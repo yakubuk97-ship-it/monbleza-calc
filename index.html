@@ -8,7 +8,7 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg: #0c0c0c; --surface: #141414; --surface2: #1a1a1a;
+    --bg: #0c0c0c; --surface: #141414;
     --border: rgba(255,255,255,0.08);
     --gold: #c9a84c; --text: #f0ede8;
     --muted: rgba(240,237,232,0.45); --dim: rgba(240,237,232,0.18);
@@ -26,7 +26,15 @@
   .title em { font-style: italic; color: var(--gold); }
   .card { background: var(--surface); border: 0.5px solid var(--border); border-radius: 2px; padding: 32px 28px; position: relative; }
   .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.5; }
-  .source-badge { display: inline-block; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); border: 0.5px solid var(--border); border-radius: 2px; padding: 4px 10px; margin-bottom: 24px; }
+  .source-badge {
+    display: inline-block; font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--muted);
+    border: 0.5px solid var(--border); border-radius: 2px;
+    padding: 4px 10px; margin-bottom: 24px;
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .source-badge:hover { border-color: var(--gold); color: var(--gold); }
   .field-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
   .input-wrap { position: relative; }
   .input-wrap input { width: 100%; background: rgba(255,255,255,0.03); border: 0.5px solid var(--border); border-radius: 2px; color: var(--text); font-family: 'Jost', sans-serif; font-size: 32px; font-weight: 300; padding: 14px 60px 14px 18px; outline: none; transition: border-color 0.2s; -moz-appearance: textfield; }
@@ -55,7 +63,7 @@
 <div class="wrap">
   <h1 class="title">Узнать цену<br>с <em>доставкой</em></h1>
   <div class="card">
-    <div class="source-badge">END</div>
+    <a class="source-badge" href="https://www.endclothing.com/eu?storeCode=PL" target="_blank">END ↗</a>
     <div class="field-label">Цена товара на сайте</div>
     <div class="input-wrap">
       <input type="number" id="price" placeholder="0" min="0" step="1" autofocus>
