@@ -8,15 +8,17 @@
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
-    --bg: #0c0c0c; --surface: #141414;
-    --border: rgba(255,255,255,0.08); --gold: #c9a84c;
-    --text: #f0ede8; --muted: rgba(240,237,232,0.45); --dim: rgba(240,237,232,0.18);
+    --bg: #0c0c0c; --surface: #141414; --surface2: #1a1a1a;
+    --border: rgba(255,255,255,0.08);
+    --gold: #c9a84c; --text: #f0ede8;
+    --muted: rgba(240,237,232,0.45); --dim: rgba(240,237,232,0.18);
   }
   html, body {
     min-height: 100vh; background: var(--bg); color: var(--text);
     font-family: 'Jost', sans-serif; font-weight: 300;
-    -webkit-font-smoothing: antialiased; display: flex;
-    align-items: center; justify-content: center; padding: 40px 20px;
+    -webkit-font-smoothing: antialiased;
+    display: flex; align-items: center; justify-content: center;
+    padding: 40px 20px;
     background-image: radial-gradient(ellipse 60% 40% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 70%);
   }
   .wrap { width: 100%; max-width: 400px; }
@@ -32,13 +34,21 @@
   .input-wrap input:focus { border-color: rgba(201,168,76,0.5); }
   .input-wrap input::placeholder { color: var(--dim); }
   .input-wrap .cur { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 13px; color: var(--muted); pointer-events: none; }
-  .divider { height: 0.5px; background: var(--border); margin: 24px 0; }
-  .out-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
-  .out-val { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--text); min-height: 62px; display: flex; align-items: baseline; gap: 6px; }
-  .out-val .rub { font-size: 28px; color: var(--muted); }
-  .out-sub { font-size: 12px; color: var(--dim); margin-top: 6px; min-height: 16px; }
+  .delivery-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 0.5px solid var(--border); }
+  .del-label { font-size: 13px; color: var(--muted); }
+  .del-val { font-size: 13px; color: var(--text); font-weight: 400; }
+  .sub-row { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 0.5px solid var(--border); }
+  .sub-label { font-size: 13px; color: var(--muted); }
+  .sub-val { font-size: 16px; color: var(--text); font-weight: 400; }
+  .final-block { padding-top: 20px; }
+  .final-label { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .final-val { font-family: 'Cormorant Garamond', serif; font-size: 52px; font-weight: 300; color: var(--text); display: flex; align-items: baseline; gap: 6px; min-height: 62px; }
+  .final-val .rub { font-size: 28px; color: var(--muted); }
+  .final-sub { font-size: 12px; color: var(--dim); margin-top: 6px; }
   .cta { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; margin-top: 28px; padding: 14px 24px; background: transparent; border: 0.5px solid var(--gold); border-radius: 2px; color: var(--gold); font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; transition: background 0.2s, color 0.2s; }
   .cta:hover { background: var(--gold); color: #0c0c0c; }
+  .hidden { opacity: 0; pointer-events: none; }
+  .visible { opacity: 1; pointer-events: auto; }
 </style>
 </head>
 <body>
@@ -51,13 +61,22 @@
       <input type="number" id="price" placeholder="0" min="0" step="1" autofocus>
       <span class="cur">EUR</span>
     </div>
-    <div class="divider"></div>
-    <div class="out-label">Итоговая цена</div>
-    <div class="out-val">
-      <span id="out-num">—</span>
-      <span class="rub" id="out-cur"></span>
+    <div class="delivery-row">
+      <div class="del-label">Платная доставка на склад в Польшу</div>
+      <div class="del-val">10 EUR</div>
     </div>
-    <div class="out-sub" id="out-eur"></div>
+    <div class="sub-row hidden" id="sub-row">
+      <div class="sub-label">Промежуточный итог</div>
+      <div class="sub-val" id="sub-val">—</div>
+    </div>
+    <div class="final-block hidden" id="final-block">
+      <div class="final-label">Итого к оплате</div>
+      <div class="final-val">
+        <span id="out-num">—</span>
+        <span class="rub" id="out-cur"></span>
+      </div>
+      <div class="final-sub" id="out-eur"></div>
+    </div>
     <a class="cta" href="https://t.me/euclothing" target="_blank">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
         <path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/>
@@ -67,20 +86,28 @@
   </div>
 </div>
 <script>
-  const RATE = 95, LOGISTICS = 23, MARKUP = 0.25;
+  const RATE = 95, DELIVERY_TO_PL = 10, LOGISTICS_FULL = 23, MARKUP = 0.25;
   const inp = document.getElementById('price');
-  const outNum = document.getElementById('out-num');
-  const outCur = document.getElementById('out-cur');
-  const outEur = document.getElementById('out-eur');
-  function fmt(n) { return Math.round(n).toLocaleString('ru-RU'); }
+  function fmt(n) { return Math.round(n).toLocaleString('ru-RU') + ' ₽'; }
   function calc() {
     const p = parseFloat(inp.value);
-    if (!p || p <= 0) { outNum.textContent = '—'; outCur.textContent = ''; outEur.textContent = ''; return; }
-    const finalEur = (p + LOGISTICS) * (1 + MARKUP);
+    const subRow = document.getElementById('sub-row');
+    const finalBlock = document.getElementById('final-block');
+    if (!p || p <= 0) {
+      subRow.className = 'sub-row hidden';
+      finalBlock.className = 'final-block hidden';
+      return;
+    }
+    const subtotalEur = p + DELIVERY_TO_PL;
+    const subtotalRub = subtotalEur * RATE;
+    const finalEur = (p + LOGISTICS_FULL) * (1 + MARKUP);
     const finalRub = finalEur * RATE;
-    outNum.textContent = fmt(finalRub);
-    outCur.textContent = '₽';
-    outEur.textContent = '≈ ' + finalEur.toFixed(0) + ' EUR';
+    document.getElementById('sub-val').textContent = fmt(subtotalRub) + '  ·  ' + subtotalEur.toFixed(0) + ' EUR';
+    subRow.className = 'sub-row visible';
+    document.getElementById('out-num').textContent = Math.round(finalRub).toLocaleString('ru-RU');
+    document.getElementById('out-cur').textContent = '₽';
+    document.getElementById('out-eur').textContent = '≈ ' + finalEur.toFixed(0) + ' EUR';
+    finalBlock.className = 'final-block visible';
   }
   inp.addEventListener('input', calc);
 </script>
