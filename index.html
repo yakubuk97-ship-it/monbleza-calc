@@ -123,6 +123,24 @@
   .mbtn-site:hover{border-color:var(--gold);color:var(--gold);}
   .close-btn{width:100%;padding:12px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;}
   .close-btn:hover{border-color:var(--gold);color:var(--gold);}
+  .top-tabs{display:flex;gap:6px;margin-bottom:24px;}
+  .top-tab{flex:1;padding:10px 8px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.2s;}
+  .top-tab:hover{border-color:var(--gold);color:var(--text);}
+  .top-tab.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.07);}
+  .delivery-section{display:none;}
+  .delivery-section.show{display:block;}
+  .dlv-block{background:var(--surface);border:0.5px solid var(--border);border-radius:2px;padding:22px 20px;margin-bottom:10px;position:relative;}
+  .dlv-block::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.4;}
+  .dlv-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+  .dlv-step{display:flex;gap:12px;padding:10px 0;border-bottom:0.5px solid var(--border);}
+  .dlv-step:last-child{border-bottom:none;}
+  .dlv-num{width:22px;height:22px;border-radius:50%;border:0.5px solid rgba(201,168,76,0.4);color:var(--gold);font-size:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+  .dlv-text{font-size:12px;color:var(--muted);line-height:1.5;}
+  .dlv-text strong{color:var(--text);font-weight:400;}
+  .dlv-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:0.5px solid var(--border);}
+  .dlv-row:last-child{border-bottom:none;}
+  .dlv-label{font-size:12px;color:var(--muted);}
+  .dlv-val{font-size:12px;color:var(--text);}
   .modal-sz{cursor:pointer;transition:all 0.15s;}
   .modal-sz:hover{border-color:rgba(201,168,76,0.5);color:var(--text);}
   .modal-sz.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.1);}
@@ -167,9 +185,70 @@
 <body>
 <div class="wrap">
   <h1 class="title">Узнать цену<br>с <em>доставкой</em></h1>
-  <p class="subtitle">Выбери магазин для расчёта</p>
+  <p class="subtitle">Беларусь · Доставка из Европы</p>
 
-  <div class="card">
+  <div class="top-tabs">
+    <button class="top-tab active" id="tab-calc" onclick="switchTab('calc')">Калькулятор</button>
+    <button class="top-tab" id="tab-delivery" onclick="switchTab('delivery')">Доставка</button>
+    <button class="top-tab" id="tab-catalog" onclick="switchTab('catalog')">Каталог</button>
+  </div>
+
+  <!-- РАЗДЕЛ ДОСТАВКА -->
+  <div class="delivery-section" id="section-delivery">
+    <div class="dlv-block">
+      <div class="dlv-title">Как это работает</div>
+      <div class="dlv-step">
+        <div class="dlv-num">1</div>
+        <div class="dlv-text"><strong>Выбираешь товар</strong> на сайте магазина или в нашем каталоге Zalando</div>
+      </div>
+      <div class="dlv-step">
+        <div class="dlv-num">2</div>
+        <div class="dlv-text"><strong>Пишешь нам в Telegram</strong> — присылаешь ссылку, размер и цену</div>
+      </div>
+      <div class="dlv-step">
+        <div class="dlv-num">3</div>
+        <div class="dlv-text"><strong>Мы выкупаем и доставляем</strong> товар со склада в Польше до тебя в Беларусь</div>
+      </div>
+      <div class="dlv-step">
+        <div class="dlv-num">4</div>
+        <div class="dlv-text"><strong>Получаешь посылку</strong> — Европейский оригинал с чеком</div>
+      </div>
+    </div>
+    <div class="dlv-block">
+      <div class="dlv-title">Сроки и стоимость</div>
+      <div class="dlv-row">
+        <span class="dlv-label">Срок доставки</span>
+        <span class="dlv-val">7–14 дней</span>
+      </div>
+      <div class="dlv-row">
+        <span class="dlv-label">Стоимость сервиса</span>
+        <span class="dlv-val">23 EUR</span>
+      </div>
+      <div class="dlv-row">
+        <span class="dlv-label">Наценка</span>
+        <span class="dlv-val">25%</span>
+      </div>
+      <div class="dlv-row">
+        <span class="dlv-label">Оплата</span>
+        <span class="dlv-val">BYN · RUB · USDT</span>
+      </div>
+      <div class="dlv-row">
+        <span class="dlv-label">Гарантия</span>
+        <span class="dlv-val">100% оригинал</span>
+      </div>
+    </div>
+    <div class="dlv-block">
+      <div class="dlv-title">Написать нам</div>
+      <div class="dlv-step">
+        <div class="dlv-text" style="width:100%;display:flex;flex-direction:column;gap:8px;">
+          <a href="https://t.me/euclothing" target="_blank" style="color:var(--gold);text-decoration:none;font-size:13px;">→ Telegram: @euclothing</a>
+          <a href="https://vk.com/euclothing" target="_blank" style="color:var(--muted);text-decoration:none;font-size:13px;">→ ВКонтакте: vk.com/euclothing</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="section-calc">
     <!-- Главный экран -->
     <div id="s-stores">
       <div class="sec-label">Интернет-магазины</div>
@@ -279,7 +358,7 @@
   </div>
 
   <!-- КАТАЛОГ ZALANDO -->
-  <div class="catalog-section">
+  <div class="catalog-section" id="section-catalog" style="display:none">
     <div class="catalog-header">
       <div class="catalog-title">Каталог · Zalando Germany</div>
       <div class="catalog-badge">Оригинал</div>
@@ -398,6 +477,17 @@
 </div>
 
 <script>
+/* ── ВКЛАДКИ ── */
+function switchTab(tab){
+  ['calc','delivery','catalog'].forEach(t=>{
+    document.getElementById('tab-'+t).classList.remove('active');
+  });
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('section-calc').style.display = tab==='calc'?'':'none';
+  document.getElementById('section-delivery').style.display = tab==='delivery'?'block':'none';
+  document.getElementById('section-catalog').style.display = tab==='catalog'?'':'none';
+}
+
 /* ── КАЛЬКУЛЯТОР ── */
 const RATE=95,RATE_GBP=107,RATE_USD=81,MARKUP=0.25;
 const stores={
