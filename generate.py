@@ -1,4 +1,4 @@
-import json, re, sys
+import json, re, sys, hashlib
 
 with open('zalando_data.json', encoding='utf-8') as f:
     data = json.load(f)
@@ -6,13 +6,17 @@ with open('zalando_data.json', encoding='utf-8') as f:
 print(f'Данных с Apify: {len(data)} товаров')
 
 if len(data) == 0:
-    print('❌ Пустой результат — index.html не меняем')
+    print('❌ Пустой результат — файлы не меняем')
     sys.exit(0)
 
-def get_cat(name):
+def get_cat(name, color=''):
+    n = name.upper()
     for m in ['9060','1906','550','480','204','574','530','327']:
-        if m in name.upper():
-            return m
+        if m in n: return m
+    if any(w in n for w in ['HOODIE','SWEATSHIRT','PULLOVER','HOODY']): return 'hoodie'
+    if any(w in n for w in ['T-SHIRT','TEE','TSHIRT']): return 'tshirt'
+    if any(w in n for w in ['JACKET','PARKA','WINDBREAKER','ANORAK']): return 'jacket'
+    if any(w in n for w in ['JOGGER','SWEATPANT','TRACKPANT','TROUSER']): return 'jogger'
     return 'other'
 
 products = []
@@ -28,43 +32,64 @@ for p in data:
     if price <= 0: continue
     try: promo = int(str(p.get('promotionalPrice',0))) / 100 if p.get('promotionalPrice') else None
     except: promo = None
-    img = p.get('imageUrl','').replace('imwidth=300','imwidth=762')
+    # Уменьшаем картинки: 762→400px — вдвое меньше трафика
+    img = p.get('imageUrl','').replace('imwidth=762','imwidth=400').replace('imwidth=300','imwidth=400')
     url = p.get('productUrl','')
     if img in seen_imgs: continue
     seen_imgs.add(img)
     is_sale = bool(promo and promo < price)
     brand = p.get('brand','New Balance')
     sizes = p.get('sizes', [])
-    products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model),'img':img,'url':url,'sizes':sizes})
+    products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model, color),'img':img,'url':url,'sizes':sizes})
 
 print(f'Обработано уникальных товаров: {len(products)}')
 
 if len(products) == 0:
-    print('❌ После фильтрации 0 товаров — index.html не меняем')
+    print('❌ После фильтрации 0 товаров — файлы не меняем')
     sys.exit(0)
 
 def js_p(p):
-    old = f', oldPrice:{p["oldPrice"]}' if p['oldPrice'] else ''
-    sale = ', sale:true' if p['sale'] else ''
-    n = p['name'].replace('"','\\"')
-    c = p['color'].replace('"','\\"')
-    b = p['brand'].replace('"','\\"')
-    sizes_js = json.dumps(p.get('sizes',[]))
-    return f'  {{name:"{n}",color:"{c}",brand:"{b}",price:{p["price"]}{old}{sale},cat:"{p["cat"]}",img:"{p["img"]}",url:"{p["url"]}",sizes:{sizes_js}}}'
+    old = f',op:{p["oldPrice"]}' if p['oldPrice'] else ''
+    sale = ',sale:1' if p['sale'] else ''
+    n = p['name'].replace('\\','\\\\').replace('"','\\"')
+    c = p['color'].replace('\\','\\\\').replace('"','\\"')
+    b = p['brand'].replace('\\','\\\\').replace('"','\\"')
+    sizes_js = json.dumps(p.get('sizes',[]), separators=(',',':'))
+    return f'["{n}","{c}","{b}",{p["price"]}{old}{sale},"{p["cat"]}","{p["img"]}","{p["url"]}",{sizes_js}]'
 
-products_js = 'const products=[\n' + ',\n'.join(js_p(p) for p in products) + '\n];'
+# Компактный формат: массив массивов вместо объектов — ~40% меньше размер файла
+products_js = 'var products=[\n' + ',\n'.join(js_p(p) for p in products) + '\n].map(r=>({name:r[0],color:r[1],brand:r[2],price:r[3],...(r.includes&&typeof r[4]==="number"?{op:r[4]}:{}),cat:r.find?.(v=>typeof v==="string"&&["9060","530","574","574","hoodie","tshirt","jacket","jogger","other"].includes(v))||"other",img:r[r.length-2],url:r[r.length-1],sizes:r[r.length>8?r.length-0:8]}));'
 
+# Пересчитываем — используем простой формат объектов (надёжнее)
+def js_obj(p):
+    old = f',oldPrice:{p["oldPrice"]}' if p['oldPrice'] else ''
+    sale = ',sale:true' if p['sale'] else ''
+    n = p['name'].replace('\\','\\\\').replace('"','\\"')
+    c = p['color'].replace('\\','\\\\').replace('"','\\"')
+    b = p['brand'].replace('\\','\\\\').replace('"','\\"')
+    sizes_js = json.dumps(p.get('sizes',[]), separators=(',',':'))
+    return f'{{n:"{n}",c:"{c}",b:"{b}",p:{p["price"]}{old}{sale},cat:"{p["cat"]}",i:"{p["img"]}",u:"{p["url"]}",s:{sizes_js}}}'
+
+products_js = 'var products=[\n' + ',\n'.join(js_obj(p) for p in products) + '\n].map(r=>({name:r.n,color:r.c,brand:r.b,price:r.p,oldPrice:r.oldPrice||null,sale:!!r.sale,cat:r.cat,img:r.i,url:r.u,sizes:r.s||[]}));'
+
+# Хэш для cache-busting
+content_hash = hashlib.md5(products_js.encode()).hexdigest()[:8]
+
+# Записываем products.js
+with open('products.js', 'w', encoding='utf-8') as f:
+    f.write(products_js)
+print(f'✅ products.js записан ({len(products_js)//1024}KB), hash={content_hash}')
+
+# Обновляем index.html
 with open('index.html', encoding='utf-8') as f:
     html = f.read()
 
-if 'const products=[' not in html:
-    print('❌ Паттерн не найден в index.html')
-    sys.exit(1)
-
-html = re.sub(r'const products=\[.*?\];', products_js, html, flags=re.DOTALL)
+# Обновляем src у тега products.js с cache-busting хэшем
+html = re.sub(r'<script src="products\.js[^"]*">', f'<script src="products.js?v={content_hash}">', html)
+# Обновляем счётчик товаров
 html = re.sub(r'\d+ моделей', f'{len(products)} моделей', html)
 
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print(f'✅ index.html обновлён: {len(products)} товаров')
+print(f'✅ index.html обновлён: {len(products)} товаров, hash={content_hash}')

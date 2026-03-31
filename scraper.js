@@ -8,7 +8,26 @@ const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 
 const OUTPUT_FILE = 'zalando_data.json';
-const BASE_URL = 'https://www.zalando.de/sneaker/new-balance/';
+const BRAND_URLS = [
+  // Кроссовки — бренды
+  'https://www.zalando.de/sneaker/new-balance/',
+  'https://www.zalando.de/sneaker/nike/',
+  'https://www.zalando.de/sneaker/adidas/',
+  'https://www.zalando.de/sneaker/puma/',
+  'https://www.zalando.de/sneaker/converse/',
+  'https://www.zalando.de/sneaker/vans/',
+  'https://www.zalando.de/sneaker/reebok/',
+  'https://www.zalando.de/sneaker/asics/',
+  'https://www.zalando.de/sneaker/jordan/',
+  'https://www.zalando.de/sneaker/salomon/',
+  'https://www.zalando.de/sneaker/on/',
+  'https://www.zalando.de/sneaker/diadora/',
+  // Одежда
+  'https://www.zalando.de/hoodies-sweatshirts-herren/',
+  'https://www.zalando.de/t-shirts-tops-herren/',
+  'https://www.zalando.de/jacken-maenner/',
+  'https://www.zalando.de/jogginghosen-herren/',
+];
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -39,7 +58,8 @@ async function run() {
   await page.setExtraHTTPHeaders({ 'Accept-Language': 'de-DE,de;q=0.9' });
   await page.setViewport({ width: 1280, height: 900 });
 
-  const allProducts = [];
+    const allProducts = [];
+  const seenUrls = new Set();
 
   page.on('response', async (response) => {
     const url = response.url();
@@ -53,6 +73,9 @@ async function run() {
         for (const edge of edges) {
           const node = edge?.node;
           if (!node || !node.name) continue;
+          const productUrl = node.uri || '';
+          if (seenUrls.has(productUrl)) continue;
+          seenUrls.add(productUrl);
           const origAmount = node.displayPrice?.original?.amount;
           const promoAmount = node.displayPrice?.promotional?.amount;
           const sizes = (node.simples || []).map(s => s.size).filter(Boolean);
@@ -63,7 +86,7 @@ async function run() {
             currencySymbol: '€',
             originalPrice: origAmount || 0,
             promotionalPrice: promoAmount || null,
-            productUrl: node.uri || '',
+            productUrl,
             sizes,
           });
         }
@@ -71,25 +94,24 @@ async function run() {
     } catch (e) {}
   });
 
-  // Iterate pages until empty
-  let pageNum = 1;
-  let emptyPages = 0;
+  // Iterate all brands and their pages
+  for (const BASE_URL of BRAND_URLS) {
+    console.log(`\n=== Brand: ${BASE_URL.split('/').filter(Boolean).pop()} ===`);
+    let pageNum = 1;
+    let emptyPages = 0;
 
-  while (emptyPages < 2) {
-    const sep = BASE_URL.includes('?') ? '&' : '?';
-    const url = pageNum === 1 ? BASE_URL : `${BASE_URL}${sep}p=${pageNum}`;
-    console.log(`Page ${pageNum}: ${url}`);
-    const added = await scrapePage(page, url, allProducts);
-    console.log(`  +${added} products (total raw: ${allProducts.length})`);
+    while (emptyPages < 2) {
+      const sep = BASE_URL.includes('?') ? '&' : '?';
+      const url = pageNum === 1 ? BASE_URL : `${BASE_URL}${sep}p=${pageNum}`;
+      console.log(`  Page ${pageNum}`);
+      const added = await scrapePage(page, url, allProducts);
+      console.log(`  +${added} (total raw: ${allProducts.length})`);
 
-    if (added === 0) {
-      emptyPages++;
-    } else {
-      emptyPages = 0;
+      if (added === 0) emptyPages++;
+      else emptyPages = 0;
+      pageNum++;
+      if (pageNum > 30) break;
     }
-    pageNum++;
-
-    if (pageNum > 30) break; // safety limit
   }
 
   await browser.close();
