@@ -1,143 +1,85 @@
 #!/usr/bin/env node
 /**
- * Zalando Germany scraper — New Balance sneakers
- * Output: zalando_data.json (same format as Apify Zalando Scraper)
- *
- * Usage:
- *   node scraper.js
- *
- * Install deps first:
- *   npm install axios
+ * Zalando Germany scraper — New Balance men's shoes
+ * Intercepts GraphQL responses to extract product data
  */
 
-const axios = require('axios');
+const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 
-const BRAND_SLUG = 'new-balance';
-const CATEGORY = 'herren-schuhe';           // men's shoes
-const BASE_URL = 'https://www.zalando.de';
-const PER_PAGE = 84;                        // max per request
 const OUTPUT_FILE = 'zalando_data.json';
-
-const HEADERS = {
-  'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36',
-  'Accept': 'application/json, text/plain, */*',
-  'Accept-Language': 'de-DE,de;q=0.9,en;q=0.8',
-  'Accept-Encoding': 'gzip, deflate, br',
-  'Referer': `${BASE_URL}/new-balance-schuhe-herren/`,
-  'x-xsrf-token': '',
-};
-
-function sleep(ms) {
-  return new Promise(r => setTimeout(r, ms));
-}
-
-/**
- * Fetch one page from Zalando catalog API.
- * Zalando uses /api/catalog/articles with query params.
- */
-async function fetchPage(offset) {
-  const url = `${BASE_URL}/api/catalog/articles`;
-  const params = {
-    brands: BRAND_SLUG,
-    category: CATEGORY,
-    per_page: PER_PAGE,
-    offset,
-  };
-
-  const resp = await axios.get(url, {
-    headers: HEADERS,
-    params,
-    timeout: 30000,
-  });
-
-  return resp.data;
-}
-
-/**
- * Map a Zalando catalog article to the Apify output schema.
- */
-function mapArticle(item) {
-  const entity = item.entity || item;
-
-  const name = entity.name || '';
-  const brand = entity.brand?.name || entity.brandName || 'New Balance';
-
-  // Zalando prices come as integers in cents
-  const originalPrice = entity.price?.original ?? entity.displayPrice?.value ?? 0;
-  const promotionalPrice = entity.price?.promotional ?? entity.displayPrice?.promotional ?? null;
-
-  // First media item
-  const imageUrl = (entity.media?.[0]?.path
-    ? `https://img01.ztat.net/article/${entity.media[0].path}?imwidth=300&filter=packshot`
-    : entity.imageUrl || '');
-
-  const sku = entity.sku || entity.id || '';
-  const productUrl = sku
-    ? `${BASE_URL}/${sku}.html`
-    : (entity.url ? `${BASE_URL}${entity.url}` : '');
-
-  return {
-    name,
-    brand,
-    imageUrl,
-    currencySymbol: '€',
-    originalPrice,
-    promotionalPrice: promotionalPrice || null,
-    productUrl,
-  };
-}
+const CATALOG_URL = 'https://www.zalando.de/herrenschuhe/new-balance/';
+const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 async function run() {
-  console.log(`Scraping Zalando Germany — brand: ${BRAND_SLUG}, category: ${CATEGORY}`);
+  console.log('Launching Chrome...');
+  const browser = await puppeteer.launch({
+    executablePath: CHROME_PATH,
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
 
-  let allItems = [];
-  let offset = 0;
-  let total = null;
+  const page = await browser.newPage();
+  await page.setUserAgent('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36');
+  await page.setExtraHTTPHeaders({ 'Accept-Language': 'de-DE,de;q=0.9' });
 
-  while (true) {
-    console.log(`  Fetching offset=${offset}...`);
+  const allProducts = [];
 
-    let data;
+  // Intercept GraphQL responses and extract product data
+  page.on('response', async (response) => {
+    const url = response.url();
+    if (!url.includes('/api/graphql')) return;
+
     try {
-      data = await fetchPage(offset);
-    } catch (err) {
-      if (err.response) {
-        console.error(`  HTTP ${err.response.status} at offset=${offset}`);
-        // Some offsets may return 404 when past the end — treat as done
-        if (err.response.status === 404) break;
+      const data = await response.json();
+      const items = Array.isArray(data) ? data : [data];
+
+      for (const item of items) {
+        // Each item: { data: { product: { family: { products: { edges: [...] } } } } }
+        const edges = item?.data?.product?.family?.products?.edges;
+        if (!edges) continue;
+
+        for (const edge of edges) {
+          const node = edge?.node;
+          if (!node || !node.name) continue;
+
+          const origAmount = node.displayPrice?.original?.amount;
+          const promoAmount = node.displayPrice?.promotional?.amount;
+
+          allProducts.push({
+            name: node.name,
+            brand: node.brand?.name || 'New Balance',
+            imageUrl: node.packshotImage?.uri || node.packShotThumbnail?.uri || '',
+            currencySymbol: '€',
+            originalPrice: origAmount ? origAmount / 100 : 0,
+            promotionalPrice: promoAmount ? promoAmount / 100 : null,
+            productUrl: node.uri || '',
+          });
+        }
       }
-      throw err;
-    }
+    } catch (e) {}
+  });
 
-    // Support two known response shapes
-    const articles = data.articles ?? data.items ?? [];
-    if (total === null) {
-      total = data.pagination?.totalCount ?? data.total ?? articles.length;
-      console.log(`  Total reported by API: ${total}`);
-    }
+  console.log('Opening Zalando catalog...');
+  await page.goto(CATALOG_URL, { waitUntil: 'networkidle2', timeout: 60000 });
+  await new Promise(r => setTimeout(r, 3000));
 
-    if (articles.length === 0) break;
+  await browser.close();
 
-    allItems = allItems.concat(articles.map(mapArticle));
-    offset += PER_PAGE;
+  console.log(`Collected ${allProducts.length} products from GraphQL`);
 
-    if (offset >= total) break;
-
-    // Polite delay between pages
-    await sleep(1500 + Math.random() * 1000);
-  }
-
-  // Deduplicate by imageUrl (same logic as generate.py)
+  // Deduplicate by imageUrl
   const seen = new Set();
-  const unique = allItems.filter(p => {
-    if (seen.has(p.imageUrl)) return false;
+  const unique = allProducts.filter(p => {
+    if (!p.imageUrl || seen.has(p.imageUrl)) return false;
     seen.add(p.imageUrl);
     return true;
   });
 
   fs.writeFileSync(OUTPUT_FILE, JSON.stringify(unique, null, 2), 'utf-8');
-  console.log(`\nSaved ${unique.length} unique products to ${OUTPUT_FILE}`);
+  console.log(`Saved ${unique.length} products to ${OUTPUT_FILE}`);
+
+  if (unique.length === 0) process.exit(1);
 }
 
 run().catch(err => {
