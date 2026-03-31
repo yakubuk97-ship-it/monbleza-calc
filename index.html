@@ -123,6 +123,45 @@
   .mbtn-site:hover{border-color:var(--gold);color:var(--gold);}
   .close-btn{width:100%;padding:12px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;}
   .close-btn:hover{border-color:var(--gold);color:var(--gold);}
+  .modal-sz{cursor:pointer;transition:all 0.15s;}
+  .modal-sz:hover{border-color:rgba(201,168,76,0.5);color:var(--text);}
+  .modal-sz.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.1);}
+  .modal-sz-label{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;}
+  .modal-add-btn{width:100%;padding:14px;background:var(--gold);color:#0c0c0c;border:none;border-radius:2px;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;margin-bottom:8px;display:none;transition:opacity 0.2s;}
+  .modal-add-btn.visible{display:block;}
+  .modal-add-btn:hover{opacity:0.88;}
+  .cart-fab{position:fixed;bottom:24px;right:20px;z-index:300;background:var(--gold);color:#0c0c0c;border:none;border-radius:50%;width:54px;height:54px;display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 24px rgba(201,168,76,0.45);transition:transform 0.2s;}
+  .cart-fab.show{display:flex;}
+  .cart-fab:hover{transform:scale(1.08);}
+  .cart-badge{position:absolute;top:-3px;right:-3px;background:#e53935;color:white;font-size:9px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px;}
+  .cart-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:400;overflow-y:auto;padding:20px 16px;}
+  .cart-overlay.show{display:block;}
+  .cart-modal{max-width:400px;margin:0 auto;background:var(--surface);border:0.5px solid var(--border);border-radius:2px;position:relative;}
+  .cart-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.5;}
+  .cart-header{padding:20px 20px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:0.5px solid var(--border);}
+  .cart-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
+  .cart-cnt{font-size:10px;color:var(--muted);}
+  .cart-body{padding:0 20px;}
+  .cart-empty{text-align:center;color:var(--muted);font-size:13px;padding:40px 0;}
+  .cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:0.5px solid var(--border);}
+  .cart-item:last-child{border-bottom:none;}
+  .cart-item-img{width:56px;height:56px;background:#f5f3ef;border-radius:2px;flex-shrink:0;overflow:hidden;}
+  .cart-item-img img{width:100%;height:100%;object-fit:contain;padding:4px;}
+  .cart-item-info{flex:1;min-width:0;}
+  .cart-item-brand{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);}
+  .cart-item-name{font-size:12px;color:var(--text);margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .cart-item-sz{display:inline-block;font-size:10px;color:var(--gold);border:0.5px solid rgba(201,168,76,0.35);padding:2px 7px;border-radius:2px;margin-top:3px;}
+  .cart-item-price{font-size:11px;color:var(--muted);margin-top:5px;}
+  .cart-item-del{background:none;border:none;color:var(--dim);cursor:pointer;font-size:20px;padding:0;flex-shrink:0;align-self:flex-start;line-height:1;transition:color 0.2s;}
+  .cart-item-del:hover{color:#e53935;}
+  .cart-footer{padding:14px 20px 20px;}
+  .cart-total-row{display:flex;justify-content:space-between;align-items:baseline;background:var(--s2);border-radius:2px;padding:14px 16px;margin-bottom:12px;}
+  .cart-total-l{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
+  .cart-total-v{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;}
+  .cart-order-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:var(--gold);color:#0c0c0c;border:none;border-radius:2px;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;margin-bottom:8px;text-decoration:none;transition:opacity 0.2s;}
+  .cart-order-btn:hover{opacity:0.88;}
+  .cart-close-btn{width:100%;padding:12px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;}
+  .cart-close-btn:hover{border-color:var(--gold);color:var(--gold);}
 </style>
 </head>
 <body>
@@ -269,6 +308,24 @@
   </div>
 </div>
 
+<!-- CART FAB -->
+<button class="cart-fab" id="cart-fab" onclick="openCart()">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+  <span class="cart-badge" id="cart-badge">0</span>
+</button>
+
+<!-- CART OVERLAY -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCartBg(event)">
+  <div class="cart-modal">
+    <div class="cart-header">
+      <span class="cart-title">Корзина</span>
+      <span class="cart-cnt" id="cart-cnt"></span>
+    </div>
+    <div class="cart-body" id="cart-body"></div>
+    <div class="cart-footer" id="cart-footer"></div>
+  </div>
+</div>
+
 <!-- MODAL -->
 <div class="overlay" id="overlay" onclick="closeModal(event)">
   <div class="modal">
@@ -277,7 +334,9 @@
       <div class="modal-brand" id="mBrand"></div>
       <div class="modal-name" id="mName"></div>
       <div class="modal-color" id="mColor"></div>
+      <div class="modal-sz-label" id="mSzLabel" style="display:none">Выберите размер</div>
       <div class="modal-sizes" id="mSizes"></div>
+      <button class="modal-add-btn" id="modal-add-btn" onclick="addToCart()">+ В корзину</button>
       <div class="modal-price-row">
         <span class="modal-price" id="mPrice"></span>
         <span class="modal-cur">EUR</span>
@@ -7771,14 +7830,99 @@ function renderGrid(items){
   `).join('');
 }
 
+/* ── КОРЗИНА ── */
+let cart=[];
+let modalProduct=null;
+let selectedSize=null;
+
+function selectSize(size,btn){
+  selectedSize=size;
+  document.querySelectorAll('#mSizes .modal-sz').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('modal-add-btn').classList.add('visible');
+}
+
+function addToCart(){
+  if(!modalProduct||!selectedSize)return;
+  cart.push({name:modalProduct.name,brand:modalProduct.brand,img:modalProduct.img,price:modalProduct.price,url:modalProduct.url,size:selectedSize});
+  updateCartBadge();
+  const btn=document.getElementById('modal-add-btn');
+  const orig=btn.textContent;
+  btn.textContent='✓ Добавлено!';
+  btn.style.background='#2e7d32';
+  setTimeout(()=>{btn.textContent=orig;btn.style.background='';},1600);
+}
+
+function updateCartBadge(){
+  const fab=document.getElementById('cart-fab');
+  document.getElementById('cart-badge').textContent=cart.length;
+  cart.length>0?fab.classList.add('show'):fab.classList.remove('show');
+}
+
+function openCart(){renderCart();document.getElementById('cart-overlay').classList.add('show');}
+function closeCartBg(e){if(e.target.id==='cart-overlay')document.getElementById('cart-overlay').classList.remove('show');}
+function closeCart(){document.getElementById('cart-overlay').classList.remove('show');}
+
+function removeFromCart(idx){
+  cart.splice(idx,1);
+  updateCartBadge();
+  renderCart();
+}
+
+function wordForm(n){return n===1?'товар':n<5?'товара':'товаров';}
+
+function buildTgLink(){
+  const lines=cart.map((item,i)=>`${i+1}. ${item.brand} ${item.name}, размер ${item.size} — ${item.price.toFixed(2)}€ (≈${calcRub(item.price).toLocaleString('ru-RU')}₽)`);
+  const total=cart.reduce((s,item)=>s+calcRub(item.price),0);
+  const msg='Привет! Хочу заказать:\n\n'+lines.join('\n')+`\n\nИтого: ≈${total.toLocaleString('ru-RU')} ₽`;
+  return 'https://t.me/euclothing?text='+encodeURIComponent(msg);
+}
+
+function renderCart(){
+  const body=document.getElementById('cart-body');
+  const footer=document.getElementById('cart-footer');
+  document.getElementById('cart-cnt').textContent=cart.length+' '+wordForm(cart.length);
+  if(!cart.length){
+    body.innerHTML='<div class="cart-empty">Корзина пуста<br><span style="font-size:10px;opacity:0.5">Выберите товар и размер</span></div>';
+    footer.innerHTML='<button class="cart-close-btn" onclick="closeCart()">← Назад к каталогу</button>';
+    return;
+  }
+  body.innerHTML=cart.map((item,i)=>`
+    <div class="cart-item">
+      <div class="cart-item-img"><img src="${item.img}" alt="${item.name}" loading="lazy"></div>
+      <div class="cart-item-info">
+        <div class="cart-item-brand">${item.brand}</div>
+        <div class="cart-item-name">${item.name}</div>
+        <span class="cart-item-sz">Размер ${item.size}</span>
+        <div class="cart-item-price">${item.price.toFixed(2)} € · ≈ ${calcRub(item.price).toLocaleString('ru-RU')} ₽</div>
+      </div>
+      <button class="cart-item-del" onclick="removeFromCart(${i})">×</button>
+    </div>
+  `).join('');
+  const total=cart.reduce((s,item)=>s+calcRub(item.price),0);
+  footer.innerHTML=`
+    <div class="cart-total-row">
+      <span class="cart-total-l">Итого</span>
+      <span class="cart-total-v">${total.toLocaleString('ru-RU')}<small style="font-size:18px;color:var(--muted);margin-left:4px">₽</small></span>
+    </div>
+    <a class="cart-order-btn" href="${buildTgLink()}" target="_blank">📩 Оформить заказ в Telegram</a>
+    <button class="cart-close-btn" onclick="closeCart()">← Назад к каталогу</button>
+  `;
+}
+
 function openModal(i){
   const p=currentProducts[i];
+  modalProduct=p;
+  selectedSize=null;
+  document.getElementById('modal-add-btn').classList.remove('visible');
   document.getElementById('mImg').src=p.img;
   document.getElementById('mBrand').textContent=p.brand;
   document.getElementById('mName').textContent=p.name;
   document.getElementById('mColor').textContent=p.color;
   const sz=p.sizes||[];
-  document.getElementById('mSizes').innerHTML=sz.length?sz.map(s=>`<span class="modal-sz">${s}</span>`).join(''):'';
+  const label=document.getElementById('mSzLabel');
+  label.style.display=sz.length?'block':'none';
+  document.getElementById('mSizes').innerHTML=sz.length?sz.map(s=>`<span class="modal-sz" onclick="selectSize('${s}',this)">${s}</span>`).join(''):'';
   document.getElementById('mPrice').textContent=p.price.toFixed(2);
   document.getElementById('mLink').href=p.url;
   document.getElementById('mEur').textContent=p.price.toFixed(2)+' EUR';
