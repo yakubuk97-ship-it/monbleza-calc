@@ -33,7 +33,8 @@ for p in data:
     if img in seen_imgs: continue
     seen_imgs.add(img)
     is_sale = bool(promo and promo < price)
-    products.append({'name':model,'color':color,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model),'img':img,'url':url})
+    brand = p.get('brand','New Balance')
+    products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model),'img':img,'url':url})
 
 print(f'Обработано уникальных товаров: {len(products)}')
 
@@ -46,7 +47,8 @@ def js_p(p):
     sale = ', sale:true' if p['sale'] else ''
     n = p['name'].replace('"','\\"')
     c = p['color'].replace('"','\\"')
-    return f'  {{name:"{n}",color:"{c}",price:{p["price"]}{old}{sale},cat:"{p["cat"]}",img:"{p["img"]}",url:"{p["url"]}"}}'
+    b = p['brand'].replace('"','\\"')
+    return f'  {{name:"{n}",color:"{c}",brand:"{b}",price:{p["price"]}{old}{sale},cat:"{p["cat"]}",img:"{p["img"]}",url:"{p["url"]}"}}'
 
 products_js = 'const products=[\n' + ',\n'.join(js_p(p) for p in products) + '\n];'
 

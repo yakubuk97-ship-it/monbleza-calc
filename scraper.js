@@ -51,8 +51,8 @@ async function run() {
             brand: node.brand?.name || 'New Balance',
             imageUrl: node.packshotImage?.uri || node.packShotThumbnail?.uri || '',
             currencySymbol: '€',
-            originalPrice: origAmount ? origAmount / 100 : 0,
-            promotionalPrice: promoAmount ? promoAmount / 100 : null,
+            originalPrice: origAmount || 0,       // in cents, e.g. 11995 = €119.95
+            promotionalPrice: promoAmount || null, // in cents
             productUrl: node.uri || '',
           });
         }
