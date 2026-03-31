@@ -4,8 +4,10 @@ on:
   schedule:
     - cron: '0 6 * * *'
   workflow_dispatch:
+
 permissions:
   contents: write
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -13,39 +15,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Run Apify scraper
-        id: apify
-        run: |
-          RUN=$(curl -s -X POST \
-            "https://api.apify.com/v2/acts/vistics~zalando-scraper/runs" \
-            -H "Authorization: Bearer ${{ secrets.APIFY_TOKEN }}" \
-            -H "Content-Type: application/json" \
-            -d '{"startUrls":[{"url":"https://www.zalando.de/herren-schuhe/new-balance/"}],"maximumResults":200,"maxRequestRetries":3,"maxConcurrency":4}')
-          echo "Apify response: $RUN"
-          RUN_ID=$(echo $RUN | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['data']['id'])")
-          echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
 
-      - name: Wait for completion
-        run: |
-          RUN_ID="${{ steps.apify.outputs.run_id }}"
-          for i in $(seq 1 30); do
-            STATUS=$(curl -s \
-              "https://api.apify.com/v2/actor-runs/$RUN_ID" \
-              -H "Authorization: Bearer ${{ secrets.APIFY_TOKEN }}" \
-              | python3 -c "import sys,json; print(json.load(sys.stdin)['data']['status'])")
-            echo "Статус: $STATUS"
-            if [ "$STATUS" = "SUCCEEDED" ]; then break; fi
-            sleep 20
-          done
+      - name: Install dependencies
+        run: npm install axios
 
-      - name: Download and generate
-        run: |
-          RUN_ID="${{ steps.apify.outputs.run_id }}"
-          curl -s \
-            "https://api.apify.com/v2/actor-runs/$RUN_ID/dataset/items?format=json" \
-            -H "Authorization: Bearer ${{ secrets.APIFY_TOKEN }}" \
-            -o zalando_data.json
-          python3 generate.py
+      - name: Run scraper
+        run: node scraper.js
+
+      - name: Generate catalog
+        run: python3 generate.py
 
       - name: Commit and push
         run: |
