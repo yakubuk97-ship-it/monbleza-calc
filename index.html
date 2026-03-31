@@ -84,6 +84,11 @@
   .cat-name{font-size:11px;color:var(--text);line-height:1.3;margin-bottom:6px;}
   .cat-price{font-size:15px;font-weight:300;}
   .cat-rub{font-size:10px;color:var(--dim);margin-top:2px;}
+  .cat-sizes{display:flex;flex-wrap:wrap;gap:3px;margin-top:6px;}
+  .cat-sz{font-size:9px;padding:2px 5px;border:0.5px solid var(--border);border-radius:2px;color:var(--dim);line-height:1.3;}
+  .cat-sz-more{font-size:9px;padding:2px 5px;color:var(--dim);opacity:0.6;}
+  .modal-sizes{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px;}
+  .modal-sz{font-size:11px;padding:5px 9px;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);cursor:default;}
 
   /* Modal */
   .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:200;overflow-y:auto;padding:20px 16px;}
@@ -272,6 +277,7 @@
       <div class="modal-brand" id="mBrand"></div>
       <div class="modal-name" id="mName"></div>
       <div class="modal-color" id="mColor"></div>
+      <div class="modal-sizes" id="mSizes"></div>
       <div class="modal-price-row">
         <span class="modal-price" id="mPrice"></span>
         <span class="modal-cur">EUR</span>
@@ -7759,6 +7765,7 @@ function renderGrid(items){
         <div class="cat-name">${p.name}</div>
         <div class="cat-price">${p.price.toFixed(2)} €</div>
         <div class="cat-rub">≈ ${calcRub(p.price).toLocaleString('ru-RU')} ₽</div>
+        ${(()=>{const sz=p.sizes||[];if(!sz.length)return '';const show=sz.slice(0,8);const rest=sz.length-8;return '<div class="cat-sizes">'+show.map(s=>`<span class="cat-sz">${s}</span>`).join('')+(rest>0?`<span class="cat-sz-more">+${rest}</span>`:'')+' </div>';})()}
       </div>
     </div>
   `).join('');
@@ -7770,6 +7777,8 @@ function openModal(i){
   document.getElementById('mBrand').textContent=p.brand;
   document.getElementById('mName').textContent=p.name;
   document.getElementById('mColor').textContent=p.color;
+  const sz=p.sizes||[];
+  document.getElementById('mSizes').innerHTML=sz.length?sz.map(s=>`<span class="modal-sz">${s}</span>`).join(''):'';
   document.getElementById('mPrice').textContent=p.price.toFixed(2);
   document.getElementById('mLink').href=p.url;
   document.getElementById('mEur').textContent=p.price.toFixed(2)+' EUR';
