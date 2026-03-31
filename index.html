@@ -179,6 +179,11 @@
         <button class="store-btn" onclick="goCalc('flannels')">Flannels<span class="ssub">flannels.com · UK</span></button>
         <button class="store-btn" onclick="goCalc('bstn')">BSTN<span class="ssub">bstn.com · EU</span></button>
         <button class="store-btn" onclick="goCalc('zalando')">Zalando<span class="ssub">zalando.pl · PLN</span></button>
+        <button class="store-btn" onclick="goCalc('farfetch')">Farfetch<span class="ssub">farfetch.com/pl · EUR</span></button>
+        <button class="store-btn" onclick="goCalc('terraces')">Terraces<span class="ssub">terracesmenswear.co.uk · GBP</span></button>
+        <button class="store-btn" onclick="goCalc('fredperry')">Fred Perry<span class="ssub">fredperry.com/eu · EUR</span></button>
+        <button class="store-btn" onclick="goCalc('stoneisland')">Stone Island<span class="ssub">stoneisland.com · EUR</span></button>
+        <button class="store-btn" onclick="goCalc('stockx')">StockX<span class="ssub">stockx.com · USD</span></button>
       </div>
     </div>
 
@@ -375,6 +380,11 @@ const stores={
   'nike-us':{name:'Nike USA',url:'https://www.nike.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-nike'},
   'nike-de':{name:'Nike Germany',url:'https://www.nike.com/de/',del:10,log:33,cur:'EUR',rate:RATE,back:'s-nike'},
   'nike-pl':{name:'Nike Poland',url:'https://www.nike.com/pl/mezczyzni',del:0,log:23,cur:'EUR',rate:RATE,back:'s-nike'},
+  farfetch:{name:'Farfetch',url:'https://www.farfetch.com/pl/shopping/men/shoes-2/items.aspx',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
+  terraces:{name:'Terraces Menswear',url:'https://www.terracesmenswear.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-stores'},
+  fredperry:{name:'Fred Perry EU',url:'https://www.fredperry.com/eu/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
+  stoneisland:{name:'Stone Island',url:'https://www.stoneisland.com/it-it/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
+  stockx:{name:'StockX',url:'https://stockx.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-stores'},
 };
 let current=null;
 function show(id){['s-stores','s-nb','s-nike','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
