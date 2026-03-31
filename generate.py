@@ -1,7 +1,13 @@
-import json, re
+import json, re, sys
 
 with open('zalando_data.json', encoding='utf-8') as f:
     data = json.load(f)
+
+print(f'Данных с Apify: {len(data)} товаров')
+
+if len(data) == 0:
+    print('❌ Пустой результат — index.html не меняем')
+    sys.exit(0)
 
 def get_cat(name):
     for m in ['9060','1906','550','480','204','574','530','327']:
@@ -29,15 +35,27 @@ for p in data:
     is_sale = bool(promo and promo < price)
     products.append({'name':model,'color':color,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model),'img':img,'url':url})
 
-def js_product(p):
+print(f'Обработано уникальных товаров: {len(products)}')
+
+if len(products) == 0:
+    print('❌ После фильтрации 0 товаров — index.html не меняем')
+    sys.exit(0)
+
+def js_p(p):
     old = f', oldPrice:{p["oldPrice"]}' if p['oldPrice'] else ''
     sale = ', sale:true' if p['sale'] else ''
-    return f'  {{name:"{p["name"].replace(chr(34),chr(92)+chr(34))}",color:"{p["color"].replace(chr(34),chr(92)+chr(34))}",price:{p["price"]}{old}{sale},cat:"{p["cat"]}",img:"{p["img"]}",url:"{p["url"]}"}}'
+    n = p['name'].replace('"','\\"')
+    c = p['color'].replace('"','\\"')
+    return f'  {{name:"{n}",color:"{c}",price:{p["price"]}{old}{sale},cat:"{p["cat"]}",img:"{p["img"]}",url:"{p["url"]}"}}'
 
-products_js = 'const products=[\n' + ',\n'.join(js_product(p) for p in products) + '\n];'
+products_js = 'const products=[\n' + ',\n'.join(js_p(p) for p in products) + '\n];'
 
 with open('index.html', encoding='utf-8') as f:
     html = f.read()
+
+if 'const products=[' not in html:
+    print('❌ Паттерн не найден в index.html')
+    sys.exit(1)
 
 html = re.sub(r'const products=\[.*?\];', products_js, html, flags=re.DOTALL)
 html = re.sub(r'\d+ моделей', f'{len(products)} моделей', html)
@@ -45,4 +63,4 @@ html = re.sub(r'\d+ моделей', f'{len(products)} моделей', html)
 with open('index.html', 'w', encoding='utf-8') as f:
     f.write(html)
 
-print(f'✅ Обновлено: {len(products)} товаров')
+print(f'✅ index.html обновлён: {len(products)} товаров')
