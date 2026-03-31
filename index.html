@@ -175,7 +175,7 @@
       <div class="store-grid">
         <button class="store-btn multi" onclick="show('s-nb')">New Balance<span class="ssub">4 страны →</span></button>
         <button class="store-btn multi" onclick="show('s-nike')">Nike<span class="ssub">3 страны →</span></button>
-        <button class="store-btn multi" onclick="show('s-shops')">Интернет-магазины<span class="ssub">9 магазинов →</span></button>
+        <button class="store-btn multi" onclick="show('s-shops')">Интернет-магазины<span class="ssub">11 магазинов →</span></button>
       </div>
     </div>
 
@@ -213,6 +213,8 @@
         <button class="country-btn" onclick="goCalc('fredperry')">Fred Perry<span class="csub">fredperry.com/eu · EUR</span></button>
         <button class="country-btn" onclick="goCalc('stoneisland')">Stone Island<span class="csub">stoneisland.com · EUR</span></button>
         <button class="country-btn" onclick="goCalc('stockx')">StockX<span class="csub">stockx.com · USD</span></button>
+        <button class="country-btn" onclick="goCalc('streetstyle')">Streetstyle24<span class="csub">streetstyle24.pl · EUR</span></button>
+        <button class="country-btn" onclick="goCalc('carhartt')">Carhartt WIP<span class="csub">carhartt-wip.com · GBP</span></button>
       </div>
     </div>
 
@@ -377,10 +379,10 @@
 /* ── КАЛЬКУЛЯТОР ── */
 const RATE=95,RATE_GBP=107,RATE_USD=81,MARKUP=0.25;
 const stores={
-  end:{name:'END',url:'https://www.endclothing.com/eu?storeCode=PL',del:10,log:33,cur:'EUR',rate:RATE,back:'s-stores'},
-  flannels:{name:'Flannels',url:'https://www.flannels.com',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-stores'},
-  bstn:{name:'BSTN',url:'https://www.bstn.com',del:10,log:33,cur:'EUR',rate:RATE,back:'s-stores'},
-  zalando:{name:'Zalando PL',url:'https://www.zalando.pl/obuwie-meskie/',del:0,log:23,cur:'PLN',rate:RATE/4.25,back:'s-stores'},
+  end:{name:'END',url:'https://www.endclothing.com/eu?storeCode=PL',del:10,log:33,cur:'EUR',rate:RATE,back:'s-shops'},
+  flannels:{name:'Flannels',url:'https://www.flannels.com',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-shops'},
+  bstn:{name:'BSTN',url:'https://www.bstn.com',del:10,log:33,cur:'EUR',rate:RATE,back:'s-shops'},
+  zalando:{name:'Zalando PL',url:'https://www.zalando.pl/obuwie-meskie/',del:0,log:23,cur:'PLN',rate:RATE/4.25,back:'s-shops'},
   'nb-pl':{name:'NB Poland',url:'https://www.newbalance.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-nb'},
   'nb-uk':{name:'NB UK',url:'https://www.newbalance.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-nb'},
   'nb-us':{name:'NB USA',url:'https://www.newbalance.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-nb'},
@@ -388,11 +390,13 @@ const stores={
   'nike-us':{name:'Nike USA',url:'https://www.nike.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-nike'},
   'nike-de':{name:'Nike Germany',url:'https://www.nike.com/de/',del:10,log:33,cur:'EUR',rate:RATE,back:'s-nike'},
   'nike-pl':{name:'Nike Poland',url:'https://www.nike.com/pl/mezczyzni',del:0,log:23,cur:'EUR',rate:RATE,back:'s-nike'},
-  farfetch:{name:'Farfetch',url:'https://www.farfetch.com/pl/shopping/men/shoes-2/items.aspx',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
-  terraces:{name:'Terraces Menswear',url:'https://www.terracesmenswear.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-stores'},
-  fredperry:{name:'Fred Perry EU',url:'https://www.fredperry.com/eu/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
-  stoneisland:{name:'Stone Island',url:'https://www.stoneisland.com/it-it/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
-  stockx:{name:'StockX',url:'https://stockx.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-stores'},
+  farfetch:{name:'Farfetch',url:'https://www.farfetch.com/pl/shopping/men/shoes-2/items.aspx',del:0,log:23,cur:'EUR',rate:RATE,back:'s-shops'},
+  terraces:{name:'Terraces Menswear',url:'https://www.terracesmenswear.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-shops'},
+  fredperry:{name:'Fred Perry EU',url:'https://www.fredperry.com/eu/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-shops'},
+  stoneisland:{name:'Stone Island',url:'https://www.stoneisland.com/it-it/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-shops'},
+  stockx:{name:'StockX',url:'https://stockx.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-shops'},
+  streetstyle:{name:'Streetstyle24',url:'https://streetstyle24.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-shops'},
+  carhartt:{name:'Carhartt WIP',url:'https://www.carhartt-wip.com/en-gb',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-shops'},
 };
 let current=null;
 function show(id){['s-stores','s-nb','s-nike','s-shops','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
