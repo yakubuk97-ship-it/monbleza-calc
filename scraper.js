@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 
 const OUTPUT_FILE = 'zalando_data.json';
-const BASE_URL = 'https://www.zalando.de/sneaker/new-balance/';
+const BASE_URL = 'https://www.zalando.de/herren/?q=new+balance+574';
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
@@ -76,7 +76,8 @@ async function run() {
   let emptyPages = 0;
 
   while (emptyPages < 2) {
-    const url = pageNum === 1 ? BASE_URL : `${BASE_URL}?p=${pageNum}`;
+    const sep = BASE_URL.includes('?') ? '&' : '?';
+    const url = pageNum === 1 ? BASE_URL : `${BASE_URL}${sep}p=${pageNum}`;
     console.log(`Page ${pageNum}: ${url}`);
     const added = await scrapePage(page, url, allProducts);
     console.log(`  +${added} products (total raw: ${allProducts.length})`);
