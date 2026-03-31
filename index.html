@@ -170,27 +170,32 @@
   <p class="subtitle">Выбери магазин для расчёта</p>
 
   <div class="card">
+    <!-- Главный экран -->
     <div id="s-stores">
       <div class="sec-label">Интернет-магазины</div>
       <div class="store-grid">
+        <button class="store-btn multi" onclick="show('s-official')">Официальные магазины<span class="ssub">бренды → сайты →</span></button>
+        <button class="store-btn multi" onclick="show('s-multi')">Мультибрендовые<span class="ssub">7 магазинов →</span></button>
+        <button class="store-btn multi" onclick="show('s-market')">Маркетплейсы<span class="ssub">StockX и др. →</span></button>
+      </div>
+    </div>
+
+    <!-- Официальные магазины -->
+    <div id="s-official" class="hidden">
+      <button class="back-btn" onclick="show('s-stores')">← назад</button>
+      <div class="sec-label">Официальные магазины</div>
+      <div class="store-grid">
         <button class="store-btn multi" onclick="show('s-nb')">New Balance<span class="ssub">4 страны →</span></button>
         <button class="store-btn multi" onclick="show('s-nike')">Nike<span class="ssub">3 страны →</span></button>
-        <button class="store-btn" onclick="goCalc('end')">END<span class="ssub">endclothing.com · EUR</span></button>
-        <button class="store-btn" onclick="goCalc('flannels')">Flannels<span class="ssub">flannels.com · GBP</span></button>
-        <button class="store-btn" onclick="goCalc('bstn')">BSTN<span class="ssub">bstn.com · EUR</span></button>
-        <button class="store-btn" onclick="goCalc('zalando')">Zalando<span class="ssub">zalando.pl · PLN</span></button>
-        <button class="store-btn" onclick="goCalc('farfetch')">Farfetch<span class="ssub">farfetch.com · EUR</span></button>
-        <button class="store-btn" onclick="goCalc('terraces')">Terraces<span class="ssub">terracesmenswear · GBP</span></button>
-        <button class="store-btn" onclick="goCalc('fredperry')">Fred Perry<span class="ssub">fredperry.com · EUR</span></button>
+        <button class="store-btn" onclick="goCalc('fredperry')">Fred Perry<span class="ssub">fredperry.com/eu · EUR</span></button>
         <button class="store-btn" onclick="goCalc('stoneisland')">Stone Island<span class="ssub">stoneisland.com · EUR</span></button>
-        <button class="store-btn" onclick="goCalc('stockx')">StockX<span class="ssub">stockx.com · USD</span></button>
-        <button class="store-btn" onclick="goCalc('streetstyle')">Streetstyle24<span class="ssub">streetstyle24.pl · EUR</span></button>
         <button class="store-btn" onclick="goCalc('carhartt')">Carhartt WIP<span class="ssub">carhartt-wip.com · GBP</span></button>
       </div>
     </div>
 
+    <!-- New Balance -->
     <div id="s-nb" class="hidden">
-      <button class="back-btn" onclick="show('s-stores')">← назад</button>
+      <button class="back-btn" onclick="show('s-official')">← назад</button>
       <div class="sec-label">New Balance — выбери сайт</div>
       <div class="country-grid">
         <button class="country-btn" onclick="goCalc('nb-pl')">🇵🇱 Poland<span class="csub">newbalance.pl · EUR</span></button>
@@ -200,13 +205,38 @@
       </div>
     </div>
 
+    <!-- Nike -->
     <div id="s-nike" class="hidden">
-      <button class="back-btn" onclick="show('s-stores')">← назад</button>
+      <button class="back-btn" onclick="show('s-official')">← назад</button>
       <div class="sec-label">Nike — выбери сайт</div>
       <div class="country-grid">
         <button class="country-btn" onclick="goCalc('nike-us')">🇺🇸 USA<span class="csub">nike.com · USD</span></button>
         <button class="country-btn" onclick="goCalc('nike-de')">🇩🇪 Германия<span class="csub">nike.com/de · EUR</span></button>
         <button class="country-btn" onclick="goCalc('nike-pl')">🇵🇱 Польша<span class="csub">nike.com/pl · EUR</span></button>
+      </div>
+    </div>
+
+    <!-- Мультибрендовые -->
+    <div id="s-multi" class="hidden">
+      <button class="back-btn" onclick="show('s-stores')">← назад</button>
+      <div class="sec-label">Мультибрендовые магазины</div>
+      <div class="store-grid">
+        <button class="store-btn" onclick="goCalc('end')">END<span class="ssub">endclothing.com · EUR</span></button>
+        <button class="store-btn" onclick="goCalc('flannels')">Flannels<span class="ssub">flannels.com · GBP</span></button>
+        <button class="store-btn" onclick="goCalc('bstn')">BSTN<span class="ssub">bstn.com · EUR</span></button>
+        <button class="store-btn" onclick="goCalc('zalando')">Zalando<span class="ssub">zalando.pl · PLN</span></button>
+        <button class="store-btn" onclick="goCalc('farfetch')">Farfetch<span class="ssub">farfetch.com · EUR</span></button>
+        <button class="store-btn" onclick="goCalc('terraces')">Terraces<span class="ssub">terracesmenswear · GBP</span></button>
+        <button class="store-btn" onclick="goCalc('streetstyle')">Streetstyle24<span class="ssub">streetstyle24.pl · EUR</span></button>
+      </div>
+    </div>
+
+    <!-- Маркетплейсы -->
+    <div id="s-market" class="hidden">
+      <button class="back-btn" onclick="show('s-stores')">← назад</button>
+      <div class="sec-label">Маркетплейсы</div>
+      <div class="store-grid">
+        <button class="store-btn" onclick="goCalc('stockx')">StockX<span class="ssub">stockx.com · USD</span></button>
       </div>
     </div>
 
@@ -371,10 +401,10 @@
 /* ── КАЛЬКУЛЯТОР ── */
 const RATE=95,RATE_GBP=107,RATE_USD=81,MARKUP=0.25;
 const stores={
-  end:{name:'END',url:'https://www.endclothing.com/eu?storeCode=PL',del:10,log:33,cur:'EUR',rate:RATE,back:'s-stores'},
-  flannels:{name:'Flannels',url:'https://www.flannels.com',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-stores'},
-  bstn:{name:'BSTN',url:'https://www.bstn.com',del:10,log:33,cur:'EUR',rate:RATE,back:'s-stores'},
-  zalando:{name:'Zalando PL',url:'https://www.zalando.pl/obuwie-meskie/',del:0,log:23,cur:'PLN',rate:RATE/4.25,back:'s-stores'},
+  end:{name:'END',url:'https://www.endclothing.com/eu?storeCode=PL',del:10,log:33,cur:'EUR',rate:RATE,back:'s-multi'},
+  flannels:{name:'Flannels',url:'https://www.flannels.com',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-multi'},
+  bstn:{name:'BSTN',url:'https://www.bstn.com',del:10,log:33,cur:'EUR',rate:RATE,back:'s-multi'},
+  zalando:{name:'Zalando PL',url:'https://www.zalando.pl/obuwie-meskie/',del:0,log:23,cur:'PLN',rate:RATE/4.25,back:'s-multi'},
   'nb-pl':{name:'NB Poland',url:'https://www.newbalance.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-nb'},
   'nb-uk':{name:'NB UK',url:'https://www.newbalance.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-nb'},
   'nb-us':{name:'NB USA',url:'https://www.newbalance.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-nb'},
@@ -382,16 +412,16 @@ const stores={
   'nike-us':{name:'Nike USA',url:'https://www.nike.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-nike'},
   'nike-de':{name:'Nike Germany',url:'https://www.nike.com/de/',del:10,log:33,cur:'EUR',rate:RATE,back:'s-nike'},
   'nike-pl':{name:'Nike Poland',url:'https://www.nike.com/pl/mezczyzni',del:0,log:23,cur:'EUR',rate:RATE,back:'s-nike'},
-  farfetch:{name:'Farfetch',url:'https://www.farfetch.com/pl/shopping/men/shoes-2/items.aspx',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
-  terraces:{name:'Terraces Menswear',url:'https://www.terracesmenswear.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-stores'},
-  fredperry:{name:'Fred Perry EU',url:'https://www.fredperry.com/eu/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
-  stoneisland:{name:'Stone Island',url:'https://www.stoneisland.com/it-it/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
-  stockx:{name:'StockX',url:'https://stockx.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-stores'},
-  streetstyle:{name:'Streetstyle24',url:'https://streetstyle24.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-stores'},
-  carhartt:{name:'Carhartt WIP',url:'https://www.carhartt-wip.com/en-gb',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-stores'},
+  farfetch:{name:'Farfetch',url:'https://www.farfetch.com/pl/shopping/men/shoes-2/items.aspx',del:0,log:23,cur:'EUR',rate:RATE,back:'s-multi'},
+  terraces:{name:'Terraces Menswear',url:'https://www.terracesmenswear.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-multi'},
+  fredperry:{name:'Fred Perry EU',url:'https://www.fredperry.com/eu/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-official'},
+  stoneisland:{name:'Stone Island',url:'https://www.stoneisland.com/it-it/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-official'},
+  stockx:{name:'StockX',url:'https://stockx.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-market'},
+  streetstyle:{name:'Streetstyle24',url:'https://streetstyle24.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-multi'},
+  carhartt:{name:'Carhartt WIP',url:'https://www.carhartt-wip.com/en-gb',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-official'},
 };
 let current=null;
-function show(id){['s-stores','s-nb','s-nike','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
+function show(id){['s-stores','s-official','s-nb','s-nike','s-multi','s-market','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
 function goCalc(key){current=stores[key];document.getElementById('c-name').textContent=current.name;document.getElementById('c-link').href=current.url;document.getElementById('store-icon-link').href=current.url;document.getElementById('c-del').textContent=current.del>0?current.del+' '+current.cur:'Бесплатно';document.getElementById('c-cur').textContent=current.cur;document.getElementById('price').value='';document.getElementById('sub-row').classList.add('hidden');document.getElementById('final-block').classList.add('hidden');document.getElementById('out-num').textContent='—';document.getElementById('out-cur').textContent='';document.getElementById('out-sub').textContent='';show('s-calc');setTimeout(()=>document.getElementById('price').focus(),100);}
 function backFromCalc(){show(current?current.back:'s-stores');}
 function fmt(n){return Math.round(n).toLocaleString('ru-RU')+' ₽';}
