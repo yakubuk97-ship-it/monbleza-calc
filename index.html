@@ -8,8 +8,8 @@
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
   :root{--bg:#0c0c0c;--surface:#141414;--s2:#1e1e1e;--border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.15);--gold:#c9a84c;--text:#f0ede8;--muted:rgba(240,237,232,0.45);--dim:rgba(240,237,232,0.18);}
-  html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;padding:40px 20px;background-image:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(201,168,76,0.05) 0%,transparent 70%);}
-  .wrap{width:100%;max-width:400px;margin:0 auto;}
+  html,body{min-height:100vh;background:var(--bg);color:var(--text);font-family:'Jost',sans-serif;font-weight:300;-webkit-font-smoothing:antialiased;padding:0;background-image:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(201,168,76,0.05) 0%,transparent 70%);}
+  .wrap{width:100%;max-width:1280px;margin:0 auto;padding:0 32px;}
   .title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:300;text-align:center;line-height:1.2;margin-bottom:8px;}
   .title em{font-style:italic;color:var(--gold);}
   .subtitle{font-size:11px;color:var(--muted);text-align:center;letter-spacing:0.15em;text-transform:uppercase;margin-bottom:32px;}
@@ -94,10 +94,12 @@
   .filter-row::-webkit-scrollbar{display:none;}
   .f-btn{flex-shrink:0;padding:6px 13px;border-radius:20px;font-size:10px;letter-spacing:0.1em;cursor:pointer;border:0.5px solid var(--border2);color:var(--muted);background:transparent;transition:all 0.2s;font-family:'Jost',sans-serif;}
   .f-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.08);}
-  .cat-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;}
+  @media(max-width:600px){.cat-grid{grid-template-columns:1fr 1fr;}}
   .cat-card{background:var(--surface);border:0.5px solid var(--border);border-radius:2px;overflow:hidden;cursor:pointer;transition:border-color 0.2s;}
   .cat-card:hover{border-color:rgba(201,168,76,0.4);}
   .cat-img{width:100%;height:150px;background:#f5f3ef;overflow:hidden;position:relative;}
+  @media(min-width:1024px){.cat-img{height:200px;}}
   .cat-img img{width:100%;height:100%;object-fit:contain;padding:10px;}
   .sale-tag{position:absolute;top:7px;left:7px;background:#e53935;color:white;font-size:9px;padding:2px 6px;border-radius:2px;letter-spacing:0.08em;font-weight:500;}
   .cat-body{padding:10px 11px;}
@@ -154,10 +156,25 @@
   .mbtn-site:hover{border-color:var(--gold);color:var(--gold);}
   .close-btn{width:100%;padding:12px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;}
   .close-btn:hover{border-color:var(--gold);color:var(--gold);}
-  .top-tabs{display:flex;gap:6px;margin-bottom:24px;}
-  .top-tab{flex:1;padding:10px 8px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.2s;}
-  .top-tab:hover{border-color:var(--gold);color:var(--text);}
-  .top-tab.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.07);}
+  /* ── SITE HEADER ── */
+  .site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:56px;background:rgba(12,12,12,0.9);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);}
+  .site-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.1em;color:var(--gold);}
+  .site-nav{display:flex;gap:2px;}
+  .nav-btn{background:transparent;border:none;color:var(--muted);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 14px;cursor:pointer;border-radius:2px;transition:all 0.2s;}
+  .nav-btn:hover{color:var(--text);background:rgba(255,255,255,0.05);}
+  .nav-btn.active{color:var(--gold);background:rgba(201,168,76,0.08);}
+  .nav-tg{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);text-decoration:none;letter-spacing:0.08em;transition:color 0.2s;}
+  .nav-tg:hover{color:var(--gold);}
+  @media(max-width:600px){
+    .site-header{padding:0 16px;}
+    .nav-tg span{display:none;}
+    .site-nav .nav-btn{padding:8px 10px;font-size:10px;}
+  }
+  /* ── CONTENT ── */
+  .content-area{padding-top:24px;}
+  .calc-wrap{max-width:480px;margin:40px auto;}
+  /* ── CATALOG FILTERS STICKY ── */
+  .catalog-filters{position:sticky;top:56px;z-index:90;background:rgba(12,12,12,0.95);backdrop-filter:blur(8px);padding:12px 0;border-bottom:0.5px solid var(--border);margin-bottom:16px;}
   .delivery-section{display:none;}
   .delivery-section.show{display:block;}
   .dlv-block{background:var(--surface);border:0.5px solid var(--border);border-radius:2px;padding:22px 20px;margin-bottom:10px;position:relative;}
@@ -214,16 +231,21 @@
 </style>
 </head>
 <body>
+<header class="site-header">
+  <div class="site-logo">Monbleza</div>
+  <nav class="site-nav">
+    <button class="nav-btn active" id="tab-calc" onclick="switchTab('calc')">Калькулятор</button>
+    <button class="nav-btn" id="tab-stock" onclick="switchTab('stock')">В наличии</button>
+    <button class="nav-btn" id="tab-delivery" onclick="switchTab('delivery')">Доставка</button>
+    <button class="nav-btn" id="tab-catalog" onclick="switchTab('catalog')">Каталог</button>
+  </nav>
+  <a class="nav-tg" href="https://t.me/euclothing" target="_blank">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+    <span>@euclothing</span>
+  </a>
+</header>
 <div class="wrap">
-  <h1 class="title">Узнать цену<br>с <em>доставкой</em></h1>
-  <p class="subtitle">Беларусь · Доставка из Европы</p>
-
-  <div class="top-tabs">
-    <button class="top-tab active" id="tab-calc" onclick="switchTab('calc')">Калькулятор</button>
-    <button class="top-tab" id="tab-stock" onclick="switchTab('stock')">В наличии</button>
-    <button class="top-tab" id="tab-delivery" onclick="switchTab('delivery')">Доставка</button>
-    <button class="top-tab" id="tab-catalog" onclick="switchTab('catalog')">Каталог</button>
-  </div>
+<div class="content-area">
 
   <!-- РАЗДЕЛ В НАЛИЧИИ -->
   <div class="stock-section" id="section-stock" style="display:none">
@@ -289,6 +311,7 @@
     </div>
   </div>
 
+  <div class="calc-wrap">
   <div class="card" id="section-calc">
     <!-- Главный экран -->
     <div id="s-stores">
@@ -397,6 +420,7 @@
       </div>
     </div>
   </div>
+  </div><!-- /calc-wrap -->
 
   <!-- КАТАЛОГ ZALANDO -->
   <div class="catalog-section" id="section-catalog" style="display:none">
@@ -404,11 +428,13 @@
       <div class="catalog-title">Каталог · Zalando Germany</div>
       <div class="catalog-badge">Оригинал</div>
     </div>
-    <div style="margin-bottom:10px;">
-      <input id="search-input" type="text" placeholder="Поиск... (530, 574, 9060, Nike, Adidas)" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:0.5px solid var(--border2);border-radius:2px;color:var(--text);font-family:'Jost',sans-serif;font-size:13px;padding:10px 14px;outline:none;" oninput="applyFilters()">
+    <div class="catalog-filters">
+      <div style="margin-bottom:10px;">
+        <input id="search-input" type="text" placeholder="Поиск... (530, 574, 9060, Nike, Adidas)" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:0.5px solid var(--border2);border-radius:2px;color:var(--text);font-family:'Jost',sans-serif;font-size:13px;padding:10px 14px;outline:none;" oninput="applyFilters()">
+      </div>
+      <div class="filter-row" id="brand-filter-row" style="display:none"></div>
+      <div class="filter-row" id="size-filter-row" style="display:none"></div>
     </div>
-    <div class="filter-row" id="brand-filter-row" style="display:none"></div>
-    <div class="filter-row" id="size-filter-row" style="display:none"></div>
     <div class="cat-grid" id="cat-grid"></div>
   </div>
 
@@ -463,7 +489,8 @@
       <a class="contact-link" href="https://vk.com/euclothing" target="_blank">vk.com</a>
     </div>
   </div>
-</div>
+</div><!-- /content-area -->
+</div><!-- /wrap -->
 
 <!-- CART FAB -->
 <button class="cart-fab" id="cart-fab" onclick="openCart()">
