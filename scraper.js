@@ -8,7 +8,7 @@ const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 
 const OUTPUT_FILE = 'zalando_data.json';
-const CATALOG_URL = 'https://www.zalando.de/herrenschuhe/new-balance/';
+const CATALOG_URL = 'https://www.zalando.de/sneaker/new-balance/';
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 async function run() {
@@ -46,6 +46,8 @@ async function run() {
           const origAmount = node.displayPrice?.original?.amount;
           const promoAmount = node.displayPrice?.promotional?.amount;
 
+          const sizes = (node.simples || []).map(s => s.size).filter(Boolean);
+
           allProducts.push({
             name: node.name,
             brand: node.brand?.name || 'New Balance',
@@ -54,6 +56,7 @@ async function run() {
             originalPrice: origAmount || 0,       // in cents, e.g. 11995 = €119.95
             promotionalPrice: promoAmount || null, // in cents
             productUrl: node.uri || '',
+            sizes,
           });
         }
       }

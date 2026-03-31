@@ -34,7 +34,8 @@ for p in data:
     seen_imgs.add(img)
     is_sale = bool(promo and promo < price)
     brand = p.get('brand','New Balance')
-    products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model),'img':img,'url':url})
+    sizes = p.get('sizes', [])
+    products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model),'img':img,'url':url,'sizes':sizes})
 
 print(f'Обработано уникальных товаров: {len(products)}')
 
@@ -48,7 +49,8 @@ def js_p(p):
     n = p['name'].replace('"','\\"')
     c = p['color'].replace('"','\\"')
     b = p['brand'].replace('"','\\"')
-    return f'  {{name:"{n}",color:"{c}",brand:"{b}",price:{p["price"]}{old}{sale},cat:"{p["cat"]}",img:"{p["img"]}",url:"{p["url"]}"}}'
+    sizes_js = json.dumps(p.get('sizes',[]))
+    return f'  {{name:"{n}",color:"{c}",brand:"{b}",price:{p["price"]}{old}{sale},cat:"{p["cat"]}",img:"{p["img"]}",url:"{p["url"]}",sizes:{sizes_js}}}'
 
 products_js = 'const products=[\n' + ',\n'.join(js_p(p) for p in products) + '\n];'
 
