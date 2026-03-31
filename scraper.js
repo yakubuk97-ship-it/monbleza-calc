@@ -1,17 +1,30 @@
 #!/usr/bin/env node
 /**
  * Zalando Germany scraper — New Balance sneakers
- * Scrolls through all pages to collect all products
+ * Iterates through all pages to collect all products
  */
 
 const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 
 const OUTPUT_FILE = 'zalando_data.json';
-const CATALOG_URL = 'https://www.zalando.de/sneaker/new-balance/';
+const BASE_URL = 'https://www.zalando.de/sneaker/new-balance/';
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+async function scrapePage(page, url, allProducts) {
+  const before = allProducts.length;
+
+  await page.goto(url, { waitUntil: 'networkidle2', timeout: 60000 });
+  await sleep(2000);
+
+  // Scroll once to trigger lazy loads
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await sleep(2000);
+
+  return allProducts.length - before;
+}
 
 async function run() {
   console.log('Launching Chrome...');
@@ -31,23 +44,18 @@ async function run() {
   page.on('response', async (response) => {
     const url = response.url();
     if (!url.includes('/api/graphql')) return;
-
     try {
       const data = await response.json();
       const items = Array.isArray(data) ? data : [data];
-
       for (const item of items) {
         const edges = item?.data?.product?.family?.products?.edges;
         if (!edges) continue;
-
         for (const edge of edges) {
           const node = edge?.node;
           if (!node || !node.name) continue;
-
           const origAmount = node.displayPrice?.original?.amount;
           const promoAmount = node.displayPrice?.promotional?.amount;
           const sizes = (node.simples || []).map(s => s.size).filter(Boolean);
-
           allProducts.push({
             name: node.name,
             brand: node.brand?.name || 'New Balance',
@@ -63,38 +71,31 @@ async function run() {
     } catch (e) {}
   });
 
-  console.log('Opening Zalando catalog...');
-  await page.goto(CATALOG_URL, { waitUntil: 'networkidle2', timeout: 60000 });
-  await sleep(2000);
+  // Iterate pages until empty
+  let pageNum = 1;
+  let emptyPages = 0;
 
-  // Scroll to load all products (Zalando uses infinite scroll)
-  let prevCount = 0;
-  let noChangeRounds = 0;
+  while (emptyPages < 2) {
+    const url = pageNum === 1 ? BASE_URL : `${BASE_URL}?p=${pageNum}`;
+    console.log(`Page ${pageNum}: ${url}`);
+    const added = await scrapePage(page, url, allProducts);
+    console.log(`  +${added} products (total raw: ${allProducts.length})`);
 
-  for (let round = 0; round < 20; round++) {
-    await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
-    await sleep(2000);
-
-    const count = allProducts.length;
-    console.log(`  Round ${round + 1}: ${count} products collected`);
-
-    if (count === prevCount) {
-      noChangeRounds++;
-      if (noChangeRounds >= 3) {
-        console.log('  No new products — reached end');
-        break;
-      }
+    if (added === 0) {
+      emptyPages++;
     } else {
-      noChangeRounds = 0;
+      emptyPages = 0;
     }
-    prevCount = count;
+    pageNum++;
+
+    if (pageNum > 30) break; // safety limit
   }
 
   await browser.close();
 
-  console.log(`\nTotal collected: ${allProducts.length} products`);
+  console.log(`\nTotal raw: ${allProducts.length}`);
 
-  // Deduplicate by productUrl (same product, different sizes)
+  // Deduplicate by productUrl
   const seen = new Set();
   const unique = allProducts.filter(p => {
     const key = p.productUrl || p.imageUrl;
