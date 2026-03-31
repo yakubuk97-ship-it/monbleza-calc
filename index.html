@@ -64,6 +64,27 @@
   .contact-link:hover{color:var(--gold);border-color:var(--gold);}
   .hidden{display:none;}
 
+  /* ── В НАЛИЧИИ ── */
+  .stock-section{margin-bottom:12px;}
+  .stock-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
+  .stock-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
+  .stock-badge{font-size:10px;color:#4caf50;border:0.5px solid rgba(76,175,80,0.35);padding:3px 8px;border-radius:2px;letter-spacing:0.1em;}
+  .stock-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .stock-card{background:var(--surface);border:0.5px solid var(--border);border-radius:2px;overflow:hidden;transition:border-color 0.2s;}
+  .stock-card:hover{border-color:rgba(201,168,76,0.4);}
+  .stock-img{width:100%;height:150px;background:#f5f3ef;overflow:hidden;position:relative;}
+  .stock-img img{width:100%;height:100%;object-fit:contain;padding:10px;}
+  .stock-avail{position:absolute;top:7px;left:7px;background:#2e7d32;color:white;font-size:9px;padding:2px 6px;border-radius:2px;letter-spacing:0.06em;font-weight:500;}
+  .stock-body{padding:10px 11px;}
+  .stock-brand{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);margin-bottom:2px;}
+  .stock-name{font-size:11px;color:var(--text);line-height:1.3;margin-bottom:4px;}
+  .stock-size{font-size:10px;color:var(--gold);margin-bottom:6px;}
+  .stock-price{font-size:15px;font-weight:300;}
+  .stock-rub{font-size:10px;color:var(--dim);margin-top:2px;}
+  .stock-btn{display:block;width:100%;margin-top:8px;padding:7px;background:transparent;border:0.5px solid var(--gold);border-radius:2px;color:var(--gold);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;text-align:center;text-decoration:none;transition:all 0.2s;}
+  .stock-btn:hover{background:var(--gold);color:#0c0c0c;}
+  .stock-empty{text-align:center;color:var(--muted);font-size:13px;padding:40px 0;background:var(--surface);border:0.5px solid var(--border);border-radius:2px;}
+
   /* ── КАТАЛОГ ZALANDO ── */
   .catalog-section{margin-bottom:12px;}
   .catalog-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
@@ -189,8 +210,18 @@
 
   <div class="top-tabs">
     <button class="top-tab active" id="tab-calc" onclick="switchTab('calc')">Калькулятор</button>
+    <button class="top-tab" id="tab-stock" onclick="switchTab('stock')">В наличии</button>
     <button class="top-tab" id="tab-delivery" onclick="switchTab('delivery')">Доставка</button>
     <button class="top-tab" id="tab-catalog" onclick="switchTab('catalog')">Каталог</button>
+  </div>
+
+  <!-- РАЗДЕЛ В НАЛИЧИИ -->
+  <div class="stock-section" id="section-stock" style="display:none">
+    <div class="stock-header">
+      <div class="stock-title">Товары в наличии</div>
+      <div class="stock-badge" id="stock-badge">● Есть</div>
+    </div>
+    <div class="stock-grid" id="stock-grid"></div>
   </div>
 
   <!-- РАЗДЕЛ ДОСТАВКА -->
@@ -477,15 +508,49 @@
 </div>
 
 <script>
+/* ── ТОВАРЫ В НАЛИЧИИ ── */
+const stockItems = [
+  // Добавляй сюда товары в формате:
+  // {brand:'Nike',name:'Air Force 1',size:'42',price:120,img:'URL картинки',url:'ссылка на товар или tg'}
+];
+
+function renderStock(){
+  const grid = document.getElementById('stock-grid');
+  document.getElementById('stock-badge').textContent = stockItems.length
+    ? '● ' + stockItems.length + ' ' + (stockItems.length===1?'товар':stockItems.length<5?'товара':'товаров')
+    : '● Скоро';
+  if(!stockItems.length){
+    grid.innerHTML='<div class="stock-empty" style="grid-column:1/-1">Скоро здесь появятся товары</div>';
+    return;
+  }
+  grid.innerHTML = stockItems.map((p,i)=>`
+    <div class="stock-card">
+      <div class="stock-img">
+        <div class="stock-avail">В наличии</div>
+        <img src="${p.img||''}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="stock-body">
+        <div class="stock-brand">${p.brand}</div>
+        <div class="stock-name">${p.name}</div>
+        <div class="stock-size">Размер ${p.size}</div>
+        <div class="stock-price">${p.price.toFixed(2)} €</div>
+        <div class="stock-rub">≈ ${calcRub(p.price).toLocaleString('ru-RU')} ₽</div>
+        <a class="stock-btn" href="${p.url||'https://t.me/euclothing'}" target="_blank">Заказать →</a>
+      </div>
+    </div>
+  `).join('');
+}
+
 /* ── ВКЛАДКИ ── */
 function switchTab(tab){
-  ['calc','delivery','catalog'].forEach(t=>{
+  ['calc','stock','delivery','catalog'].forEach(t=>{
     document.getElementById('tab-'+t).classList.remove('active');
   });
   document.getElementById('tab-'+tab).classList.add('active');
-  document.getElementById('section-calc').style.display = tab==='calc'?'':'none';
-  document.getElementById('section-delivery').style.display = tab==='delivery'?'block':'none';
-  document.getElementById('section-catalog').style.display = tab==='catalog'?'':'none';
+  document.getElementById('section-calc').style.display    = tab==='calc'    ? '' : 'none';
+  document.getElementById('section-stock').style.display   = tab==='stock'   ? '' : 'none';
+  document.getElementById('section-delivery').style.display= tab==='delivery'? 'block':'none';
+  document.getElementById('section-catalog').style.display = tab==='catalog' ? '' : 'none';
 }
 
 /* ── КАЛЬКУЛЯТОР ── */
@@ -8068,6 +8133,7 @@ function closeOverlay(){document.getElementById('overlay').classList.remove('sho
 
 buildFilters();
 applyFilters();
+renderStock();
 </script>
 </body>
 </html>
