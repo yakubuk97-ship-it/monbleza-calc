@@ -11,19 +11,46 @@ if len(data) == 0:
 
 def get_cat(name, color=''):
     n = name.upper()
-    for m in ['9060','1906','550','480','204','574','530','327']:
+    for m in ['9060','1906','550','480','204','574','530','327','2002','993','990','998','860','1080','1500','240']:
         if m in n: return m
-    if any(w in n for w in ['HOODIE','SWEATSHIRT','PULLOVER','HOODY']): return 'hoodie'
-    if any(w in n for w in ['T-SHIRT','TEE','TSHIRT']): return 'tshirt'
-    if any(w in n for w in ['JACKET','PARKA','WINDBREAKER','ANORAK']): return 'jacket'
-    if any(w in n for w in ['JOGGER','SWEATPANT','TRACKPANT','TROUSER']): return 'jogger'
+    # Sneaker keywords (for items that don't have a model number)
+    if any(w in n for w in ['SNEAKER','AIR MAX','DUNK','FORCE 1','AIR FORCE','FORUM','STAN SMITH','SUPERSTAR','CLASSIC','CHUCK','OLD SKOOL','ERA ','AUTHENTIC','SK8']):
+        return 'sneaker'
+    # Hoodie/sweatshirt (German: Hoodie, Sweatshirt, Kapuzenpullover)
+    if any(w in n for w in ['HOODIE','SWEATSHIRT','PULLOVER','HOODY','KAPUZENPULLOVER','FLEECE']):
+        return 'hoodie'
+    # T-shirt (German: T-Shirt, Shirt)
+    if any(w in n for w in ['T-SHIRT','TEE','TSHIRT',' SHIRT','LONGSLEEVE','LANGARMSHIRT']):
+        return 'tshirt'
+    # Jacket (German: Jacke, Windbreaker, Anorak, Parka)
+    if any(w in n for w in ['JACKET','PARKA','WINDBREAKER','ANORAK','JACKE','BLOUSON','STEPPJACKE']):
+        return 'jacket'
+    # Joggers/pants (German: Jogginghose, Trainingshose)
+    if any(w in n for w in ['JOGGER','SWEATPANT','TRACKPANT','TROUSER','JOGGINGHOSE','TRAININGSHOSE','HOSE']):
+        return 'jogger'
     return 'other'
 
 products = []
 seen_imgs = set()
 
 for p in data:
-    raw = p.get('name','').replace(' UNISEX','').replace(' - Trainers','').replace(' - Low-top trainers','').strip()
+    raw = (p.get('name','')
+           .replace(' UNISEX','')
+           .replace(' - Trainers','')
+           .replace(' - Low-top trainers','')
+           .replace(' - Sneaker low','')
+           .replace(' - Sneaker high','')
+           .replace(' - Hoodie','')
+           .replace(' - Sweatshirt','')
+           .replace(' - Jogginghose','')
+           .replace(' - Trainingsjacke','')
+           .replace(' - T-Shirt print','')
+           .replace(' - T-Shirt basic','')
+           .replace(' - T-Shirt','')
+           .replace(' - Shirt','')
+           .replace(' - Jacke','')
+           .replace(' - Kapuzenpullover','')
+           .strip())
     parts = raw.split(' - ')
     model = parts[0].strip()
     color = parts[1].strip() if len(parts)>1 else ''
@@ -38,7 +65,7 @@ for p in data:
     if img in seen_imgs: continue
     seen_imgs.add(img)
     is_sale = bool(promo and promo < price)
-    brand = p.get('brand','New Balance')
+    brand = p.get('brand','') or 'Unknown'
     sizes = p.get('sizes', [])
     products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model, color),'img':img,'url':url,'sizes':sizes})
 

@@ -432,6 +432,14 @@
       <div style="margin-bottom:10px;">
         <input id="search-input" type="text" placeholder="Поиск... (530, 574, 9060, Nike, Adidas)" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:0.5px solid var(--border2);border-radius:2px;color:var(--text);font-family:'Jost',sans-serif;font-size:13px;padding:10px 14px;outline:none;" oninput="applyFilters()">
       </div>
+      <div class="filter-row" id="cat-filter-row">
+        <button class="f-btn active" onclick="filterCat('all',this)">Все</button>
+        <button class="f-btn" onclick="filterCat('sneaker',this)">👟 Кроссовки</button>
+        <button class="f-btn" onclick="filterCat('hoodie',this)">🧥 Худи</button>
+        <button class="f-btn" onclick="filterCat('tshirt',this)">👕 Футболки</button>
+        <button class="f-btn" onclick="filterCat('jacket',this)">🧥 Куртки</button>
+        <button class="f-btn" onclick="filterCat('jogger',this)">👖 Джоггеры</button>
+      </div>
       <div class="filter-row" id="brand-filter-row" style="display:none"></div>
       <div class="filter-row" id="size-filter-row" style="display:none"></div>
     </div>
@@ -547,7 +555,7 @@
   </div>
 </div>
 
-<script src="products.js?v=e9561668"></script>
+<script src="products.js?v=774d494e"></script>
 <script>
 /* ── ТОВАРЫ В НАЛИЧИИ ── */
 const stockItems = [
@@ -632,6 +640,10 @@ function calcRub(eur){return Math.round((eur+LOG)*MU*EUR_RUB);}
 let currentProducts=[...products];
 let activeSize='all';
 let activeBrand='all';
+let activeCat='all';
+
+// Which cats count as "sneaker" (model numbers + generic sneaker cat)
+const SNEAKER_CATS=new Set(['9060','1906','550','480','204','574','530','327','2002','993','990','998','860','1080','1500','240','sneaker']);
 
 function buildFilters(){
   // Brand filter
@@ -655,6 +667,13 @@ function buildFilters(){
     +sorted.map(s=>`<button class="f-btn" onclick="filterSize('${s}',this)">${s}</button>`).join('');
 }
 
+function filterCat(cat,btn){
+  activeCat=cat;
+  document.querySelectorAll('#cat-filter-row .f-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  applyFilters();
+}
+
 function filterBrand(brand,btn){
   activeBrand=brand;
   document.querySelectorAll('#brand-filter-row .f-btn').forEach(b=>b.classList.remove('active'));
@@ -672,6 +691,13 @@ function filterSize(size,btn){
 function applyFilters(){
   const q=(document.getElementById('search-input').value||'').trim().toLowerCase();
   let filtered=products;
+  if(activeCat!=='all'){
+    if(activeCat==='sneaker'){
+      filtered=filtered.filter(p=>SNEAKER_CATS.has(p.cat));
+    } else {
+      filtered=filtered.filter(p=>p.cat===activeCat);
+    }
+  }
   if(activeBrand!=='all') filtered=filtered.filter(p=>p.brand===activeBrand);
   if(q) filtered=filtered.filter(p=>(p.name+' '+p.color+' '+p.brand).toLowerCase().includes(q));
   if(activeSize!=='all') filtered=filtered.filter(p=>(p.sizes||[]).includes(activeSize));

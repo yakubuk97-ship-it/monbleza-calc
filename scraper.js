@@ -9,7 +9,7 @@ const fs = require('fs');
 
 const OUTPUT_FILE = 'zalando_data.json';
 const BRAND_URLS = [
-  // Кроссовки — бренды
+  // Кроссовки — бренды (sneaker category pages)
   'https://www.zalando.de/sneaker/new-balance/',
   'https://www.zalando.de/sneaker/nike/',
   'https://www.zalando.de/sneaker/adidas/',
@@ -22,11 +22,19 @@ const BRAND_URLS = [
   'https://www.zalando.de/sneaker/salomon/',
   'https://www.zalando.de/sneaker/on/',
   'https://www.zalando.de/sneaker/diadora/',
-  // Одежда
-  'https://www.zalando.de/hoodies-sweatshirts-herren/',
-  'https://www.zalando.de/t-shirts-tops-herren/',
-  'https://www.zalando.de/jacken-maenner/',
-  'https://www.zalando.de/jogginghosen-herren/',
+  // Одежда — мужские страницы брендов (clothing captured via direct product handler)
+  'https://www.zalando.de/herren/new-balance/',
+  'https://www.zalando.de/herren/nike/',
+  'https://www.zalando.de/herren/adidas/',
+  'https://www.zalando.de/herren/puma/',
+  'https://www.zalando.de/herren/carhartt/',
+  'https://www.zalando.de/herren/fred-perry/',
+  'https://www.zalando.de/herren/stone-island/',
+  'https://www.zalando.de/herren/lacoste/',
+  'https://www.zalando.de/herren/tommy-hilfiger/',
+  'https://www.zalando.de/herren/ralph-lauren/',
+  'https://www.zalando.de/herren/champion/',
+  'https://www.zalando.de/herren/dickies/',
 ];
 const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
@@ -61,6 +69,47 @@ async function run() {
     const allProducts = [];
   const seenUrls = new Set();
 
+  function extractEdges(item) {
+    // Try all known Zalando GraphQL response structures
+    return (
+      item?.data?.product?.family?.products?.edges ||          // brand sneaker pages
+      item?.data?.search?.products?.edges ||                   // search/category pages
+      item?.data?.catalog?.products?.edges ||                  // catalog pages
+      item?.data?.categorySearch?.products?.edges ||           // category search
+      item?.data?.esSearch?.products?.edges ||                 // ES search variant
+      null
+    );
+  }
+
+  function pushProduct(node) {
+    if (!node?.name) return false;
+    const productUrl = node.uri || '';
+    if (seenUrls.has(productUrl)) return false;
+    seenUrls.add(productUrl);
+    const origAmount = node.displayPrice?.original?.amount;
+    const promoAmount = node.displayPrice?.promotional?.amount;
+    const sizes = (node.simples || []).map(s => s.size).filter(Boolean);
+    // Determine image: try several field names
+    const imageUrl = node.packshotImage?.uri
+      || node.packShotThumbnail?.uri
+      || node.mediumPackshotImage?.uri
+      || node.smallPackshotImage?.uri
+      || node.defaultMediaInfo?.uri
+      || node.mediumDefaultMedia?.uri
+      || '';
+    allProducts.push({
+      name: node.name,
+      brand: node.brand?.name || '',
+      imageUrl,
+      currencySymbol: '€',
+      originalPrice: origAmount || 0,
+      promotionalPrice: promoAmount || null,
+      productUrl,
+      sizes,
+    });
+    return true;
+  }
+
   page.on('response', async (response) => {
     const url = response.url();
     if (!url.includes('/api/graphql')) return;
@@ -68,27 +117,18 @@ async function run() {
       const data = await response.json();
       const items = Array.isArray(data) ? data : [data];
       for (const item of items) {
-        const edges = item?.data?.product?.family?.products?.edges;
-        if (!edges) continue;
-        for (const edge of edges) {
-          const node = edge?.node;
-          if (!node || !node.name) continue;
-          const productUrl = node.uri || '';
-          if (seenUrls.has(productUrl)) continue;
-          seenUrls.add(productUrl);
-          const origAmount = node.displayPrice?.original?.amount;
-          const promoAmount = node.displayPrice?.promotional?.amount;
-          const sizes = (node.simples || []).map(s => s.size).filter(Boolean);
-          allProducts.push({
-            name: node.name,
-            brand: node.brand?.name || 'New Balance',
-            imageUrl: node.packshotImage?.uri || node.packShotThumbnail?.uri || '',
-            currencySymbol: '€',
-            originalPrice: origAmount || 0,
-            promotionalPrice: promoAmount || null,
-            productUrl,
-            sizes,
-          });
+        // Handler 1: family.products.edges (brand sneaker category pages)
+        const edges = extractEdges(item);
+        if (edges) {
+          for (const edge of edges) {
+            pushProduct(edge?.node);
+          }
+          continue;
+        }
+        // Handler 2: direct data.product (individual product card responses)
+        const product = item?.data?.product;
+        if (product?.name && product?.displayPrice && product?.uri) {
+          pushProduct(product);
         }
       }
     } catch (e) {}
