@@ -432,6 +432,11 @@
       <div style="margin-bottom:10px;">
         <input id="search-input" type="text" placeholder="Поиск... (530, 574, 9060, Nike, Adidas)" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.05);border:0.5px solid var(--border2);border-radius:2px;color:var(--text);font-family:'Jost',sans-serif;font-size:13px;padding:10px 14px;outline:none;" oninput="applyFilters()">
       </div>
+      <div class="filter-row" id="src-filter-row">
+        <button class="f-btn active" onclick="filterSrc('all',this)">🌍 Все магазины</button>
+        <button class="f-btn" onclick="filterSrc('zal',this)">🇩🇪 Zalando DE</button>
+        <button class="f-btn" onclick="filterSrc('ss24',this)">🇵🇱 StreetStyle24</button>
+      </div>
       <div class="filter-row" id="cat-filter-row">
         <button class="f-btn active" onclick="filterCat('all',this)">Все</button>
         <button class="f-btn" onclick="filterCat('sneaker',this)">👟 Кроссовки</button>
@@ -555,7 +560,7 @@
   </div>
 </div>
 
-<script src="products.js?v=774d494e"></script>
+<script src="products.js?v=c4fa6af1"></script>
 <script>
 /* ── ТОВАРЫ В НАЛИЧИИ ── */
 const stockItems = [
@@ -641,14 +646,16 @@ let currentProducts=[...products];
 let activeSize='all';
 let activeBrand='all';
 let activeCat='all';
+let activeSrc='all';
 
 // Which cats count as "sneaker" (model numbers + generic sneaker cat)
 const SNEAKER_CATS=new Set(['9060','1906','550','480','204','574','530','327','2002','993','990','998','860','1080','1500','240','sneaker']);
 
-function buildFilters(){
-  // Brand filter
+function buildFilters(srcFilter='all'){
+  // Brand filter — only show brands for current source
   const allBrands=new Set();
-  products.forEach(p=>{ if(p.brand) allBrands.add(p.brand); });
+  const srcProducts = srcFilter==='all' ? products : products.filter(p=>p.src===srcFilter);
+  srcProducts.forEach(p=>{ if(p.brand) allBrands.add(p.brand); });
   const brands=[...allBrands].sort();
   const brow=document.getElementById('brand-filter-row');
   if(brands.length>1){
@@ -665,6 +672,15 @@ function buildFilters(){
   row.style.display='flex';
   row.innerHTML='<button class="f-btn active" onclick="filterSize(\'all\',this)">Все размеры</button>'
     +sorted.map(s=>`<button class="f-btn" onclick="filterSize('${s}',this)">${s}</button>`).join('');
+}
+
+function filterSrc(src,btn){
+  activeSrc=src;
+  document.querySelectorAll('#src-filter-row .f-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  // Rebuild brand filter for this source
+  buildFilters(src);
+  applyFilters();
 }
 
 function filterCat(cat,btn){
@@ -691,6 +707,7 @@ function filterSize(size,btn){
 function applyFilters(){
   const q=(document.getElementById('search-input').value||'').trim().toLowerCase();
   let filtered=products;
+  if(activeSrc!=='all') filtered=filtered.filter(p=>p.src===activeSrc);
   if(activeCat!=='all'){
     if(activeCat==='sneaker'){
       filtered=filtered.filter(p=>SNEAKER_CATS.has(p.cat));
@@ -720,9 +737,9 @@ function cardHTML(p,i){
       <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async">
     </div>
     <div class="cat-body">
-      <div class="cat-brand">${p.brand}</div>
+      <div class="cat-brand">${p.brand}${p.src==='ss24'?' <span style="opacity:0.5;font-size:8px;">🇵🇱 SS24</span>':''}</div>
       <div class="cat-name">${p.name}</div>
-      <div class="cat-price">${p.price.toFixed(2)} €</div>
+      <div class="cat-price">${p.price.toFixed(2)} €${p.oldPrice?` <span style="text-decoration:line-through;font-size:11px;color:var(--dim);margin-left:4px;">${p.oldPrice.toFixed(2)}€</span>`:''}</div>
       <div class="cat-rub">≈ ${calcRub(p.price).toLocaleString('ru-RU')} ₽</div>
       ${szHTML}
     </div>

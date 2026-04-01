@@ -1,13 +1,23 @@
-import json, re, sys, hashlib
+import json, re, sys, hashlib, os
 
 with open('zalando_data.json', encoding='utf-8') as f:
     data = json.load(f)
 
-print(f'Данных с Apify: {len(data)} товаров')
+print(f'Данных с Zalando: {len(data)} товаров')
 
-if len(data) == 0:
+# Load StreetStyle24 data if available
+ss_data = []
+if os.path.exists('streetstyle_data.json'):
+    with open('streetstyle_data.json', encoding='utf-8') as f:
+        ss_data = json.load(f)
+    print(f'Данных с StreetStyle24: {len(ss_data)} товаров')
+
+if len(data) == 0 and len(ss_data) == 0:
     print('❌ Пустой результат — файлы не меняем')
     sys.exit(0)
+
+# PLN → EUR conversion rate
+PLN_TO_EUR = 4.25
 
 def get_cat(name, color=''):
     n = name.upper()
@@ -67,8 +77,44 @@ for p in data:
     is_sale = bool(promo and promo < price)
     brand = p.get('brand','') or 'Unknown'
     sizes = p.get('sizes', [])
-    products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model, color),'img':img,'url':url,'sizes':sizes})
+    products.append({'name':model,'color':color,'brand':brand,'price':price,'oldPrice':promo if is_sale else None,'sale':is_sale,'cat':get_cat(model, color),'img':img,'url':url,'sizes':sizes,'src':'zal'})
 
+print(f'Zalando уникальных: {len(products)}')
+
+# === StreetStyle24 processing ===
+for p in ss_data:
+    name_raw = p.get('name','').strip()
+    if not name_raw: continue
+
+    # Price in PLN → convert to EUR
+    sell_pln = p.get('sellPrice', 0)
+    base_pln = p.get('basePrice', None)
+    if not sell_pln or sell_pln <= 0: continue
+
+    price_eur = round(sell_pln / PLN_TO_EUR, 2)
+    old_eur = round(base_pln / PLN_TO_EUR, 2) if base_pln and base_pln > sell_pln else None
+
+    img = p.get('imageUrl', '')
+    if not img: continue
+    if img in seen_imgs: continue
+    seen_imgs.add(img)
+
+    url = p.get('productUrl', '')
+    brand = p.get('brand', '') or 'Unknown'
+    sizes = p.get('sizes', [])
+    is_sale = bool(old_eur and old_eur > price_eur)
+
+    # Name: Polish names often "Buty męskie Brand Model - color"
+    # Try to split off the color after last " - "
+    parts = name_raw.split(' - ')
+    model = parts[0].strip()
+    color = parts[-1].strip() if len(parts) > 1 else ''
+    if color == model: color = ''
+
+    products.append({'name':model,'color':color,'brand':brand,'price':price_eur,'oldPrice':old_eur,'sale':is_sale,'cat':get_cat(model, color),'img':img,'url':url,'sizes':sizes,'src':'ss24'})
+
+ss_count = sum(1 for p in products if p.get('src') == 'ss24')
+print(f'StreetStyle24 добавлено: {ss_count}')
 print(f'Обработано уникальных товаров: {len(products)}')
 
 if len(products) == 0:
@@ -91,13 +137,14 @@ products_js = 'var products=[\n' + ',\n'.join(js_p(p) for p in products) + '\n].
 def js_obj(p):
     old = f',oldPrice:{p["oldPrice"]}' if p['oldPrice'] else ''
     sale = ',sale:true' if p['sale'] else ''
+    src = f',src:"{p["src"]}"' if p.get('src') else ''
     n = p['name'].replace('\\','\\\\').replace('"','\\"')
     c = p['color'].replace('\\','\\\\').replace('"','\\"')
     b = p['brand'].replace('\\','\\\\').replace('"','\\"')
     sizes_js = json.dumps(p.get('sizes',[]), separators=(',',':'))
-    return f'{{n:"{n}",c:"{c}",b:"{b}",p:{p["price"]}{old}{sale},cat:"{p["cat"]}",i:"{p["img"]}",u:"{p["url"]}",s:{sizes_js}}}'
+    return f'{{n:"{n}",c:"{c}",b:"{b}",p:{p["price"]}{old}{sale},cat:"{p["cat"]}",i:"{p["img"]}",u:"{p["url"]}",s:{sizes_js}{src}}}'
 
-products_js = 'var products=[\n' + ',\n'.join(js_obj(p) for p in products) + '\n].map(r=>({name:r.n,color:r.c,brand:r.b,price:r.p,oldPrice:r.oldPrice||null,sale:!!r.sale,cat:r.cat,img:r.i,url:r.u,sizes:r.s||[]}));'
+products_js = 'var products=[\n' + ',\n'.join(js_obj(p) for p in products) + '\n].map(r=>({name:r.n,color:r.c,brand:r.b,price:r.p,oldPrice:r.oldPrice||null,sale:!!r.sale,cat:r.cat,img:r.i,url:r.u,sizes:r.s||[],src:r.src||"zal"}));'
 
 # Хэш для cache-busting
 content_hash = hashlib.md5(products_js.encode()).hexdigest()[:8]
