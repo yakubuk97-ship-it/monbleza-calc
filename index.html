@@ -79,10 +79,12 @@
   .sf-btn{flex-shrink:0;padding:5px 11px;border-radius:20px;font-size:10px;letter-spacing:0.06em;cursor:pointer;border:0.5px solid var(--border2);color:var(--muted);background:transparent;transition:all 0.2s;font-family:'Jost',sans-serif;}
   .sf-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.08);}
   .stock-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  @media(min-width:600px){.stock-grid{grid-template-columns:repeat(3,1fr);}}
+  @media(min-width:900px){.stock-grid{grid-template-columns:repeat(4,1fr);}}
   .stock-card{background:var(--surface);border:0.5px solid var(--border);border-radius:2px;overflow:hidden;transition:border-color 0.2s;}
   .stock-card:hover{border-color:rgba(201,168,76,0.4);}
-  .stock-img{width:100%;height:150px;background:#f5f3ef;overflow:hidden;position:relative;}
-  .stock-img img{width:100%;height:100%;object-fit:contain;padding:10px;}
+  .stock-img{width:100%;aspect-ratio:3/4;background:#f5f3ef;overflow:hidden;position:relative;}
+  .stock-img img{width:100%;height:100%;object-fit:cover;}
   .stock-avail{position:absolute;top:7px;left:7px;background:#2e7d32;color:white;font-size:9px;padding:2px 6px;border-radius:2px;letter-spacing:0.06em;font-weight:500;}
   .stock-body{padding:10px 11px;}
   .stock-brand{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);margin-bottom:2px;}
