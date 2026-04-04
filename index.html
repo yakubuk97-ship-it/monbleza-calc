@@ -257,6 +257,35 @@
     <div class="stock-grid" id="stock-grid"></div>
   </div>
 
+  <!-- МОДАЛ ТОВАРА В НАЛИЧИИ -->
+  <div class="overlay" id="stock-overlay" onclick="if(event.target===this)closeStockModal()">
+    <div class="modal" id="stock-modal">
+      <button class="modal-close" onclick="closeStockModal()">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="modal-img"><img id="sm-img" src="" alt=""></div>
+      <div class="modal-body">
+        <div class="modal-brand" id="sm-brand"></div>
+        <div class="modal-name" id="sm-name"></div>
+        <div class="modal-price-row">
+          <span class="modal-price" id="sm-price"></span>
+          <span class="modal-cur">₽</span>
+        </div>
+        <div class="mdivider"></div>
+        <div class="modal-sz-label" id="sm-sz-label" style="display:none">Выбери размер</div>
+        <div class="modal-sizes" id="sm-sizes"></div>
+        <div id="sm-desc" style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:16px;display:none"></div>
+        <div class="modal-btns">
+          <a class="mbtn mbtn-tg" id="sm-order" href="https://t.me/euclothing" target="_blank">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+            Заказать
+          </a>
+        </div>
+        <button class="close-btn" onclick="closeStockModal()">← Назад</button>
+      </div>
+    </div>
+  </div>
+
   <!-- РАЗДЕЛ ДОСТАВКА -->
   <div class="delivery-section" id="section-delivery">
     <div class="dlv-block">
@@ -578,7 +607,7 @@ function renderStock(items){
     return;
   }
   grid.innerHTML = stockItems.map((p,i)=>`
-    <div class="stock-card">
+    <div class="stock-card" onclick="openStockModal(${i})" style="cursor:pointer">
       <div class="stock-img">
         <div class="stock-avail">В наличии</div>
         <img src="${p.img||''}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
@@ -586,13 +615,49 @@ function renderStock(items){
       <div class="stock-body">
         <div class="stock-brand">${p.brand}</div>
         <div class="stock-name">${p.name}</div>
-        ${p.size ? `<div class="stock-size">Размер ${p.size}</div>` : ''}
+        ${p.sizes && p.sizes.length ? `<div class="stock-size">${p.sizes.slice(0,3).join(' · ')}${p.sizes.length>3?` +${p.sizes.length-3}`:''}</div>` : ''}
         <div class="stock-price">${p.price.toLocaleString('ru-RU')} ₽</div>
-        <div class="stock-rub">Остаток: ${p.quantity} шт.</div>
-        <a class="stock-btn" href="https://t.me/euclothing" target="_blank">Заказать →</a>
       </div>
     </div>
   `).join('');
+}
+
+let selectedStockSize = null;
+
+function openStockModal(i){
+  const p = stockItems[i];
+  selectedStockSize = null;
+  document.getElementById('sm-img').src = p.img || '';
+  document.getElementById('sm-brand').textContent = p.brand;
+  document.getElementById('sm-name').textContent = p.name;
+  document.getElementById('sm-price').textContent = p.price.toLocaleString('ru-RU');
+  const sizes = p.sizes || [];
+  const szLabel = document.getElementById('sm-sz-label');
+  const szContainer = document.getElementById('sm-sizes');
+  szLabel.style.display = sizes.length ? 'block' : 'none';
+  szContainer.innerHTML = sizes.map(s=>`<span class="modal-sz" onclick="selectStockSize('${s}',this,'${encodeURIComponent(p.name)}')">${s}</span>`).join('');
+  const desc = document.getElementById('sm-desc');
+  if(p.description){desc.textContent=p.description;desc.style.display='block';}
+  else desc.style.display='none';
+  document.getElementById('sm-order').href = `https://t.me/euclothing?text=${encodeURIComponent('Хочу заказать: '+p.name+' — '+p.price.toLocaleString('ru-RU')+' ₽')}`;
+  document.getElementById('stock-overlay').classList.add('show');
+  document.body.style.overflow='hidden';
+  tgShowBack();
+}
+
+function selectStockSize(size, el, encodedName){
+  selectedStockSize = size;
+  document.querySelectorAll('#sm-sizes .modal-sz').forEach(s=>s.classList.remove('active'));
+  el.classList.add('active');
+  const name = decodeURIComponent(encodedName);
+  const price = document.getElementById('sm-price').textContent;
+  document.getElementById('sm-order').href = `https://t.me/euclothing?text=${encodeURIComponent('Хочу заказать: '+name+' — размер '+size+' — '+price+' ₽')}`;
+}
+
+function closeStockModal(){
+  document.getElementById('stock-overlay').classList.remove('show');
+  document.body.style.overflow='';
+  tgHideBack();
 }
 
 async function loadStock(){
@@ -900,10 +965,13 @@ if (tg) {
   tg.BackButton.onClick(() => {
     const overlay = document.getElementById('overlay');
     const cartOverlay = document.getElementById('cart-overlay');
+    const stockOverlay = document.getElementById('stock-overlay');
     if (cartOverlay && cartOverlay.classList.contains('show')) {
       closeCart();
     } else if (overlay && overlay.classList.contains('show')) {
       closeOverlay();
+    } else if (stockOverlay && stockOverlay.classList.contains('show')) {
+      closeStockModal();
     } else {
       tg.BackButton.hide();
     }
