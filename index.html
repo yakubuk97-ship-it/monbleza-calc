@@ -751,8 +751,9 @@ function buildStockFilters(catItems){
   const brands=[...new Set(catItems.filter(x=>KNOWN_BRANDS.has(x.brand)).map(x=>x.brand))].sort();
   document.getElementById('stock-brand-row').innerHTML=[
     `<button class="sf-btn ${stockActiveBrand==='all'?'active':''}" onclick="setStockBrand('all',this)">Все бренды</button>`,
-    ...brands.map(b=>`<button class="sf-btn ${stockActiveBrand===b?'active':''}" onclick="setStockBrand(${JSON.stringify(b)},this)">${b}</button>`)
+    ...brands.map((b,i)=>`<button class="sf-btn ${stockActiveBrand===b?'active':''}" onclick="setStockBrand(_sfBrands[${i}],this)">${b}</button>`)
   ].join('');
+  window._sfBrands=brands;
 
   const clothOrder=['XS','S','M','L','XL','2XL','3XL','XXL','XXXL'];
   const sizes=[...new Set(catItems.flatMap(x=>(x.sizes||[]).map(normSize).filter(Boolean)))];
@@ -765,8 +766,9 @@ function buildStockFilters(catItems){
   });
   document.getElementById('stock-size-row').innerHTML=[
     `<button class="sf-btn ${stockActiveSize==='all'?'active':''}" onclick="setStockSize('all',this)">Все размеры</button>`,
-    ...sizes.map(s=>`<button class="sf-btn ${stockActiveSize===s?'active':''}" onclick="setStockSize(${JSON.stringify(s)},this)">${s}</button>`)
+    ...sizes.map((s,i)=>`<button class="sf-btn ${stockActiveSize===s?'active':''}" onclick="setStockSize(_sfSizes[${i}],this)">${s}</button>`)
   ].join('');
+  window._sfSizes=sizes;
 }
 
 function applyStockFilters(){
