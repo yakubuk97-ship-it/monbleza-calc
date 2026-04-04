@@ -565,18 +565,16 @@
 <script src="products.js?v=2402373a"></script>
 <script>
 /* ── ТОВАРЫ В НАЛИЧИИ ── */
-const stockItems = [
-  // Добавляй сюда товары в формате:
-  // {brand:'Nike',name:'Air Force 1',size:'42',price:120,img:'URL картинки',url:'ссылка на товар или tg'}
-];
+let stockItems = [];
 
-function renderStock(){
+function renderStock(items){
+  if (items) stockItems = items;
   const grid = document.getElementById('stock-grid');
   document.getElementById('stock-badge').textContent = stockItems.length
     ? '● ' + stockItems.length + ' ' + (stockItems.length===1?'товар':stockItems.length<5?'товара':'товаров')
     : '● Скоро';
   if(!stockItems.length){
-    grid.innerHTML='<div class="stock-empty" style="grid-column:1/-1">Скоро здесь появятся товары</div>';
+    grid.innerHTML='<div class="stock-empty" style="grid-column:1/-1">Загрузка...</div>';
     return;
   }
   grid.innerHTML = stockItems.map((p,i)=>`
@@ -588,13 +586,25 @@ function renderStock(){
       <div class="stock-body">
         <div class="stock-brand">${p.brand}</div>
         <div class="stock-name">${p.name}</div>
-        <div class="stock-size">Размер ${p.size}</div>
-        <div class="stock-price">${p.price.toFixed(2)} €</div>
-        <div class="stock-rub">≈ ${calcRub(p.price).toLocaleString('ru-RU')} ₽</div>
-        <a class="stock-btn" href="${p.url||'https://t.me/euclothing'}" target="_blank">Заказать →</a>
+        ${p.size ? `<div class="stock-size">Размер ${p.size}</div>` : ''}
+        <div class="stock-price">${p.price.toLocaleString('ru-RU')} ₽</div>
+        <div class="stock-rub">Остаток: ${p.quantity} шт.</div>
+        <a class="stock-btn" href="https://t.me/euclothing" target="_blank">Заказать →</a>
       </div>
     </div>
   `).join('');
+}
+
+async function loadStock(){
+  try {
+    renderStock([]);
+    const r = await fetch('https://monbleza-calc.onrender.com/stock');
+    const items = await r.json();
+    renderStock(items);
+  } catch(e) {
+    document.getElementById('stock-grid').innerHTML =
+      '<div class="stock-empty" style="grid-column:1/-1">Не удалось загрузить товары</div>';
+  }
 }
 
 /* ── ВКЛАДКИ ── */
@@ -904,7 +914,7 @@ function tgHideBack() { if (tg) tg.BackButton.hide(); }
 
 buildFilters();
 applyFilters();
-renderStock();
+loadStock();
 </script>
 </body>
 </html>
