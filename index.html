@@ -157,6 +157,48 @@
   .mbtn-site:hover{border-color:var(--gold);color:var(--gold);}
   .close-btn{width:100%;padding:12px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;}
   .close-btn:hover{border-color:var(--gold);color:var(--gold);}
+  /* ── CHECKOUT ── */
+  .checkout-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.85);overflow-y:auto;padding:20px 16px;}
+  .checkout-overlay.show{display:block;}
+  .checkout-modal{max-width:420px;margin:0 auto;background:var(--surface);border:0.5px solid var(--border);border-radius:2px;position:relative;}
+  .checkout-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.6;}
+  .co-header{padding:20px 20px 16px;border-bottom:0.5px solid var(--border);}
+  .co-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+  .co-product{display:flex;gap:12px;align-items:center;}
+  .co-img{width:56px;height:56px;background:#f5f3ef;border-radius:2px;flex-shrink:0;overflow:hidden;}
+  .co-img img{width:100%;height:100%;object-fit:contain;padding:4px;}
+  .co-pname{font-size:13px;color:var(--text);line-height:1.3;margin-bottom:3px;}
+  .co-psize{font-size:11px;color:var(--gold);}
+  .co-pprice{font-size:15px;color:var(--text);margin-top:3px;}
+  .co-body{padding:20px;}
+  .co-label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;}
+  .co-options{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;}
+  .co-option{display:flex;align-items:center;gap:12px;padding:13px 14px;background:var(--s2);border:0.5px solid var(--border);border-radius:2px;cursor:pointer;transition:all 0.2s;}
+  .co-option:hover{border-color:rgba(201,168,76,0.4);}
+  .co-option.selected{border-color:var(--gold);background:rgba(201,168,76,0.06);}
+  .co-radio{width:16px;height:16px;border-radius:50%;border:0.5px solid var(--border2);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s;}
+  .co-option.selected .co-radio{border-color:var(--gold);background:var(--gold);}
+  .co-option.selected .co-radio::after{content:'';width:6px;height:6px;border-radius:50%;background:#0c0c0c;}
+  .co-opt-text{flex:1;}
+  .co-opt-name{font-size:13px;color:var(--text);}
+  .co-opt-sub{font-size:10px;color:var(--dim);margin-top:2px;}
+  .co-split{display:flex;align-items:center;justify-content:space-between;padding:14px;background:var(--s2);border:0.5px solid var(--border);border-radius:2px;margin-bottom:20px;cursor:pointer;transition:border-color 0.2s;}
+  .co-split.on{border-color:var(--gold);}
+  .co-split-left{display:flex;flex-direction:column;gap:3px;}
+  .co-split-name{font-size:13px;color:var(--text);}
+  .co-split-sub{font-size:10px;color:var(--dim);}
+  .co-toggle{width:40px;height:22px;border-radius:11px;background:var(--border2);position:relative;transition:background 0.2s;flex-shrink:0;}
+  .co-split.on .co-toggle{background:var(--gold);}
+  .co-toggle::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;border-radius:50%;background:white;transition:transform 0.2s;}
+  .co-split.on .co-toggle::after{transform:translateX(18px);}
+  .co-promo{margin-bottom:20px;}
+  .co-promo-input{width:100%;background:rgba(255,255,255,0.03);border:0.5px solid var(--border);border-radius:2px;color:var(--text);font-family:'Jost',sans-serif;font-size:13px;padding:12px 14px;outline:none;transition:border-color 0.2s;}
+  .co-promo-input:focus{border-color:rgba(201,168,76,0.5);}
+  .co-promo-input::placeholder{color:var(--dim);}
+  .co-submit{width:100%;padding:14px;background:var(--gold);color:#0c0c0c;border:none;border-radius:2px;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;margin-bottom:8px;transition:opacity 0.2s;}
+  .co-submit:hover{opacity:0.88;}
+  .co-cancel{width:100%;padding:12px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;}
+  .co-cancel:hover{border-color:var(--gold);color:var(--gold);}
   /* ── SITE HEADER ── */
   .site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:56px;background:rgba(12,12,12,0.9);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);}
   .site-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;letter-spacing:0.1em;color:var(--gold);}
@@ -276,12 +318,77 @@
         <div class="modal-sizes" id="sm-sizes"></div>
         <div id="sm-desc" style="font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:16px;display:none"></div>
         <div class="modal-btns">
-          <a class="mbtn mbtn-tg" id="sm-order" href="https://t.me/euclothing" target="_blank">
+          <button class="mbtn mbtn-tg" id="sm-order" onclick="openCheckoutFromStock()">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
             Заказать
-          </a>
+          </button>
         </div>
         <button class="close-btn" onclick="closeStockModal()">← Назад</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT -->
+  <div class="checkout-overlay" id="checkout-overlay" onclick="if(event.target===this)closeCheckout()">
+    <div class="checkout-modal">
+      <div class="co-header">
+        <div class="co-title">Оформление заказа</div>
+        <div class="co-product">
+          <div class="co-img"><img id="co-img" src="" alt=""></div>
+          <div>
+            <div class="co-pname" id="co-name"></div>
+            <div class="co-psize" id="co-size"></div>
+            <div class="co-pprice" id="co-price"></div>
+          </div>
+        </div>
+      </div>
+      <div class="co-body">
+        <div class="co-label">Как получить</div>
+        <div class="co-options">
+          <div class="co-option selected" id="co-opt-store" onclick="selectDelivery('store',this)">
+            <div class="co-radio"></div>
+            <div class="co-opt-text">
+              <div class="co-opt-name">В магазине в Москве</div>
+              <div class="co-opt-sub">Ростокино, пр-т Мира, 188Бк3 · по записи</div>
+            </div>
+          </div>
+          <div class="co-option" id="co-opt-pickup" onclick="selectDelivery('pickup',this)">
+            <div class="co-radio"></div>
+            <div class="co-opt-text">
+              <div class="co-opt-name">В пункте выдачи</div>
+              <div class="co-opt-sub">СДЭК, Boxberry, ПВЗ по всей России</div>
+            </div>
+          </div>
+          <div class="co-option" id="co-opt-courier" onclick="selectDelivery('courier',this)">
+            <div class="co-radio"></div>
+            <div class="co-opt-text">
+              <div class="co-opt-name">Курьером</div>
+              <div class="co-opt-sub">Доставка до двери, Москва и регионы</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="co-label">Сплит</div>
+        <div class="co-split" id="co-split" onclick="toggleSplit()">
+          <div class="co-split-left">
+            <div class="co-split-name">Оплатить половину сейчас</div>
+            <div class="co-split-sub">Остаток — при получении товара</div>
+          </div>
+          <div class="co-toggle"></div>
+        </div>
+
+        <div class="co-promo">
+          <div class="co-label">Промокод</div>
+          <input class="co-promo-input" id="co-promo" type="text" placeholder="Введите промокод">
+        </div>
+
+        <div style="display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-top:0.5px solid var(--border);margin-bottom:16px;">
+          <span style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted)">Итого</span>
+          <span style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300" id="co-total"></span>
+        </div>
+
+        <button class="co-submit" onclick="submitCheckout()">Оформить заказ →</button>
+        <button class="co-cancel" onclick="closeCheckout()">← Назад</button>
       </div>
     </div>
   </div>
@@ -582,7 +689,7 @@
         <span class="mtotal-v" id="mTotal">—<small>₽</small></span>
       </div>
       <div class="modal-btns">
-        <a class="mbtn mbtn-tg" href="https://t.me/euclothing" target="_blank">📩 Заказать</a>
+        <button class="mbtn mbtn-tg" onclick="openCheckoutFromCatalog()">📩 Заказать</button>
         <a class="mbtn mbtn-vk" href="https://vk.com/euclothing" target="_blank">ВК</a>
         <a class="mbtn mbtn-site" id="mLink" href="#" target="_blank">Zalando ↗</a>
       </div>
@@ -623,8 +730,10 @@ function renderStock(items){
 }
 
 let selectedStockSize = null;
+let currentStockIndex = 0;
 
 function openStockModal(i){
+  currentStockIndex = i;
   const p = stockItems[i];
   selectedStockSize = null;
   document.getElementById('sm-img').src = p.img || '';
@@ -658,6 +767,29 @@ function closeStockModal(){
   document.getElementById('stock-overlay').classList.remove('show');
   document.body.style.overflow='';
   tgHideBack();
+}
+
+function openCheckoutFromStock(){
+  const overlay = document.getElementById('stock-overlay');
+  overlay.classList.remove('show');
+  const p = stockItems[currentStockIndex];
+  openCheckout({
+    name: p.name, brand: p.brand, img: p.img,
+    price: p.price, priceRub: p.price,
+    size: selectedStockSize || ''
+  });
+}
+
+function openCheckoutFromCatalog(){
+  const p = modalProduct;
+  if (!p) return;
+  document.getElementById('overlay').classList.remove('show');
+  openCheckout({
+    name: p.name, brand: p.brand, img: p.img,
+    price: p.price,
+    priceRub: calcRub(p.price),
+    size: selectedSize || ''
+  });
 }
 
 async function loadStock(){
@@ -956,6 +1088,63 @@ function openOverlay(){
   tgShowBack();
 }
 
+// ── CHECKOUT ──
+let checkoutProduct = null;
+let checkoutDelivery = 'store';
+let checkoutSplit = false;
+
+function openCheckout(product) {
+  checkoutProduct = product;
+  checkoutDelivery = 'store';
+  checkoutSplit = false;
+  document.getElementById('co-img').src = product.img || '';
+  document.getElementById('co-name').textContent = product.name;
+  document.getElementById('co-size').textContent = product.size ? 'Размер ' + product.size : '';
+  document.getElementById('co-price').textContent = product.priceRub
+    ? product.priceRub.toLocaleString('ru-RU') + ' ₽'
+    : product.price.toLocaleString('ru-RU') + ' ₽';
+  document.getElementById('co-total').textContent = (product.priceRub || product.price).toLocaleString('ru-RU') + ' ₽';
+  document.getElementById('co-promo').value = '';
+  document.getElementById('co-split').classList.remove('on');
+  ['store','pickup','courier'].forEach(k => document.getElementById('co-opt-'+k).classList.remove('selected'));
+  document.getElementById('co-opt-store').classList.add('selected');
+  document.getElementById('checkout-overlay').classList.add('show');
+  document.body.style.overflow = 'hidden';
+  tgShowBack();
+}
+
+function closeCheckout() {
+  document.getElementById('checkout-overlay').classList.remove('show');
+  document.body.style.overflow = '';
+  tgHideBack();
+}
+
+function selectDelivery(type, el) {
+  checkoutDelivery = type;
+  ['store','pickup','courier'].forEach(k => document.getElementById('co-opt-'+k).classList.remove('selected'));
+  el.classList.add('selected');
+}
+
+function toggleSplit() {
+  checkoutSplit = !checkoutSplit;
+  document.getElementById('co-split').classList.toggle('on', checkoutSplit);
+}
+
+function submitCheckout() {
+  const p = checkoutProduct;
+  if (!p) return;
+  const deliveryMap = { store: 'В магазине в Москве', pickup: 'В пункте выдачи', courier: 'Курьером' };
+  const promo = document.getElementById('co-promo').value.trim();
+  let msg = `Хочу заказать:\n📦 ${p.name}`;
+  if (p.size) msg += `\n📐 Размер: ${p.size}`;
+  msg += `\n💰 ${(p.priceRub || p.price).toLocaleString('ru-RU')} ₽`;
+  msg += `\n🚚 Доставка: ${deliveryMap[checkoutDelivery]}`;
+  if (checkoutSplit) msg += `\n💳 Сплит: да (50% сейчас, 50% при получении)`;
+  if (promo) msg += `\n🎟 Промокод: ${promo}`;
+  window.open(`https://t.me/euclothing?text=${encodeURIComponent(msg)}`, '_blank');
+  closeCheckout();
+}
+
 // ── TELEGRAM MINI APP ──
 const tg = window.Telegram?.WebApp;
 if (tg) {
@@ -970,6 +1159,8 @@ if (tg) {
       closeCart();
     } else if (overlay && overlay.classList.contains('show')) {
       closeOverlay();
+    } else if (document.getElementById('checkout-overlay').classList.contains('show')) {
+      closeCheckout();
     } else if (stockOverlay && stockOverlay.classList.contains('show')) {
       closeStockModal();
     } else {
