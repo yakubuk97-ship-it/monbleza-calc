@@ -810,7 +810,7 @@ function renderStockGrid(items){
     <div class="stock-card" onclick="openStockModal(${i})" style="cursor:pointer">
       <div class="stock-img">
         <div class="stock-avail">В наличии</div>
-        <img src="${p.img||''}" alt="${p.name}" loading="lazy" onerror="this.style.display='none'">
+        <img src="${p.img||''}" alt="${p.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:11px;letter-spacing:0.15em;color:rgba(0,0,0,0.35);text-transform:uppercase;font-family:Jost,sans-serif;\'>${p.brand}</div>'">
       </div>
       <div class="stock-body">
         <div class="stock-brand">${p.brand}</div>
