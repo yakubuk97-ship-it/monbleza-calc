@@ -83,8 +83,8 @@
   @media(min-width:900px){.stock-grid{grid-template-columns:repeat(4,1fr);}}
   .stock-card{background:var(--surface);border:0.5px solid var(--border);border-radius:2px;overflow:hidden;transition:border-color 0.2s;}
   .stock-card:hover{border-color:rgba(201,168,76,0.4);}
-  .stock-img{width:100%;aspect-ratio:3/4;background:#f5f3ef;overflow:hidden;position:relative;}
-  .stock-img img{width:100%;height:100%;object-fit:cover;}
+  .stock-img{width:100%;height:200px;background:#f5f3ef;overflow:hidden;position:relative;}
+  .stock-img img{width:100%;height:100%;object-fit:contain;padding:8px;}
   .stock-avail{position:absolute;top:7px;left:7px;background:#2e7d32;color:white;font-size:9px;padding:2px 6px;border-radius:2px;letter-spacing:0.06em;font-weight:500;}
   .stock-body{padding:10px 11px;}
   .stock-brand{font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--dim);margin-bottom:2px;}
