@@ -731,10 +731,14 @@ const KNOWN_BRANDS = new Set(['Weekend Offender','Fred Perry','Marshall Artist',
   'Calvin Klein','Lonsdale','Birkenstock','UGG','Dr. Martens','The North Face','Columbia',
   'Helly Hansen','Under Armour','Jack Wolfskin','Polo']);
 
+const PROXY = 'https://monbleza-calc.onrender.com/img?url=';
+function proxyImg(url){ return url ? PROXY + encodeURIComponent(url) : ''; }
+
 function getItemCat(item){
   const cat=(item.category||'').toLowerCase().trim();
-  if(cat==='обувь') return 'shoes';
-  if(cat==='аксессуары') return 'accessories';
+  const name=(item.name||'').toLowerCase();
+  if(cat==='обувь' || /кроссовк|ботин|сникер|мокасин|слипон|угги|сабо|лоафер/.test(name)) return 'shoes';
+  if(cat==='аксессуары' || /кепк|шапк|сумк|ремен|шарф|перчат|носк|очки|кошел/.test(name)) return 'accessories';
   return 'clothing';
 }
 
@@ -810,7 +814,7 @@ function renderStockGrid(items){
     <div class="stock-card" onclick="openStockModal(${i})" style="cursor:pointer">
       <div class="stock-img">
         <div class="stock-avail">В наличии</div>
-        <img src="${p.img||''}" alt="${p.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:11px;letter-spacing:0.15em;color:rgba(0,0,0,0.35);text-transform:uppercase;font-family:Jost,sans-serif;\'>${p.brand}</div>'">
+        <img src="${proxyImg(p.img)}" alt="${p.name}" loading="lazy" onerror="this.parentElement.innerHTML='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:11px;letter-spacing:0.15em;color:rgba(0,0,0,0.35);text-transform:uppercase;font-family:Jost,sans-serif;\'>${p.brand}</div>'">
       </div>
       <div class="stock-body">
         <div class="stock-brand">${p.brand}</div>
@@ -835,7 +839,7 @@ function openStockModal(i){
   currentStockIndex = i;
   const p = stockItems[i];
   selectedStockSize = null;
-  document.getElementById('sm-img').src = p.img || '';
+  document.getElementById('sm-img').src = proxyImg(p.img);
   document.getElementById('sm-brand').textContent = p.brand;
   document.getElementById('sm-name').textContent = p.name;
   document.getElementById('sm-price').textContent = p.price.toLocaleString('ru-RU');

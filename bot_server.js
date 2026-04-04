@@ -112,6 +112,25 @@ http.createServer(async (req, res) => {
 
   if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
 
+  // Прокси для фото МойСклад (добавляет Bearer токен)
+  if (req.method === 'GET' && req.url.startsWith('/img?')) {
+    const imgUrl = new URL('http://x' + req.url).searchParams.get('url');
+    if (!imgUrl || !imgUrl.startsWith('https://api.moysklad.ru/')) {
+      res.writeHead(400); res.end(); return;
+    }
+    const proxyReq = https.request(imgUrl, { headers: { 'Authorization': 'Bearer ' + MS_TOKEN } }, proxyRes => {
+      res.writeHead(200, {
+        'Content-Type': proxyRes.headers['content-type'] || 'image/jpeg',
+        'Cache-Control': 'public, max-age=604800',
+        'Access-Control-Allow-Origin': '*'
+      });
+      proxyRes.pipe(res);
+    });
+    proxyReq.on('error', () => { res.writeHead(502); res.end(); });
+    proxyReq.end();
+    return;
+  }
+
   // Эндпоинт для товаров из МойСклад
   if (req.method === 'GET' && req.url === '/stock') {
     try {
