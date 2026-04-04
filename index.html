@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Калькулятор цены</title>
+<title>Monbleza — каталог брендов</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -799,9 +800,9 @@ function updateCartBadge(){
   cart.length>0?fab.classList.add('show'):fab.classList.remove('show');
 }
 
-function openCart(){renderCart();document.getElementById('cart-overlay').classList.add('show');}
-function closeCartBg(e){if(e.target.id==='cart-overlay')document.getElementById('cart-overlay').classList.remove('show');}
-function closeCart(){document.getElementById('cart-overlay').classList.remove('show');}
+function openCart(){renderCart();document.getElementById('cart-overlay').classList.add('show');tgShowBack();}
+function closeCartBg(e){if(e.target.id==='cart-overlay'){document.getElementById('cart-overlay').classList.remove('show');tgHideBack();}}
+function closeCart(){document.getElementById('cart-overlay').classList.remove('show');tgHideBack();}
 
 function removeFromCart(idx){
   cart.splice(idx,1);
@@ -872,11 +873,34 @@ function openModal(i){
 function closeOverlay(){
   document.getElementById('overlay').classList.remove('show');
   document.body.style.overflow='';
+  tgHideBack();
 }
 function openOverlay(){
   document.getElementById('overlay').classList.add('show');
   document.body.style.overflow='hidden';
+  tgShowBack();
 }
+
+// ── TELEGRAM MINI APP ──
+const tg = window.Telegram?.WebApp;
+if (tg) {
+  tg.ready();
+  tg.expand();
+  // Кнопка "Назад" в Telegram при открытом модале
+  tg.BackButton.onClick(() => {
+    const overlay = document.getElementById('overlay');
+    const cartOverlay = document.getElementById('cart-overlay');
+    if (cartOverlay && cartOverlay.classList.contains('show')) {
+      closeCart();
+    } else if (overlay && overlay.classList.contains('show')) {
+      closeOverlay();
+    } else {
+      tg.BackButton.hide();
+    }
+  });
+}
+function tgShowBack() { if (tg) tg.BackButton.show(); }
+function tgHideBack() { if (tg) tg.BackButton.hide(); }
 
 buildFilters();
 applyFilters();
