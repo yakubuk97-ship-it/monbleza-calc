@@ -595,15 +595,61 @@ function renderStock(items){
   `).join('');
 }
 
+const MS_TOKEN = '3b701e01c5660188053b898da86779c282b1c527';
+
+function extractBrand(name) {
+  const brands = ['Nike','Adidas','New Balance','Puma','Converse','Vans','The North Face',
+    'Tommy Hilfiger','Calvin Klein','Ralph Lauren','Hugo Boss','Lacoste','Fred Perry',
+    'Gant','Weekend Offender','Columbia','Helly Hansen','Under Armour','Jack Wolfskin',
+    'Birkenstock','UGG','Dr. Martens','Levi\'s','Diesel','Polo'];
+  for (const b of brands) {
+    if (name.toLowerCase().includes(b.toLowerCase())) return b;
+  }
+  return name.split(' ')[0];
+}
+
+async function msGet(path) {
+  const r = await fetch('https://api.moysklad.ru/api/remap/1.2' + path, {
+    headers: { 'Authorization': 'Bearer ' + MS_TOKEN, 'Accept': 'application/json' }
+  });
+  return r.json();
+}
+
 async function loadStock(){
+  const grid = document.getElementById('stock-grid');
+  grid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1">Загрузка...</div>';
   try {
-    renderStock([]);
-    const r = await fetch('https://monbleza-calc.onrender.com/stock');
-    const items = await r.json();
+    const report = await msGet('/report/stock/all?filter=stockMode%3DpositiveOnly&limit=100');
+    const rows = (report.rows || []).filter(r => r.quantity > 0 && r.salePrice > 0);
+
+    const items = await Promise.all(rows.map(async row => {
+      let img = '';
+      try {
+        const href = row.meta.href;
+        const parts = href.split('/entity/')[1].split('/');
+        const type = parts[0], id = parts[1];
+        const imgData = await msGet(`/entity/${type}/${id}/images?limit=1`);
+        if (imgData.rows && imgData.rows[0]) {
+          img = imgData.rows[0].miniature ? imgData.rows[0].miniature.href : imgData.rows[0].meta.downloadHref;
+        }
+      } catch(e) {}
+
+      const pathParts = (row.pathName || '').split('/');
+      return {
+        name: row.name,
+        brand: extractBrand(row.name),
+        price: Math.round(row.salePrice / 100),
+        quantity: Math.floor(row.quantity),
+        size: row.size || '',
+        category: pathParts[pathParts.length - 1] || '',
+        img
+      };
+    }));
+
     renderStock(items);
   } catch(e) {
-    document.getElementById('stock-grid').innerHTML =
-      '<div class="stock-empty" style="grid-column:1/-1">Не удалось загрузить товары</div>';
+    console.error(e);
+    grid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1">Не удалось загрузить товары</div>';
   }
 }
 
