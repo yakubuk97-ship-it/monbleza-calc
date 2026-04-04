@@ -70,6 +70,14 @@
   .stock-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;}
   .stock-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);}
   .stock-badge{font-size:10px;color:#4caf50;border:0.5px solid rgba(76,175,80,0.35);padding:3px 8px;border-radius:2px;letter-spacing:0.1em;}
+  .stock-cat-tabs{display:flex;gap:0;margin-bottom:12px;border:0.5px solid var(--border);border-radius:2px;overflow:hidden;}
+  .scat-btn{flex:1;padding:9px 4px;background:transparent;border:none;border-right:0.5px solid var(--border);color:var(--muted);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.2s;}
+  .scat-btn:last-child{border-right:none;}
+  .scat-btn.active{background:rgba(201,168,76,0.1);color:var(--gold);}
+  .stock-filter-row{display:flex;gap:6px;margin-bottom:10px;overflow-x:auto;padding-bottom:2px;}
+  .stock-filter-row::-webkit-scrollbar{display:none;}
+  .sf-btn{flex-shrink:0;padding:5px 11px;border-radius:20px;font-size:10px;letter-spacing:0.06em;cursor:pointer;border:0.5px solid var(--border2);color:var(--muted);background:transparent;transition:all 0.2s;font-family:'Jost',sans-serif;}
+  .sf-btn.active{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.08);}
   .stock-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   .stock-card{background:var(--surface);border:0.5px solid var(--border);border-radius:2px;overflow:hidden;transition:border-color 0.2s;}
   .stock-card:hover{border-color:rgba(201,168,76,0.4);}
@@ -84,7 +92,7 @@
   .stock-rub{font-size:10px;color:var(--dim);margin-top:2px;}
   .stock-btn{display:block;width:100%;margin-top:8px;padding:7px;background:transparent;border:0.5px solid var(--gold);border-radius:2px;color:var(--gold);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;text-align:center;text-decoration:none;transition:all 0.2s;}
   .stock-btn:hover{background:var(--gold);color:#0c0c0c;}
-  .stock-empty{text-align:center;color:var(--muted);font-size:13px;padding:40px 0;background:var(--surface);border:0.5px solid var(--border);border-radius:2px;}
+  .stock-empty{text-align:center;color:var(--muted);font-size:13px;padding:40px 0;background:var(--surface);border:0.5px solid var(--border);border-radius:2px;grid-column:1/-1;}
 
   /* ── КАТАЛОГ ZALANDO ── */
   .catalog-section{margin-bottom:12px;}
@@ -296,6 +304,14 @@
       <div class="stock-title">Товары в наличии</div>
       <div class="stock-badge" id="stock-badge">● Есть</div>
     </div>
+    <div class="stock-cat-tabs">
+      <button class="scat-btn active" onclick="setStockCat('all',this)">Все</button>
+      <button class="scat-btn" onclick="setStockCat('clothing',this)">Одежда</button>
+      <button class="scat-btn" onclick="setStockCat('shoes',this)">Обувь</button>
+      <button class="scat-btn" onclick="setStockCat('accessories',this)">Аксессуары</button>
+    </div>
+    <div class="stock-filter-row" id="stock-brand-row"></div>
+    <div class="stock-filter-row" id="stock-size-row"></div>
     <div class="stock-grid" id="stock-grid"></div>
   </div>
 
@@ -702,18 +718,91 @@
 <script>
 /* ── ТОВАРЫ В НАЛИЧИИ ── */
 let stockItems = [];
+let stockAllItems = [];
+let stockActiveCat = 'all';
+let stockActiveBrand = 'all';
+let stockActiveSize = 'all';
 
-function renderStock(items){
-  if (items) stockItems = items;
-  const grid = document.getElementById('stock-grid');
-  document.getElementById('stock-badge').textContent = stockItems.length
-    ? '● ' + stockItems.length + ' ' + (stockItems.length===1?'товар':stockItems.length<5?'товара':'товаров')
-    : '● Скоро';
-  if(!stockItems.length){
-    grid.innerHTML='<div class="stock-empty" style="grid-column:1/-1">Загрузка...</div>';
-    return;
-  }
-  grid.innerHTML = stockItems.map((p,i)=>`
+const KNOWN_BRANDS = new Set(['Weekend Offender','Fred Perry','Marshall Artist','Ellesse','MA.Strum',
+  'Sergio Tacchini','Napapijri','Lacoste','Ben Sherman','New Balance','Bench','Gant',
+  'Tommy Hilfiger','Nike','Adidas','Puma','Converse','Vans','Ralph Lauren','Hugo Boss',
+  'Calvin Klein','Lonsdale','Birkenstock','UGG','Dr. Martens','The North Face','Columbia',
+  'Helly Hansen','Under Armour','Jack Wolfskin','Polo']);
+
+function getItemCat(item){
+  const cat=(item.category||'').toLowerCase().trim();
+  if(cat==='обувь') return 'shoes';
+  if(cat==='аксессуары') return 'accessories';
+  return 'clothing';
+}
+
+function normSize(s){
+  const eur=s.match(/^(\d+(?:\.\d+)?)\s*EUR/);
+  if(eur) return eur[1]+' EU';
+  const cl=s.match(/^(XS|S|M|L|XL|2XL|3XL|XXL|XXXL)/);
+  if(cl) return cl[1];
+  if(s==='One Size') return 'One Size';
+  return null;
+}
+
+function buildStockFilters(catItems){
+  const brands=[...new Set(catItems.filter(x=>KNOWN_BRANDS.has(x.brand)).map(x=>x.brand))].sort();
+  document.getElementById('stock-brand-row').innerHTML=[
+    `<button class="sf-btn ${stockActiveBrand==='all'?'active':''}" onclick="setStockBrand('all',this)">Все бренды</button>`,
+    ...brands.map(b=>`<button class="sf-btn ${stockActiveBrand===b?'active':''}" onclick="setStockBrand(${JSON.stringify(b)},this)">${b}</button>`)
+  ].join('');
+
+  const clothOrder=['XS','S','M','L','XL','2XL','3XL','XXL','XXXL'];
+  const sizes=[...new Set(catItems.flatMap(x=>(x.sizes||[]).map(normSize).filter(Boolean)))];
+  sizes.sort((a,b)=>{
+    const ai=clothOrder.indexOf(a),bi=clothOrder.indexOf(b);
+    if(ai>=0&&bi>=0) return ai-bi;
+    if(ai>=0) return -1;
+    if(bi>=0) return 1;
+    return parseFloat(a)-parseFloat(b);
+  });
+  document.getElementById('stock-size-row').innerHTML=[
+    `<button class="sf-btn ${stockActiveSize==='all'?'active':''}" onclick="setStockSize('all',this)">Все размеры</button>`,
+    ...sizes.map(s=>`<button class="sf-btn ${stockActiveSize===s?'active':''}" onclick="setStockSize(${JSON.stringify(s)},this)">${s}</button>`)
+  ].join('');
+}
+
+function applyStockFilters(){
+  const catItems=stockActiveCat==='all'?stockAllItems:stockAllItems.filter(x=>getItemCat(x)===stockActiveCat);
+  buildStockFilters(catItems);
+  let filtered=catItems;
+  if(stockActiveBrand!=='all') filtered=filtered.filter(x=>x.brand===stockActiveBrand);
+  if(stockActiveSize!=='all') filtered=filtered.filter(x=>(x.sizes||[]).some(s=>normSize(s)===stockActiveSize));
+  renderStockGrid(filtered);
+}
+
+function setStockCat(cat,el){
+  stockActiveCat=cat; stockActiveBrand='all'; stockActiveSize='all';
+  document.querySelectorAll('.scat-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  applyStockFilters();
+}
+function setStockBrand(brand,el){
+  stockActiveBrand=brand;
+  document.querySelectorAll('#stock-brand-row .sf-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  applyStockFilters();
+}
+function setStockSize(size,el){
+  stockActiveSize=size;
+  document.querySelectorAll('#stock-size-row .sf-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  applyStockFilters();
+}
+
+function renderStockGrid(items){
+  stockItems=items;
+  const grid=document.getElementById('stock-grid');
+  document.getElementById('stock-badge').textContent=items.length
+    ?'● '+items.length+' '+(items.length===1?'товар':items.length<5?'товара':'товаров')
+    :'● 0';
+  if(!items.length){grid.innerHTML='<div class="stock-empty">Нет товаров по фильтру</div>';return;}
+  grid.innerHTML=items.map((p,i)=>`
     <div class="stock-card" onclick="openStockModal(${i})" style="cursor:pointer">
       <div class="stock-img">
         <div class="stock-avail">В наличии</div>
@@ -722,11 +811,17 @@ function renderStock(items){
       <div class="stock-body">
         <div class="stock-brand">${p.brand}</div>
         <div class="stock-name">${p.name}</div>
-        ${p.sizes && p.sizes.length ? `<div class="stock-size">${p.sizes.slice(0,3).join(' · ')}${p.sizes.length>3?` +${p.sizes.length-3}`:''}</div>` : ''}
+        ${p.sizes&&p.sizes.length?`<div class="stock-size">${p.sizes.slice(0,3).map(normSize).filter(Boolean).join(' · ')}${p.sizes.length>3?` +${p.sizes.length-3}`:''}</div>`:''}
         <div class="stock-price">${p.price.toLocaleString('ru-RU')} ₽</div>
       </div>
     </div>
   `).join('');
+}
+
+function renderStock(items){
+  if(items) stockAllItems=items;
+  buildStockFilters(stockAllItems);
+  applyStockFilters();
 }
 
 let selectedStockSize = null;
