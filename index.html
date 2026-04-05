@@ -731,8 +731,7 @@ const KNOWN_BRANDS = new Set(['Weekend Offender','Fred Perry','Marshall Artist',
   'Calvin Klein','Lonsdale','Birkenstock','UGG','Dr. Martens','The North Face','Columbia',
   'Helly Hansen','Under Armour','Jack Wolfskin','Polo']);
 
-const PROXY = 'https://monbleza-calc.onrender.com/img?url=';
-function proxyImg(url){ return url ? PROXY + encodeURIComponent(url) : ''; }
+function proxyImg(url){ return url||''; }
 
 function getItemCat(item){
   const cat=(item.category||'').toLowerCase().trim();

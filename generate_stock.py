@@ -1,4 +1,4 @@
-import requests, json
+import requests, json, os
 
 MS_TOKEN = '3b701e01c5660188053b898da86779c282b1c527'
 HEADERS = {'Authorization': f'Bearer {MS_TOKEN}', 'Accept': 'application/json;charset=utf-8'}
@@ -9,6 +9,8 @@ BRANDS = ['Nike','Adidas','New Balance','Puma','Converse','Vans','The North Face
     'Gant','Weekend Offender','Columbia','Helly Hansen','Under Armour','Jack Wolfskin',
     'Birkenstock','UGG','Dr. Martens','Levis','Diesel','Polo','Ellesse','Lonsdale',
     'Ben Sherman','Napapijri','Marshall Artist','Sergio Tacchini','MA.Strum','Bench']
+
+os.makedirs('img', exist_ok=True)
 
 def extract_brand(name):
     for b in BRANDS:
@@ -21,14 +23,30 @@ def get_image(product_id):
         r = requests.get(f'{BASE}/entity/product/{product_id}/images?limit=1', headers=HEADERS, timeout=10)
         rows = r.json().get('rows', [])
         if rows:
-            return rows[0].get('meta', {}).get('downloadHref', '') or rows[0].get('miniature', {}).get('href', '')
+            return rows[0].get('meta', {}).get('downloadHref', '')
+    except:
+        pass
+    return ''
+
+def download_image(url, product_id):
+    if not url:
+        return ''
+    local_path = f'img/{product_id}.jpg'
+    if os.path.exists(local_path):
+        return local_path
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=15)
+        if r.status_code == 200 and len(r.content) > 1000:
+            with open(local_path, 'wb') as f:
+                f.write(r.content)
+            return local_path
     except:
         pass
     return ''
 
 # Шаг 1: Загружаем все варианты и группируем по product_id
 print('Загружаем варианты...')
-variant_map = {}  # product_id -> [size, ...]
+variant_map = {}
 offset, limit = 0, 100
 while True:
     r = requests.get(f'{BASE}/entity/variant?limit={limit}&offset={offset}', headers=HEADERS)
@@ -69,7 +87,8 @@ while True:
             continue
 
         product_id = row['id']
-        img = get_image(product_id)
+        img_url = get_image(product_id)
+        local_img = download_image(img_url, product_id)
         path_parts = (row.get('pathName') or '').split('/')
         category = path_parts[-1] if path_parts else ''
         sizes = variant_map.get(product_id, [])
@@ -80,10 +99,10 @@ while True:
             'price': round(price / 100),
             'sizes': sizes,
             'category': category,
-            'img': img,
+            'img': local_img,
             'description': row.get('description', '')
         })
-        print(f'[{len(items)}/{total}] {row["name"]} | размеры: {sizes}')
+        print(f'[{len(items)}/{total}] {row["name"]} | img: {"✓" if local_img else "✗"}')
 
     offset += 100
     if offset >= total:
@@ -93,3 +112,4 @@ with open('stock.json', 'w', encoding='utf-8') as f:
     json.dump(items, f, ensure_ascii=False, indent=2)
 
 print(f'\n✅ stock.json записан: {len(items)} товаров')
+print(f'📁 Фото сохранены в папку img/')
