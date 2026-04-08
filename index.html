@@ -259,34 +259,57 @@
   .cart-fab.show{display:flex;}
   .cart-fab:hover{transform:scale(1.08);}
   .cart-badge{position:absolute;top:-3px;right:-3px;background:#e53935;color:white;font-size:9px;font-weight:700;min-width:18px;height:18px;border-radius:9px;display:flex;align-items:center;justify-content:center;padding:0 4px;}
-  .cart-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:400;overflow-y:auto;padding:20px 16px;}
+  /* ── КОРЗИНА ── */
+  .cart-overlay{display:none;position:fixed;inset:0;background:#fff;z-index:400;overflow-y:auto;}
   .cart-overlay.show{display:block;}
-  .cart-modal{max-width:400px;margin:0 auto;background:var(--surface);border:0.5px solid var(--border);border-radius:2px;position:relative;}
-  .cart-modal::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.5;}
-  .cart-header{padding:20px 20px 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:0.5px solid var(--border);}
-  .cart-title{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);}
-  .cart-cnt{font-size:10px;color:var(--muted);}
-  .cart-body{padding:0 20px;}
-  .cart-empty{text-align:center;color:var(--muted);font-size:13px;padding:40px 0;}
-  .cart-item{display:flex;gap:12px;padding:14px 0;border-bottom:0.5px solid var(--border);}
-  .cart-item:last-child{border-bottom:none;}
-  .cart-item-img{width:56px;height:56px;background:#f5f3ef;border-radius:2px;flex-shrink:0;overflow:hidden;}
-  .cart-item-img img{width:100%;height:100%;object-fit:contain;padding:4px;}
+  .cart-page{max-width:1100px;margin:0 auto;padding:24px 20px 60px;}
+  .cart-header{display:flex;align-items:baseline;gap:12px;margin-bottom:24px;}
+  .cart-title{font-size:28px;font-weight:700;color:#111;}
+  .cart-cnt{font-size:15px;color:#999;font-weight:400;}
+  .cart-layout{display:grid;grid-template-columns:1fr;gap:0;}
+  @media(min-width:700px){.cart-layout{grid-template-columns:1fr 380px;gap:32px;}}
+  .cart-body{}
+  .cart-empty{text-align:center;color:var(--muted);font-size:15px;padding:60px 0;}
+  .cart-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #f0f0f0;align-items:flex-start;}
+  .cart-item-img{width:80px;height:80px;background:#f5f5f5;border-radius:8px;flex-shrink:0;overflow:hidden;}
+  .cart-item-img img{width:100%;height:100%;object-fit:contain;padding:6px;}
   .cart-item-info{flex:1;min-width:0;}
-  .cart-item-brand{font-size:9px;letter-spacing:0.15em;text-transform:uppercase;color:var(--dim);}
-  .cart-item-name{font-size:12px;color:var(--text);margin:2px 0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  .cart-item-sz{display:inline-block;font-size:10px;color:var(--gold);border:0.5px solid rgba(201,168,76,0.35);padding:2px 7px;border-radius:2px;margin-top:3px;}
-  .cart-item-price{font-size:11px;color:var(--muted);margin-top:5px;}
-  .cart-item-del{background:none;border:none;color:var(--dim);cursor:pointer;font-size:20px;padding:0;flex-shrink:0;align-self:flex-start;line-height:1;transition:color 0.2s;}
-  .cart-item-del:hover{color:#e53935;}
-  .cart-footer{padding:14px 20px 20px;}
-  .cart-total-row{display:flex;justify-content:space-between;align-items:baseline;background:var(--s2);border-radius:2px;padding:14px 16px;margin-bottom:12px;}
-  .cart-total-l{font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);}
-  .cart-total-v{font-family:'Inter',sans-serif;font-size:32px;font-weight:300;}
-  .cart-order-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:var(--gold);color:#ffffff;border:none;border-radius:2px;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;margin-bottom:8px;text-decoration:none;transition:opacity 0.2s;}
-  .cart-order-btn:hover{opacity:0.88;}
-  .cart-close-btn{width:100%;padding:12px;background:transparent;border:0.5px solid var(--border2);border-radius:2px;color:var(--muted);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;}
-  .cart-close-btn:hover{border-color:var(--gold);color:var(--gold);}
+  .cart-item-name{font-size:14px;font-weight:500;color:#111;margin-bottom:4px;line-height:1.3;}
+  .cart-item-sz{font-size:13px;color:#666;margin-bottom:2px;}
+  .cart-item-price{font-size:15px;font-weight:600;color:#111;}
+  .cart-item-del{background:none;border:none;color:#ccc;cursor:pointer;font-size:22px;padding:0;line-height:1;transition:color 0.2s;flex-shrink:0;}
+  .cart-item-del:hover{color:#111;}
+  /* Checkout panel */
+  .cart-checkout{background:#f7f7f7;border-radius:16px;padding:20px;}
+  .co2-title{font-size:17px;font-weight:600;margin-bottom:14px;}
+  .co2-tabs{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-radius:10px;overflow:hidden;border:1px solid #e0e0e0;margin-bottom:16px;}
+  .co2-tab{padding:12px 8px;background:#fff;border:none;font-size:13px;font-weight:400;cursor:pointer;font-family:'Inter',sans-serif;color:#111;text-align:left;line-height:1.3;transition:background 0.15s;border-right:1px solid #e0e0e0;}
+  .co2-tab:last-child{border-right:none;}
+  .co2-tab.active{background:#fce4ec;font-weight:500;}
+  .co2-address{font-size:15px;color:#111;margin-bottom:14px;display:flex;align-items:center;gap:6px;}
+  .co2-address span{color:#e53935;}
+  .co2-note{font-size:14px;color:#111;margin-bottom:16px;line-height:1.4;}
+  .co2-split{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;gap:12px;}
+  .co2-split-text{font-size:15px;color:#111;line-height:1.35;flex:1;}
+  .co2-toggle{width:44px;height:26px;background:#ddd;border-radius:13px;border:none;cursor:pointer;position:relative;flex-shrink:0;transition:background 0.2s;}
+  .co2-toggle::after{content:'';position:absolute;top:3px;left:3px;width:20px;height:20px;background:#fff;border-radius:50%;transition:transform 0.2s;box-shadow:0 1px 4px rgba(0,0,0,0.2);}
+  .co2-toggle.on{background:#4caf50;}
+  .co2-toggle.on::after{transform:translateX(18px);}
+  .co2-promo{display:flex;gap:0;margin-bottom:16px;border:1px solid #e0e0e0;border-radius:10px;overflow:hidden;background:#fff;}
+  .co2-promo input{flex:1;padding:13px 14px;border:none;background:transparent;font-size:14px;font-family:'Inter',sans-serif;color:#111;outline:none;}
+  .co2-promo input::placeholder{color:#aaa;}
+  .co2-promo button{padding:0 16px;background:transparent;border:none;border-left:1px solid #e0e0e0;font-size:13px;font-weight:500;cursor:pointer;color:#111;font-family:'Inter',sans-serif;}
+  .co2-divider{height:1px;background:#e0e0e0;margin-bottom:14px;}
+  .co2-total-row{display:flex;justify-content:space-between;margin-bottom:6px;}
+  .co2-total-l{font-size:14px;color:#999;}
+  .co2-total-v{font-size:14px;color:#111;}
+  .co2-итого-row{display:flex;justify-content:space-between;margin-bottom:16px;}
+  .co2-итого-l{font-size:16px;font-weight:700;color:#111;}
+  .co2-итого-v{font-size:16px;font-weight:700;color:#111;}
+  .co2-pay-btn{width:100%;padding:18px;background:linear-gradient(135deg,#f06292,#e53935);color:#fff;border:none;border-radius:14px;font-size:18px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;gap:10px;transition:opacity 0.2s;text-decoration:none;}
+  .co2-pay-btn:hover{opacity:0.9;}
+  .cart-close-btn{width:100%;padding:12px;background:transparent;border:1px solid #ddd;border-radius:8px;color:#666;font-size:13px;cursor:pointer;font-family:'Inter',sans-serif;margin-top:12px;}
+  .cart-close-btn:hover{border-color:#111;color:#111;}
 </style>
 </head>
 <body>
@@ -686,14 +709,17 @@
 </button>
 
 <!-- CART OVERLAY -->
-<div class="cart-overlay" id="cart-overlay" onclick="closeCartBg(event)">
-  <div class="cart-modal">
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-page">
     <div class="cart-header">
+      <button onclick="closeCart()" style="background:none;border:none;font-size:22px;cursor:pointer;color:#111;padding:0;line-height:1;margin-right:12px;">←</button>
       <span class="cart-title">Корзина</span>
       <span class="cart-cnt" id="cart-cnt"></span>
     </div>
-    <div class="cart-body" id="cart-body"></div>
-    <div class="cart-footer" id="cart-footer"></div>
+    <div class="cart-layout">
+      <div id="cart-body"></div>
+      <div id="cart-checkout"></div>
+    </div>
   </div>
 </div>
 
@@ -1141,8 +1167,10 @@ function updateCartBadge(){
   if(hdrBadge){hdrBadge.textContent=cart.length;hdrBadge.style.display=cart.length>0?'flex':'none';}
 }
 
+let cartDelivery = 'store';
+let cartSplit = false;
+
 function openCart(){renderCart();document.getElementById('cart-overlay').classList.add('show');tgShowBack();}
-function closeCartBg(e){if(e.target.id==='cart-overlay'){document.getElementById('cart-overlay').classList.remove('show');tgHideBack();}}
 function closeCart(){document.getElementById('cart-overlay').classList.remove('show');tgHideBack();}
 
 function removeFromCart(idx){
@@ -1151,45 +1179,104 @@ function removeFromCart(idx){
   renderCart();
 }
 
+function setCartDelivery(val){
+  cartDelivery=val;
+  document.querySelectorAll('.co2-tab').forEach(t=>t.classList.remove('active'));
+  const tabMap={store:'co2-tab-store',pickup:'co2-tab-pickup',courier:'co2-tab-courier'};
+  const el=document.getElementById(tabMap[val]);
+  if(el)el.classList.add('active');
+  const addr=document.getElementById('co2-address-block');
+  if(addr)addr.style.display=val==='store'?'flex':'none';
+}
+
+function toggleCartSplit(){
+  cartSplit=!cartSplit;
+  const btn=document.getElementById('co2-split-toggle');
+  if(btn)btn.classList.toggle('on',cartSplit);
+}
+
 function wordForm(n){return n===1?'товар':n<5?'товара':'товаров';}
 
+function itemRub(item){return item.isStock?item.price:calcRub(item.price);}
+
 function buildTgLink(){
-  const lines=cart.map((item,i)=>`${i+1}. ${item.brand} ${item.name}, размер ${item.size} — ${item.price.toFixed(2)}€ (≈${calcRub(item.price).toLocaleString('ru-RU')}₽)`);
-  const total=cart.reduce((s,item)=>s+calcRub(item.price),0);
-  const msg='Привет! Хочу заказать:\n\n'+lines.join('\n')+`\n\nИтого: ≈${total.toLocaleString('ru-RU')} ₽`;
+  const deliveryMap={store:'В магазине, Москва Северный бульвар 3',pickup:'В пункте выдачи (СДЭК/Boxberry)',courier:'Курьером до двери'};
+  const lines=cart.map((item,i)=>{
+    const rub=itemRub(item);
+    const priceStr=item.isStock?`${rub.toLocaleString('ru-RU')} ₽`:`${item.price.toFixed(2)}€ (≈${rub.toLocaleString('ru-RU')} ₽)`;
+    return `${i+1}. ${item.brand} ${item.name}, размер ${item.size} — ${priceStr}`;
+  });
+  const total=cart.reduce((s,item)=>s+itemRub(item),0);
+  let msg='Привет! Хочу заказать:\n\n'+lines.join('\n')+`\n\nИтого: ${total.toLocaleString('ru-RU')} ₽`;
+  msg+=`\n🚚 Доставка: ${deliveryMap[cartDelivery]||''}`;
+  if(cartSplit)msg+='\n💳 Сплит: 50% сейчас, 50% при получении';
   return 'https://t.me/euclothing?text='+encodeURIComponent(msg);
 }
 
 function renderCart(){
-  const body=document.getElementById('cart-body');
-  const footer=document.getElementById('cart-footer');
   document.getElementById('cart-cnt').textContent=cart.length+' '+wordForm(cart.length);
+  const body=document.getElementById('cart-body');
+  const checkout=document.getElementById('cart-checkout');
+
   if(!cart.length){
-    body.innerHTML='<div class="cart-empty">Корзина пуста<br><span style="font-size:10px;opacity:0.5">Выберите товар и размер</span></div>';
-    footer.innerHTML='<button class="cart-close-btn" onclick="closeCart()">← Назад к каталогу</button>';
+    body.innerHTML='<div class="cart-empty">Корзина пуста<br><span style="font-size:13px;opacity:0.5;display:block;margin-top:6px">Выберите товар и размер</span></div>';
+    checkout.innerHTML='';
     return;
   }
+
   body.innerHTML=cart.map((item,i)=>`
     <div class="cart-item">
-      <div class="cart-item-img"><img src="${item.img}" alt="${item.name}" loading="lazy"></div>
+      <div class="cart-item-img"><img src="${item.img||''}" alt="${item.name}" loading="lazy"></div>
       <div class="cart-item-info">
-        <div class="cart-item-brand">${item.brand}</div>
-        <div class="cart-item-name">${item.name}</div>
-        <span class="cart-item-sz">Размер ${item.size}</span>
-        <div class="cart-item-price">${item.price.toFixed(2)} € · ≈ ${calcRub(item.price).toLocaleString('ru-RU')} ₽</div>
+        <div class="cart-item-name">${item.brand} ${item.name}</div>
+        <div class="cart-item-sz">Размер ${item.size}</div>
+        <div class="cart-item-price">${itemRub(item).toLocaleString('ru-RU')} ₽${item.isStock?'':` · ${item.price.toFixed(2)} €`}</div>
       </div>
       <button class="cart-item-del" onclick="removeFromCart(${i})">×</button>
     </div>
   `).join('');
-  const total=cart.reduce((s,item)=>s+calcRub(item.price),0);
-  footer.innerHTML=`
-    <div class="cart-total-row">
-      <span class="cart-total-l">Итого</span>
-      <span class="cart-total-v">${total.toLocaleString('ru-RU')}<small style="font-size:18px;color:var(--muted);margin-left:4px">₽</small></span>
+
+  const total=cart.reduce((s,item)=>s+itemRub(item),0);
+  const splitAmt=Math.round(total/2);
+
+  checkout.innerHTML=`
+    <div class="cart-checkout">
+      <div class="co2-title">Как получить</div>
+      <div class="co2-tabs">
+        <button class="co2-tab active" id="co2-tab-store" onclick="setCartDelivery('store')">В магазине<br>в Москве</button>
+        <button class="co2-tab" id="co2-tab-pickup" onclick="setCartDelivery('pickup')">В пункте<br>выдачи</button>
+        <button class="co2-tab" id="co2-tab-courier" onclick="setCartDelivery('courier')">Курьером</button>
+      </div>
+      <div class="co2-address" id="co2-address-block" style="display:flex">
+        <span>📍</span>
+        <span>Москва, Северный бульвар, 3</span>
+        <span style="color:#999;margin-left:auto">›</span>
+      </div>
+      <div class="co2-split">
+        <div class="co2-split-text">Сплит<br><span style="font-size:13px;color:#999">Платите половину сейчас,<br>половину при получении</span></div>
+        <button class="co2-toggle${cartSplit?' on':''}" id="co2-split-toggle" onclick="toggleCartSplit()"></button>
+      </div>
+      <div class="co2-promo">
+        <input type="text" id="co2-promo-input" placeholder="Промокод">
+        <button>Применить</button>
+      </div>
+      <div class="co2-divider"></div>
+      <div class="co2-total-row">
+        <span class="co2-total-l">Всего</span>
+        <span class="co2-total-v">${total.toLocaleString('ru-RU')} ₽</span>
+      </div>
+      <div class="co2-итого-row">
+        <span class="co2-итого-l">Итого</span>
+        <span class="co2-итого-v">${total.toLocaleString('ru-RU')} ₽</span>
+      </div>
+      <a class="co2-pay-btn" href="${buildTgLink()}" target="_blank">
+        ${total.toLocaleString('ru-RU')} ₽ · Оформить заказ
+      </a>
+      <button class="cart-close-btn" onclick="closeCart()">← Назад к каталогу</button>
     </div>
-    <a class="cart-order-btn" href="${buildTgLink()}" target="_blank">📩 Оформить заказ в Telegram</a>
-    <button class="cart-close-btn" onclick="closeCart()">← Назад к каталогу</button>
   `;
+  // restore delivery tab state
+  setCartDelivery(cartDelivery);
 }
 
 function openModal(i){
