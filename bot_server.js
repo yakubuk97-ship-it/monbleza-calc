@@ -180,6 +180,13 @@ http.createServer(async (req, res) => {
     return;
   }
 
+  // Keep-alive ping (для UptimeRobot)
+  if (req.url === '/ping') {
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('ok');
+    return;
+  }
+
   // Эндпоинт для товаров из МойСклад
   if (req.method === 'GET' && req.url === '/stock') {
     try {
