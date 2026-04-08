@@ -1433,27 +1433,39 @@ function buildTgLink(){
   });
   const total=cart.reduce((s,item)=>s+itemRub(item),0);
   let msg='Привет! Хочу заказать:\n\n'+lines.join('\n')+`\n\nИтого: ${total.toLocaleString('ru-RU')} ₽\n`;
+
   if(cartDelivery==='store'){
-    msg+='\n🏪 Самовывоз: Москва, Северный бульвар, 3';
+    msg+='\n🏪 Способ получения: Лично в Москве';
+    msg+='\n📍 Адрес: Москва, Северный бульвар, 3';
+
   } else if(cartDelivery==='pickup'){
     const addr=window._cdekChosenAddr||'';
     const name=(document.getElementById('co2-pickup-name')||{}).value||'';
     const phone=(document.getElementById('co2-pickup-phone')||{}).value||'';
-    msg+='\n📦 Пункт выдачи СДЭК';
-    if(addr)msg+=`\n📍 Адрес ПВЗ: ${addr}`;
-    if(name)msg+=`\n👤 Получатель: ${name}`;
-    if(phone)msg+=`\n📞 Телефон: ${phone}`;
+    msg+='\n📦 Способ получения: СДЭК (пункт выдачи)';
+    if(addr) msg+=`\n📍 ПВЗ: ${addr}`;
+    else     msg+='\n📍 ПВЗ: не указан';
+    if(name)  msg+=`\n👤 Получатель: ${name}`;
+    if(phone) msg+=`\n📞 Телефон: ${phone}`;
+
   } else if(cartDelivery==='courier'){
     const addr=(document.getElementById('co2-courier-addr')||{}).value||'';
     const name=(document.getElementById('co2-courier-name')||{}).value||'';
     const phone=(document.getElementById('co2-courier-phone')||{}).value||'';
-    msg+='\n🚚 Доставка курьером';
-    if(addr)msg+=`\n📍 Адрес: ${addr}`;
-    if(name)msg+=`\n👤 Получатель: ${name}`;
-    if(phone)msg+=`\n📞 Телефон: ${phone}`;
+    msg+='\n🚚 Способ получения: Курьер';
+    if(addr)  msg+=`\n📍 Адрес: ${addr}`;
+    else      msg+='\n📍 Адрес доставки: не указан';
+    if(name)  msg+=`\n👤 Получатель: ${name}`;
+    if(phone) msg+=`\n📞 Телефон: ${phone}`;
   }
-  if(cartSplit)msg+='\n💳 Сплит: 50% сейчас, 50% при получении';
+
+  if(cartSplit) msg+='\n💳 Оплата: Сплит (50% сейчас, 50% при получении)';
+
   return 'https://t.me/euclothing?text='+encodeURIComponent(msg);
+}
+
+function submitCartOrder(){
+  window.open(buildTgLink(), '_blank');
 }
 
 function renderCart(){
@@ -1529,9 +1541,9 @@ function renderCart(){
         <span class="co2-итого-l">Итого</span>
         <span class="co2-итого-v">${total.toLocaleString('ru-RU')} ₽</span>
       </div>
-      <a class="co2-pay-btn" href="${buildTgLink()}" target="_blank">
+      <button class="co2-pay-btn" onclick="submitCartOrder()">
         ${total.toLocaleString('ru-RU')} ₽ · Оформить заказ
-      </a>
+      </button>
       <button class="cart-close-btn" onclick="closeCart()">← Назад к каталогу</button>
     </div>
   `;
