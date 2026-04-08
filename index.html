@@ -213,7 +213,7 @@
   .co-cancel:hover{border-color:var(--gold);color:var(--gold);}
   /* ── SITE HEADER ── */
   .site-header{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 32px;height:56px;background:rgba(255,255,255,0.95);backdrop-filter:blur(12px);border-bottom:0.5px solid var(--border);}
-  .site-logo{font-family:'Inter',sans-serif;font-size:18px;font-weight:700;letter-spacing:0.05em;color:var(--text);text-transform:uppercase;}
+  .site-logo{font-family:'Inter',sans-serif;font-size:18px;font-weight:700;letter-spacing:0.05em;color:var(--text);text-transform:uppercase;cursor:pointer;background:none;border:none;padding:0;}
   .site-nav{display:flex;gap:2px;}
   .nav-btn{background:transparent;border:none;color:var(--muted);font-family:'Inter',sans-serif;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;padding:8px 14px;cursor:pointer;border-radius:2px;transition:all 0.2s;}
   .nav-btn:hover{color:var(--text);background:rgba(255,255,255,0.05);}
@@ -348,7 +348,7 @@
 </head>
 <body>
 <header class="site-header">
-  <div class="site-logo">Monbleza</div>
+  <button class="site-logo" onclick="switchTab('calc')">Monbleza</button>
   <nav class="site-nav">
     <button class="nav-btn active" id="tab-calc" onclick="switchTab('calc')">Калькулятор</button>
     <button class="nav-btn" id="tab-stock" onclick="switchTab('stock')">В наличии</button>
