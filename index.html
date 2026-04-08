@@ -1232,9 +1232,13 @@ let cartSplit = false;
 
 /* ── CDEK MAP ── */
 const CDEK_SERVER = 'https://monbleza-calc.onrender.com';
+const CDEK_ID = 'EMscd6r9JnFiQ3bLoyjJY6eM78JrJceI';
+const CDEK_SEC = 'PjLZkKBHEiLK3YsjtNrt3TGNG0ahs3kG';
 let cdekMap = null;
 let cdekMarkers = [];
 let cdekSelectedPoint = null;
+let cdekToken = null;
+let cdekTokenExp = 0;
 
 function openCdekModal() {
   document.getElementById('cdek-overlay').classList.add('show');
@@ -1252,77 +1256,135 @@ function closeCdekModal() {
   document.getElementById('cdek-overlay').classList.remove('show');
 }
 
-async function loadCdekPvz() {
-  const city = document.getElementById('cdek-city').value.trim() || 'Москва';
-  const loading = document.getElementById('cdek-loading');
-  loading.style.display = 'flex';
-  cdekSelectedPoint = null;
-  document.getElementById('cdek-sel-label').textContent = 'Выберите точку на карте';
-  document.getElementById('cdek-sel-addr').textContent = '';
-  document.getElementById('cdek-confirm-btn').classList.remove('show');
+async function cdekGetToken() {
+  if (cdekToken && Date.now() < cdekTokenExp) return cdekToken;
+  const r = await fetch('https://api.cdek.ru/v2/oauth/token', {
+    method: 'POST',
+    headers: {'Content-Type':'application/x-www-form-urlencoded'},
+    body: `grant_type=client_credentials&client_id=${CDEK_ID}&client_secret=${CDEK_SEC}`
+  });
+  const d = await r.json();
+  cdekToken = d.access_token;
+  cdekTokenExp = Date.now() + ((d.expires_in||3600) - 60) * 1000;
+  return cdekToken;
+}
 
-  // Удаляем старые маркеры
-  cdekMarkers.forEach(m => m.remove());
-  cdekMarkers = [];
+async function cdekFetchDirect(city) {
+  const token = await cdekGetToken();
+  const cr = await fetch(`https://api.cdek.ru/v2/location/cities?city=${encodeURIComponent(city)}&size=1`, {
+    headers: {Authorization: `Bearer ${token}`}
+  });
+  const cities = await cr.json();
+  if (!cities || !cities.length) return [];
+  const code = cities[0].code;
+  const pr = await fetch(`https://api.cdek.ru/v2/deliverypoints?city_code=${code}&type=PVZ&size=200`, {
+    headers: {Authorization: `Bearer ${token}`}
+  });
+  const pts = await pr.json();
+  return (pts||[]).map(p=>({
+    Code: p.code, Name: p.name||'',
+    Address: (p.location&&p.location.address)||'',
+    FullAddress: `${(p.location&&p.location.city)||city}, ${(p.location&&p.location.address)||''}`,
+    coordX: p.location&&p.location.longitude,
+    coordY: p.location&&p.location.latitude,
+  }));
+}
 
+async function cdekFetchViaServer(city) {
+  const ctrl = new AbortController();
+  const t = setTimeout(()=>ctrl.abort(), 55000);
   try {
-    loading.textContent = 'Загрузка... (первый раз ~10 сек)';
-    const r = await fetch(`${CDEK_SERVER}/cdek-pvz?city=${encodeURIComponent(city)}`, {signal: AbortSignal.timeout(30000)});
-    const data = await r.json();
-    const pvzList = data.pvz || [];
-    loading.style.display = 'none';
-    if (!pvzList.length) {
-      document.getElementById('cdek-sel-label').textContent = 'Пункты не найдены — попробуйте другой город';
+    const r = await fetch(`${CDEK_SERVER}/cdek-pvz?city=${encodeURIComponent(city)}`, {signal: ctrl.signal});
+    const d = await r.json();
+    return d.pvz||[];
+  } finally { clearTimeout(t); }
+}
+
+function renderCdekMarkers(pvzList) {
+  const cdekIcon = L.divIcon({
+    html:`<div style="background:#00b33c;color:#fff;font-size:10px;font-weight:700;padding:3px 7px;border-radius:4px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,0.3);">СДЭК</div>`,
+    className:'', iconAnchor:[20,10]
+  });
+  const bounds = [];
+  pvzList.slice(0,200).forEach(pvz=>{
+    const lat=parseFloat(pvz.coordY), lng=parseFloat(pvz.coordX);
+    if(!lat||!lng) return;
+    bounds.push([lat,lng]);
+    const m = L.marker([lat,lng],{icon:cdekIcon}).addTo(cdekMap);
+    m.on('click',()=>selectCdekPoint(pvz));
+    cdekMarkers.push(m);
+  });
+  if(bounds.length) cdekMap.fitBounds(bounds,{padding:[30,30]});
+}
+
+function showCdekManual() {
+  document.getElementById('cdek-sel-label').textContent = '📍 Введи адрес ПВЗ СДЭК:';
+  document.getElementById('cdek-sel-addr').innerHTML = `
+    <input id="cdek-manual" class="cdek-city-input" type="text" placeholder="ул. Примерная, 10" style="width:100%;margin-top:8px">
+    <button onclick="confirmCdekManual()" style="margin-top:8px;width:100%;padding:13px;background:#111;color:#fff;border:none;border-radius:10px;font-size:15px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif">Выбрать этот адрес</button>
+    <button onclick="loadCdekPvz()" style="margin-top:6px;width:100%;padding:10px;background:transparent;color:#999;border:1px solid #ddd;border-radius:10px;font-size:13px;cursor:pointer;font-family:Inter,sans-serif">↺ Попробовать снова</button>`;
+}
+
+function confirmCdekManual() {
+  const v = (document.getElementById('cdek-manual')||{}).value||'';
+  if(!v.trim()) return;
+  window._cdekChosenAddr = v.trim();
+  updateCdekPickupBtn(v.trim());
+  closeCdekModal();
+}
+
+async function loadCdekPvz() {
+  const city = document.getElementById('cdek-city').value.trim()||'Москва';
+  const loading = document.getElementById('cdek-loading');
+  loading.style.display='flex'; loading.textContent='Загрузка...';
+  cdekSelectedPoint=null;
+  document.getElementById('cdek-sel-label').textContent='Выберите точку на карте';
+  document.getElementById('cdek-sel-addr').textContent='';
+  document.getElementById('cdek-confirm-btn').classList.remove('show');
+  cdekMarkers.forEach(m=>m.remove()); cdekMarkers=[];
+
+  let pvzList=[];
+  try {
+    pvzList = await cdekFetchDirect(city);
+  } catch(e1) {
+    loading.textContent='⏳ Подключение... (~15 сек)';
+    try {
+      pvzList = await cdekFetchViaServer(city);
+    } catch(e2) {
+      loading.style.display='none';
+      showCdekManual();
       return;
     }
-
-    const cdekIcon = L.divIcon({
-      html: `<div style="background:#00b33c;color:#fff;font-size:10px;font-weight:700;padding:3px 6px;border-radius:4px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.25);">СДЭК</div>`,
-      className: '',
-      iconAnchor: [18, 10]
-    });
-
-    const bounds = [];
-    pvzList.slice(0, 100).forEach(pvz => {
-      const lat = parseFloat(pvz.coordY);
-      const lng = parseFloat(pvz.coordX);
-      if (!lat || !lng) return;
-      bounds.push([lat, lng]);
-      const marker = L.marker([lat, lng], { icon: cdekIcon }).addTo(cdekMap);
-      marker.on('click', () => selectCdekPoint(pvz));
-      cdekMarkers.push(marker);
-    });
-
-    if (bounds.length) cdekMap.fitBounds(bounds, { padding: [30, 30] });
-  } catch(e) {
-    loading.innerHTML = '';
-    loading.style.display = 'none';
-    document.getElementById('cdek-sel-label').textContent = 'Ошибка: ' + (e.message||'попробуйте ещё раз');
-    document.getElementById('cdek-sel-addr').innerHTML = '<button onclick="loadCdekPvz()" style="margin-top:8px;padding:8px 14px;border:1px solid #111;border-radius:8px;background:#111;color:#fff;cursor:pointer;font-family:Inter,sans-serif;font-size:13px;">Повторить</button>';
   }
+
+  loading.style.display='none';
+  if(!pvzList.length){
+    document.getElementById('cdek-sel-label').textContent='Пункты не найдены — попробуй другой город';
+    return;
+  }
+  renderCdekMarkers(pvzList);
 }
 
 function selectCdekPoint(pvz) {
-  cdekSelectedPoint = pvz;
-  const addr = pvz.Address || pvz.FullAddress || '';
-  document.getElementById('cdek-sel-label').textContent = '📍 Выбранный пункт:';
-  document.getElementById('cdek-sel-addr').textContent = addr;
+  cdekSelectedPoint=pvz;
+  const addr=pvz.Address||pvz.FullAddress||'';
+  document.getElementById('cdek-sel-label').textContent='📍 Выбранный пункт:';
+  document.getElementById('cdek-sel-addr').textContent=addr;
   document.getElementById('cdek-confirm-btn').classList.add('show');
-  cdekMap.setView([parseFloat(pvz.coordY), parseFloat(pvz.coordX)], 15);
+  const lat=parseFloat(pvz.coordY), lng=parseFloat(pvz.coordX);
+  if(lat&&lng) cdekMap.setView([lat,lng],16);
+}
+
+function updateCdekPickupBtn(addr) {
+  const btn=document.getElementById('co2-pickup-chosen');
+  if(btn) btn.innerHTML=`<span>📍</span><span class="selected-addr" style="flex:1;font-size:14px;color:#111;line-height:1.3">${addr}</span><span style="color:#999;font-size:18px">›</span>`;
 }
 
 function confirmCdekPoint() {
   if (!cdekSelectedPoint) return;
   const addr = cdekSelectedPoint.Address || cdekSelectedPoint.FullAddress || '';
-  // Обновить кнопку выбора ПВЗ в корзине
-  const btn = document.getElementById('co2-pickup-chosen');
-  if (btn) {
-    btn.querySelector('.selected-addr') && (btn.querySelector('.selected-addr').textContent = addr);
-    if (!btn.querySelector('.selected-addr')) {
-      btn.innerHTML = `<span>📍</span><span class="selected-addr" style="flex:1;font-size:14px;color:#111">${addr}</span><span style="color:#999">›</span>`;
-    }
-  }
   window._cdekChosenAddr = addr;
+  updateCdekPickupBtn(addr);
   closeCdekModal();
 }
 
