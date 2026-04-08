@@ -310,6 +310,10 @@
   .co2-pay-btn:hover{opacity:0.9;}
   .cart-close-btn{width:100%;padding:12px;background:transparent;border:1px solid #ddd;border-radius:8px;color:#666;font-size:13px;cursor:pointer;font-family:'Inter',sans-serif;margin-top:12px;}
   .cart-close-btn:hover{border-color:#111;color:#111;}
+  .co2-field-label{font-size:15px;font-weight:600;color:#111;margin:16px 0 8px;}
+  .co2-input{width:100%;padding:14px 16px;border:1px solid #e0e0e0;border-radius:10px;background:#fff;font-size:15px;font-family:'Inter',sans-serif;color:#111;outline:none;transition:border-color 0.2s;margin-bottom:8px;}
+  .co2-input:focus{border-color:#111;}
+  .co2-input::placeholder{color:#aaa;}
 </style>
 </head>
 <body>
@@ -1185,8 +1189,12 @@ function setCartDelivery(val){
   const tabMap={store:'co2-tab-store',pickup:'co2-tab-pickup',courier:'co2-tab-courier'};
   const el=document.getElementById(tabMap[val]);
   if(el)el.classList.add('active');
-  const addr=document.getElementById('co2-address-block');
-  if(addr)addr.style.display=val==='store'?'flex':'none';
+  const storeBlock=document.getElementById('co2-address-block');
+  const pickupBlock=document.getElementById('co2-pickup-block');
+  const courierBlock=document.getElementById('co2-courier-block');
+  if(storeBlock)storeBlock.style.display=val==='store'?'flex':'none';
+  if(pickupBlock)pickupBlock.style.display=val==='pickup'?'block':'none';
+  if(courierBlock)courierBlock.style.display=val==='courier'?'block':'none';
 }
 
 function toggleCartSplit(){
@@ -1200,15 +1208,32 @@ function wordForm(n){return n===1?'товар':n<5?'товара':'товаро�
 function itemRub(item){return item.isStock?item.price:calcRub(item.price);}
 
 function buildTgLink(){
-  const deliveryMap={store:'В магазине, Москва Северный бульвар 3',pickup:'В пункте выдачи (СДЭК/Boxberry)',courier:'Курьером до двери'};
   const lines=cart.map((item,i)=>{
     const rub=itemRub(item);
     const priceStr=item.isStock?`${rub.toLocaleString('ru-RU')} ₽`:`${item.price.toFixed(2)}€ (≈${rub.toLocaleString('ru-RU')} ₽)`;
     return `${i+1}. ${item.brand} ${item.name}, размер ${item.size} — ${priceStr}`;
   });
   const total=cart.reduce((s,item)=>s+itemRub(item),0);
-  let msg='Привет! Хочу заказать:\n\n'+lines.join('\n')+`\n\nИтого: ${total.toLocaleString('ru-RU')} ₽`;
-  msg+=`\n🚚 Доставка: ${deliveryMap[cartDelivery]||''}`;
+  let msg='Привет! Хочу заказать:\n\n'+lines.join('\n')+`\n\nИтого: ${total.toLocaleString('ru-RU')} ₽\n`;
+  if(cartDelivery==='store'){
+    msg+='\n🏪 Самовывоз: Москва, Северный бульвар, 3';
+  } else if(cartDelivery==='pickup'){
+    const addr=(document.getElementById('co2-pickup-addr')||{}).value||'';
+    const name=(document.getElementById('co2-pickup-name')||{}).value||'';
+    const phone=(document.getElementById('co2-pickup-phone')||{}).value||'';
+    msg+='\n📦 Пункт выдачи СДЭК';
+    if(addr)msg+=`\n📍 Адрес ПВЗ: ${addr}`;
+    if(name)msg+=`\n👤 Получатель: ${name}`;
+    if(phone)msg+=`\n📞 Телефон: ${phone}`;
+  } else if(cartDelivery==='courier'){
+    const addr=(document.getElementById('co2-courier-addr')||{}).value||'';
+    const name=(document.getElementById('co2-courier-name')||{}).value||'';
+    const phone=(document.getElementById('co2-courier-phone')||{}).value||'';
+    msg+='\n🚚 Доставка курьером';
+    if(addr)msg+=`\n📍 Адрес: ${addr}`;
+    if(name)msg+=`\n👤 Получатель: ${name}`;
+    if(phone)msg+=`\n📞 Телефон: ${phone}`;
+  }
   if(cartSplit)msg+='\n💳 Сплит: 50% сейчас, 50% при получении';
   return 'https://t.me/euclothing?text='+encodeURIComponent(msg);
 }
@@ -1251,6 +1276,20 @@ function renderCart(){
         <span>📍</span>
         <span>Москва, Северный бульвар, 3</span>
         <span style="color:#999;margin-left:auto">›</span>
+      </div>
+      <div id="co2-pickup-block" style="display:none">
+        <div class="co2-field-label">Адрес пункта выдачи СДЭК</div>
+        <input class="co2-input" id="co2-pickup-addr" type="text" placeholder="ул. Пример, 10">
+        <div class="co2-field-label">Кому выдать</div>
+        <input class="co2-input" id="co2-pickup-name" type="text" placeholder="Имя Фамилия">
+        <input class="co2-input" id="co2-pickup-phone" type="tel" placeholder="+7 (___) ___ __ __">
+      </div>
+      <div id="co2-courier-block" style="display:none">
+        <div class="co2-field-label">Адрес доставки</div>
+        <input class="co2-input" id="co2-courier-addr" type="text" placeholder="Улица, дом, квартира">
+        <div class="co2-field-label">Кому доставить</div>
+        <input class="co2-input" id="co2-courier-name" type="text" placeholder="Имя Фамилия">
+        <input class="co2-input" id="co2-courier-phone" type="tel" placeholder="+7 (___) ___ __ __">
       </div>
       <div class="co2-split">
         <div class="co2-split-text">Сплит<br><span style="font-size:13px;color:#999">Платите половину сейчас,<br>половину при получении</span></div>
