@@ -131,21 +131,52 @@ http.createServer(async (req, res) => {
     return;
   }
 
-  // СДЭК ПВЗ прокси
+  // СДЭК ПВЗ прокси (v2 API)
   if (req.method === 'GET' && req.url.startsWith('/cdek-pvz')) {
     const params = new URL('http://x' + req.url).searchParams;
     const city = params.get('city') || 'Москва';
-    const pvzReq = https.request({
-      hostname: 'integration.cdek.ru',
-      path: '/pvzlist/v1/json?type=PVZ&city=' + encodeURIComponent(city),
-      method: 'GET',
-      headers: { 'Accept': 'application/json' }
-    }, pvzRes => {
+    try {
+      const axios = require('axios');
+      // Получаем токен
+      const tokenRes = await axios.post(
+        'https://api.cdek.ru/v2/oauth/token',
+        'grant_type=client_credentials&client_id=EMscd6r9JnFiQ3bLoyjJY6eM78JrJceI&client_secret=PjLZkKBHEiLK3YsjtNrt3TGNG0ahs3kG',
+        { headers: { 'Content-Type': 'application/x-www-form-urlencoded' } }
+      );
+      const token = tokenRes.data.access_token;
+      // Получаем код города
+      const cityRes = await axios.get(
+        `https://api.cdek.ru/v2/location/cities?city=${encodeURIComponent(city)}&size=1`,
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      const cities = cityRes.data;
+      if (!cities || !cities.length) {
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({ pvz: [] }));
+        return;
+      }
+      const cityCode = cities[0].code;
+      // Получаем ПВЗ
+      const pvzRes = await axios.get(
+        `https://api.cdek.ru/v2/deliverypoints?city_code=${cityCode}&type=PVZ&size=200`,
+        { headers: { Authorization: `Bearer ${token}` } }
+      );
+      const pvz = (pvzRes.data || []).map(p => ({
+        Code: p.code,
+        Name: p.name || '',
+        Address: (p.location && p.location.address) || '',
+        FullAddress: `${(p.location && p.location.city) || city}, ${(p.location && p.location.address) || ''}`,
+        coordX: p.location && p.location.longitude,
+        coordY: p.location && p.location.latitude,
+        WorkTime: p.work_time || '',
+      }));
       res.setHeader('Content-Type', 'application/json');
-      pvzRes.pipe(res);
-    });
-    pvzReq.on('error', () => { res.writeHead(502); res.end('{}'); });
-    pvzReq.end();
+      res.end(JSON.stringify({ pvz }));
+    } catch(e) {
+      console.error('CDEK error:', e.message);
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ pvz: [], error: e.message }));
+    }
     return;
   }
 

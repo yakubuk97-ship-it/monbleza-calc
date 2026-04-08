@@ -332,9 +332,9 @@
   .cdek-back{background:none;border:none;cursor:pointer;font-size:22px;color:#111;padding:0;line-height:1;}
   .cdek-subtitle{font-size:13px;color:#999;margin-bottom:14px;}
   .cdek-city-row{display:flex;gap:8px;margin-bottom:12px;}
-  .cdek-city-input{flex:1;padding:11px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:#111;outline:none;}
+  .cdek-city-input{flex:1;min-width:0;padding:11px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:#111;outline:none;}
   .cdek-city-input:focus{border-color:#111;}
-  .cdek-city-btn{padding:11px 16px;background:#111;color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;}
+  .cdek-city-btn{padding:11px 18px;background:#111;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;flex-shrink:0;}
   .cdek-selected-info{flex:1;display:flex;flex-direction:column;gap:4px;}
   .cdek-selected-label{font-size:12px;color:#999;margin-top:8px;}
   .cdek-selected-addr{font-size:15px;font-weight:500;color:#111;line-height:1.4;}
@@ -1240,10 +1240,8 @@ function openCdekModal() {
   document.getElementById('cdek-overlay').classList.add('show');
   setTimeout(() => {
     if (!cdekMap) {
-      cdekMap = L.map('cdek-map').setView([55.75, 37.61], 11);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap'
-      }).addTo(cdekMap);
+      cdekMap = L.map('cdek-map', {attributionControl: false}).setView([55.75, 37.61], 11);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(cdekMap);
     }
     cdekMap.invalidateSize();
     loadCdekPvz();
@@ -1268,12 +1266,13 @@ async function loadCdekPvz() {
   cdekMarkers = [];
 
   try {
-    const r = await fetch(`${CDEK_SERVER}/cdek-pvz?city=${encodeURIComponent(city)}`);
+    loading.textContent = 'Загрузка... (первый раз ~10 сек)';
+    const r = await fetch(`${CDEK_SERVER}/cdek-pvz?city=${encodeURIComponent(city)}`, {signal: AbortSignal.timeout(30000)});
     const data = await r.json();
     const pvzList = data.pvz || [];
     loading.style.display = 'none';
     if (!pvzList.length) {
-      document.getElementById('cdek-sel-label').textContent = 'Пункты не найдены, попробуйте другой город';
+      document.getElementById('cdek-sel-label').textContent = 'Пункты не найдены — попробуйте другой город';
       return;
     }
 
@@ -1296,8 +1295,10 @@ async function loadCdekPvz() {
 
     if (bounds.length) cdekMap.fitBounds(bounds, { padding: [30, 30] });
   } catch(e) {
+    loading.innerHTML = '';
     loading.style.display = 'none';
-    document.getElementById('cdek-sel-label').textContent = 'Ошибка загрузки, попробуйте позже';
+    document.getElementById('cdek-sel-label').textContent = 'Ошибка: ' + (e.message||'попробуйте ещё раз');
+    document.getElementById('cdek-sel-addr').innerHTML = '<button onclick="loadCdekPvz()" style="margin-top:8px;padding:8px 14px;border:1px solid #111;border-radius:8px;background:#111;color:#fff;cursor:pointer;font-family:Inter,sans-serif;font-size:13px;">Повторить</button>';
   }
 }
 
