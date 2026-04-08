@@ -131,6 +131,24 @@ http.createServer(async (req, res) => {
     return;
   }
 
+  // СДЭК ПВЗ прокси
+  if (req.method === 'GET' && req.url.startsWith('/cdek-pvz')) {
+    const params = new URL('http://x' + req.url).searchParams;
+    const city = params.get('city') || 'Москва';
+    const pvzReq = https.request({
+      hostname: 'integration.cdek.ru',
+      path: '/pvzlist/v1/json?type=PVZ&city=' + encodeURIComponent(city),
+      method: 'GET',
+      headers: { 'Accept': 'application/json' }
+    }, pvzRes => {
+      res.setHeader('Content-Type', 'application/json');
+      pvzRes.pipe(res);
+    });
+    pvzReq.on('error', () => { res.writeHead(502); res.end('{}'); });
+    pvzReq.end();
+    return;
+  }
+
   // Эндпоинт для товаров из МойСклад
   if (req.method === 'GET' && req.url === '/stock') {
     try {

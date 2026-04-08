@@ -6,6 +6,8 @@
 <title>Monbleza — каталог брендов</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0;}
   :root{--bg:#ffffff;--surface:#f7f7f7;--s2:#eeeeee;--border:rgba(0,0,0,0.1);--border2:rgba(0,0,0,0.18);--gold:#111111;--text:#111111;--muted:rgba(17,17,17,0.45);--dim:rgba(17,17,17,0.25);}
@@ -314,6 +316,34 @@
   .co2-input{width:100%;padding:14px 16px;border:1px solid #e0e0e0;border-radius:10px;background:#fff;font-size:15px;font-family:'Inter',sans-serif;color:#111;outline:none;transition:border-color 0.2s;margin-bottom:8px;}
   .co2-input:focus{border-color:#111;}
   .co2-input::placeholder{color:#aaa;}
+  .co2-pickup-btn{width:100%;padding:14px 16px;border:1px solid #e0e0e0;border-radius:10px;background:#fff;font-size:15px;font-family:'Inter',sans-serif;color:#111;text-align:left;cursor:pointer;display:flex;align-items:center;gap:10px;margin-bottom:8px;transition:border-color 0.2s;}
+  .co2-pickup-btn:hover{border-color:#111;}
+  .co2-pickup-btn .selected-addr{flex:1;font-size:14px;color:#111;line-height:1.3;}
+  .co2-pickup-btn .placeholder-addr{flex:1;font-size:15px;color:#aaa;}
+  /* CDEK MAP MODAL */
+  .cdek-overlay{display:none;position:fixed;inset:0;z-index:700;background:rgba(0,0,0,0.5);}
+  .cdek-overlay.show{display:flex;align-items:flex-end;}
+  @media(min-width:600px){.cdek-overlay.show{align-items:center;justify-content:center;}}
+  .cdek-modal{background:#fff;border-radius:20px 20px 0 0;width:100%;max-height:90vh;display:flex;flex-direction:column;overflow:hidden;}
+  @media(min-width:600px){.cdek-modal{border-radius:20px;width:90%;max-width:860px;max-height:85vh;flex-direction:row;}}
+  .cdek-panel{padding:20px;display:flex;flex-direction:column;flex-shrink:0;}
+  @media(min-width:600px){.cdek-panel{width:300px;border-right:1px solid #f0f0f0;}}
+  .cdek-panel-title{font-size:18px;font-weight:700;color:#111;margin-bottom:4px;display:flex;align-items:center;gap:10px;}
+  .cdek-back{background:none;border:none;cursor:pointer;font-size:22px;color:#111;padding:0;line-height:1;}
+  .cdek-subtitle{font-size:13px;color:#999;margin-bottom:14px;}
+  .cdek-city-row{display:flex;gap:8px;margin-bottom:12px;}
+  .cdek-city-input{flex:1;padding:11px 14px;border:1px solid #e0e0e0;border-radius:10px;font-size:14px;font-family:'Inter',sans-serif;color:#111;outline:none;}
+  .cdek-city-input:focus{border-color:#111;}
+  .cdek-city-btn{padding:11px 16px;background:#111;color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;}
+  .cdek-selected-info{flex:1;display:flex;flex-direction:column;gap:4px;}
+  .cdek-selected-label{font-size:12px;color:#999;margin-top:8px;}
+  .cdek-selected-addr{font-size:15px;font-weight:500;color:#111;line-height:1.4;}
+  .cdek-confirm-btn{width:100%;padding:16px;background:linear-gradient(135deg,#f06292,#e53935);color:#fff;border:none;border-radius:14px;font-size:16px;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;margin-top:auto;display:none;}
+  .cdek-confirm-btn.show{display:block;}
+  .cdek-map-wrap{flex:1;min-height:300px;position:relative;}
+  #cdek-map{width:100%;height:100%;min-height:300px;}
+  .cdek-close{position:absolute;top:14px;right:14px;z-index:10;background:#fff;border:none;border-radius:50%;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);font-size:18px;color:#111;}
+  .cdek-loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.8);font-size:14px;color:#666;z-index:5;}
 </style>
 </head>
 <body>
@@ -705,6 +735,32 @@
   </div>
 </div><!-- /content-area -->
 </div><!-- /wrap -->
+
+<!-- CDEK MAP MODAL -->
+<div class="cdek-overlay" id="cdek-overlay" onclick="if(event.target===this)closeCdekModal()">
+  <div class="cdek-modal">
+    <div class="cdek-panel">
+      <div class="cdek-panel-title">
+        <button class="cdek-back" onclick="closeCdekModal()">←</button>
+        Пункт выдачи СДЭК
+      </div>
+      <div class="cdek-city-row">
+        <input class="cdek-city-input" id="cdek-city" type="text" placeholder="Город" value="Москва">
+        <button class="cdek-city-btn" onclick="loadCdekPvz()">Найти</button>
+      </div>
+      <div class="cdek-selected-info">
+        <div class="cdek-selected-label" id="cdek-sel-label">Выберите точку на карте</div>
+        <div class="cdek-selected-addr" id="cdek-sel-addr"></div>
+      </div>
+      <button class="cdek-confirm-btn" id="cdek-confirm-btn" onclick="confirmCdekPoint()">Заберу здесь</button>
+    </div>
+    <div class="cdek-map-wrap">
+      <button class="cdek-close" onclick="closeCdekModal()">×</button>
+      <div id="cdek-loading" class="cdek-loading">Загрузка точек...</div>
+      <div id="cdek-map"></div>
+    </div>
+  </div>
+</div>
 
 <!-- CART FAB -->
 <button class="cart-fab" id="cart-fab" onclick="openCart()">
@@ -1174,6 +1230,105 @@ function updateCartBadge(){
 let cartDelivery = 'store';
 let cartSplit = false;
 
+/* ── CDEK MAP ── */
+const CDEK_SERVER = 'https://monbleza-calc.onrender.com';
+let cdekMap = null;
+let cdekMarkers = [];
+let cdekSelectedPoint = null;
+
+function openCdekModal() {
+  document.getElementById('cdek-overlay').classList.add('show');
+  setTimeout(() => {
+    if (!cdekMap) {
+      cdekMap = L.map('cdek-map').setView([55.75, 37.61], 11);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+      }).addTo(cdekMap);
+    }
+    cdekMap.invalidateSize();
+    loadCdekPvz();
+  }, 50);
+}
+
+function closeCdekModal() {
+  document.getElementById('cdek-overlay').classList.remove('show');
+}
+
+async function loadCdekPvz() {
+  const city = document.getElementById('cdek-city').value.trim() || 'Москва';
+  const loading = document.getElementById('cdek-loading');
+  loading.style.display = 'flex';
+  cdekSelectedPoint = null;
+  document.getElementById('cdek-sel-label').textContent = 'Выберите точку на карте';
+  document.getElementById('cdek-sel-addr').textContent = '';
+  document.getElementById('cdek-confirm-btn').classList.remove('show');
+
+  // Удаляем старые маркеры
+  cdekMarkers.forEach(m => m.remove());
+  cdekMarkers = [];
+
+  try {
+    const r = await fetch(`${CDEK_SERVER}/cdek-pvz?city=${encodeURIComponent(city)}`);
+    const data = await r.json();
+    const pvzList = data.pvz || [];
+    loading.style.display = 'none';
+    if (!pvzList.length) {
+      document.getElementById('cdek-sel-label').textContent = 'Пункты не найдены, попробуйте другой город';
+      return;
+    }
+
+    const cdekIcon = L.divIcon({
+      html: `<div style="background:#00b33c;color:#fff;font-size:10px;font-weight:700;padding:3px 6px;border-radius:4px;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.25);">СДЭК</div>`,
+      className: '',
+      iconAnchor: [18, 10]
+    });
+
+    const bounds = [];
+    pvzList.slice(0, 100).forEach(pvz => {
+      const lat = parseFloat(pvz.coordY);
+      const lng = parseFloat(pvz.coordX);
+      if (!lat || !lng) return;
+      bounds.push([lat, lng]);
+      const marker = L.marker([lat, lng], { icon: cdekIcon }).addTo(cdekMap);
+      marker.on('click', () => selectCdekPoint(pvz));
+      cdekMarkers.push(marker);
+    });
+
+    if (bounds.length) cdekMap.fitBounds(bounds, { padding: [30, 30] });
+  } catch(e) {
+    loading.style.display = 'none';
+    document.getElementById('cdek-sel-label').textContent = 'Ошибка загрузки, попробуйте позже';
+  }
+}
+
+function selectCdekPoint(pvz) {
+  cdekSelectedPoint = pvz;
+  const addr = pvz.Address || pvz.FullAddress || '';
+  document.getElementById('cdek-sel-label').textContent = '📍 Выбранный пункт:';
+  document.getElementById('cdek-sel-addr').textContent = addr;
+  document.getElementById('cdek-confirm-btn').classList.add('show');
+  cdekMap.setView([parseFloat(pvz.coordY), parseFloat(pvz.coordX)], 15);
+}
+
+function confirmCdekPoint() {
+  if (!cdekSelectedPoint) return;
+  const addr = cdekSelectedPoint.Address || cdekSelectedPoint.FullAddress || '';
+  // Обновить кнопку выбора ПВЗ в корзине
+  const btn = document.getElementById('co2-pickup-chosen');
+  if (btn) {
+    btn.querySelector('.selected-addr') && (btn.querySelector('.selected-addr').textContent = addr);
+    if (!btn.querySelector('.selected-addr')) {
+      btn.innerHTML = `<span>📍</span><span class="selected-addr" style="flex:1;font-size:14px;color:#111">${addr}</span><span style="color:#999">›</span>`;
+    }
+  }
+  window._cdekChosenAddr = addr;
+  closeCdekModal();
+}
+
+document.getElementById('cdek-city').addEventListener('keydown', e => {
+  if (e.key === 'Enter') loadCdekPvz();
+});
+
 function openCart(){renderCart();document.getElementById('cart-overlay').classList.add('show');tgShowBack();}
 function closeCart(){document.getElementById('cart-overlay').classList.remove('show');tgHideBack();}
 
@@ -1218,7 +1373,7 @@ function buildTgLink(){
   if(cartDelivery==='store'){
     msg+='\n🏪 Самовывоз: Москва, Северный бульвар, 3';
   } else if(cartDelivery==='pickup'){
-    const addr=(document.getElementById('co2-pickup-addr')||{}).value||'';
+    const addr=window._cdekChosenAddr||'';
     const name=(document.getElementById('co2-pickup-name')||{}).value||'';
     const phone=(document.getElementById('co2-pickup-phone')||{}).value||'';
     msg+='\n📦 Пункт выдачи СДЭК';
@@ -1278,8 +1433,11 @@ function renderCart(){
         <span style="color:#999;margin-left:auto">›</span>
       </div>
       <div id="co2-pickup-block" style="display:none">
-        <div class="co2-field-label">Адрес пункта выдачи СДЭК</div>
-        <input class="co2-input" id="co2-pickup-addr" type="text" placeholder="ул. Пример, 10">
+        <div class="co2-field-label">Пункт выдачи СДЭК</div>
+        <button class="co2-pickup-btn" id="co2-pickup-chosen" onclick="openCdekModal()">
+          <span style="font-size:18px">📍</span>
+          <span class="placeholder-addr">Выбрать пункт выдачи →</span>
+        </button>
         <div class="co2-field-label">Кому выдать</div>
         <input class="co2-input" id="co2-pickup-name" type="text" placeholder="Имя Фамилия">
         <input class="co2-input" id="co2-pickup-phone" type="tel" placeholder="+7 (___) ___ __ __">
