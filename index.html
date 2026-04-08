@@ -845,7 +845,7 @@ function openStockModal(i){
   const desc = document.getElementById('sm-desc');
   if(p.description){desc.textContent=p.description;desc.style.display='block';}
   else desc.style.display='none';
-  document.getElementById('sm-order').href = `https://t.me/euclothing?text=${encodeURIComponent('Хочу заказать: '+p.name+' — '+p.price.toLocaleString('ru-RU')+' ₽')}`;
+  document.getElementById('sm-add-btn').style.display = 'none';
   document.getElementById('stock-overlay').classList.add('show');
   document.body.style.overflow='hidden';
   tgShowBack();
@@ -857,7 +857,6 @@ function selectStockSize(size, el, encodedName){
   el.classList.add('active');
   const name = decodeURIComponent(encodedName);
   const price = document.getElementById('sm-price').textContent;
-  document.getElementById('sm-order').href = `https://t.me/euclothing?text=${encodeURIComponent('Хочу заказать: '+name+' — размер '+size+' — '+price+' ₽')}`;
   document.getElementById('sm-add-btn').style.display = 'block';
 }
 
