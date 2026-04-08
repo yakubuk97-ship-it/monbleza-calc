@@ -9,7 +9,7 @@ from urllib.parse import quote
 MS_TOKEN = '3b701e01c5660188053b898da86779c282b1c527'
 HEADERS = {'Authorization': f'Bearer {MS_TOKEN}', 'Accept': 'application/json;charset=utf-8'}
 BASE = 'https://api.moysklad.ru/api/remap/1.2'
-IMG_PROXY = 'https://monbleza-calc.onrender.com/img?url='
+IMG_PROXY = ''  # не используется — храним прямые miniature URL
 
 BRANDS = [
     'Nike','Adidas','New Balance','Puma','Converse','Vans','The North Face',
@@ -32,8 +32,9 @@ if os.path.exists('stock.json'):
         with open('stock.json', encoding='utf-8') as f:
             existing = json.load(f)
         for item in existing:
-            if item.get('img') and item['img'].startswith('http'):
-                img_cache[item['name']] = item['img']
+            img = item.get('img', '')
+        if img and 'moysklad' in img:
+            img_cache[item['name']] = img
         print(f'Кэш картинок: {len(img_cache)} товаров')
     except Exception as e:
         print(f'Кэш не загружен: {e}')
@@ -51,7 +52,8 @@ def get_img_url(product_id, name):
         if rows:
             href = rows[0].get('meta', {}).get('downloadHref', '')
             if href:
-                url = IMG_PROXY + quote(href, safe='')
+                # Miniature URL работает публично без авторизации
+                url = href + '?miniature=true'
                 img_cache[name] = url
                 return url
     except Exception as e:
