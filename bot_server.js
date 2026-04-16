@@ -5,6 +5,9 @@ const BOT_TOKEN = '8717339910:AAE14IK6Zd5bHgAAD3Tt6Rpm3JQsLZzuppE';
 const OWNER_ID = 6156197177;
 const MS_TOKEN = '3b701e01c5660188053b898da86779c282b1c527';
 const PORT = process.env.PORT || 3000;
+const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
+const GITHUB_REPO = 'yakubuk97-ship-it/monbleza-calc';
+const GITHUB_WORKFLOW = 'update-stock.yml';
 
 function tgRequest(method, data) {
   return new Promise((resolve, reject) => {
@@ -111,6 +114,33 @@ http.createServer(async (req, res) => {
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
 
   if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+
+  // Пинг — чтобы сервер не засыпал
+  if (req.url === '/ping') { res.writeHead(200); res.end('ok'); return; }
+
+  // Вебхук от МоегоСклада — обновление остатков
+  if (req.method === 'POST' && req.url === '/webhook/stock') {
+    res.writeHead(200); res.end('ok'); // сразу отвечаем МойСкладу
+    if (!GITHUB_TOKEN) { console.log('GITHUB_TOKEN не задан'); return; }
+    // Запускаем GitHub Actions workflow
+    const body = JSON.stringify({ ref: 'main' });
+    const ghReq = https.request({
+      hostname: 'api.github.com',
+      path: `/repos/${GITHUB_REPO}/actions/workflows/${GITHUB_WORKFLOW}/dispatches`,
+      method: 'POST',
+      headers: {
+        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json',
+        'Content-Length': Buffer.byteLength(body),
+        'User-Agent': 'monbleza-bot'
+      }
+    }, r => console.log('GitHub Actions triggered:', r.statusCode));
+    ghReq.on('error', e => console.error('GitHub trigger error:', e.message));
+    ghReq.write(body); ghReq.end();
+    console.log('Webhook received from MoySklad — triggering update');
+    return;
+  }
 
   // Прокси для фото МойСклад (добавляет Bearer токен)
   if (req.method === 'GET' && req.url.startsWith('/img?')) {
