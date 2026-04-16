@@ -1,15 +1,14 @@
 """
 Hourly stock updater for GitHub Actions.
-Uses Render image proxy so photos work publicly without auth.
-Caches existing image URLs to avoid re-fetching every run.
+Downloads images to img/ folder — served directly via GitHub Pages.
+Caches existing images to avoid re-downloading every run.
 """
 import requests, json, os
-from urllib.parse import quote
 
 MS_TOKEN = '3b701e01c5660188053b898da86779c282b1c527'
 HEADERS = {'Authorization': f'Bearer {MS_TOKEN}', 'Accept': 'application/json;charset=utf-8'}
 BASE = 'https://api.moysklad.ru/api/remap/1.2'
-IMG_PROXY = 'https://monbleza-calc.onrender.com/img?url='
+os.makedirs('img', exist_ok=True)
 
 BRANDS = [
     'Nike','Adidas','New Balance','Puma','Converse','Vans','The North Face',
@@ -26,21 +25,21 @@ def extract_brand(name):
     return name.split()[0] if name else ''
 
 # ── Загружаем кэш картинок из существующего stock.json ──
-img_cache = {}  # name → img_url
+img_cache = {}  # name → img_path (img/xxxxx.jpg)
 if os.path.exists('stock.json'):
     try:
         with open('stock.json', encoding='utf-8') as f:
             existing = json.load(f)
         for item in existing:
             img = item.get('img', '')
-        if img and img.startswith('http'):
-            img_cache[item['name']] = img
+            if img and img.startswith('img/') and os.path.exists(img):
+                img_cache[item['name']] = img
         print(f'Кэш картинок: {len(img_cache)} товаров')
     except Exception as e:
         print(f'Кэш не загружен: {e}')
 
 def get_img_url(product_id, name):
-    """Get image URL: from cache first, then from MoySklad API."""
+    """Get image: from cache first, then download from MoySklad API."""
     if name in img_cache:
         return img_cache[name]
     try:
@@ -50,12 +49,17 @@ def get_img_url(product_id, name):
         )
         rows = r.json().get('rows', [])
         if rows:
-            href = rows[0].get('meta', {}).get('downloadHref', '')
-            if href:
-                # Render proxy — полное качество
-                url = IMG_PROXY + quote(href, safe='')
-                img_cache[name] = url
-                return url
+            img_id = rows[0].get('id', '')
+            download_href = rows[0].get('meta', {}).get('downloadHref', '')
+            if download_href and img_id:
+                local_path = f'img/{img_id}.jpg'
+                if not os.path.exists(local_path):
+                    img_data = requests.get(download_href, headers=HEADERS, timeout=15)
+                    if img_data.status_code == 200:
+                        with open(local_path, 'wb') as f:
+                            f.write(img_data.content)
+                img_cache[name] = local_path
+                return local_path
     except Exception as e:
         print(f'  Фото не получено: {e}')
     return ''
