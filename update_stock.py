@@ -1,9 +1,11 @@
 """
 Hourly stock updater for GitHub Actions.
+Uses /report/stock/all?filter=stockMode=positiveOnly — only products actually in stock.
 Downloads images to img/ folder — served directly via GitHub Pages.
 Caches existing images to avoid re-downloading every run.
 """
 import requests, json, os
+from collections import defaultdict
 
 MS_TOKEN = '3b701e01c5660188053b898da86779c282b1c527'
 HEADERS = {'Authorization': f'Bearer {MS_TOKEN}', 'Accept': 'application/json;charset=utf-8'}
@@ -24,8 +26,8 @@ def extract_brand(name):
             return b
     return name.split()[0] if name else ''
 
-# ── Загружаем кэш картинок из существующего stock.json ──
-img_cache = {}  # name → img_path (img/xxxxx.jpg)
+# ── Кэш картинок из предыдущего stock.json ──
+img_cache = {}
 if os.path.exists('stock.json'):
     try:
         with open('stock.json', encoding='utf-8') as f:
@@ -39,7 +41,6 @@ if os.path.exists('stock.json'):
         print(f'Кэш не загружен: {e}')
 
 def get_img_url(product_id, name):
-    """Get image: from cache first, then download from MoySklad API."""
     if name in img_cache:
         return img_cache[name]
     try:
@@ -64,9 +65,9 @@ def get_img_url(product_id, name):
         print(f'  Фото не получено: {e}')
     return ''
 
-# ── Шаг 1: Загружаем варианты (размеры) ──
+# ── Шаг 1: Варианты (variant_id → product_id + размер) ──
 print('Загружаем варианты...')
-variant_map = {}
+variant_info = {}  # variant_id → {'product_id':..., 'size':...}
 offset, limit = 0, 100
 while True:
     r = requests.get(f'{BASE}/entity/variant?limit={limit}&offset={offset}', headers=HEADERS, timeout=30)
@@ -74,23 +75,60 @@ while True:
     rows = data.get('rows', [])
     total = data.get('meta', {}).get('size', 0)
     for row in rows:
+        v_id = row.get('id', '')
         prod_href = row.get('product', {}).get('meta', {}).get('href', '')
         prod_id = prod_href.split('/')[-1] if prod_href else ''
         chars = row.get('characteristics', [])
         size = next((c['value'] for c in chars if 'размер' in c.get('name','').lower()), '')
-        if prod_id and size:
-            variant_map.setdefault(prod_id, [])
-            if size not in variant_map[prod_id]:
-                variant_map[prod_id].append(size)
+        if v_id and prod_id:
+            variant_info[v_id] = {'product_id': prod_id, 'size': size}
     print(f'  Варианты: {offset+len(rows)}/{total}')
     offset += limit
     if offset >= total:
         break
 
-print(f'Товаров с размерами: {len(variant_map)}')
+print(f'Всего вариантов: {len(variant_info)}')
 
-# ── Шаг 2: Загружаем товары ──
-print('Загружаем товары...')
+# ── Шаг 2: Отчёт остатков (ТОЛЬКО положительные) ──
+print('Загружаем отчёт остатков (positiveOnly)...')
+in_stock_product_ids = set()
+in_stock_sizes = defaultdict(list)  # product_id → [размеры в наличии]
+offset = 0
+while True:
+    r = requests.get(
+        f'{BASE}/report/stock/all?filter=stockMode%3DpositiveOnly&limit=1000&offset={offset}',
+        headers=HEADERS, timeout=30
+    )
+    data = r.json()
+    rows = data.get('rows', [])
+    total = data.get('meta', {}).get('size', 0)
+    for row in rows:
+        meta = row.get('meta', {})
+        href = meta.get('href', '')
+        item_type = meta.get('type', '')
+        stock_qty = row.get('stock', 0)
+        if stock_qty <= 0:
+            continue
+        item_id = href.split('/')[-1].split('?')[0]
+        if item_type == 'product':
+            in_stock_product_ids.add(item_id)
+        elif item_type == 'variant':
+            info = variant_info.get(item_id)
+            if info:
+                prod_id = info['product_id']
+                size = info['size']
+                in_stock_product_ids.add(prod_id)
+                if size and size not in in_stock_sizes[prod_id]:
+                    in_stock_sizes[prod_id].append(size)
+    print(f'  Остатки: {offset+len(rows)}/{total}')
+    offset += 1000
+    if offset >= total:
+        break
+
+print(f'Товаров в наличии: {len(in_stock_product_ids)}')
+
+# ── Шаг 3: Детали товаров (только тех, что в наличии) ──
+print('Загружаем детали товаров...')
 items = []
 offset = 0
 while True:
@@ -103,19 +141,21 @@ while True:
     total = data.get('meta', {}).get('size', 0)
 
     for row in rows:
+        prod_id = row['id']
+        if prod_id not in in_stock_product_ids:
+            continue
         if not row.get('salePrices'):
             continue
         price = row['salePrices'][0].get('value', 0)
         if price == 0:
             continue
 
-        product_id = row['id']
         name = row['name']
         path_parts = (row.get('pathName') or '').split('/')
         category = path_parts[-1].strip() if path_parts else ''
-        sizes = variant_map.get(product_id, [])
+        sizes = in_stock_sizes.get(prod_id, [])
 
-        img = get_img_url(product_id, name)
+        img = get_img_url(prod_id, name)
 
         items.append({
             'name': name,
@@ -127,7 +167,7 @@ while True:
             'description': row.get('description', '')
         })
         cached = '(кэш)' if name in img_cache else '(новое)'
-        print(f'[{len(items)}/{total}] {name[:40]} | {cached}')
+        print(f'[{len(items)}] {name[:40]} | размеры:{len(sizes)} {cached}')
 
     offset += 100
     if offset >= total:
@@ -136,4 +176,4 @@ while True:
 with open('stock.json', 'w', encoding='utf-8') as f:
     json.dump(items, f, ensure_ascii=False, indent=2)
 
-print(f'\n✅ stock.json обновлён: {len(items)} товаров')
+print(f'\n✅ stock.json обновлён: {len(items)} товаров в наличии')
