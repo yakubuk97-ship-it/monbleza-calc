@@ -40,43 +40,53 @@ def extract_brand(name):
     return name.split()[0] if name else ''
 
 # ── Кэш картинок из предыдущего stock.json ──
-img_cache = {}
+# Кэшируем все пути (images[]) по имени товара
+img_cache = {}  # name → [img/xxx.jpg, img/yyy.jpg, ...]
 if os.path.exists('stock.json'):
     try:
         with open('stock.json', encoding='utf-8') as f:
             existing = json.load(f)
         for item in existing:
-            img = item.get('img', '')
-            if img and img.startswith('img/') and os.path.exists(img):
-                img_cache[item['name']] = img
+            paths = item.get('images') or ([item['img']] if item.get('img') else [])
+            valid = [p for p in paths if p.startswith('img/') and os.path.exists(p)]
+            if valid:
+                img_cache[item['name']] = valid
         print(f'Кэш картинок: {len(img_cache)} товаров')
     except Exception as e:
         print(f'Кэш не загружен: {e}')
 
-def get_img_url(product_id, name):
+def get_img_urls(product_id, name):
+    """Скачать ВСЕ фото товара. Возвращает список локальных путей."""
     if name in img_cache:
         return img_cache[name]
+    paths = []
     try:
-        r = requests.get(
-            f'{BASE}/entity/product/{product_id}/images?limit=1',
-            headers=HEADERS, timeout=10
-        )
+        r = ms_get(f'{BASE}/entity/product/{product_id}/images?limit=100', timeout=30)
         rows = r.json().get('rows', [])
-        if rows:
-            img_id = rows[0].get('id', '')
-            download_href = rows[0].get('meta', {}).get('downloadHref', '')
-            if download_href and img_id:
-                local_path = f'img/{img_id}.jpg'
-                if not os.path.exists(local_path):
-                    img_data = requests.get(download_href, headers=HEADERS, timeout=15)
-                    if img_data.status_code == 200:
+        for row in rows:
+            img_id = row.get('id', '')
+            download_href = row.get('meta', {}).get('downloadHref', '')
+            if not (download_href and img_id):
+                continue
+            local_path = f'img/{img_id}.jpg'
+            if not os.path.exists(local_path):
+                try:
+                    img_data = requests.get(download_href, headers=HEADERS, timeout=30)
+                    if img_data.status_code == 200 and len(img_data.content) > 0:
                         with open(local_path, 'wb') as f:
                             f.write(img_data.content)
-                img_cache[name] = local_path
-                return local_path
+                    else:
+                        print(f'  ⚠️  фото {img_id}: HTTP {img_data.status_code}')
+                        continue
+                except Exception as e:
+                    print(f'  ⚠️  не скачал {img_id}: {e}')
+                    continue
+            paths.append(local_path)
     except Exception as e:
-        print(f'  Фото не получено: {e}')
-    return ''
+        print(f'  Фото не получены: {e}')
+    if paths:
+        img_cache[name] = paths
+    return paths
 
 # ── Шаг 1: Варианты (variant_id → product_id + размер) ──
 print('Загружаем варианты...')
@@ -162,7 +172,8 @@ while True:
         category = path_parts[-1].strip() if path_parts else ''
         sizes = in_stock_sizes.get(prod_id, [])
 
-        img = get_img_url(prod_id, name)
+        was_cached = name in img_cache
+        images = get_img_urls(prod_id, name)
 
         items.append({
             'name': name,
@@ -170,11 +181,12 @@ while True:
             'price': round(price / 100),
             'sizes': sizes,
             'category': category,
-            'img': img,
+            'img': images[0] if images else '',   # первое фото для превью (обратная совместимость)
+            'images': images,                      # все фото для галереи
             'description': row.get('description', '')
         })
-        cached = '(кэш)' if name in img_cache else '(новое)'
-        print(f'[{len(items)}] {name[:40]} | размеры:{len(sizes)} {cached}')
+        cached = '(кэш)' if was_cached else '(новое)'
+        print(f'[{len(items)}] {name[:40]} | размеры:{len(sizes)} | фото:{len(images)} {cached}')
 
     offset += 100
     if offset >= total:
