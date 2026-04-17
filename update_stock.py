@@ -4,13 +4,26 @@ Uses /report/stock/all?filter=stockMode=positiveOnly — only products actually 
 Downloads images to img/ folder — served directly via GitHub Pages.
 Caches existing images to avoid re-downloading every run.
 """
-import requests, json, os
+import requests, json, os, time
 from collections import defaultdict
 
 MS_TOKEN = '3b701e01c5660188053b898da86779c282b1c527'
 HEADERS = {'Authorization': f'Bearer {MS_TOKEN}', 'Accept': 'application/json;charset=utf-8'}
 BASE = 'https://api.moysklad.ru/api/remap/1.2'
 os.makedirs('img', exist_ok=True)
+
+def ms_get(url, timeout=90, retries=4):
+    """GET с ретраями — MoySklad API иногда таймаутит."""
+    last = None
+    for i in range(retries):
+        try:
+            return requests.get(url, headers=HEADERS, timeout=timeout)
+        except requests.exceptions.RequestException as e:
+            last = e
+            wait = 2 ** i
+            print(f'  ⚠️  {e.__class__.__name__}: ретрай через {wait}с (попытка {i+1}/{retries})')
+            time.sleep(wait)
+    raise last
 
 BRANDS = [
     'Nike','Adidas','New Balance','Puma','Converse','Vans','The North Face',
@@ -70,7 +83,7 @@ print('Загружаем варианты...')
 variant_info = {}  # variant_id → {'product_id':..., 'size':...}
 offset, limit = 0, 100
 while True:
-    r = requests.get(f'{BASE}/entity/variant?limit={limit}&offset={offset}', headers=HEADERS, timeout=30)
+    r = ms_get(f'{BASE}/entity/variant?limit={limit}&offset={offset}')
     data = r.json()
     rows = data.get('rows', [])
     total = data.get('meta', {}).get('size', 0)
@@ -95,10 +108,7 @@ in_stock_product_ids = set()
 in_stock_sizes = defaultdict(list)  # product_id → [размеры в наличии]
 offset = 0
 while True:
-    r = requests.get(
-        f'{BASE}/report/stock/all?filter=stockMode%3DpositiveOnly&limit=1000&offset={offset}',
-        headers=HEADERS, timeout=30
-    )
+    r = ms_get(f'{BASE}/report/stock/all?filter=stockMode%3DpositiveOnly&limit=1000&offset={offset}')
     data = r.json()
     rows = data.get('rows', [])
     total = data.get('meta', {}).get('size', 0)
@@ -132,10 +142,7 @@ print('Загружаем детали товаров...')
 items = []
 offset = 0
 while True:
-    r = requests.get(
-        f'{BASE}/entity/product?limit=100&offset={offset}&filter=archived%3Dfalse',
-        headers=HEADERS, timeout=30
-    )
+    r = ms_get(f'{BASE}/entity/product?limit=100&offset={offset}&filter=archived%3Dfalse')
     data = r.json()
     rows = data.get('rows', [])
     total = data.get('meta', {}).get('size', 0)
