@@ -1144,13 +1144,19 @@ function openCheckoutFromCatalog(){
 
 async function loadStock(){
   const grid = document.getElementById('stock-grid');
-  grid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1">Загрузка...</div>';
+  const homeGrid = document.getElementById('home-featured-grid');
+  if(grid) grid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1">Загрузка...</div>';
+  if(homeGrid && !stockAllItems.length) homeGrid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1">Загрузка...</div>';
   try {
     const r = await fetch('stock.json?t=' + Date.now());
+    if(!r.ok) throw new Error('HTTP ' + r.status);
     const items = await r.json();
+    if(!Array.isArray(items) || !items.length) throw new Error('Empty stock');
     renderStock(items);
   } catch(e) {
-    grid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1">Товары скоро появятся</div>';
+    console.error('loadStock error:', e);
+    if(grid) grid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1">Товары скоро появятся</div>';
+    if(homeGrid) homeGrid.innerHTML = '<div class="stock-empty" style="grid-column:1/-1;cursor:pointer" onclick="loadStock()">Не удалось загрузить товары. Нажми чтобы повторить</div>';
   }
 }
 

@@ -31,5 +31,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add stock.json img/
-          git diff --staged --quiet || git commit -m "Auto-update stock $(date +'%Y-%m-%d %H:%M UTC')"
-          git push
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto-update stock $(date +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No changes to commit"
+          fi
