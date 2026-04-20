@@ -811,6 +811,7 @@
         <button class="f-btn" onclick="filterSrc('zal',this)">🇩🇪 Zalando DE</button>
         <button class="f-btn" onclick="filterSrc('ss24',this)">🇵🇱 StreetStyle24</button>
         <button class="f-btn" onclick="filterSrc('answear',this)">🛍 Answear</button>
+        <button class="f-btn" onclick="filterSrc('joes',this)">🇺🇸 Joe's NB Outlet</button>
       </div>
       <div class="filter-row" id="cat-filter-row">
         <button class="f-btn active" onclick="filterCat('all',this)">Все</button>
@@ -964,7 +965,7 @@
   </div>
 </div>
 
-<script src="products.js?v=2402373a"></script>
+<script src="products.js?v=65eaf0ae"></script>
 <script>
 /* ── ТОВАРЫ В НАЛИЧИИ ── */
 let stockItems = [];
@@ -1400,7 +1401,7 @@ function cardHTML(p,i){
       <img src="${p.img}" alt="${p.name}" loading="lazy" decoding="async">
     </div>
     <div class="cat-body">
-      <div class="cat-brand">${p.brand}${p.src==='ss24'?' <span style="opacity:0.5;font-size:8px;">🇵🇱 SS24</span>':p.src==='answear'?' <span style="opacity:0.5;font-size:8px;">🛍 Answear</span>':''}</div>
+      <div class="cat-brand">${p.brand}${p.src==='ss24'?' <span style="opacity:0.5;font-size:8px;">🇵🇱 SS24</span>':p.src==='answear'?' <span style="opacity:0.5;font-size:8px;">🛍 Answear</span>':p.src==='joes'?' <span style="opacity:0.5;font-size:8px;">🇺🇸 Joe\'s</span>':''}</div>
       <div class="cat-name">${p.name}</div>
       <div class="cat-price">${p.price.toFixed(2)} €${p.oldPrice?` <span style="text-decoration:line-through;font-size:11px;color:var(--dim);margin-left:4px;">${p.oldPrice.toFixed(2)}€</span>`:''}</div>
       <div class="cat-rub">≈ ${calcRub(p.price).toLocaleString('ru-RU')} ₽</div>

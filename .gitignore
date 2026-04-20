@@ -1,1 +1,6 @@
 node_modules/
+.env
+.env.*
+*.log
+joes_raw_*.html
+joes_grid_*.html

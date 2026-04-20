@@ -19,12 +19,21 @@ if os.path.exists('answear_data.json'):
         answear_data = json.load(f)
     print(f'Данных с Answear: {len(answear_data)} товаров')
 
-if len(data) == 0 and len(ss_data) == 0 and len(answear_data) == 0:
+# Load Joe's New Balance Outlet data if available
+joes_data = []
+if os.path.exists('joes_data.json'):
+    with open('joes_data.json', encoding='utf-8') as f:
+        joes_data = json.load(f)
+    print(f'Данных с Joe\'s NB Outlet: {len(joes_data)} товаров')
+
+if len(data) == 0 and len(ss_data) == 0 and len(answear_data) == 0 and len(joes_data) == 0:
     print('❌ Пустой результат — файлы не меняем')
     sys.exit(0)
 
 # PLN → EUR conversion rate
 PLN_TO_EUR = 4.25
+# USD → EUR conversion rate (Joe's prices в $)
+USD_TO_EUR = 0.92
 
 def get_cat(name, color=''):
     n = name.upper()
@@ -163,6 +172,43 @@ for p in answear_data:
 
 aw_count = sum(1 for p in products if p.get('src') == 'answear')
 print(f'Answear добавлено: {aw_count}')
+
+# === Joe's New Balance Outlet processing (USD) ===
+for p in joes_data:
+    name = (p.get('name') or '').strip()
+    if not name: continue
+
+    orig_usd = p.get('originalPrice')
+    promo_usd = p.get('promotionalPrice')
+    try: orig_usd = float(orig_usd) if orig_usd is not None else None
+    except: orig_usd = None
+    try: promo_usd = float(promo_usd) if promo_usd is not None else None
+    except: promo_usd = None
+
+    # Цена — акционная если есть, иначе оригинальная
+    price_usd = promo_usd if (promo_usd and promo_usd > 0) else orig_usd
+    if not price_usd or price_usd <= 0: continue
+
+    price_eur = round(price_usd * USD_TO_EUR, 2)
+    old_eur = round(orig_usd * USD_TO_EUR, 2) if (orig_usd and promo_usd and orig_usd > promo_usd) else None
+
+    img = p.get('imageUrl', '')
+    if not img: continue
+    if img in seen_imgs: continue
+    seen_imgs.add(img)
+
+    url = p.get('productUrl', '')
+    brand = p.get('brand') or 'New Balance'
+    color = p.get('color') or ''
+    sizes = p.get('sizes', [])
+    is_sale = bool(old_eur and old_eur > price_eur)
+
+    products.append({'name': name, 'color': color, 'brand': brand, 'price': price_eur,
+                     'oldPrice': old_eur, 'sale': is_sale, 'cat': get_cat(name, color),
+                     'img': img, 'url': url, 'sizes': sizes, 'src': 'joes'})
+
+joes_count = sum(1 for p in products if p.get('src') == 'joes')
+print(f'Joe\'s NB добавлено: {joes_count}')
 print(f'Обработано уникальных товаров: {len(products)}')
 
 if len(products) == 0:
