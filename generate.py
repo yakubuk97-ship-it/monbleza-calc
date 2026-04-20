@@ -12,7 +12,14 @@ if os.path.exists('streetstyle_data.json'):
         ss_data = json.load(f)
     print(f'Данных с StreetStyle24: {len(ss_data)} товаров')
 
-if len(data) == 0 and len(ss_data) == 0:
+# Load Answear data if available
+answear_data = []
+if os.path.exists('answear_data.json'):
+    with open('answear_data.json', encoding='utf-8') as f:
+        answear_data = json.load(f)
+    print(f'Данных с Answear: {len(answear_data)} товаров')
+
+if len(data) == 0 and len(ss_data) == 0 and len(answear_data) == 0:
     print('❌ Пустой результат — файлы не меняем')
     sys.exit(0)
 
@@ -115,6 +122,47 @@ for p in ss_data:
 
 ss_count = sum(1 for p in products if p.get('src') == 'ss24')
 print(f'StreetStyle24 добавлено: {ss_count}')
+
+# === Answear processing ===
+for p in answear_data:
+    name_raw = p.get('name', '').strip()
+    subtitle = p.get('subtitle', '').strip()
+    if not name_raw: continue
+
+    sell_pln = p.get('price', 0)
+    base_pln = p.get('priceRegular', None)
+    if not sell_pln or sell_pln <= 0: continue
+
+    price_eur = round(sell_pln / PLN_TO_EUR, 2)
+    old_eur = round(base_pln / PLN_TO_EUR, 2) if base_pln and base_pln > sell_pln else None
+
+    img = p.get('img', '')
+    if not img: continue
+    if img in seen_imgs: continue
+    seen_imgs.add(img)
+
+    url = p.get('url', '')
+    brand = p.get('brand', '') or 'Unknown'
+    # Use available sizes; fall back to all sizes
+    sizes = p.get('sizes') or p.get('sizesAll', [])
+    is_sale = bool(old_eur and old_eur > price_eur)
+
+    # Name: combine name + subtitle for better display
+    full_name = name_raw
+    if subtitle and subtitle.lower() not in name_raw.lower():
+        full_name = f'{name_raw} {subtitle}'
+
+    parts = full_name.split(' - ')
+    model = parts[0].strip()
+    color = parts[-1].strip() if len(parts) > 1 else ''
+    if color == model: color = ''
+
+    products.append({'name': model, 'color': color, 'brand': brand, 'price': price_eur,
+                     'oldPrice': old_eur, 'sale': is_sale, 'cat': get_cat(model, color),
+                     'img': img, 'url': url, 'sizes': sizes, 'src': 'answear'})
+
+aw_count = sum(1 for p in products if p.get('src') == 'answear')
+print(f'Answear добавлено: {aw_count}')
 print(f'Обработано уникальных товаров: {len(products)}')
 
 if len(products) == 0:

@@ -56,36 +56,49 @@ if os.path.exists('stock.json'):
         print(f'Кэш не загружен: {e}')
 
 def get_img_urls(product_id, name):
-    """Скачать ВСЕ фото товара. Возвращает список локальных путей."""
-    if name in img_cache:
-        return img_cache[name]
-    paths = []
+    """Всегда спрашивает MoySklad список id, скачивает только недостающие файлы."""
+    cached = img_cache.get(name, [])
     try:
         r = ms_get(f'{BASE}/entity/product/{product_id}/images?limit=100', timeout=30)
         rows = r.json().get('rows', [])
-        for row in rows:
-            img_id = row.get('id', '')
-            download_href = row.get('meta', {}).get('downloadHref', '')
-            if not (download_href and img_id):
-                continue
-            local_path = f'img/{img_id}.jpg'
-            if not os.path.exists(local_path):
-                try:
-                    img_data = requests.get(download_href, headers=HEADERS, timeout=30)
-                    if img_data.status_code == 200 and len(img_data.content) > 0:
-                        with open(local_path, 'wb') as f:
-                            f.write(img_data.content)
-                    else:
-                        print(f'  ⚠️  фото {img_id}: HTTP {img_data.status_code}')
-                        continue
-                except Exception as e:
-                    print(f'  ⚠️  не скачал {img_id}: {e}')
-                    continue
-            paths.append(local_path)
     except Exception as e:
-        print(f'  Фото не получены: {e}')
-    if paths:
-        img_cache[name] = paths
+        print(f'  Фото: API не ответил ({e}) — оставляю кэш ({len(cached)})')
+        return cached
+
+    if not rows:
+        return []
+
+    # id фото зашит в meta.href последним сегментом — вытаскиваем
+    def extract_id(row):
+        href = row.get('meta', {}).get('href', '')
+        return href.rsplit('/', 1)[-1] if href else ''
+
+    # Быстрый путь: если список в кэше совпадает с MoySklad и файлы на месте
+    expected = [f"img/{extract_id(row)}.jpg" for row in rows if extract_id(row)]
+    if expected == cached and all(os.path.exists(p) for p in cached):
+        return cached
+
+    # Медленный путь: качаем недостающие
+    paths = []
+    for row in rows:
+        img_id = extract_id(row)
+        download_href = row.get('meta', {}).get('downloadHref', '')
+        if not (download_href and img_id):
+            continue
+        local_path = f'img/{img_id}.jpg'
+        if not os.path.exists(local_path):
+            try:
+                img_data = requests.get(download_href, headers=HEADERS, timeout=30)
+                if img_data.status_code == 200 and len(img_data.content) > 0:
+                    with open(local_path, 'wb') as f:
+                        f.write(img_data.content)
+                else:
+                    print(f'  ⚠️  фото {img_id}: HTTP {img_data.status_code}')
+                    continue
+            except Exception as e:
+                print(f'  ⚠️  не скачал {img_id}: {e}')
+                continue
+        paths.append(local_path)
     return paths
 
 # ── Шаг 1: Варианты (variant_id → product_id + размер) ──
