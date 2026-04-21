@@ -934,7 +934,7 @@
     <button class="modal-close" onclick="closeOverlay()">
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-    <div class="modal-img"><img id="mImg" src="" alt="" decoding="async"></div>
+    <div class="modal-img" id="mGallery" style="position:relative;overflow:hidden;"></div>
     <div class="modal-body">
       <div class="modal-brand" id="mBrand"></div>
       <div class="modal-name" id="mName"></div>
@@ -965,7 +965,7 @@
   </div>
 </div>
 
-<script src="products.js?v=65eaf0ae"></script>
+<script src="products.js?v=92669ccb"></script>
 <script>
 /* ── ТОВАРЫ В НАЛИЧИИ ── */
 let stockItems = [];
@@ -1788,12 +1788,49 @@ function renderCart(){
   setCartDelivery(cartDelivery);
 }
 
+// ── CATALOG MODAL GALLERY ──
+let cmImages = [];
+let cmIndex = 0;
+function renderCatGal(){
+  const gal = document.getElementById('mGallery');
+  if (!gal) return;
+  if (!cmImages.length) { gal.innerHTML = ''; return; }
+  const slides = cmImages.map(src => `<div class="sm-gal-slide"><img src="${src}" alt="" loading="lazy" decoding="async"></div>`).join('');
+  const multi = cmImages.length > 1;
+  const dots = multi ? cmImages.map((_,i)=>`<div class="sm-gal-dot ${i===cmIndex?'active':''}" onclick="goCatGal(${i})"></div>`).join('') : '';
+  gal.innerHTML = `
+    <div class="sm-gal-track" id="mGalTrack" style="transform:translateX(-${cmIndex*100}%)">${slides}</div>
+    ${multi ? `<button class="sm-gal-arrow prev" ${cmIndex===0?'disabled':''} onclick="prevCatGal(event)" aria-label="Предыдущее">‹</button>
+    <button class="sm-gal-arrow next" ${cmIndex===cmImages.length-1?'disabled':''} onclick="nextCatGal(event)" aria-label="Следующее">›</button>
+    <div class="sm-gal-counter">${cmIndex+1}/${cmImages.length}</div>
+    <div class="sm-gal-dots">${dots}</div>` : ''}
+  `;
+  // Swipe
+  if (multi) attachCmSwipe(gal);
+}
+function goCatGal(i){ if(i<0||i>=cmImages.length)return; cmIndex=i; renderCatGal(); }
+function nextCatGal(e){ if(e)e.stopPropagation(); goCatGal(cmIndex+1); }
+function prevCatGal(e){ if(e)e.stopPropagation(); goCatGal(cmIndex-1); }
+function attachCmSwipe(el){
+  let x0=null;
+  el.ontouchstart = e => { x0 = e.touches[0].clientX; };
+  el.ontouchend   = e => {
+    if (x0===null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (dx < -40) nextCatGal();
+    else if (dx > 40) prevCatGal();
+    x0 = null;
+  };
+}
+
 function openModal(i){
   const p=currentProducts[i];
   modalProduct=p;
   selectedSize=null;
   document.getElementById('modal-add-btn').classList.remove('visible');
-  document.getElementById('mImg').src=p.img;
+  cmImages = (p.imgs && p.imgs.length) ? p.imgs : (p.img ? [p.img] : []);
+  cmIndex = 0;
+  renderCatGal();
   document.getElementById('mBrand').textContent=p.brand;
   document.getElementById('mName').textContent=p.name;
   document.getElementById('mColor').textContent=p.color;

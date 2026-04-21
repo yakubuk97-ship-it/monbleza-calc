@@ -132,18 +132,27 @@ function parseTile($, el) {
   };
 }
 
+// Глобальный счётчик потраченных кредитов ScrapFly
+let _spent = 0;
+const COST_BUDGET = parseInt(process.env.COST_BUDGET || '500', 10);
+
 async function scrapeCategory(cat) {
   const all = [];
   for (let page = 0; page < MAX_PAGES_PER_CAT; page++) {
+    if (_spent >= COST_BUDGET) {
+      console.log(`  ⚠️  budget exceeded (${_spent}/${COST_BUDGET}) — stopping ${cat.name}`);
+      break;
+    }
     const start = page * PAGE_SIZE;
     const url = `${BASE}${GRID}?cgid=${cat.cgid}&start=${start}&sz=${PAGE_SIZE}`;
     const r = await sfFetch(url);
     const html = r.data?.result?.content || '';
-    const cost = r.data?.context?.cost?.total;
+    const cost = r.data?.context?.cost?.total || 0;
+    _spent += cost;
 
     const $ = cheerio.load(html);
     const tiles = $('.pgptiles').toArray();
-    console.log(`  ${cat.name} page ${page+1} (start=${start}): ${tiles.length} tiles  cost ${cost}`);
+    console.log(`  ${cat.name} page ${page+1} (start=${start}): ${tiles.length} tiles  cost ${cost}  spent ${_spent}`);
     if (tiles.length === 0) break;
 
     for (const t of tiles) {

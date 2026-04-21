@@ -197,6 +197,17 @@ for p in joes_data:
     if img in seen_imgs: continue
     seen_imgs.add(img)
 
+    # Увеличиваем фото до 800×800 (по умолчанию 440×440 — слишком мелко)
+    def hi_res(u):
+        if not u: return u
+        return u.replace('wid=440&hei=440', 'wid=800&hei=800')
+
+    img_hi = hi_res(img)
+    imgs_hi = [hi_res(u) for u in (p.get('images') or [img]) if u]
+    # Уберём дубликаты, сохранив порядок
+    seen_local = set()
+    imgs_hi = [u for u in imgs_hi if not (u in seen_local or seen_local.add(u))]
+
     url = p.get('productUrl', '')
     brand = p.get('brand') or 'New Balance'
     color = p.get('color') or ''
@@ -205,7 +216,7 @@ for p in joes_data:
 
     products.append({'name': name, 'color': color, 'brand': brand, 'price': price_eur,
                      'oldPrice': old_eur, 'sale': is_sale, 'cat': get_cat(name, color),
-                     'img': img, 'url': url, 'sizes': sizes, 'src': 'joes'})
+                     'img': img_hi, 'imgs': imgs_hi, 'url': url, 'sizes': sizes, 'src': 'joes'})
 
 joes_count = sum(1 for p in products if p.get('src') == 'joes')
 print(f'Joe\'s NB добавлено: {joes_count}')
@@ -232,13 +243,18 @@ def js_obj(p):
     old = f',oldPrice:{p["oldPrice"]}' if p['oldPrice'] else ''
     sale = ',sale:true' if p['sale'] else ''
     src = f',src:"{p["src"]}"' if p.get('src') else ''
+    # imgs (массив) сохраняем только если фото больше одного — экономия размера
+    imgs = p.get('imgs') or []
+    imgs_js = ''
+    if len(imgs) > 1:
+        imgs_js = ',g:' + json.dumps(imgs, separators=(',',':'))
     n = p['name'].replace('\\','\\\\').replace('"','\\"')
     c = p['color'].replace('\\','\\\\').replace('"','\\"')
     b = p['brand'].replace('\\','\\\\').replace('"','\\"')
     sizes_js = json.dumps(p.get('sizes',[]), separators=(',',':'))
-    return f'{{n:"{n}",c:"{c}",b:"{b}",p:{p["price"]}{old}{sale},cat:"{p["cat"]}",i:"{p["img"]}",u:"{p["url"]}",s:{sizes_js}{src}}}'
+    return f'{{n:"{n}",c:"{c}",b:"{b}",p:{p["price"]}{old}{sale},cat:"{p["cat"]}",i:"{p["img"]}",u:"{p["url"]}",s:{sizes_js}{src}{imgs_js}}}'
 
-products_js = 'var products=[\n' + ',\n'.join(js_obj(p) for p in products) + '\n].map(r=>({name:r.n,color:r.c,brand:r.b,price:r.p,oldPrice:r.oldPrice||null,sale:!!r.sale,cat:r.cat,img:r.i,url:r.u,sizes:r.s||[],src:r.src||"zal"}));'
+products_js = 'var products=[\n' + ',\n'.join(js_obj(p) for p in products) + '\n].map(r=>({name:r.n,color:r.c,brand:r.b,price:r.p,oldPrice:r.oldPrice||null,sale:!!r.sale,cat:r.cat,img:r.i,imgs:r.g||[r.i],url:r.u,sizes:r.s||[],src:r.src||"zal"}));'
 
 # Хэш для cache-busting
 content_hash = hashlib.md5(products_js.encode()).hexdigest()[:8]
