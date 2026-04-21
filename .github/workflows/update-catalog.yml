@@ -59,12 +59,8 @@ jobs:
         continue-on-error: true
         timeout-minutes: 20
 
-      - name: Scrape Joe's NB Outlet
-        env:
-          SCRAPFLY_KEY: ${{ secrets.SCRAPFLY_KEY }}
-        run: node scraper_joes.js
-        continue-on-error: true
-        timeout-minutes: 15
+      # Joe's NB Outlet обновляется отдельным workflow раз в 3 дня
+      # (см. .github/workflows/update-joes.yml), чтобы экономить кредиты ScrapFly.
 
       # === GENERATE ===
 

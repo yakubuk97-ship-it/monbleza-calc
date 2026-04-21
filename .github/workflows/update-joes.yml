@@ -1,0 +1,58 @@
+name: Update Joe's NB Outlet (every 3 days)
+
+on:
+  schedule:
+    # Раз в 3 дня в 03:00 UTC (06:00 МСК). Кратно 3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30
+    - cron: '0 3 */3 * *'
+  workflow_dispatch:
+    inputs:
+      max_pages:
+        description: 'Страниц на категорию (по 200 товаров)'
+        required: false
+        default: '4'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: npm install axios cheerio dotenv
+
+      - name: Scrape Joe's NB Outlet
+        env:
+          SCRAPFLY_KEY: ${{ secrets.SCRAPFLY_KEY }}
+          JOES_MAX_PAGES: ${{ github.event.inputs.max_pages || '4' }}
+        run: node scraper_joes.js
+
+      - name: Regenerate catalog
+        run: python3 generate.py
+
+      - name: Commit and push
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add joes_data.json products.js index.html || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto-update Joe's NB $(date +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No Joe's changes"
+          fi

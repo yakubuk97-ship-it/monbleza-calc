@@ -26,7 +26,9 @@ const CATEGORIES = [
 ];
 
 const PAGE_SIZE = 200;
-const MAX_PAGES_PER_CAT = 40; // 40 × 200 = 8000 products per category (upper bound)
+// Default — умеренный прогон (помещается в бюджет ScrapFly при запуске раз в 3 дня).
+// Можно переопределить через env: JOES_MAX_PAGES=10 node scraper_joes.js
+const MAX_PAGES_PER_CAT = parseInt(process.env.JOES_MAX_PAGES || '4', 10);
 
 function sfFetch(url, { render = false, timeout = 120000 } = {}) {
   const params = new URLSearchParams({
