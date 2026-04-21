@@ -86,7 +86,12 @@ for p in data:
     try: promo = int(str(p.get('promotionalPrice',0))) / 100 if p.get('promotionalPrice') else None
     except: promo = None
     # Уменьшаем картинки: 762→400px — вдвое меньше трафика
-    img = p.get('imageUrl','').replace('imwidth=762','imwidth=400').replace('imwidth=300','imwidth=400')
+    # Zalando: увеличиваем до imwidth=900 (было 400, отображение в модалке идёт крупно)
+    import re as _re
+    img = p.get('imageUrl','')
+    img = _re.sub(r'imwidth=\d+', 'imwidth=900', img)
+    if 'imwidth=' not in img and 'ztat.net' in img:
+        img = img + ('&' if '?' in img else '?') + 'imwidth=900'
     url = p.get('productUrl','')
     if img in seen_imgs: continue
     seen_imgs.add(img)
@@ -112,6 +117,8 @@ for p in ss_data:
 
     img = p.get('imageUrl', '')
     if not img: continue
+    # SS24: увеличиваем с 600x600 до 1200x1200
+    img = _re.sub(r'/fit-in/\d+x\d+/', '/fit-in/1200x1200/', img)
     if img in seen_imgs: continue
     seen_imgs.add(img)
 
@@ -147,6 +154,8 @@ for p in answear_data:
 
     img = p.get('img', '')
     if not img: continue
+    # Answear: увеличиваем с 400x600 до 800x1200
+    img = _re.sub(r'/i/\d+x\d+/', '/i/800x1200/', img)
     if img in seen_imgs: continue
     seen_imgs.add(img)
 
