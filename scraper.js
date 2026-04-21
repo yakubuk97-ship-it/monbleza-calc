@@ -36,7 +36,7 @@ const BRAND_URLS = [
   'https://www.zalando.de/herren/champion/',
   'https://www.zalando.de/herren/dickies/',
 ];
-const CHROME_PATH = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
+const CHROME_PATH = process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 

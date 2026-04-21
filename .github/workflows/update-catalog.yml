@@ -1,9 +1,10 @@
-name: Update NB Catalog
+name: Update Catalog (all stores)
 
 on:
   schedule:
+    # Раз в день в 06:00 UTC (09:00 МСК)
     - cron: '0 6 * * *'
-  workflow_dispatch:
+  workflow_dispatch:      # можно запустить вручную
 
 permissions:
   contents: write
@@ -11,28 +12,78 @@ permissions:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 60   # 4 скрейпера могут тянуться долго
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
-      - name: Install dependencies
-        run: npm install axios
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-      - name: Run scraper
+      - name: Install Node dependencies
+        run: npm install
+
+      - name: Install Chrome (для puppeteer-core)
+        uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: stable
+        id: setup-chrome
+
+      # === SCRAPERS ===
+      # Каждый в своей ступени с continue-on-error, чтобы падение одного
+      # не ломало остальные источники.
+
+      - name: Scrape Zalando DE
+        env:
+          CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
         run: node scraper.js
+        continue-on-error: true
+        timeout-minutes: 20
+
+      - name: Scrape StreetStyle24
+        run: node scraper_ss.js
+        continue-on-error: true
+        timeout-minutes: 15
+
+      - name: Scrape Answear
+        env:
+          CHROME_PATH: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: node scraper_answear.js
+        continue-on-error: true
+        timeout-minutes: 20
+
+      - name: Scrape Joe's NB Outlet
+        env:
+          SCRAPFLY_KEY: ${{ secrets.SCRAPFLY_KEY }}
+        run: node scraper_joes.js
+        continue-on-error: true
+        timeout-minutes: 15
+
+      # === GENERATE ===
 
       - name: Generate catalog
         run: python3 generate.py
+
+      # === COMMIT ===
 
       - name: Commit and push
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add index.html
-          git diff --staged --quiet || git commit -m "Auto-update catalog $(date +'%Y-%m-%d')"
-          git push
+          git add products.js index.html \
+                  zalando_data.json streetstyle_data.json \
+                  answear_data.json joes_data.json || true
+          if ! git diff --staged --quiet; then
+            git commit -m "Auto-update catalog $(date +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main
+            git push
+          else
+            echo "No catalog changes to commit"
+          fi
