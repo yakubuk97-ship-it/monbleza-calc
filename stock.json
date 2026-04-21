@@ -1588,7 +1588,6 @@
     "brand": "Weekend Offender",
     "price": 5790,
     "sizes": [
-      "2XL",
       "L",
       "XL"
     ],
@@ -2846,8 +2845,7 @@
     "brand": "Weekend Offender",
     "price": 6490,
     "sizes": [
-      "M",
-      "S"
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/73c48f09-1ffd-4758-b82f-c1878c3f4886.jpg",
