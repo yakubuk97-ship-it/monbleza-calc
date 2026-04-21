@@ -1,15 +1,19 @@
-name: Update Joe's NB Outlet (every 3 days)
+name: Update Joe's NB Outlet (daily)
 
 on:
   schedule:
-    # Раз в 3 дня в 03:00 UTC (06:00 МСК). Кратно 3: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30
-    - cron: '0 3 */3 * *'
+    # Каждый день в 03:00 UTC (06:00 МСК)
+    - cron: '0 3 * * *'
   workflow_dispatch:
     inputs:
       max_pages:
         description: 'Страниц на категорию (по 200 товаров)'
         required: false
-        default: '4'
+        default: '5'
+      budget:
+        description: 'Бюджет ScrapFly-кредитов на прогон'
+        required: false
+        default: '33'
 
 permissions:
   contents: write
@@ -38,7 +42,12 @@ jobs:
       - name: Scrape Joe's NB Outlet
         env:
           SCRAPFLY_KEY: ${{ secrets.SCRAPFLY_KEY }}
-          JOES_MAX_PAGES: ${{ github.event.inputs.max_pages || '4' }}
+          JOES_MAX_PAGES: ${{ github.event.inputs.max_pages || '5' }}
+          # Лимит 33 credits/день укладывается в 1000/мес бесплатного
+          # ScrapFly (33×30=990). При цене 1 credit/запрос — за день пройдёт
+          # весь каталог Joe's, при 25 credit/запрос — обновится самая
+          # свежая страница (200 товаров).
+          COST_BUDGET: ${{ github.event.inputs.budget || '33' }}
         run: node scraper_joes.js
 
       - name: Regenerate catalog
