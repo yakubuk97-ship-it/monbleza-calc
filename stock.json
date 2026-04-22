@@ -2561,22 +2561,6 @@
     "description": "Новая, 100% Оригинальная продукция с навесными бирками. \nСостав : 90% Хлопок ; 10% Вискоза"
   },
   {
-    "name": "Поло Barbour Original Dusty Green",
-    "brand": "Поло",
-    "price": 8490,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/ead20d4e-d31e-40fb-af57-2e381aa0452a.jpg",
-    "images": [
-      "img/ead20d4e-d31e-40fb-af57-2e381aa0452a.jpg",
-      "img/50c1cdc1-6f4c-40b9-b258-87a5f2b55584.jpg",
-      "img/f7d4b050-9931-4bb9-80b6-f883c65d0692.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок высокой плотности\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Толстовка C.P. Company Diagonal Hoodie",
     "brand": "Толстовка",
     "price": 20990,
@@ -2811,6 +2795,7 @@
     "brand": "Weekend Offender",
     "price": 6790,
     "sizes": [
+      "2XL",
       "L"
     ],
     "category": "Рубашка",
