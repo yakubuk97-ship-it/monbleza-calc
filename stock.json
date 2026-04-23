@@ -1239,7 +1239,6 @@
     "brand": "Поло",
     "price": 7490,
     "sizes": [
-      "L",
       "XL"
     ],
     "category": "Лонгслив",
@@ -1690,27 +1689,11 @@
     "description": ""
   },
   {
-    "name": "Толстовка Weekend Offender Reutemann Black",
-    "brand": "Weekend Offender",
-    "price": 11490,
-    "sizes": [
-      "L"
-    ],
-    "category": "Джемпер",
-    "img": "img/0e3c2ae4-8fd8-4d40-9fd6-6f847ba69d01.jpg",
-    "images": [
-      "img/0e3c2ae4-8fd8-4d40-9fd6-6f847ba69d01.jpg",
-      "img/81a88443-31b8-411f-9e82-f160f529a451.jpg",
-      "img/8e97f200-75ca-4384-aa30-3cdb6d0b2d7d.jpg",
-      "img/a249d765-6127-4f98-8c6d-2d4ec4a1c2c7.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: премиальный хлопок, полиэстер"
-  },
-  {
     "name": "Поло Fred Perry Twin Tapped Ecru",
     "brand": "Fred Perry",
     "price": 8790,
     "sizes": [
+      "L",
       "XL"
     ],
     "category": "Лонгслив",
@@ -1810,7 +1793,6 @@
     "brand": "Sergio Tacchini",
     "price": 13490,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Джемпер",
@@ -2708,8 +2690,7 @@
     "brand": "Толстовка",
     "price": 22990,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/9ac83e60-e765-43f5-9630-35224daa9168.jpg",
