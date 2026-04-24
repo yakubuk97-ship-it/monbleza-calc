@@ -349,7 +349,7 @@
   {
     "name": "Поло Weekend Offender Barnum White",
     "brand": "Weekend Offender",
-    "price": 4790,
+    "price": 4590,
     "sizes": [
       "L",
       "M",
@@ -1020,6 +1020,22 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Куртка Weekend Offender La Guarda Porpoise",
+    "brand": "Weekend Offender",
+    "price": 11990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/5c897131-6f83-400e-8007-e72597bff992.jpg",
+    "images": [
+      "img/5c897131-6f83-400e-8007-e72597bff992.jpg",
+      "img/a5a51d11-fd33-42ca-8ca1-a4310070c0f4.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав внешний: нейлон метал с Водоотталкивающими свойствами\nCостав внутри: поли. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Овершот C.P. Company Organic Gabardina Black",
     "brand": "Овершот",
     "price": 23990,
@@ -1370,6 +1386,21 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок высокой плотности.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Толстовка Weekend Offender Daponte Black",
+    "brand": "Weekend Offender",
+    "price": 8490,
+    "sizes": [
+      "L/XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/3d410f0a-d4a3-40f7-8870-b1356579f710.jpg",
+    "images": [
+      "img/3d410f0a-d4a3-40f7-8870-b1356579f710.jpg",
+      "img/cda9eab7-8521-4b1e-a4ce-29da96c988f6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nСостав 100% премиальный хлопок, детали из плотного нейлон метала!\nCверьте размерную сетку \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Поло Barbour Classic Black",
     "brand": "Поло",
     "price": 8990,
@@ -1434,6 +1465,26 @@
       "img/8a1c4b31-f629-4a1c-a4de-98b5e3751a8f.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 65% хлопок и 35% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Куртка Weekend Offender Harpocrates Intercity Black",
+    "brand": "Weekend Offender",
+    "price": 13490,
+    "sizes": [
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Жилет",
+    "img": "img/8eb33901-c9b9-48cc-a81e-1f0e21582c75.jpg",
+    "images": [
+      "img/8eb33901-c9b9-48cc-a81e-1f0e21582c75.jpg",
+      "img/e0f02c20-6ed2-4c4d-bb58-046d5d7d5f00.jpg",
+      "img/5ffda240-6ddf-466e-b8bb-62c279ae3ca8.jpg",
+      "img/b81a4cfc-b703-45ea-8c0c-dfa910f2ed24.jpg",
+      "img/6974222e-0f27-4fe9-bb58-40b0967a94c7.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \n- Съемный капюшон  \n- Стандартный фит\n- Фурнитура Vilson YKK\n- Карманы так же с боковым входом\n- Потайной карман сзади на молнии\nСостав: премиальный хлопок и нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Штаны Weekend Offender Pianemo Cargo Castle Green",
@@ -1533,6 +1584,20 @@
       "img/20194412-eeeb-4db8-a7b4-99b6c55f78fc.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Жилет Weekend Offender Gordini Down",
+    "brand": "Weekend Offender",
+    "price": 11990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/47e688b8-ba6d-495c-8489-bf7667e3e7ae.jpg",
+    "images": [
+      "img/47e688b8-ba6d-495c-8489-bf7667e3e7ae.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСтандартный фит\nСостав внешний: нейлон\nСостав набивки: 70% пух; 30% перо\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Угги UGG Mustard Seed Classic Maxi Mini Boot",
@@ -1809,8 +1874,10 @@
   {
     "name": "Шорты Weekend Offender Barios Navy",
     "brand": "Weekend Offender",
-    "price": 4590,
+    "price": 4390,
     "sizes": [
+      "L",
+      "M",
       "XL"
     ],
     "category": "Шорты",
@@ -1820,7 +1887,7 @@
       "img/d748f3e0-018c-498c-bd25-c8328bb5953c.jpg",
       "img/0a22bc2f-d679-49fc-9e22-72fb818e698d.jpg"
     ],
-    "description": "Оригинальная продукция \nСостав: 100% нейлон"
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Fred Perry Lauren Shell Green",
@@ -1942,6 +2009,26 @@
       "img/12d1b50a-a301-4cfb-acf7-30f7ec403771.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Овершот Weekend Offender Vinnie Pocket Sea Spray",
+    "brand": "Weekend Offender",
+    "price": 8990,
+    "sizes": [
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Жилет",
+    "img": "img/017c7af5-d4c6-481a-bffc-0a0b39ac0a69.jpg",
+    "images": [
+      "img/017c7af5-d4c6-481a-bffc-0a0b39ac0a69.jpg",
+      "img/8e47b290-3d03-4bda-b0a6-9a2dfe5b42ac.jpg",
+      "img/96bb3f4f-7e45-4234-b68f-32e26011c6dd.jpg",
+      "img/7003e941-600a-4ca6-9264-b72adb3b73ad.jpg",
+      "img/08457df3-b208-4c29-b159-05889c389074.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% нейлон метал, ripstop \nОриентируйтесь на размерную сетку!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка MA.Strum Core Overhead Hoody Jet Black",
@@ -2201,6 +2288,21 @@
       "img/ca7b2624-1bed-4b4e-9bd1-40b2bdf2ba9d.jpg"
     ],
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Поло Weekend Offender Barnum Black",
+    "brand": "Weekend Offender",
+    "price": 4590,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/dadfd207-bf6e-40b0-9166-a6b89010cfa9.jpg",
+    "images": [
+      "img/dadfd207-bf6e-40b0-9166-a6b89010cfa9.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Napapijri S-Vanni Black Beauty",
