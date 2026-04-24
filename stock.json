@@ -1183,6 +1183,22 @@
     "description": "Оригинал из бутиков Европы!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Куртка Fred Perry Caban Black",
+    "brand": "Fred Perry",
+    "price": 22990,
+    "sizes": [
+      "2XL",
+      "L"
+    ],
+    "category": "Жилет",
+    "img": "img/9cd4129c-72cc-4460-82de-e8caeec8c835.jpg",
+    "images": [
+      "img/9cd4129c-72cc-4460-82de-e8caeec8c835.jpg",
+      "img/079f4f0e-3cf7-436e-9ab4-0c4ea5855fab.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 78% хлопок, 28 поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Свитер Weekend Offender Platinum Knit Midium Grey",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -1416,6 +1432,23 @@
       "img/12b67b11-fe31-4b2c-9ecf-1d1a3aa70378.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок высокой плотности \n(Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Sergio Tacchini Master Navy White",
+    "brand": "Sergio Tacchini",
+    "price": 6490,
+    "sizes": [
+      "2XL (fact. XL)",
+      "L (fact. M)",
+      "XL (fact. L)"
+    ],
+    "category": "Лонгслив",
+    "img": "img/37b1d9b6-e24c-4ede-a92a-e6ef3fd05d15.jpg",
+    "images": [
+      "img/37b1d9b6-e24c-4ede-a92a-e6ef3fd05d15.jpg",
+      "img/29c2ce99-4ddc-4a15-8ccf-160bde7b3c63.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Ellesse Ollio 2 White",
@@ -1825,6 +1858,23 @@
     "description": "Оригинал из бутиков Европы!\n\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Weekend Offender Cannon Beach Cornflower",
+    "brand": "Weekend Offender",
+    "price": 3890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/d59cafde-7dbe-4dde-adb6-c781d2a15a0b.jpg",
+    "images": [
+      "img/d59cafde-7dbe-4dde-adb6-c781d2a15a0b.jpg",
+      "img/dcd13ddd-8ec8-4895-8387-44effe76392e.jpg",
+      "img/969f152c-f403-4b24-b043-424a254960f5.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Ben Sherman Signature Target Black",
     "brand": "Ben Sherman",
     "price": 4190,
@@ -1855,6 +1905,22 @@
       "img/794db939-8f54-4dfb-8ccd-348567c5c110.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% полиэстер"
+  },
+  {
+    "name": "Толстовка MA.Strum Neo Quarter Zip Ink Navy",
+    "brand": "MA.Strum",
+    "price": 17990,
+    "sizes": [
+      "L"
+    ],
+    "category": "Джемпер",
+    "img": "img/182d3a53-ae89-4dc9-b435-77e0a60e18c7.jpg",
+    "images": [
+      "img/182d3a53-ae89-4dc9-b435-77e0a60e18c7.jpg",
+      "img/e2b4a185-bf18-41cb-b3be-8fbdbbc8cfa6.jpg",
+      "img/c990465e-9b71-40d5-a65b-ea0875aed92f.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Олимпийка Sergio Tacchini New Dallas Track Black",
@@ -2086,7 +2152,8 @@
     "price": 13990,
     "sizes": [
       "42 EUR / 26.5 cm",
-      "43 EUR / 27 cm"
+      "43 EUR / 27 cm",
+      "44 EUR / 28 cm"
     ],
     "category": "Обувь",
     "img": "img/ac56e15b-cc27-4084-9b9a-1fc0eed8a147.jpg",
@@ -2161,6 +2228,20 @@
       "img/50340f71-b48a-421c-8976-f6fc3fff9a76.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок, технология окрашивания Garment Dyeing\n(Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Поло MA.Strum Pique Burnt Cream",
+    "brand": "MA.Strum",
+    "price": 9690,
+    "sizes": [
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/cdf054b3-f11e-4dcd-815c-d179d8b8e6f8.jpg",
+    "images": [
+      "img/cdf054b3-f11e-4dcd-815c-d179d8b8e6f8.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Джемпер Weekend Offender Zip Vandium Charcoal",
@@ -2426,6 +2507,7 @@
     "brand": "Weekend Offender",
     "price": 11990,
     "sizes": [
+      "2XL",
       "L",
       "XL"
     ],
@@ -2470,6 +2552,22 @@
       "img/b122944f-6df3-44ba-bced-19a51469d984.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Шорты Weekend Offender Mascia Bark",
+    "brand": "Weekend Offender",
+    "price": 5690,
+    "sizes": [
+      "L",
+      "S",
+      "XL"
+    ],
+    "category": "Шорты",
+    "img": "img/c7183803-0ccd-4cb6-96f4-24c994b3abf4.jpg",
+    "images": [
+      "img/c7183803-0ccd-4cb6-96f4-24c994b3abf4.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Джемпер Weekend Offender Vandium Half Zip Stormy",
@@ -2934,6 +3032,23 @@
       "img/fda3ae58-0f3a-4f07-b273-c103f9f0965c.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Поло MA.Strum Pique Sage",
+    "brand": "MA.Strum",
+    "price": 9690,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/869d85b9-8fa9-4522-a191-b3286767ee23.jpg",
+    "images": [
+      "img/869d85b9-8fa9-4522-a191-b3286767ee23.jpg",
+      "img/42c94281-3041-4755-b823-5e63310711d5.jpg",
+      "img/91ae9d13-8550-48a4-888d-a35e06a5bcb5.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка MA.Strum Core Overhead Hoody Ink Navy",
