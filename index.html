@@ -82,6 +82,8 @@
   .brand-hero{width:100%;aspect-ratio:5/2;display:flex;align-items:center;justify-content:center;border-radius:8px;margin-bottom:18px;padding:24px;box-sizing:border-box;}
   .brand-hero svg{max-width:70%;max-height:62%;display:block;}
   @media(max-width:600px){.brand-hero{aspect-ratio:16/7;padding:16px;border-radius:6px;}}
+  .brand-desc{font-size:13px;line-height:1.55;color:var(--muted);margin:-6px 2px 18px;font-weight:300;letter-spacing:0.01em;}
+  @media(max-width:600px){.brand-desc{font-size:12px;}}
   .country-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   .country-btn{background:var(--s2);border:0.5px solid var(--border2);border-radius:2px;padding:13px 14px;color:var(--text);font-size:13px;font-weight:500;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:3px;transition:border-color 0.2s,background 0.2s;}
   .country-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.06);}
@@ -799,6 +801,7 @@
       <div class="brand-hero" style="background:#dee4ea">
         <svg viewBox="0 0 240 60"><g fill="#111" transform="translate(8,8)"><polygon points="0,38 8,38 22,12 14,12"/><polygon points="16,38 24,38 38,12 30,12"/><polygon points="32,38 40,38 54,12 46,12"/></g><text x="135" y="42" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="900" letter-spacing="0" fill="#111">adidas</text></svg>
       </div>
+      <p class="brand-desc">Adidas — компания немецкого происхождения, которая производит спортивные товары. В ассортименте представлены одежда и обувь, аксессуары и инвентарь. Сотрудничает с профессиональными спортсменами, актерами и артистами, часто выпускает кастомизированные серии в коллаборации с другими брендами и знаменитостями.</p>
       <div class="sec-label">Adidas — выбери сайт</div>
       <div class="country-grid">
         <button class="country-btn" onclick="goCalc('adidas-pl')">🇵🇱 Польша<span class="csub">adidas.pl · EUR</span></button>
