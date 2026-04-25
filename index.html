@@ -774,6 +774,13 @@
           <span class="bt-name">DKNY</span>
           <span class="bt-sub">dkny.com · EUR</span>
         </button>
+        <button class="brand-tile" onclick="show('s-diesel')">
+          <span class="bt-img" style="background:#cdd5dd">
+            <svg viewBox="0 0 240 60"><text x="120" y="42" text-anchor="middle" font-family="Arial Black,Helvetica,sans-serif" font-size="32" font-weight="900" letter-spacing="3" fill="#111">DIESEL</text></svg>
+          </span>
+          <span class="bt-name">Diesel</span>
+          <span class="bt-sub">2 страны →</span>
+        </button>
       </div>
     </div>
 
@@ -803,6 +810,19 @@
         <button class="country-btn" onclick="goCalc('nike-us')">🇺🇸 USA<span class="csub">nike.com · USD</span></button>
         <button class="country-btn" onclick="goCalc('nike-de')">🇩🇪 Германия<span class="csub">nike.com/de · EUR</span></button>
         <button class="country-btn" onclick="goCalc('nike-pl')">🇵🇱 Польша<span class="csub">nike.com/pl · EUR</span></button>
+      </div>
+    </div>
+
+    <!-- Diesel -->
+    <div id="s-diesel" class="hidden">
+      <button class="back-btn" onclick="show('s-official')">← назад</button>
+      <div class="brand-hero" style="background:#cdd5dd">
+        <svg viewBox="0 0 240 60"><text x="120" y="42" text-anchor="middle" font-family="Arial Black,Helvetica,sans-serif" font-size="32" font-weight="900" letter-spacing="3" fill="#111">DIESEL</text></svg>
+      </div>
+      <div class="sec-label">Diesel — выбери сайт</div>
+      <div class="country-grid">
+        <button class="country-btn" onclick="goCalc('diesel-de')">🇩🇪 Германия<span class="csub">de.diesel.com · EUR</span></button>
+        <button class="country-btn" onclick="goCalc('diesel-us')">🇺🇸 USA<span class="csub">diesel.com/en-us · USD</span></button>
       </div>
     </div>
 
@@ -1425,9 +1445,11 @@ const stores={
   streetstyle:{name:'Streetstyle24',url:'https://streetstyle24.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-multi'},
   carhartt:{name:'Carhartt WIP',url:'https://www.carhartt-wip.com/en-gb',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-official'},
   dkny:{name:'DKNY Germany',url:'https://www.dkny.com/?country=DE',del:10,log:33,cur:'EUR',rate:RATE,back:'s-official'},
+  'diesel-de':{name:'Diesel Germany',url:'https://de.diesel.com/de/',del:10,log:33,cur:'EUR',rate:RATE,back:'s-diesel'},
+  'diesel-us':{name:'Diesel USA',url:'https://diesel.com/en-us/',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-diesel'},
 };
 let current=null;
-function show(id){['s-stores','s-official','s-nb','s-nike','s-adidas','s-multi','s-market','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
+function show(id){['s-stores','s-official','s-nb','s-nike','s-adidas','s-diesel','s-multi','s-market','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
 function goCalc(key){current=stores[key];document.getElementById('c-name').textContent=current.name;document.getElementById('c-link').href=current.url;document.getElementById('shop-btn').href=current.url;document.getElementById('c-del').textContent=current.del>0?current.del+' '+current.cur:'Бесплатно';document.getElementById('c-cur').textContent=current.cur;document.getElementById('price').value='';document.getElementById('sub-row').classList.add('hidden');document.getElementById('final-block').classList.add('hidden');document.getElementById('out-num').textContent='—';document.getElementById('out-cur').textContent='';document.getElementById('out-sub').textContent='';show('s-calc');setTimeout(()=>document.getElementById('price').focus(),100);}
 function backFromCalc(){show(current?current.back:'s-stores');}
 function fmt(n){return Math.round(n).toLocaleString('ru-RU')+' ₽';}
