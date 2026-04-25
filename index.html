@@ -78,6 +78,10 @@
   .bt-name{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);}
   .bt-sub{font-size:10px;color:var(--dim);letter-spacing:0.03em;font-weight:300;}
   @media(max-width:600px){.bt-img{padding:10px;} .bt-name{font-size:11px;} .bt-sub{font-size:9px;}}
+  /* Хиро-баннер на странице бренда */
+  .brand-hero{aspect-ratio:5/2;display:flex;align-items:center;justify-content:center;border-radius:3px;border:0.5px solid var(--border2);margin-bottom:18px;padding:24px;}
+  .brand-hero svg{max-width:75%;max-height:65%;display:block;}
+  @media(max-width:600px){.brand-hero{aspect-ratio:16/7;padding:16px;}}
   .country-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   .country-btn{background:var(--s2);border:0.5px solid var(--border2);border-radius:2px;padding:13px 14px;color:var(--text);font-size:13px;font-weight:500;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:3px;transition:border-color 0.2s,background 0.2s;}
   .country-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.06);}
@@ -757,6 +761,9 @@
     <!-- New Balance -->
     <div id="s-nb" class="hidden">
       <button class="back-btn" onclick="show('s-official')">← назад</button>
+      <div class="brand-hero" style="background:#ebe1cd">
+        <svg viewBox="0 0 240 60"><text x="22" y="46" font-family="Arial Black,Helvetica,sans-serif" font-size="46" font-weight="900" font-style="italic" fill="#111">N</text><text x="68" y="42" font-family="Helvetica,Arial,sans-serif" font-size="24" font-weight="500" letter-spacing="-0.5" fill="#111">new balance</text></svg>
+      </div>
       <div class="sec-label">New Balance — выбери сайт</div>
       <div class="country-grid">
         <button class="country-btn" onclick="goCalc('nb-pl')">🇵🇱 Poland<span class="csub">newbalance.pl · EUR</span></button>
@@ -769,6 +776,9 @@
     <!-- Nike -->
     <div id="s-nike" class="hidden">
       <button class="back-btn" onclick="show('s-official')">← назад</button>
+      <div class="brand-hero" style="background:#e8e1d8">
+        <svg viewBox="0 0 240 60"><path d="M70 14L8 38c-5 2-9 3-13 3-5 0-9-2-11-5-3-5-1-12 4-19 3-3 6-7 9-9-1 2-2 4-3 7-3 7-2 12 1 16 2 3 6 4 10 4 3 0 7-1 12-3L70 14z" fill="#111" transform="translate(-5,5) scale(0.6)"/><text x="135" y="46" font-family="Arial Black,Helvetica,sans-serif" font-size="40" font-weight="900" font-style="italic" letter-spacing="3" fill="#111">NIKE</text></svg>
+      </div>
       <div class="sec-label">Nike — выбери сайт</div>
       <div class="country-grid">
         <button class="country-btn" onclick="goCalc('nike-us')">🇺🇸 USA<span class="csub">nike.com · USD</span></button>
@@ -780,6 +790,9 @@
     <!-- Adidas -->
     <div id="s-adidas" class="hidden">
       <button class="back-btn" onclick="show('s-official')">← назад</button>
+      <div class="brand-hero" style="background:#dee4ea">
+        <svg viewBox="0 0 240 60"><g fill="#111" transform="translate(8,8)"><polygon points="0,38 8,38 22,12 14,12"/><polygon points="16,38 24,38 38,12 30,12"/><polygon points="32,38 40,38 54,12 46,12"/></g><text x="135" y="42" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="900" letter-spacing="0" fill="#111">adidas</text></svg>
+      </div>
       <div class="sec-label">Adidas — выбери сайт</div>
       <div class="country-grid">
         <button class="country-btn" onclick="goCalc('adidas-pl')">🇵🇱 Польша<span class="csub">adidas.pl · EUR</span></button>
