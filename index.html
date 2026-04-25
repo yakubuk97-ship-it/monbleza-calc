@@ -708,6 +708,7 @@
       <div class="store-grid">
         <button class="store-btn multi" onclick="show('s-nb')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24"><text x="12" y="20" font-family="Arial Black,Helvetica,sans-serif" font-size="22" font-weight="900" font-style="italic" text-anchor="middle" fill="currentColor">N</text></svg></span><span>New Balance</span></span><span class="ssub">4 страны →</span></button>
         <button class="store-btn multi" onclick="show('s-nike')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 7.8L6.442 15.276c-1.456.616-2.679.925-3.668.925-1.456 0-2.521-.532-3.196-1.595C-.99 13.157.165 9.987 1.74 7.776c.74-.972 1.81-2.027 2.59-2.59-.408.65-.738 1.293-.99 1.927-.778 1.99-.7 3.541.235 4.652.7.834 1.7 1.252 2.999 1.252.97 0 2.114-.245 3.43-.733L24 7.8z"/></svg></span><span>Nike</span></span><span class="ssub">3 страны →</span></button>
+        <button class="store-btn multi" onclick="show('s-adidas')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="2,19 5,19 11,7 8,7"/><polygon points="8,19 11,19 17,7 14,7"/><polygon points="14,19 17,19 23,7 20,7"/></svg></span><span>Adidas</span></span><span class="ssub">4 страны →</span></button>
         <button class="store-btn" onclick="goCalc('fredperry')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M7 9c0.5 1.5 1 3 1 5M17 9c-0.5 1.5-1 3-1 5M9 7c1 1 1.5 2.5 1.5 4M15 7c-1 1-1.5 2.5-1.5 4"/></svg></span><span>Fred Perry</span></span><span class="ssub">fredperry.com/eu · EUR</span></button>
         <button class="store-btn" onclick="goCalc('stoneisland')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l1.4 7.2L20.5 6l-3.7 5.5 6.2 3.7-7.2-1.4L17.5 21 12 16.5 6.5 21l1.7-7.2L1 15.2 7.2 11.5 3.5 6l7.1 2.2z"/></svg></span><span>Stone Island</span></span><span class="ssub">stoneisland.com · EUR</span></button>
         <button class="store-btn" onclick="goCalc('carhartt')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="6" width="20" height="12" rx="1"/><text x="12" y="16" font-family="Arial Black,Helvetica,sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="#eeeeee">CHT</text></svg></span><span>Carhartt WIP</span></span><span class="ssub">carhartt-wip.com · GBP</span></button>
@@ -734,6 +735,18 @@
         <button class="country-btn" onclick="goCalc('nike-us')">🇺🇸 USA<span class="csub">nike.com · USD</span></button>
         <button class="country-btn" onclick="goCalc('nike-de')">🇩🇪 Германия<span class="csub">nike.com/de · EUR</span></button>
         <button class="country-btn" onclick="goCalc('nike-pl')">🇵🇱 Польша<span class="csub">nike.com/pl · EUR</span></button>
+      </div>
+    </div>
+
+    <!-- Adidas -->
+    <div id="s-adidas" class="hidden">
+      <button class="back-btn" onclick="show('s-official')">← назад</button>
+      <div class="sec-label">Adidas — выбери сайт</div>
+      <div class="country-grid">
+        <button class="country-btn" onclick="goCalc('adidas-pl')">🇵🇱 Польша<span class="csub">adidas.pl · EUR</span></button>
+        <button class="country-btn" onclick="goCalc('adidas-uk')">🇬🇧 UK<span class="csub">adidas.co.uk · GBP</span></button>
+        <button class="country-btn" onclick="goCalc('adidas-de')">🇩🇪 Германия<span class="csub">adidas.de · EUR</span></button>
+        <button class="country-btn" onclick="goCalc('adidas-us')">🇺🇸 USA<span class="csub">adidas.com/us · USD</span></button>
       </div>
     </div>
 
@@ -1289,6 +1302,10 @@ const stores={
   'nike-us':{name:'Nike USA',url:'https://www.nike.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-nike'},
   'nike-de':{name:'Nike Germany',url:'https://www.nike.com/de/',del:10,log:33,cur:'EUR',rate:RATE,back:'s-nike'},
   'nike-pl':{name:'Nike Poland',url:'https://www.nike.com/pl/mezczyzni',del:0,log:23,cur:'EUR',rate:RATE,back:'s-nike'},
+  'adidas-pl':{name:'Adidas Poland',url:'https://www.adidas.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-adidas'},
+  'adidas-uk':{name:'Adidas UK',url:'https://www.adidas.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-adidas'},
+  'adidas-de':{name:'Adidas Germany',url:'https://www.adidas.de',del:10,log:33,cur:'EUR',rate:RATE,back:'s-adidas'},
+  'adidas-us':{name:'Adidas USA',url:'https://www.adidas.com/us',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-adidas'},
   farfetch:{name:'Farfetch',url:'https://www.farfetch.com/pl/shopping/men/shoes-2/items.aspx',del:0,log:23,cur:'EUR',rate:RATE,back:'s-multi'},
   terraces:{name:'Terraces Menswear',url:'https://www.terracesmenswear.co.uk',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-multi'},
   fredperry:{name:'Fred Perry EU',url:'https://www.fredperry.com/eu/',del:0,log:23,cur:'EUR',rate:RATE,back:'s-official'},
@@ -1298,7 +1315,7 @@ const stores={
   carhartt:{name:'Carhartt WIP',url:'https://www.carhartt-wip.com/en-gb',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-official'},
 };
 let current=null;
-function show(id){['s-stores','s-official','s-nb','s-nike','s-multi','s-market','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
+function show(id){['s-stores','s-official','s-nb','s-nike','s-adidas','s-multi','s-market','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
 function goCalc(key){current=stores[key];document.getElementById('c-name').textContent=current.name;document.getElementById('c-link').href=current.url;document.getElementById('store-icon-link').href=current.url;document.getElementById('c-del').textContent=current.del>0?current.del+' '+current.cur:'Бесплатно';document.getElementById('c-cur').textContent=current.cur;document.getElementById('price').value='';document.getElementById('sub-row').classList.add('hidden');document.getElementById('final-block').classList.add('hidden');document.getElementById('out-num').textContent='—';document.getElementById('out-cur').textContent='';document.getElementById('out-sub').textContent='';show('s-calc');setTimeout(()=>document.getElementById('price').focus(),100);}
 function backFromCalc(){show(current?current.back:'s-stores');}
 function fmt(n){return Math.round(n).toLocaleString('ru-RU')+' ₽';}
