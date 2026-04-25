@@ -69,6 +69,15 @@
   .s-row{display:flex;align-items:center;gap:10px;}
   .store-logo{width:22px;height:22px;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;color:var(--text);}
   .store-logo svg{width:100%;height:100%;display:block;}
+  /* — Брендовые плитки (раздел «Официальные магазины») — */
+  .brand-tile{background:none;border:0.5px solid var(--border2);border-radius:3px;padding:0;color:var(--text);cursor:pointer;text-align:left;display:flex;flex-direction:column;overflow:hidden;transition:border-color 0.2s,transform 0.15s;font:inherit;}
+  .brand-tile:hover{border-color:var(--gold);transform:translateY(-1px);}
+  .bt-img{aspect-ratio:5/3;display:flex;align-items:center;justify-content:center;padding:14px;}
+  .bt-img svg{max-width:92%;max-height:70%;display:block;}
+  .bt-meta{padding:10px 12px 11px;background:var(--s2);border-top:0.5px solid var(--border2);display:flex;flex-direction:column;gap:3px;}
+  .bt-name{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text);}
+  .bt-sub{font-size:10px;color:var(--dim);letter-spacing:0.03em;font-weight:300;}
+  @media(max-width:600px){.bt-img{padding:10px;} .bt-name{font-size:11px;} .bt-sub{font-size:9px;}}
   .country-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
   .country-btn{background:var(--s2);border:0.5px solid var(--border2);border-radius:2px;padding:13px 14px;color:var(--text);font-size:13px;font-weight:500;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:3px;transition:border-color 0.2s,background 0.2s;}
   .country-btn:hover{border-color:var(--gold);background:rgba(201,168,76,0.06);}
@@ -706,12 +715,42 @@
       <button class="back-btn" onclick="show('s-stores')">← назад</button>
       <div class="sec-label">Официальные магазины</div>
       <div class="store-grid">
-        <button class="store-btn multi" onclick="show('s-nb')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24"><text x="12" y="20" font-family="Arial Black,Helvetica,sans-serif" font-size="22" font-weight="900" font-style="italic" text-anchor="middle" fill="currentColor">N</text></svg></span><span>New Balance</span></span><span class="ssub">4 страны →</span></button>
-        <button class="store-btn multi" onclick="show('s-nike')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 7.8L6.442 15.276c-1.456.616-2.679.925-3.668.925-1.456 0-2.521-.532-3.196-1.595C-.99 13.157.165 9.987 1.74 7.776c.74-.972 1.81-2.027 2.59-2.59-.408.65-.738 1.293-.99 1.927-.778 1.99-.7 3.541.235 4.652.7.834 1.7 1.252 2.999 1.252.97 0 2.114-.245 3.43-.733L24 7.8z"/></svg></span><span>Nike</span></span><span class="ssub">3 страны →</span></button>
-        <button class="store-btn multi" onclick="show('s-adidas')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="2,19 5,19 11,7 8,7"/><polygon points="8,19 11,19 17,7 14,7"/><polygon points="14,19 17,19 23,7 20,7"/></svg></span><span>Adidas</span></span><span class="ssub">4 страны →</span></button>
-        <button class="store-btn" onclick="goCalc('fredperry')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M7 9c0.5 1.5 1 3 1 5M17 9c-0.5 1.5-1 3-1 5M9 7c1 1 1.5 2.5 1.5 4M15 7c-1 1-1.5 2.5-1.5 4"/></svg></span><span>Fred Perry</span></span><span class="ssub">fredperry.com/eu · EUR</span></button>
-        <button class="store-btn" onclick="goCalc('stoneisland')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1l1.4 7.2L20.5 6l-3.7 5.5 6.2 3.7-7.2-1.4L17.5 21 12 16.5 6.5 21l1.7-7.2L1 15.2 7.2 11.5 3.5 6l7.1 2.2z"/></svg></span><span>Stone Island</span></span><span class="ssub">stoneisland.com · EUR</span></button>
-        <button class="store-btn" onclick="goCalc('carhartt')"><span class="s-row"><span class="store-logo"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="6" width="20" height="12" rx="1"/><text x="12" y="16" font-family="Arial Black,Helvetica,sans-serif" font-size="11" font-weight="900" text-anchor="middle" fill="#eeeeee">CHT</text></svg></span><span>Carhartt WIP</span></span><span class="ssub">carhartt-wip.com · GBP</span></button>
+        <button class="brand-tile" onclick="show('s-nb')">
+          <div class="bt-img" style="background:#ebe1cd">
+            <svg viewBox="0 0 240 60"><text x="22" y="46" font-family="Arial Black,Helvetica,sans-serif" font-size="46" font-weight="900" font-style="italic" fill="#111">N</text><text x="68" y="42" font-family="Helvetica,Arial,sans-serif" font-size="24" font-weight="500" letter-spacing="-0.5" fill="#111">new balance</text></svg>
+          </div>
+          <div class="bt-meta"><span class="bt-name">New Balance</span><span class="bt-sub">4 страны →</span></div>
+        </button>
+        <button class="brand-tile" onclick="show('s-nike')">
+          <div class="bt-img" style="background:#e8e1d8">
+            <svg viewBox="0 0 240 60"><path d="M70 14L8 38c-5 2-9 3-13 3-5 0-9-2-11-5-3-5-1-12 4-19 3-3 6-7 9-9-1 2-2 4-3 7-3 7-2 12 1 16 2 3 6 4 10 4 3 0 7-1 12-3L70 14z" fill="#111" transform="translate(-5,5) scale(0.6)"/><text x="135" y="46" font-family="Arial Black,Helvetica,sans-serif" font-size="40" font-weight="900" font-style="italic" letter-spacing="3" fill="#111">NIKE</text></svg>
+          </div>
+          <div class="bt-meta"><span class="bt-name">Nike</span><span class="bt-sub">3 страны →</span></div>
+        </button>
+        <button class="brand-tile" onclick="show('s-adidas')">
+          <div class="bt-img" style="background:#dee4ea">
+            <svg viewBox="0 0 240 60"><g fill="#111" transform="translate(8,8)"><polygon points="0,38 8,38 22,12 14,12"/><polygon points="16,38 24,38 38,12 30,12"/><polygon points="32,38 40,38 54,12 46,12"/></g><text x="135" y="42" font-family="Helvetica,Arial,sans-serif" font-size="26" font-weight="900" letter-spacing="0" fill="#111">adidas</text></svg>
+          </div>
+          <div class="bt-meta"><span class="bt-name">Adidas</span><span class="bt-sub">4 страны →</span></div>
+        </button>
+        <button class="brand-tile" onclick="goCalc('fredperry')">
+          <div class="bt-img" style="background:#d8e3d8">
+            <svg viewBox="0 0 240 60"><g fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" transform="translate(15,8)"><circle cx="22" cy="22" r="20" fill="#fff"/><path d="M10 17c1 3 2 6 2 10M34 17c-1 3-2 6-2 10M16 13c2 2 3 5 3 8M28 13c-2 2-3 5-3 8"/></g><text x="135" y="40" font-family="Georgia,serif" font-size="22" font-weight="700" letter-spacing="2" fill="#111">FRED PERRY</text></svg>
+          </div>
+          <div class="bt-meta"><span class="bt-name">Fred Perry</span><span class="bt-sub">fredperry.com/eu · EUR</span></div>
+        </button>
+        <button class="brand-tile" onclick="goCalc('stoneisland')">
+          <div class="bt-img" style="background:#f3e7b6">
+            <svg viewBox="0 0 240 60"><path fill="#111" transform="translate(8,5) scale(2.1)" d="M12 1l1.4 7.2L20.5 6l-3.7 5.5 6.2 3.7-7.2-1.4L17.5 21 12 16.5 6.5 21l1.7-7.2L1 15.2 7.2 11.5 3.5 6l7.1 2.2z"/><text x="140" y="40" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="800" letter-spacing="3" fill="#111">STONE ISLAND</text></svg>
+          </div>
+          <div class="bt-meta"><span class="bt-name">Stone Island</span><span class="bt-sub">stoneisland.com · EUR</span></div>
+        </button>
+        <button class="brand-tile" onclick="goCalc('carhartt')">
+          <div class="bt-img" style="background:#d6b78a">
+            <svg viewBox="0 0 240 60"><rect x="20" y="14" width="50" height="32" rx="2" fill="#111"/><text x="45" y="38" font-family="Arial Black,Helvetica,sans-serif" font-size="18" font-weight="900" text-anchor="middle" fill="#d6b78a">CHT</text><text x="135" y="40" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="800" letter-spacing="0.5" fill="#111">Carhartt WIP</text></svg>
+          </div>
+          <div class="bt-meta"><span class="bt-name">Carhartt WIP</span><span class="bt-sub">carhartt-wip.com · GBP</span></div>
+        </button>
       </div>
     </div>
 
