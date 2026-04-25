@@ -767,6 +767,13 @@
           <span class="bt-name">Carhartt WIP</span>
           <span class="bt-sub">carhartt-wip.com · GBP</span>
         </button>
+        <button class="brand-tile" onclick="goCalc('dkny')">
+          <span class="bt-img" style="background:#ead8d8">
+            <svg viewBox="0 0 240 60"><text x="120" y="44" text-anchor="middle" font-family="Arial Black,Helvetica,sans-serif" font-size="38" font-weight="900" letter-spacing="4" fill="#111">DKNY</text></svg>
+          </span>
+          <span class="bt-name">DKNY</span>
+          <span class="bt-sub">dkny.com · EUR</span>
+        </button>
       </div>
     </div>
 
@@ -1417,6 +1424,7 @@ const stores={
   apple:{name:'Apple',url:'https://www.apple.com',del:15,log:38,cur:'USD',rate:RATE_USD,back:'s-market'},
   streetstyle:{name:'Streetstyle24',url:'https://streetstyle24.pl',del:0,log:23,cur:'EUR',rate:RATE,back:'s-multi'},
   carhartt:{name:'Carhartt WIP',url:'https://www.carhartt-wip.com/en-gb',del:10,log:33,cur:'GBP',rate:RATE_GBP,back:'s-official'},
+  dkny:{name:'DKNY Germany',url:'https://www.dkny.com/?country=DE',del:10,log:33,cur:'EUR',rate:RATE,back:'s-official'},
 };
 let current=null;
 function show(id){['s-stores','s-official','s-nb','s-nike','s-adidas','s-multi','s-market','s-calc'].forEach(s=>document.getElementById(s).classList.add('hidden'));document.getElementById(id).classList.remove('hidden');}
