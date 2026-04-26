@@ -1475,7 +1475,6 @@
     "brand": "Fred Perry",
     "price": 6190,
     "sizes": [
-      "M",
       "XL"
     ],
     "category": "Лонгслив",
@@ -1509,7 +1508,6 @@
     "price": 13490,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Жилет",
@@ -1675,7 +1673,6 @@
     "brand": "Weekend Offender",
     "price": 5790,
     "sizes": [
-      "L",
       "XL"
     ],
     "category": "Шорты",
@@ -1862,7 +1859,6 @@
     "brand": "Sergio Tacchini",
     "price": 13490,
     "sizes": [
-      "2XL",
       "L"
     ],
     "category": "Джемпер",
@@ -1939,22 +1935,6 @@
       "img/c990465e-9b71-40d5-a65b-ea0875aed92f.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Панама Weekend Offender Queensland Check",
-    "brand": "Weekend Offender",
-    "price": 4490,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "Лонгслив",
-    "img": "img/033c3e83-f0ce-4565-ae4a-cf9849c55bf8.jpg",
-    "images": [
-      "img/033c3e83-f0ce-4565-ae4a-cf9849c55bf8.jpg",
-      "img/533d0526-5836-46d0-b910-6d6802c280f1.jpg",
-      "img/033c3e83-f0ce-4565-ae4a-cf9849c55bf8.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: Универсальный \nСостав: поли\nСостав внутри: хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Олимпийка Sergio Tacchini New Dallas Track Black",
@@ -2892,23 +2872,6 @@
       "img/82fdc0bd-afaf-48df-a93a-e6ec3052d7c9.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: 21 x 15 x 6 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Штаны Weekend Offender Zenyatta Cargo Black",
-    "brand": "Weekend Offender",
-    "price": 7990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/40e661e5-3702-4ded-9a0c-216716766842.jpg",
-    "images": [
-      "img/40e661e5-3702-4ded-9a0c-216716766842.jpg",
-      "img/23789a64-4a96-47e4-ac77-cd3a952224f1.jpg",
-      "img/710e0b0c-0ad9-494e-a27c-8f832e95c7bb.jpg",
-      "img/576efb95-da11-4f4c-a496-c9ff4a4101f4.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: ripstop cotton\nРазмерная сетка на последнем фото, либо в комментариях в товару\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка C.P. Company Open Diagonal Hoodie",
