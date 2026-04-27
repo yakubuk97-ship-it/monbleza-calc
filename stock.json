@@ -126,23 +126,6 @@
     "description": "Оригинальная продукция \nСостав: 100% полиэстер"
   },
   {
-    "name": "Футболка Peaceful Hooligan Heads Stone",
-    "brand": "Футболка",
-    "price": 3890,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/8e1b2fa0-20a4-4336-bf35-293039df8b83.jpg",
-    "images": [
-      "img/8e1b2fa0-20a4-4336-bf35-293039df8b83.jpg",
-      "img/0acad917-01e1-44f3-b612-dc2f230a20fe.jpg",
-      "img/f9258dcc-69d3-47b5-abe2-ab038109a526.jpg",
-      "img/cc3f2f28-dbde-40cc-b6fb-8c2129034d17.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
-  },
-  {
     "name": "Штаны C.P. Company Cargo Chrome-R",
     "brand": "Штаны",
     "price": 19900,
@@ -1683,21 +1666,6 @@
       "img/f3c6a63b-17fd-4e72-85a4-8c719a9f70ad.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% нейлон​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Кепка Weekend Offender Clay Check",
-    "brand": "Weekend Offender",
-    "price": 5290,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "Лонгслив",
-    "img": "img/25292864-f8b9-4c31-9619-41c45260e65d.jpg",
-    "images": [
-      "img/25292864-f8b9-4c31-9619-41c45260e65d.jpg",
-      "img/9afd04bb-ac13-42cc-a765-adbe99766d7e.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: Регулируемый на любую голову!\nСостав: поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Napapijri S-Bollo 1 Bright White",
