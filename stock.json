@@ -515,8 +515,7 @@
     "brand": "Лонг",
     "price": 7990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/7b57d8f9-7794-419f-a82f-98457322a600.jpg",
@@ -1491,8 +1490,7 @@
     "brand": "Weekend Offender",
     "price": 13990,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/8eb33901-c9b9-48cc-a81e-1f0e21582c75.jpg",
@@ -2485,7 +2483,8 @@
     "images": [
       "img/7d294052-978d-42c7-bbcc-5db30e6c767f.jpg",
       "img/1ae26eb9-46ff-4266-a336-f5b8f40d1dca.jpg",
-      "img/18a20e39-dac9-485c-8435-a9f1ff158a5c.jpg"
+      "img/18a20e39-dac9-485c-8435-a9f1ff158a5c.jpg",
+      "img/794010e7-db71-4591-b3d8-6f89b9d497e1.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: twill ripstop; 98% хлопок, 2% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
@@ -2664,6 +2663,7 @@
     "img": "img/0e3a4719-94e9-4e0b-90c8-10c651702183.jpg",
     "images": [
       "img/0e3a4719-94e9-4e0b-90c8-10c651702183.jpg",
+      "img/cdb67a01-ec43-48fd-a23e-7695d15a7dea.jpg",
       "img/a59dfcd3-c20d-4b80-94a5-bad086b1df33.jpg",
       "img/794010e7-db71-4591-b3d8-6f89b9d497e1.jpg"
     ],
@@ -2753,23 +2753,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Weekend Offender Flare Graphic White",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "S"
-    ],
-    "category": "Лонгслив",
-    "img": "img/b7186769-3e84-49d7-a0d1-f932ffade8fb.jpg",
-    "images": [
-      "img/b7186769-3e84-49d7-a0d1-f932ffade8fb.jpg",
-      "img/b28c7fc6-f701-40a7-b654-9fca180e0531.jpg",
-      "img/7f170955-d08b-483e-8636-8d0ba8d84f35.jpg",
-      "img/ea22a7eb-bb15-4146-8477-500f14a383de.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав:100% премиальный хлопок"
-  },
-  {
     "name": "Поло Fred Perry Twin Tapped V36 White",
     "brand": "Fred Perry",
     "price": 8790,
@@ -2815,6 +2798,7 @@
     "images": [
       "img/87981d07-79e4-4992-8117-61e41234ea19.jpg",
       "img/7798b371-3dc4-4d1a-98b8-a7ffdc701b9a.jpg",
+      "img/a6c538be-f9e0-4720-ae16-faf9968a58a7.jpg",
       "img/794010e7-db71-4591-b3d8-6f89b9d497e1.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: twill ripstop; 98% хлопок, 2% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
