@@ -1694,8 +1694,11 @@
       "L"
     ],
     "category": "Джемпер",
-    "img": "",
-    "images": [],
+    "img": "img/d71fea08-d84e-4880-833a-03292f1426f6.jpg",
+    "images": [
+      "img/d71fea08-d84e-4880-833a-03292f1426f6.jpg",
+      "img/de74715e-8488-437d-8153-027a0ab3a5c3.jpg"
+    ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 97% хлопок, 3% elastan\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
@@ -2204,9 +2207,11 @@
       "44 EUR / 11 US"
     ],
     "category": "Обувь",
-    "img": "img/b1a91103-5618-4b51-b817-7e748a37362b.jpg",
+    "img": "img/b10208cd-f57f-40d5-ba80-868cd90bbdb3.jpg",
     "images": [
+      "img/b10208cd-f57f-40d5-ba80-868cd90bbdb3.jpg",
       "img/b1a91103-5618-4b51-b817-7e748a37362b.jpg",
+      "img/b0c82a86-bcc0-4615-b1cc-cfbb97cf1194.jpg",
       "img/e4ebed14-44e5-4d43-b161-663f89b788ab.jpg",
       "img/25945e62-a9ee-40da-825d-1910e320e4fc.jpg"
     ],
@@ -2613,8 +2618,9 @@
       "L"
     ],
     "category": "Джемпер",
-    "img": "img/8178b0aa-50f3-4a84-8e50-078a8faddaa4.jpg",
+    "img": "img/fbd80b21-3736-40c5-b5ed-a87ebc22e6dc.jpg",
     "images": [
+      "img/fbd80b21-3736-40c5-b5ed-a87ebc22e6dc.jpg",
       "img/8178b0aa-50f3-4a84-8e50-078a8faddaa4.jpg",
       "img/cb567c72-4275-4b8b-b1e0-58d202370e99.jpg"
     ],
@@ -2980,6 +2986,7 @@
     "img": "img/ea1ebb19-3b9f-41d0-a6d4-4fb4651f7695.jpg",
     "images": [
       "img/ea1ebb19-3b9f-41d0-a6d4-4fb4651f7695.jpg",
+      "img/8dc69855-d798-4391-b3b0-7486732f4128.jpg",
       "img/319182f3-4b5f-43df-99ed-71d5fa1ad6f6.jpg",
       "img/250979a4-d9a8-4c27-932a-3aa649e1bc0a.jpg",
       "img/f735baea-7f6f-458b-b089-7cc8e3b645c6.jpg"
