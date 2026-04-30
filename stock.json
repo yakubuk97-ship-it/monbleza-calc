@@ -17,22 +17,6 @@
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "Карго Weekend Offender Штаны Pianemo Zinc",
-    "brand": "Weekend Offender",
-    "price": 7290,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/8a9aca39-15d5-495a-abe9-fa46ccf93dcf.jpg",
-    "images": [
-      "img/8a9aca39-15d5-495a-abe9-fa46ccf93dcf.jpg",
-      "img/79f98a35-4540-4e95-81fd-d926bd8ec271.jpg",
-      "img/ae5b96aa-27d9-40ae-bddb-f8a7dfedf8d0.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% cotton ripstop \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Ben Sherman Signature Target White",
     "brand": "Ben Sherman",
     "price": 4190,
@@ -529,23 +513,6 @@
     "description": "43 EU 27,5 СМ 9,5 US"
   },
   {
-    "name": "Лонг C.P. Company 30/1 Jersey Total Eclipse",
-    "brand": "Лонг",
-    "price": 7990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/7b57d8f9-7794-419f-a82f-98457322a600.jpg",
-    "images": [
-      "img/7b57d8f9-7794-419f-a82f-98457322a600.jpg",
-      "img/97453ec2-40c2-404d-909d-c85edf4e47ee.jpg",
-      "img/9908ebde-82f7-4c71-b847-2e0741fcf971.jpg",
-      "img/7c1ffc58-6ddc-482d-905d-96a4c0b73822.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! CLG+ \nРазмер: \nСостав: хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Шорты Weekend Offender Scandium Navy",
     "brand": "Weekend Offender",
     "price": 4390,
@@ -729,7 +696,7 @@
     "brand": "Футболка",
     "price": 2790,
     "sizes": [
-      "XL (fact. L)"
+      "L (fact. M)"
     ],
     "category": "Лонгслив",
     "img": "img/d43b56f6-a583-4b1b-82a2-c24e2334af2e.jpg",
@@ -1471,22 +1438,6 @@
       "img/595d0d56-ef09-4123-bbe2-8fef317779f7.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: Регулируется, на любую голову!\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Fred Perry Twin Tipped Black",
-    "brand": "Fred Perry",
-    "price": 6190,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/936e4380-0128-47ff-9fb7-56fd9939ff09.jpg",
-    "images": [
-      "img/936e4380-0128-47ff-9fb7-56fd9939ff09.jpg",
-      "img/ab229875-820f-4747-932a-5a5c9bb1838e.jpg",
-      "img/9d08f6b5-8bb0-426d-b091-e710bb855343.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Шорты Weekend Offender Caleta Castle Green",
