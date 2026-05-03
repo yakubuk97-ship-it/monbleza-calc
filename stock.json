@@ -937,22 +937,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Fred Perry Twin Tipped Dark Airforce",
-    "brand": "Fred Perry",
-    "price": 6190,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/35ee1e68-9243-44e2-997f-07efd813f9d7.jpg",
-    "images": [
-      "img/35ee1e68-9243-44e2-997f-07efd813f9d7.jpg",
-      "img/d6f16b45-d849-4bd1-8cd4-9da2d5a72d96.jpg",
-      "img/447ce2a4-94ff-42d4-99d6-e7582d2476a5.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Weekend Offender The Heights Winter White",
     "brand": "Weekend Offender",
     "price": 3790,
