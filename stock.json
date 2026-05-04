@@ -1890,21 +1890,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Куртка Fred Perry Lauren Shell Green",
-    "brand": "Fred Perry",
-    "price": 17988,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/10b53502-419a-4d10-9f92-19802f6b9d78.jpg",
-    "images": [
-      "img/10b53502-419a-4d10-9f92-19802f6b9d78.jpg",
-      "img/c6bb2953-9cbb-4f71-b999-f5fd8e4221b1.jpg"
-    ],
-    "description": ""
-  },
-  {
     "name": "Футболка MA.Strum Cargo Pocket Jet Black",
     "brand": "MA.Strum",
     "price": 9690,
