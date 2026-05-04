@@ -232,7 +232,6 @@
     "price": 6990,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Шорты",
@@ -1304,24 +1303,6 @@
     "description": "Оригинальная продукция\nСостав: премиальный нейлон метал, перелив цвета\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Плащ Weekend Offender Whitehouse Mac Stone",
-    "brand": "Weekend Offender",
-    "price": 17490,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/1a577734-7d4b-401b-adbb-fe9f7e8db3b5.jpg",
-    "images": [
-      "img/1a577734-7d4b-401b-adbb-fe9f7e8db3b5.jpg",
-      "img/e85fdfc8-e910-40d0-80a8-b4c19fc44f70.jpg",
-      "img/53d3ffca-bfca-4a97-96c1-f17ee25ce6c2.jpg",
-      "img/31672e4c-dded-48f4-adba-f99927e248cb.jpg",
-      "img/9ad0ff87-613a-4bbd-85d2-f348207b5a94.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав верх:  65% хлопок, 35% поли; Подклад: 100% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Поло Barbour Original Bleached Blue",
     "brand": "Поло",
     "price": 7490,
@@ -1502,6 +1483,20 @@
       "img/304885a8-b0bb-4c14-ab3f-7a28536551b7.jpg"
     ],
     "description": "Оригинальная продукция\nСостав:100% премиальный хлопок"
+  },
+  {
+    "name": "Футболка Fred Perry Twin Tipped Logo Ecru",
+    "brand": "Fred Perry",
+    "price": 6190,
+    "sizes": [
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/50659a6d-1ad1-48b3-8b36-cd5874fedbb7.jpg",
+    "images": [
+      "img/50659a6d-1ad1-48b3-8b36-cd5874fedbb7.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Свитшот Fred Perry Crew Sweat Black",
@@ -1722,6 +1717,20 @@
     "description": ""
   },
   {
+    "name": "Толстовка Fred Perry Half Zip Green",
+    "brand": "Fred Perry",
+    "price": 12990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/33ebed20-665c-4e79-abbe-55dbd48cc5b6.jpg",
+    "images": [
+      "img/33ebed20-665c-4e79-abbe-55dbd48cc5b6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Поло Fred Perry Twin Tapped Ecru",
     "brand": "Fred Perry",
     "price": 8790,
@@ -1836,6 +1845,19 @@
       "img/794db939-8f54-4dfb-8ccd-348567c5c110.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% полиэстер"
+  },
+  {
+    "name": "Lacoste Central Croc Cap Rill",
+    "brand": "Lacoste",
+    "price": 6490,
+    "sizes": [],
+    "category": "АКСЕССУАРЫ",
+    "img": "img/b958cdce-235e-4c5a-a869-d5877da43105.jpg",
+    "images": [
+      "img/b958cdce-235e-4c5a-a869-d5877da43105.jpg",
+      "img/e846e97d-c432-46cf-9e01-86d3b0ab5a82.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: Регулируется, на любую голову!\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка MA.Strum Neo Quarter Zip Ink Navy",
@@ -2117,6 +2139,27 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nПремиальные материала и идеальная посадка. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Кроссовки Polo Ralph Lauren Bedford Tonal Grey",
+    "brand": "Ralph Lauren",
+    "price": 16990,
+    "sizes": [
+      "44 EUR / 11 US"
+    ],
+    "category": "Обувь",
+    "img": "img/242a24de-69a9-433e-9991-bc146c7e8921.jpg",
+    "images": [
+      "img/242a24de-69a9-433e-9991-bc146c7e8921.jpg",
+      "img/22cc5cc1-f3e5-4485-ac11-d1f5a1dd8ca2.jpg",
+      "img/0a3aa2d4-5ecb-4483-99c8-10c5f2d0343b.jpg",
+      "img/52e91eb6-ac68-40cc-9108-c89b6077425a.jpg",
+      "img/ac3d6834-c318-4381-9ab0-ce86a1696a8e.jpg",
+      "img/5f568376-758e-4ff9-a038-c6f1d21d7095.jpg",
+      "img/c3ebe98c-5bc0-48e5-8fe7-4319bf62ae71.jpg",
+      "img/e00c639a-1d46-4c67-b1c3-18d41861f665.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nПремиальные материала и идеальная посадка. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Fred Perry Twin Tipped Bayleaf",
     "brand": "Fred Perry",
     "price": 6190,
@@ -2358,6 +2401,21 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Поло Barbour Tartan Pique Whisper White",
+    "brand": "Поло",
+    "price": 7990,
+    "sizes": [
+      "L"
+    ],
+    "category": "Лонгслив",
+    "img": "img/f68eef72-4ef8-400e-b719-15cd06799cff.jpg",
+    "images": [
+      "img/f68eef72-4ef8-400e-b719-15cd06799cff.jpg",
+      "img/143586c4-03a0-47af-bccc-cba964f01335.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Fred Perry Snow White",
     "brand": "Fred Perry",
     "price": 5990,
@@ -2445,6 +2503,7 @@
     "price": 11990,
     "sizes": [
       "2XL",
+      "3XL",
       "L",
       "XL"
     ],
@@ -2495,7 +2554,8 @@
     "brand": "Lacoste",
     "price": 12790,
     "sizes": [
-      "L"
+      "L",
+      "M"
     ],
     "category": "Джемпер",
     "img": "img/fbd80b21-3736-40c5-b5ed-a87ebc22e6dc.jpg",
@@ -2774,6 +2834,22 @@
     "description": "Оригинал из бутика Италии!\nНовое, с комплектом биркок, CLG+ \nРазмер: \n- Состав: 100% премиальный хлопок\n- Страна-производитель: Мьянма\n- Стандартный фит\n- Регулируемый капюшон со встроенными линзами Goggle\n- Два боковых кармана на молнии\n- Отверстие для большого пальца на манжете\n\nДлина полностью - 75 cm \nШирина между подмышек - 63 cm \nРукав от подмышки - 49 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Олимпийка Sergio Tacchini Damarindo Track Azure Blue",
+    "brand": "Sergio Tacchini",
+    "price": 13490,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/f1a11dd6-49a8-4a58-84f2-cd7d38615388.jpg",
+    "images": [
+      "img/f1a11dd6-49a8-4a58-84f2-cd7d38615388.jpg",
+      "img/b63fa9b4-46bd-4a7a-ac0f-18eeba6fdc51.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 60% премиальный хлопок​, 40% поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Шорты Marshall Artist Micro Ripstop Black",
     "brand": "Marshall Artist",
     "price": 6990,
@@ -2861,7 +2937,9 @@
     "brand": "Ralph Lauren",
     "price": 17990,
     "sizes": [
-      "43 EUR / 10 US"
+      "43 EUR / 10 US",
+      "44 EUR / 11 US",
+      "45 EUR / 12 US"
     ],
     "category": "Обувь",
     "img": "img/ea1ebb19-3b9f-41d0-a6d4-4fb4651f7695.jpg",
