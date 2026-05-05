@@ -1236,22 +1236,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Weekend Offender The Heights Pale Blue Navy",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "S"
-    ],
-    "category": "Лонгслив",
-    "img": "img/43df6ac2-0a27-4a6c-9a9f-15b9bb528b1e.jpg",
-    "images": [
-      "img/43df6ac2-0a27-4a6c-9a9f-15b9bb528b1e.jpg",
-      "img/7e474a21-f53b-4478-80a9-c785acd658da.jpg",
-      "img/7a327785-0c82-44e4-8b93-3ca6bc93133b.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Поло Fred Perry Twin Tipped Smoke Petrol",
     "brand": "Fred Perry",
     "price": 8790,
@@ -1267,23 +1251,6 @@
       "img/26610783-a764-4eba-b400-a2b0e2959381.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender Bridgetown White Cadet Blue",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/38d0cbe4-81ce-4435-a1bb-7529f263dfec.jpg",
-    "images": [
-      "img/38d0cbe4-81ce-4435-a1bb-7529f263dfec.jpg",
-      "img/5396d577-8db7-4656-b15a-865240c3aafa.jpg",
-      "img/9820b108-df25-4efa-8758-6e4d914bee0c.jpg",
-      "img/9596eb23-49a5-41b6-8b6f-a95c3214528b.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
     "name": "Шорты Weekend Offender Stacks Navy",
