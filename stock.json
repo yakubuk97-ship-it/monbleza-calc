@@ -1819,7 +1819,9 @@
     "name": "Lacoste Central Croc Cap Rill",
     "brand": "Lacoste",
     "price": 6490,
-    "sizes": [],
+    "sizes": [
+      "One Size"
+    ],
     "category": "АКСЕССУАРЫ",
     "img": "img/b958cdce-235e-4c5a-a869-d5877da43105.jpg",
     "images": [
