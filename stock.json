@@ -532,6 +532,7 @@
     "price": 11990,
     "sizes": [
       "L",
+      "M",
       "XL"
     ],
     "category": "Жилет",
@@ -818,6 +819,22 @@
       "img/78688209-88fc-4cd7-9d23-6fcf82a1de6c.jpg"
     ],
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Weekend Offender Trio White",
+    "brand": "Weekend Offender",
+    "price": 3890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/2e13a117-7716-4b52-8c88-d55879335488.jpg",
+    "images": [
+      "img/2e13a117-7716-4b52-8c88-d55879335488.jpg",
+      "img/5026153b-31b7-4fdc-82a9-1c93274cebfd.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка Weekend Offender Justify Check Navy",
@@ -1219,6 +1236,23 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Peaceful Hooligan Crowd Persian Red",
+    "brand": "Футболка",
+    "price": 3890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/901a1d97-2c3d-4228-a884-e8ebead06cab.jpg",
+    "images": [
+      "img/901a1d97-2c3d-4228-a884-e8ebead06cab.jpg",
+      "img/10d6c7d4-c46b-409d-bec5-cec8f3905660.jpg",
+      "img/244c281e-8d55-4184-b404-fdf515054c50.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Поло Fred Perry Twin Tipped Smoke Petrol",
     "brand": "Fred Perry",
     "price": 8790,
@@ -1275,7 +1309,8 @@
     "brand": "Weekend Offender",
     "price": 8490,
     "sizes": [
-      "L/XL"
+      "L/XL",
+      "XL/2XL"
     ],
     "category": "Джемпер",
     "img": "img/3d410f0a-d4a3-40f7-8870-b1356579f710.jpg",
@@ -1433,6 +1468,20 @@
       "img/304885a8-b0bb-4c14-ab3f-7a28536551b7.jpg"
     ],
     "description": "Оригинальная продукция\nСостав:100% премиальный хлопок"
+  },
+  {
+    "name": "Кепка New Balance Snapback Black",
+    "brand": "New Balance",
+    "price": 3990,
+    "sizes": [
+      "One Size"
+    ],
+    "category": "АКСЕССУАРЫ",
+    "img": "img/37bb9c3f-9db6-4e11-b68e-b4fb2445f035.jpg",
+    "images": [
+      "img/37bb9c3f-9db6-4e11-b68e-b4fb2445f035.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nВышитый логотип\nРазмер: Регулируется, на любую голову!\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Fred Perry Twin Tipped Logo Ecru",
@@ -1700,6 +1749,24 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Weekend Offender McMoney Winter White",
+    "brand": "Weekend Offender",
+    "price": 3990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/af7ccdfd-b468-49dc-921a-51f40e790ed4.jpg",
+    "images": [
+      "img/af7ccdfd-b468-49dc-921a-51f40e790ed4.jpg",
+      "img/2e810e60-0cc9-42b3-b6ce-d1fe433b63ed.jpg",
+      "img/3fa14191-6bc3-4619-aa45-524920099ef6.jpg",
+      "img/ce0f2979-3589-412e-81fd-9f5435c5c844.jpg"
+    ],
+    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Поло Barbour Seagrass",
     "brand": "Поло",
     "price": 7490,
@@ -1732,6 +1799,24 @@
       "img/c8fa9b40-6d6a-4b6e-8289-b439d9f69597.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\n\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Weekend Offender McMoney Navy Bark",
+    "brand": "Weekend Offender",
+    "price": 3890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/8296c0bb-1c52-498e-91a1-d96a9775e527.jpg",
+    "images": [
+      "img/8296c0bb-1c52-498e-91a1-d96a9775e527.jpg",
+      "img/de4b6be0-32ca-4b11-a262-b39ea9847b0b.jpg",
+      "img/f8218192-81df-4f18-aee7-1c7cef67603d.jpg",
+      "img/6335dae5-7eae-457b-9077-f67f7bc841e7.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Cannon Beach Cornflower",
@@ -2160,6 +2245,22 @@
     "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Weekend Offender Mcmoney Navy Thunder",
+    "brand": "Weekend Offender",
+    "price": 3890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/258f3133-fbae-4dad-b500-68741bf52f6c.jpg",
+    "images": [
+      "img/258f3133-fbae-4dad-b500-68741bf52f6c.jpg",
+      "img/74a553e0-3420-4573-8fb3-eb7df5b4f398.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Джемпер Weekend Offender Zip Vandium Charcoal",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -2404,6 +2505,22 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Куртка Weekend Offender Cotoca Smokey",
+    "brand": "Weekend Offender",
+    "price": 16990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
+    "images": [
+      "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
+      "img/b5ea72b8-8557-456e-bd82-c9990f36c586.jpg",
+      "img/d6d73169-6eed-4133-aaab-929d48b1ad69.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nВодоотталкивающая, перелив цвета\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Шорты Marshall Artist Micro Ripstop Stone",
     "brand": "Marshall Artist",
     "price": 6990,
@@ -2439,6 +2556,20 @@
       "img/dea74770-bd2a-4875-8f4e-6240a0cb5b09.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: нейлон метал + легкий флисовый подклад\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Lacoste Pima Cotton Light Purple",
+    "brand": "Lacoste",
+    "price": 5990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/fb98017d-ace7-4d37-ba5b-34ca5c0d5e6e.jpg",
+    "images": [
+      "img/fb98017d-ace7-4d37-ba5b-34ca5c0d5e6e.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Ben Sherman Logo Black",
@@ -2598,6 +2729,40 @@
       "img/deb01aed-11d6-4cf7-bc3f-d28117f07249.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Ellesse Tortona White",
+    "brand": "Ellesse",
+    "price": 3290,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/281b902e-c7d0-4d52-9676-ceb338fdca9f.jpg",
+    "images": [
+      "img/281b902e-c7d0-4d52-9676-ceb338fdca9f.jpg",
+      "img/6aeb6039-6dc5-464f-a404-9c2493880404.jpg",
+      "img/9000f722-77c1-480a-a23b-741419bad5fe.jpg",
+      "img/bb44bcde-3c46-4c1e-80fc-cd75f1e12689.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Шорты Weekend Offender High Desert Cargo Stone",
+    "brand": "Weekend Offender",
+    "price": 5990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Шорты",
+    "img": "img/449589c3-e5fd-4538-91a8-2f8541cfd847.jpg",
+    "images": [
+      "img/449589c3-e5fd-4538-91a8-2f8541cfd847.jpg",
+      "img/fbb3b6d3-0c2b-4780-ba89-23a9a876124d.jpg",
+      "img/b75f2b35-3051-4e0d-8e4e-999717b9035a.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Fred Perry Caban Jacket Green",
@@ -2981,6 +3146,23 @@
       "img/23e976ee-efee-4612-a335-aa40d83b54af.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Шорты Weekend Offender High Desert Cargo Navy",
+    "brand": "Weekend Offender",
+    "price": 5990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Шорты",
+    "img": "img/ffa3b0ba-7ae0-4c09-b920-fcf7299dfb02.jpg",
+    "images": [
+      "img/ffa3b0ba-7ae0-4c09-b920-fcf7299dfb02.jpg",
+      "img/25b6df2e-a402-49b5-bef0-431aff45600a.jpg",
+      "img/6c0e5a74-b7c5-4ff2-8e27-020e88a9da7c.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Leo Gregory Black",
