@@ -1360,8 +1360,7 @@
     "brand": "Ellesse",
     "price": 2890,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/bd36dcf3-3c73-4080-9a3e-c567902959b6.jpg",
@@ -1440,7 +1439,6 @@
     "brand": "Weekend Offender",
     "price": 6490,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Лонгслив",
@@ -1634,8 +1632,7 @@
     "brand": "Weekend Offender",
     "price": 7490,
     "sizes": [
-      "2XL",
-      "M"
+      "2XL"
     ],
     "category": "Рубашка",
     "img": "img/eb2fec48-af6e-4ea1-8f4d-c2d01c12c4d2.jpg",
@@ -1684,21 +1681,6 @@
       "img/ba5ead3e-6f22-480c-9bb1-501272c0fd0b.jpg"
     ],
     "description": "Оригинал из бутика в Европе! Чек из бутика, по запросу покупателю! \nMade in Indonesia \nCodruda Tech. - водостойкие, износостойкая отделка.\nРазмеры: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Куртка Weekend Offender Cotoca Kingfisher",
-    "brand": "Weekend Offender",
-    "price": 12990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Жилет",
-    "img": "img/3ce16c2b-83d5-41a4-a171-78afe3e71ff2.jpg",
-    "images": [
-      "img/3ce16c2b-83d5-41a4-a171-78afe3e71ff2.jpg",
-      "img/17023a9d-9f53-4827-b70d-6c045df4da99.jpg"
-    ],
-    "description": ""
   },
   {
     "name": "Толстовка Fred Perry Half Zip Green",
@@ -2645,23 +2627,6 @@
       "img/c1bb8196-5b29-4f1f-8c74-3fbd50a63d1a.jpg"
     ],
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок высокой плотности, принт с эффектом"
-  },
-  {
-    "name": "Свитшот Marshall Artist Siren Crew Black",
-    "brand": "Marshall Artist",
-    "price": 6790,
-    "sizes": [
-      "M"
-    ],
-    "category": "Джемпер",
-    "img": "img/48666f0f-f743-4dc6-8629-74309ab895be.jpg",
-    "images": [
-      "img/48666f0f-f743-4dc6-8629-74309ab895be.jpg",
-      "img/26236c75-2797-4214-b1e8-51b88aa1a152.jpg",
-      "img/88afb44a-2b3b-4e6d-b76b-bb69fa7ab542.jpg",
-      "img/d29dd241-7568-475e-b61b-263eb338d1c0.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 80% премиальный хлопок, 20% полиэстер \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Штаны Weekend Offender Hoshino Castle Green",
