@@ -160,21 +160,6 @@
     "description": "Оригинальная продукция \nСостав: 100% нейлон внешний, полиэстер внутренний"
   },
   {
-    "name": "Толстовка Champion Logo Hoodie Blue",
-    "brand": "Толстовка",
-    "price": 6990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Джемпер",
-    "img": "img/bbd90de4-b808-41fd-b6e9-b698015bd50b.jpg",
-    "images": [
-      "img/bbd90de4-b808-41fd-b6e9-b698015bd50b.jpg",
-      "img/a9e6d705-133c-4aaf-8f64-0d9b0bd97d5f.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 70% хлопок, 30% полиэстер"
-  },
-  {
     "name": "Овершот Weekend Offender Vinnie Black",
     "brand": "Weekend Offender",
     "price": 8990,
@@ -238,6 +223,7 @@
     "images": [
       "img/f27deaec-3bdb-4e15-b589-3065ed130759.jpg",
       "img/751d5e01-4721-4e94-a067-1344e6e37098.jpg",
+      "img/ec44fc64-8050-4f10-98bc-9bed9a3026ad.jpg",
       "img/bddc046d-e993-440b-9454-e845d5297b2c.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: мягчайшая кожа, металлический логотип, комфортная посадка.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
@@ -1106,8 +1092,9 @@
       "One Size"
     ],
     "category": "АКСЕССУАРЫ",
-    "img": "img/b9347e9e-e740-4aa9-b4e4-399c667b9d00.jpg",
+    "img": "img/f6cb0d04-f695-430e-a4d8-0959a5404414.jpg",
     "images": [
+      "img/f6cb0d04-f695-430e-a4d8-0959a5404414.jpg",
       "img/b9347e9e-e740-4aa9-b4e4-399c667b9d00.jpg",
       "img/e33dd263-c5fa-42b1-bf4a-d72a01996cc4.jpg"
     ],
@@ -1292,8 +1279,9 @@
       "XL"
     ],
     "category": "Жилет",
-    "img": "img/508989a8-ff79-4595-b988-115e44b8ec12.jpg",
+    "img": "img/dc0ca9ec-bf99-4526-8e06-eb21cea20b02.jpg",
     "images": [
+      "img/dc0ca9ec-bf99-4526-8e06-eb21cea20b02.jpg",
       "img/508989a8-ff79-4595-b988-115e44b8ec12.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
@@ -2950,8 +2938,10 @@
       "M"
     ],
     "category": "Джемпер",
-    "img": "img/22f1aeec-8c25-46ef-853b-a54d008594fc.jpg",
+    "img": "img/865a73a2-a150-4e78-a581-8291c00f5425.jpg",
     "images": [
+      "img/865a73a2-a150-4e78-a581-8291c00f5425.jpg",
+      "img/09eb15b1-472d-4236-8bfe-7f2250092b14.jpg",
       "img/22f1aeec-8c25-46ef-853b-a54d008594fc.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 80% хлопок, 20% полиэстер\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
@@ -3056,6 +3046,7 @@
     "images": [
       "img/fcca6312-b9c4-42aa-aeb1-51f81eba87a5.jpg",
       "img/bd4b0104-ed77-4823-a8ea-b3a3b908c775.jpg",
+      "img/81542f2c-d23b-428a-842e-2855945e719f.jpg",
       "img/332d85d5-6bc4-44df-b081-8fafc54625b4.jpg",
       "img/8562db83-f13c-4ee5-87e9-27f17918a618.jpg"
     ],
