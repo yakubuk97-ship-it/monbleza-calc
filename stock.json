@@ -330,21 +330,6 @@
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "Поло Weekend Offender Nicks White",
-    "brand": "Weekend Offender",
-    "price": 4890,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/b614efbd-f815-49e2-bc0a-773bbbfc83c5.jpg",
-    "images": [
-      "img/b614efbd-f815-49e2-bc0a-773bbbfc83c5.jpg",
-      "img/abb2055a-2e7c-494e-9a58-69b9dfee66d9.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
-  },
-  {
     "name": "Толстовка Fred Perry Half Zip Anchor",
     "brand": "Fred Perry",
     "price": 12990,
@@ -465,7 +450,6 @@
     "brand": "Napapijri",
     "price": 3790,
     "sizes": [
-      "L",
       "M",
       "XL"
     ],
@@ -1340,6 +1324,23 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Weekend Offender Bridgetown White Cadet Blue",
+    "brand": "Weekend Offender",
+    "price": 3890,
+    "sizes": [
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/38d0cbe4-81ce-4435-a1bb-7529f263dfec.jpg",
+    "images": [
+      "img/38d0cbe4-81ce-4435-a1bb-7529f263dfec.jpg",
+      "img/5396d577-8db7-4656-b15a-865240c3aafa.jpg",
+      "img/9820b108-df25-4efa-8758-6e4d914bee0c.jpg",
+      "img/9596eb23-49a5-41b6-8b6f-a95c3214528b.jpg"
+    ],
+    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
+  },
+  {
     "name": "Шорты Weekend Offender Stacks Navy",
     "brand": "Weekend Offender",
     "price": 4790,
@@ -1843,7 +1844,6 @@
     "brand": "Weekend Offender",
     "price": 3890,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Лонгслив",
@@ -2954,7 +2954,6 @@
     "price": 6990,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Шорты",
@@ -3077,9 +3076,7 @@
     "price": 6990,
     "sizes": [
       "2XL",
-      "L",
-      "M",
-      "XL"
+      "L"
     ],
     "category": "Шорты",
     "img": "img/68877172-c685-4df0-8385-b0fba0d9fd4a.jpg",
