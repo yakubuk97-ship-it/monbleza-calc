@@ -401,8 +401,7 @@
     "brand": "Marshall Artist",
     "price": 7490,
     "sizes": [
-      "M",
-      "S"
+      "M"
     ],
     "category": "Шорты",
     "img": "img/63bb507c-afee-4897-90a0-63eab413407b.jpg",
@@ -1654,7 +1653,6 @@
     "brand": "Napapijri",
     "price": 3490,
     "sizes": [
-      "2XL",
       "M"
     ],
     "category": "Лонгслив",
@@ -2234,21 +2232,6 @@
       "img/1076d3a5-bd69-4a41-ba83-30deb30df2c2.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Поло MA.Strum Pique Burnt Cream",
-    "brand": "MA.Strum",
-    "price": 9690,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/cdf054b3-f11e-4dcd-815c-d179d8b8e6f8.jpg",
-    "images": [
-      "img/cdf054b3-f11e-4dcd-815c-d179d8b8e6f8.jpg",
-      "img/8b3248e1-060b-408a-9182-1c833ff87df5.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Mcmoney Navy Thunder",
