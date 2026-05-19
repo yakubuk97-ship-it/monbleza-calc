@@ -927,7 +927,6 @@
     "brand": "Marshall Artist",
     "price": 3690,
     "sizes": [
-      "M",
       "S"
     ],
     "category": "Лонгслив",
@@ -1321,23 +1320,6 @@
       "img/26610783-a764-4eba-b400-a2b0e2959381.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender Bridgetown White Cadet Blue",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/38d0cbe4-81ce-4435-a1bb-7529f263dfec.jpg",
-    "images": [
-      "img/38d0cbe4-81ce-4435-a1bb-7529f263dfec.jpg",
-      "img/5396d577-8db7-4656-b15a-865240c3aafa.jpg",
-      "img/9820b108-df25-4efa-8758-6e4d914bee0c.jpg",
-      "img/9596eb23-49a5-41b6-8b6f-a95c3214528b.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
     "name": "Шорты Weekend Offender Stacks Navy",
