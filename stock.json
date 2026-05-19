@@ -280,6 +280,23 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Олимпийка Sergio Tacchini Damarindo Maritime Baltic Sea",
+    "brand": "Sergio Tacchini",
+    "price": 13490,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/ceff072a-858f-42e5-bf67-0d8bd15a42c5.jpg",
+    "images": [
+      "img/ceff072a-858f-42e5-bf67-0d8bd15a42c5.jpg",
+      "img/384d6860-25c0-44dd-8d19-1a29ee00a4dc.jpg",
+      "img/861869d0-3161-4344-a98c-12a6f6c0e422.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Fred Perry Crew Neck Black",
     "brand": "Fred Perry",
     "price": 5990,
@@ -342,6 +359,26 @@
       "img/323558fe-4de4-4a57-9103-c277b07cb1db.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Fred Perry Tonal Ringer White",
+    "brand": "Fred Perry",
+    "price": 6490,
+    "sizes": [
+      "2XL",
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/d821fa25-1257-46c0-97f9-0eb3ae3fd7e7.jpg",
+    "images": [
+      "img/d821fa25-1257-46c0-97f9-0eb3ae3fd7e7.jpg",
+      "img/c0a6d11f-799c-41c3-ba0f-8d0006741de5.jpg",
+      "img/429e35b8-f02a-4283-b716-c6acbd9d9235.jpg",
+      "img/c5661075-298c-4010-a644-f5abb70aae32.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Marshall Artist Spiro Navy",
@@ -513,6 +550,21 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Fred Perry Tonal Ringer Navy",
+    "brand": "Fred Perry",
+    "price": 6490,
+    "sizes": [
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/cbfd6d8a-1488-4bac-9bad-95a8085b0e77.jpg",
+    "images": [
+      "img/cbfd6d8a-1488-4bac-9bad-95a8085b0e77.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Овершот C.P. Company Chrome-R Potent Purple",
     "brand": "Овершот",
     "price": 29990,
@@ -545,6 +597,22 @@
       "img/9a08817d-17c4-49bf-973a-ca745b4b674f.jpg"
     ],
     "description": "43 EU 27,5 СМ 9,5 US"
+  },
+  {
+    "name": "Футболка Fred Perry Tonal Ringer Black",
+    "brand": "Fred Perry",
+    "price": 6490,
+    "sizes": [
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/da891368-b666-4e74-8a6f-325bb170a930.jpg",
+    "images": [
+      "img/da891368-b666-4e74-8a6f-325bb170a930.jpg",
+      "img/2c0573e4-7748-4ac5-bb5e-f242926a7641.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Шорты Weekend Offender Scandium Navy",
@@ -1785,24 +1853,6 @@
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Weekend Offender McMoney Winter White",
-    "brand": "Weekend Offender",
-    "price": 3990,
-    "sizes": [
-      "L",
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/af7ccdfd-b468-49dc-921a-51f40e790ed4.jpg",
-    "images": [
-      "img/af7ccdfd-b468-49dc-921a-51f40e790ed4.jpg",
-      "img/2e810e60-0cc9-42b3-b6ce-d1fe433b63ed.jpg",
-      "img/3fa14191-6bc3-4619-aa45-524920099ef6.jpg",
-      "img/ce0f2979-3589-412e-81fd-9f5435c5c844.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Поло Barbour Seagrass",
     "brand": "Поло",
     "price": 7490,
@@ -3018,6 +3068,21 @@
       "img/d160a69e-73bc-4c94-b43e-e51e2138f017.jpg"
     ],
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Толстовка Fred Perry Half Zip Court Green",
+    "brand": "Fred Perry",
+    "price": 12990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/ba4965e2-7b45-4e1f-89dd-c79cd64bc664.jpg",
+    "images": [
+      "img/ba4965e2-7b45-4e1f-89dd-c79cd64bc664.jpg",
+      "img/0e5d8b47-f451-4065-95ef-6cd0493e5318.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Панама MA.Strum Bucket Hat Jet Black",
