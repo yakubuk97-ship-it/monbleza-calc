@@ -37,7 +37,9 @@
     "brand": "Fred Perry",
     "price": 6190,
     "sizes": [
-      "M"
+      "L",
+      "M",
+      "XL"
     ],
     "category": "Лонгслив",
     "img": "img/60bfa603-19cc-4c95-8c79-aad594ce122c.jpg",
@@ -285,7 +287,8 @@
     "price": 13490,
     "sizes": [
       "L",
-      "M"
+      "M",
+      "XL"
     ],
     "category": "Джемпер",
     "img": "img/ceff072a-858f-42e5-bf67-0d8bd15a42c5.jpg",
@@ -343,6 +346,22 @@
     "images": [
       "img/5a74476f-b120-4379-9b27-5f11fa6966da.jpg",
       "img/babe8af1-965b-45c8-9708-f14ea56e8405.jpg"
+    ],
+    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Поло Weekend Offender Nicks White",
+    "brand": "Weekend Offender",
+    "price": 4890,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/b614efbd-f815-49e2-bc0a-773bbbfc83c5.jpg",
+    "images": [
+      "img/b614efbd-f815-49e2-bc0a-773bbbfc83c5.jpg",
+      "img/abb2055a-2e7c-494e-9a58-69b9dfee66d9.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
@@ -420,8 +439,7 @@
     "price": 5490,
     "sizes": [
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/614a0907-db55-4e98-9eb6-49ab588c0a20.jpg",
@@ -899,7 +917,8 @@
     "brand": "Fred Perry",
     "price": 12990,
     "sizes": [
-      "L"
+      "L",
+      "M"
     ],
     "category": "Джемпер",
     "img": "img/b231d879-7b0e-451a-b304-4ab6fa171e8d.jpg",
@@ -1555,6 +1574,21 @@
       "img/13a3c362-2e5b-4404-81d9-17ba688d29b6.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Поло Fred Perry Twin Tapped Navy",
+    "brand": "Fred Perry",
+    "price": 8790,
+    "sizes": [
+      "L"
+    ],
+    "category": "Лонгслив",
+    "img": "img/f09da58b-9097-4f8a-a111-737e0cb1c2a9.jpg",
+    "images": [
+      "img/f09da58b-9097-4f8a-a111-737e0cb1c2a9.jpg",
+      "img/52b0a4d7-210c-49ce-b572-9f28393dbcaf.jpg"
+    ],
+    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок высокой плотности\n(Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Leo Gregory White",
@@ -2838,7 +2872,6 @@
     "brand": "Marshall Artist",
     "price": 7490,
     "sizes": [
-      "2XL",
       "L",
       "M",
       "XL"
@@ -2935,6 +2968,21 @@
       "img/4d27a829-9d64-4ec5-907a-1585e8405d39.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Поло Weekend Offender Nicks Navy",
+    "brand": "Weekend Offender",
+    "price": 4890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/2692fddb-a2a6-4ffd-9673-70a228d5abde.jpg",
+    "images": [
+      "img/2692fddb-a2a6-4ffd-9673-70a228d5abde.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Кепка Lacoste Central Croc Black",
@@ -3128,7 +3176,8 @@
     "price": 6990,
     "sizes": [
       "2XL",
-      "L"
+      "L",
+      "M"
     ],
     "category": "Шорты",
     "img": "img/68877172-c685-4df0-8385-b0fba0d9fd4a.jpg",
