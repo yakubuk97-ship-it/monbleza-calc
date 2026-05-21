@@ -1111,22 +1111,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав внешний: нейлон метал с Водоотталкивающими свойствами\nCостав внутри: поли. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Овершот C.P. Company Organic Gabardina Black",
-    "brand": "Овершот",
-    "price": 23990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/a1c1f5c5-88ce-4213-b4f3-bdecac9eeb24.jpg",
-    "images": [
-      "img/a1c1f5c5-88ce-4213-b4f3-bdecac9eeb24.jpg",
-      "img/cc57cba2-cfb7-4c6e-afcf-cef3e037580e.jpg",
-      "img/b8b9ad71-e2d1-42b9-9486-cc8d5df25d7d.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nMade in Tunisia \nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Поло Weekend Offender Nicks Black",
     "brand": "Weekend Offender",
     "price": 4890,
@@ -1165,8 +1149,10 @@
       "XL"
     ],
     "category": "Шорты",
-    "img": "img/d3c035c7-2cd5-4b54-8048-2e76b804d50c.jpg",
+    "img": "img/75066cef-7d2a-4789-b2b9-cec08b398352.jpg",
     "images": [
+      "img/75066cef-7d2a-4789-b2b9-cec08b398352.jpg",
+      "img/88e2015c-f54e-40f6-a1f3-a09d04ec1c43.jpg",
       "img/d3c035c7-2cd5-4b54-8048-2e76b804d50c.jpg",
       "img/9b946f61-c005-4179-8a00-15299678f525.jpg"
     ],
@@ -1419,6 +1405,7 @@
     "images": [
       "img/ccdf1dde-c940-43cf-aa33-2b17fa1ad3c3.jpg",
       "img/24a2501f-c5e5-403d-9e93-9d79f16a21f6.jpg",
+      "img/cfd86c62-85d0-4734-8b27-382bf2a64946.jpg",
       "img/7d4a3350-5e2e-417a-b6a8-e5bff3b6c158.jpg",
       "img/c91ab5d1-9fe6-4c12-ba6d-83b6d5d189d6.jpg"
     ],
@@ -2420,7 +2407,6 @@
     "brand": "Weekend Offender",
     "price": 3890,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Лонгслив",
@@ -2541,6 +2527,7 @@
     "images": [
       "img/9fd06362-9912-48e1-9791-d737885ccf97.jpg",
       "img/0e7297f5-cd07-428a-bd56-cd5cd4274680.jpg",
+      "img/532e64a8-c25b-4a0b-9d28-2c8054e2bace.jpg",
       "img/3c943bf3-796a-4eeb-bc1a-29cf782e927c.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
@@ -2571,8 +2558,9 @@
       "M"
     ],
     "category": "Шорты",
-    "img": "img/8da4f06a-ce65-4ba1-8948-c98a93d92cd3.jpg",
+    "img": "img/46753a19-a2ca-49ab-a0d3-439d4f07afaf.jpg",
     "images": [
+      "img/46753a19-a2ca-49ab-a0d3-439d4f07afaf.jpg",
       "img/8da4f06a-ce65-4ba1-8948-c98a93d92cd3.jpg",
       "img/d97511e5-68f5-40d1-9eca-1239aebf98f2.jpg"
     ],
@@ -2835,7 +2823,6 @@
     "brand": "Weekend Offender",
     "price": 5690,
     "sizes": [
-      "L",
       "S",
       "XL"
     ],
@@ -2968,7 +2955,6 @@
     "brand": "Marshall Artist",
     "price": 7490,
     "sizes": [
-      "L",
       "M",
       "XL"
     ],
@@ -3290,8 +3276,7 @@
     "price": 6990,
     "sizes": [
       "2XL",
-      "L",
-      "M"
+      "L"
     ],
     "category": "Шорты",
     "img": "img/68877172-c685-4df0-8385-b0fba0d9fd4a.jpg",
@@ -3343,7 +3328,6 @@
     "brand": "Weekend Offender",
     "price": 5990,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Шорты",
