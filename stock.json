@@ -400,6 +400,22 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Barbour Essential White",
+    "brand": "Футболка",
+    "price": 5490,
+    "sizes": [
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/eeb3c598-3e88-42b1-82e8-f6cc71e2b3d3.jpg",
+    "images": [
+      "img/eeb3c598-3e88-42b1-82e8-f6cc71e2b3d3.jpg",
+      "img/78c159a0-30f7-4660-a47d-c8d824c82032.jpg",
+      "img/4566faea-70a1-40f4-8411-40dedadbdc6e.jpg"
+    ],
+    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\nСлегка приталенный крой, сверьте замеры. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Marshall Artist Spiro Navy",
     "brand": "Marshall Artist",
     "price": 4290,
@@ -1142,6 +1158,21 @@
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
   {
+    "name": "Шорты MA.Strum Nylon Oil Slick + Чехол",
+    "brand": "MA.Strum",
+    "price": 8490,
+    "sizes": [
+      "XL"
+    ],
+    "category": "Шорты",
+    "img": "img/d3c035c7-2cd5-4b54-8048-2e76b804d50c.jpg",
+    "images": [
+      "img/d3c035c7-2cd5-4b54-8048-2e76b804d50c.jpg",
+      "img/9b946f61-c005-4179-8a00-15299678f525.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: премиальный нейлон, в комплекте идет брендированный чехол с вышитым логотипом. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Weekend Offender Cannon Beach Castle Green",
     "brand": "Weekend Offender",
     "price": 3390,
@@ -1377,6 +1408,23 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Куртка Belstaff Вощеная Sideline Black - Made in Bulgaria",
+    "brand": "Куртка",
+    "price": 36990,
+    "sizes": [
+      "2XL (fact. XL)"
+    ],
+    "category": "Жилет",
+    "img": "img/ccdf1dde-c940-43cf-aa33-2b17fa1ad3c3.jpg",
+    "images": [
+      "img/ccdf1dde-c940-43cf-aa33-2b17fa1ad3c3.jpg",
+      "img/24a2501f-c5e5-403d-9e93-9d79f16a21f6.jpg",
+      "img/7d4a3350-5e2e-417a-b6a8-e5bff3b6c158.jpg",
+      "img/c91ab5d1-9fe6-4c12-ba6d-83b6d5d189d6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nMade in Bulgaria - Люксовый бренд\nРазмер: \nВыполнена из прочного 100% вощеного хлопка 6 oz., защищает от влаги и ветра. Отличается высокой износостойкостью, воздухопроницаемостью Хлопковая подкладка обеспечивает комфорт при ежедневной носке, а качественная фурнитура подчеркивает премиальный уровень модели.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Weekend Offender Bonpensiero Alabaster",
     "brand": "Weekend Offender",
     "price": 4190,
@@ -1605,6 +1653,23 @@
       "img/304885a8-b0bb-4c14-ab3f-7a28536551b7.jpg"
     ],
     "description": "Оригинальная продукция\nСостав:100% премиальный хлопок"
+  },
+  {
+    "name": "Футболка Belstaff Cotton Jersey Black",
+    "brand": "Футболка",
+    "price": 6990,
+    "sizes": [
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/6646febe-14bf-48cf-b51e-8dc0e963409e.jpg",
+    "images": [
+      "img/6646febe-14bf-48cf-b51e-8dc0e963409e.jpg",
+      "img/005b9ce0-f053-43fa-bcae-f96e4572bf1d.jpg",
+      "img/f6bdd9ef-009b-4a11-815b-7776a108d9fc.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nMade in Moldova | Люксовый бренд.\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Кепка New Balance Snapback Black",
@@ -2038,6 +2103,21 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Куртка Fred Perry Lauren Shell Green",
+    "brand": "Fred Perry",
+    "price": 17988,
+    "sizes": [
+      "L"
+    ],
+    "category": "Жилет",
+    "img": "img/10b53502-419a-4d10-9f92-19802f6b9d78.jpg",
+    "images": [
+      "img/10b53502-419a-4d10-9f92-19802f6b9d78.jpg",
+      "img/c6bb2953-9cbb-4f71-b999-f5fd8e4221b1.jpg"
+    ],
+    "description": ""
+  },
+  {
     "name": "Футболка MA.Strum Cargo Pocket Jet Black",
     "brand": "MA.Strum",
     "price": 9690,
@@ -2111,8 +2191,7 @@
     "brand": "Weekend Offender",
     "price": 4790,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Шорты",
     "img": "img/c4680274-20a0-4f09-80f8-4e0b3c24aa76.jpg",
@@ -2451,6 +2530,22 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Толстовка MA.Strum Core Bomber - Portugal",
+    "brand": "MA.Strum",
+    "price": 17990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/9fd06362-9912-48e1-9791-d737885ccf97.jpg",
+    "images": [
+      "img/9fd06362-9912-48e1-9791-d737885ccf97.jpg",
+      "img/0e7297f5-cd07-428a-bd56-cd5cd4274680.jpg",
+      "img/3c943bf3-796a-4eeb-bc1a-29cf782e927c.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Peaceful Hooligan Ucoph1 White",
     "brand": "Футболка",
     "price": 3890,
@@ -2466,6 +2561,22 @@
       "img/ca7b2624-1bed-4b4e-9bd1-40b2bdf2ba9d.jpg"
     ],
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Шорты Weekend Offender Olympia Silvertime",
+    "brand": "Weekend Offender",
+    "price": 6490,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Шорты",
+    "img": "img/8da4f06a-ce65-4ba1-8948-c98a93d92cd3.jpg",
+    "images": [
+      "img/8da4f06a-ce65-4ba1-8948-c98a93d92cd3.jpg",
+      "img/d97511e5-68f5-40d1-9eca-1239aebf98f2.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Napapijri S-Vanni Black Beauty",
@@ -2522,6 +2633,7 @@
     "sizes": [
       "2XL",
       "L",
+      "M",
       "XL"
     ],
     "category": "Лонгслив",
@@ -2830,22 +2942,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender High Desert Cargo Stone",
-    "brand": "Weekend Offender",
-    "price": 5990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Шорты",
-    "img": "img/449589c3-e5fd-4538-91a8-2f8541cfd847.jpg",
-    "images": [
-      "img/449589c3-e5fd-4538-91a8-2f8541cfd847.jpg",
-      "img/fbb3b6d3-0c2b-4780-ba89-23a9a876124d.jpg",
-      "img/b75f2b35-3051-4e0d-8e4e-999717b9035a.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Куртка Fred Perry Caban Jacket Green",
     "brand": "Fred Perry",
     "price": 23990,
@@ -3032,6 +3128,23 @@
       "img/b71d394d-4444-4628-b6f1-8f435ad2b337.jpg"
     ],
     "description": "Оригинал из бутика Италии!\nНовое, с комплектом биркок, CLG+ \nРазмер: \n- Состав: 100% премиальный хлопок\n- Страна-производитель: Мьянма\n- Стандартный фит\n- Регулируемый капюшон со встроенными линзами Goggle\n- Два боковых кармана на молнии\n- Отверстие для большого пальца на манжете\n\nДлина полностью - 75 cm \nШирина между подмышек - 63 cm \nРукав от подмышки - 49 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Олимпийка Sergio Tacchini Damarindo Track Azure Blue",
+    "brand": "Sergio Tacchini",
+    "price": 13490,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/4cbed282-6930-49e0-82e3-15b54fcc9929.jpg",
+    "images": [
+      "img/4cbed282-6930-49e0-82e3-15b54fcc9929.jpg",
+      "img/f1a11dd6-49a8-4a58-84f2-cd7d38615388.jpg",
+      "img/b63fa9b4-46bd-4a7a-ac0f-18eeba6fdc51.jpg",
+      "img/9a08676a-21d9-4001-aa7b-ff2246bc53f6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 60% премиальный хлопок​, 40% поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Костюм Lacoste Core Tracksuit Black",
