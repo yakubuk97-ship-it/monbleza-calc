@@ -35,7 +35,7 @@
   {
     "name": "Футболка Fred Perry Twin Tipped White Black",
     "brand": "Fred Perry",
-    "price": 6190,
+    "price": 6390,
     "sizes": [
       "L",
       "M",
@@ -571,8 +571,7 @@
     "brand": "Weekend Offender",
     "price": 5790,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Рубашка",
     "img": "img/f824f0fd-aac9-4d27-9828-7a1840447d11.jpg",
@@ -1705,6 +1704,22 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Fred Perry Twin Tipped White",
+    "brand": "Fred Perry",
+    "price": 6490,
+    "sizes": [
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/6e8e12a7-2e9a-4465-89c7-4dd0bcc7bdb1.jpg",
+    "images": [
+      "img/6e8e12a7-2e9a-4465-89c7-4dd0bcc7bdb1.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Свитшот Weekend Offender Santos Crew Black",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -2071,6 +2086,24 @@
       "img/c990465e-9b71-40d5-a65b-ea0875aed92f.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Fred Perry Twin Tipped Navy",
+    "brand": "Fred Perry",
+    "price": 6490,
+    "sizes": [
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/18b88ac2-2244-4e84-b337-512c0246cd56.jpg",
+    "images": [
+      "img/18b88ac2-2244-4e84-b337-512c0246cd56.jpg",
+      "img/1c8f0447-8e87-44c3-8220-8475e07348bd.jpg",
+      "img/df907d85-1b66-4398-a2e7-2e6791529752.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Шорты Weekend Offender Barios Navy",
