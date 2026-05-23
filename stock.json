@@ -1327,23 +1327,6 @@
     "description": "Оригинальная продукция\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "C.P. Company Вельвет Pocket Corduroy",
-    "brand": "C.P.",
-    "price": 22990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Рубашка",
-    "img": "img/a6d34c04-4e0b-4a1a-97cf-124fcece9740.jpg",
-    "images": [
-      "img/a6d34c04-4e0b-4a1a-97cf-124fcece9740.jpg",
-      "img/c731f680-c35a-4893-9d7b-1008518bea33.jpg",
-      "img/7b66411e-8390-459a-bd81-ab8c90e0944c.jpg",
-      "img/7cd033db-1a1f-4794-b4b4-f09640a06a04.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nMade in Tunisia \nСостав: 97% премиальный хлопок, 3% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Ботинки New Balance H754TB",
     "brand": "New Balance",
     "price": 17990,
@@ -1726,7 +1709,6 @@
     "price": 6490,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Лонгслив",
@@ -1962,8 +1944,7 @@
     "brand": "Weekend Offender",
     "price": 3990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/af7ccdfd-b468-49dc-921a-51f40e790ed4.jpg",
@@ -2128,7 +2109,6 @@
     "brand": "Fred Perry",
     "price": 6490,
     "sizes": [
-      "L",
       "M",
       "XL"
     ],
@@ -2624,7 +2604,6 @@
     "brand": "Weekend Offender",
     "price": 6490,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Шорты",
