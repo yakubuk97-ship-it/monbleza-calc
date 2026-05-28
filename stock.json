@@ -845,23 +845,6 @@
     "description": "Оригинальная продукция\nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender Scopello Castle Green",
-    "brand": "Weekend Offender",
-    "price": 6490,
-    "sizes": [
-      "L"
-    ],
-    "category": "Шорты",
-    "img": "img/a90df712-fda1-4774-8e3f-aa5866470627.jpg",
-    "images": [
-      "img/a90df712-fda1-4774-8e3f-aa5866470627.jpg",
-      "img/e3027c05-2479-4120-8cea-86f7924d3113.jpg",
-      "img/bf5302dd-8e60-42f1-8c1f-ca3c32f479b1.jpg",
-      "img/30e4161b-7426-489f-9331-e40fb63f600e.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Sergio Tacchini Master Black Glacier",
     "brand": "Sergio Tacchini",
     "price": 5990,
