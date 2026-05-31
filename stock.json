@@ -416,24 +416,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\nСлегка приталенный крой, сверьте замеры. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Marshall Artist Spiro Navy",
-    "brand": "Marshall Artist",
-    "price": 4290,
-    "sizes": [
-      "S"
-    ],
-    "category": "Лонгслив",
-    "img": "img/6a2a1234-0510-49e1-a0ec-37845fe6db81.jpg",
-    "images": [
-      "img/6a2a1234-0510-49e1-a0ec-37845fe6db81.jpg",
-      "img/c3189584-6388-4dff-82b7-1bf8f3b416c4.jpg",
-      "img/b48527da-3ee6-4df3-b800-68575a7b54df.jpg",
-      "img/0d15ddf9-feaf-4c8d-a55d-1e76e942373f.jpg",
-      "img/bfe14e5b-bf14-44c7-bb69-6d1614ffba01.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\nПринт полностью вышит!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Толстовка Fred Perry Red Roll Neck Jumper",
     "brand": "Fred Perry",
     "price": 13490,
@@ -2872,23 +2854,6 @@
       "img/ea3d8a7c-ef87-4943-91ce-219bd9cc4cd4.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Куртка Weekend Offender Cotoca Smokey",
-    "brand": "Weekend Offender",
-    "price": 16990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Жилет",
-    "img": "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
-    "images": [
-      "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
-      "img/95f86d6b-8070-4c62-ba17-7c7f43500df4.jpg",
-      "img/b5ea72b8-8557-456e-bd82-c9990f36c586.jpg",
-      "img/d6d73169-6eed-4133-aaab-929d48b1ad69.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nВодоотталкивающая, перелив цвета\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Шорты Marshall Artist Micro Ripstop Stone",
