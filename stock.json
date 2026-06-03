@@ -235,7 +235,6 @@
     "price": 6990,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Шорты",
@@ -2064,7 +2063,6 @@
     "price": 4190,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Лонгслив",
@@ -2602,23 +2600,6 @@
       "img/10751531-89e4-4801-9d71-77c660476102.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
-  },
-  {
-    "name": "Футболка One True Saxon Away Days White (маломерит)",
-    "brand": "Футболка",
-    "price": 3390,
-    "sizes": [
-      "L (fact. M)"
-    ],
-    "category": "Лонгслив",
-    "img": "img/6203eadd-2ebf-4301-a729-7eaef94f51d6.jpg",
-    "images": [
-      "img/6203eadd-2ebf-4301-a729-7eaef94f51d6.jpg",
-      "img/e9c9486f-85c5-4635-8371-c1b864d73ad2.jpg",
-      "img/24d1f0be-9ab8-4eed-8ff2-3020729fc3e1.jpg",
-      "img/1145a445-698e-473c-a3e8-fbe083415842.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% хлопок\nМАЛОМЕРИТ, размерная сетка на последнем фото \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка Ellesse Ferrer Hoodie Navy",
@@ -3299,22 +3280,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: twill ripstop; 98% хлопок, 2% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Сумка Berghaus Logo Black",
-    "brand": "Сумка",
-    "price": 4490,
-    "sizes": [],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/e0b0e562-1406-411a-8df4-3de371b1ebee.jpg",
-    "images": [
-      "img/e0b0e562-1406-411a-8df4-3de371b1ebee.jpg",
-      "img/297742a6-3b66-462d-b8e0-ec7fa044d9b4.jpg",
-      "img/1476e586-5d04-4f30-b0f1-5d2c20008670.jpg",
-      "img/41959384-5a03-474b-91e4-39aa1a23c16f.jpg",
-      "img/82fdc0bd-afaf-48df-a93a-e6ec3052d7c9.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: 21 x 15 x 6 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Кроссовки Polo Ralph Lauren Bedford Bianco White",
     "brand": "Ralph Lauren",
     "price": 17990,
@@ -3493,29 +3458,12 @@
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "Шорты Weekend Offender High Desert Cargo Navy",
-    "brand": "Weekend Offender",
-    "price": 5990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Шорты",
-    "img": "img/ffa3b0ba-7ae0-4c09-b920-fcf7299dfb02.jpg",
-    "images": [
-      "img/ffa3b0ba-7ae0-4c09-b920-fcf7299dfb02.jpg",
-      "img/25b6df2e-a402-49b5-bef0-431aff45600a.jpg",
-      "img/6c0e5a74-b7c5-4ff2-8e27-020e88a9da7c.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Weekend Offender Leo Gregory Black",
     "brand": "Weekend Offender",
     "price": 6490,
     "sizes": [
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/8aada9ba-2dd8-43d7-99d9-70a19282ed48.jpg",
