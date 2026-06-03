@@ -895,8 +895,7 @@
     "brand": "Fred Perry",
     "price": 9490,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/19682b48-3072-4bad-b264-d9c895798e1f.jpg",
@@ -1073,22 +1072,6 @@
       "img/48557632-8a97-4d17-befd-fc7b50fe2c47.jpg"
     ],
     "description": "Оригинальная продукция\nСостав: 100% хлопок\nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender Cannon White",
-    "brand": "Weekend Offender",
-    "price": 3990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/6f22adf8-42ba-4386-ad53-3f6a4488556f.jpg",
-    "images": [
-      "img/6f22adf8-42ba-4386-ad53-3f6a4488556f.jpg",
-      "img/26a23e6a-7db2-4528-8ecd-17121878eefe.jpg",
-      "img/f490ab97-2abd-46d9-93c1-f8ca57bff4aa.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender The Heights Winter White",
