@@ -453,8 +453,7 @@
     "brand": "Sergio Tacchini",
     "price": 13490,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/52a69b20-4d24-4208-a246-b636cf236070.jpg",
@@ -2208,7 +2207,6 @@
     "brand": "Weekend Offender",
     "price": 3990,
     "sizes": [
-      "L",
       "M",
       "S",
       "XL"
@@ -2872,8 +2870,7 @@
     "brand": "Weekend Offender",
     "price": 5690,
     "sizes": [
-      "S",
-      "XL"
+      "S"
     ],
     "category": "Шорты",
     "img": "img/24a216a3-0c9a-4c8a-970c-396a6a7eabf9.jpg",
