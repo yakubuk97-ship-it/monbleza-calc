@@ -335,8 +335,7 @@
     "brand": "Weekend Offender",
     "price": 4890,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/b614efbd-f815-49e2-bc0a-773bbbfc83c5.jpg",
@@ -367,8 +366,7 @@
     "sizes": [
       "2XL",
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/d821fa25-1257-46c0-97f9-0eb3ae3fd7e7.jpg",
@@ -613,8 +611,7 @@
     "brand": "Fred Perry",
     "price": 6490,
     "sizes": [
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/199e30c9-5915-4aaa-aa92-f72a01a82727.jpg",
@@ -1717,22 +1714,6 @@
     "description": "Оригинальная продукция, из Англии!"
   },
   {
-    "name": "Футболка Peaceful Hooligan Casuals Stone",
-    "brand": "Футболка",
-    "price": 3890,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/7937515b-cc48-4b2a-b5ff-e71d87c3d32b.jpg",
-    "images": [
-      "img/7937515b-cc48-4b2a-b5ff-e71d87c3d32b.jpg",
-      "img/4bebd3c7-7611-4867-8b06-b521dca60fdc.jpg",
-      "img/01fb9817-fdd5-4822-949f-b8474ad4793b.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Шорты Weekend Offender Varadero Check",
     "brand": "Weekend Offender",
     "price": 5790,
@@ -2711,23 +2692,6 @@
       "img/9d4b8c25-c473-461f-a9d5-2e24405620db.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок\nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Шорты Weekend Offender Chapeco Black Bright Purple",
-    "brand": "Weekend Offender",
-    "price": 4390,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/c3473816-f641-45d0-babd-14a9d0f37e5d.jpg",
-    "images": [
-      "img/c3473816-f641-45d0-babd-14a9d0f37e5d.jpg",
-      "img/43ae1ffb-e2c8-4c28-8d40-d7ff3c610d77.jpg",
-      "img/457445d0-9f5f-4471-b3bf-cd2ccfe0bfe0.jpg",
-      "img/60361aa7-c791-4fd4-8f4b-3c76d3fe09bd.jpg"
-    ],
-    "description": "Оригинальная продукция \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Fred Perry Laurel Graphic Navy",
