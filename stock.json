@@ -1050,6 +1050,22 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Толстовка Lacoste Cotton Khaki",
+    "brand": "Lacoste",
+    "price": 9990,
+    "sizes": [
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/b5f02d10-80f4-4be4-88c4-174ffd02108a.jpg",
+    "images": [
+      "img/b5f02d10-80f4-4be4-88c4-174ffd02108a.jpg",
+      "img/6f01dee0-49ca-4ce4-b50f-2a8a8bb9237f.jpg",
+      "img/5af50440-1fe4-4666-9033-6d4809654af6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% organic cotton\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Куртка Weekend Offender La Guarda Porpoise",
     "brand": "Weekend Offender",
     "price": 11990,
@@ -1370,6 +1386,7 @@
     "brand": "Weekend Offender",
     "price": 21990,
     "sizes": [
+      "L",
       "M"
     ],
     "category": "Обувь",
@@ -1499,6 +1516,25 @@
       "img/595d0d56-ef09-4123-bbe2-8fef317779f7.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: Регулируется, на любую голову!\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Куртка Weekend Offender Harpocrates Intercity Black",
+    "brand": "Weekend Offender",
+    "price": 14490,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/8eb33901-c9b9-48cc-a81e-1f0e21582c75.jpg",
+    "images": [
+      "img/8eb33901-c9b9-48cc-a81e-1f0e21582c75.jpg",
+      "img/e0f02c20-6ed2-4c4d-bb58-046d5d7d5f00.jpg",
+      "img/5ffda240-6ddf-466e-b8bb-62c279ae3ca8.jpg",
+      "img/b81a4cfc-b703-45ea-8c0c-dfa910f2ed24.jpg",
+      "img/6974222e-0f27-4fe9-bb58-40b0967a94c7.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \n- Съемный капюшон  \n- Стандартный фит\n- Фурнитура Vilson YKK\n- Карманы так же с боковым входом\n- Потайной карман сзади на молнии\nСостав: премиальный хлопок и нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Штаны Weekend Offender Pianemo Cargo Castle Green",
@@ -1650,6 +1686,7 @@
     "brand": "Fred Perry",
     "price": 6490,
     "sizes": [
+      "M",
       "XL"
     ],
     "category": "Лонгслив",
@@ -1932,6 +1969,22 @@
     "description": "Оригинал из бутиков Европы!\n\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Лонг Napapijri Salis Leaf G0А",
+    "brand": "Napapijri",
+    "price": 3990,
+    "sizes": [
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/9738dd91-c04e-40e6-9685-8b8c073e1056.jpg",
+    "images": [
+      "img/9738dd91-c04e-40e6-9685-8b8c073e1056.jpg",
+      "img/07343a86-2e24-412d-b4c4-d9e24d11eecb.jpg",
+      "img/0e6f14a6-14cf-4a1a-a529-0e29ed82f879.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Weekend Offender McMoney Navy Bark",
     "brand": "Weekend Offender",
     "price": 3890,
@@ -2025,6 +2078,22 @@
       "img/c990465e-9b71-40d5-a65b-ea0875aed92f.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Поло Napapijri Ealis Leaf",
+    "brand": "Napapijri",
+    "price": 6790,
+    "sizes": [
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/3724cbbd-17d5-4c53-91a2-30da72aec19e.jpg",
+    "images": [
+      "img/3724cbbd-17d5-4c53-91a2-30da72aec19e.jpg",
+      "img/c2634538-4491-4166-b3be-40e81d878c29.jpg",
+      "img/bd6efbaf-7fe1-4903-8318-699cd9db4733.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Вощеная Barbour Lutlaw Harrington Wax Brown - Утеплена",
@@ -2490,6 +2559,23 @@
       "img/10751531-89e4-4801-9d71-77c660476102.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Куртка Weekend Offender La Guardia Black",
+    "brand": "Weekend Offender",
+    "price": 11990,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "category": "Жилет",
+    "img": "img/038143a8-6b08-4eca-93b9-b81a00c36b4c.jpg",
+    "images": [
+      "img/038143a8-6b08-4eca-93b9-b81a00c36b4c.jpg",
+      "img/77d7020b-56b7-4097-a947-dc98c193d215.jpg",
+      "img/4e80e415-a959-4832-8197-3a71093331a6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nВерх - 100% нейлон; \nНаполнитель - 100% полиэстер\nПодкладка - 100% нейлон; \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка Ellesse Ferrer Hoodie Navy",
