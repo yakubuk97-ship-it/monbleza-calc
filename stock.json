@@ -216,8 +216,7 @@
     "brand": "Sergio Tacchini",
     "price": 6990,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Шорты",
     "img": "img/5ec4c457-66bf-4fd5-b304-2b6907913e6b.jpg",
@@ -2380,22 +2379,6 @@
       "img/e00c639a-1d46-4c67-b1c3-18d41861f665.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nПремиальные материала и идеальная посадка. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Fred Perry Twin Tipped Bayleaf",
-    "brand": "Fred Perry",
-    "price": 6190,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/45e2a2f6-ba7c-4bb5-a203-cb642056f430.jpg",
-    "images": [
-      "img/45e2a2f6-ba7c-4bb5-a203-cb642056f430.jpg",
-      "img/a101b273-f126-4ff3-8297-a10a05feb8e7.jpg",
-      "img/b91a7849-dec7-4b8d-8885-0d4aba27a924.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Trainerspotting Black",
