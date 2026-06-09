@@ -348,6 +348,23 @@
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
+    "name": "Сумка Ben Sherman Steiger Barrel Bag Black",
+    "brand": "Ben Sherman",
+    "price": 4990,
+    "sizes": [
+      "One Size"
+    ],
+    "category": "АКСЕССУАРЫ",
+    "img": "img/56528570-765b-4987-b909-8503878f2f5b.jpg",
+    "images": [
+      "img/56528570-765b-4987-b909-8503878f2f5b.jpg",
+      "img/8934a6b3-d819-402b-8c87-9500b86ade0f.jpg",
+      "img/ba361526-5839-4739-8bc2-48564bee3701.jpg",
+      "img/55f819da-d60d-4b29-b952-cc47c4d430f9.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Поло Weekend Offender Nicks White",
     "brand": "Weekend Offender",
     "price": 4890,
@@ -2848,6 +2865,22 @@
     "images": [
       "img/2a446a72-7fd7-48ab-98c5-24a511ba9f42.jpg",
       "img/b122944f-6df3-44ba-bced-19a51469d984.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Шорты Ellesse Laminardo Black",
+    "brand": "Ellesse",
+    "price": 3290,
+    "sizes": [
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Шорты",
+    "img": "img/926c0a72-a7f6-4c36-a228-fcc738f4af60.jpg",
+    "images": [
+      "img/926c0a72-a7f6-4c36-a228-fcc738f4af60.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
