@@ -512,24 +512,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Вощеная Barbour Bedale Wax Sage",
-    "brand": "Вощеная",
-    "price": 37990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "",
-    "img": "img/8dcce81e-888c-41aa-9752-74bca09bab05.jpg",
-    "images": [
-      "img/8dcce81e-888c-41aa-9752-74bca09bab05.jpg",
-      "img/5580771a-45cd-4e03-aa3f-aa5a516da95f.jpg",
-      "img/fbeed0ab-e206-4586-b2a2-62b089bd0cd3.jpg",
-      "img/4c0f7c61-2599-4e5b-8b98-1c569935bda8.jpg",
-      "img/0fe37c52-3224-408a-a514-80941ca9d616.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nMade in England \nРазмер: \nВощение (Waxed Cotton): Специальная пропитка хлопковой ткани, делающая куртку устойчивой к ветру и дождю, но при этом «дышащей»! 6 унций плотности  обеспечивает долговечность изделия. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Свитшот MA.Strum Crew Neck Applique Oil Slick",
     "brand": "MA.Strum",
     "price": 15490,
@@ -921,22 +903,6 @@
       "img/80a8cd70-012f-4b72-9959-a7ca3d76856c.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Кепка C.P. Company Chrome-R Navy",
-    "brand": "Кепка",
-    "price": 8990,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/6ebdbad2-8e74-41f8-9530-b07fe7050733.jpg",
-    "images": [
-      "img/6ebdbad2-8e74-41f8-9530-b07fe7050733.jpg",
-      "img/4c3fbb68-a83b-4128-8d72-03b793ab542f.jpg",
-      "img/78688209-88fc-4cd7-9d23-6fcf82a1de6c.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Trio White",
@@ -2028,8 +1994,7 @@
     "brand": "Ben Sherman",
     "price": 4190,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/173f6670-e514-40a8-a630-1b9d92063c11.jpg",
@@ -2159,8 +2124,7 @@
     "price": 4390,
     "sizes": [
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Шорты",
     "img": "img/c32cf66d-ea18-49e9-81f6-451bcdaf42fd.jpg",
@@ -3151,8 +3115,7 @@
     "brand": "Weekend Offender",
     "price": 4890,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/2692fddb-a2a6-4ffd-9673-70a228d5abde.jpg",
@@ -3261,6 +3224,23 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: twill ripstop; 98% хлопок, 2% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Шорты Bench Noahs Combat Camo",
+    "brand": "Bench",
+    "price": 5990,
+    "sizes": [
+      "2XL",
+      "L"
+    ],
+    "category": "Шорты",
+    "img": "img/3f7e741e-b2ca-4ece-ad7c-b10e9df30c50.jpg",
+    "images": [
+      "img/3f7e741e-b2ca-4ece-ad7c-b10e9df30c50.jpg",
+      "img/be5a5827-ca19-4ab4-b52c-277d2ed57f4a.jpg",
+      "img/73157ea0-21e8-4a09-919b-45d28766b237.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\nМожно под ремень. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Кроссовки Polo Ralph Lauren Bedford Bianco White",
     "brand": "Ralph Lauren",
     "price": 17990,
@@ -3285,8 +3265,7 @@
     "brand": "Marshall Artist",
     "price": 7490,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Шорты",
     "img": "img/1fcacc08-d65b-41c0-8a58-4f0a9f7b2536.jpg",
