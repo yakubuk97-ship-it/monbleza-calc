@@ -3295,22 +3295,6 @@
     "description": "Новая, 100% Оригинальная продукция с навесными бирками. \nСостав : 90% Хлопок ; 10% Вискоза"
   },
   {
-    "name": "Шорты PEACEFUL HOOLIGAN Container Black",
-    "brand": "Шорты",
-    "price": 6790,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/129cb514-c4f0-4adf-ab30-388a60668dd1.jpg",
-    "images": [
-      "img/129cb514-c4f0-4adf-ab30-388a60668dd1.jpg",
-      "img/f0d55ee1-0767-44a1-b19b-a9433427ff28.jpg",
-      "img/ef79a945-ba07-44bf-9ce2-6a370dd80b9b.jpg"
-    ],
-    "description": "Оригинал из бутика в Англии!\nРазмер: \nТехнология окрашивания Garment Dyed\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Толстовка C.P. Company Diagonal Hoodie",
     "brand": "Толстовка",
     "price": 20990,
@@ -3463,8 +3447,7 @@
     "brand": "Marshall Artist",
     "price": 6990,
     "sizes": [
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Шорты",
     "img": "img/87981d07-79e4-4992-8117-61e41234ea19.jpg",
