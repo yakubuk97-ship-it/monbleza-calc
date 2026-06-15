@@ -1,132 +1,5 @@
 [
   {
-    "name": "Buty męskie New Balance Numeric UN440NRU - beżowe",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/ee924587ee68b4c313560feec4890c49.jpg",
-    "sellPrice": 399.99,
-    "basePrice": null,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-meskie-new-balance-numeric-un440nru-bezowe",
-    "sizes": [
-      "40.5",
-      "41.5",
-      "42",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "45.5",
-      "46.5",
-      "47.5"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Buty męskie New Balance Numeric UN508WBG - beżowe",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/99ce0193ee8d6b05dd23bb0a9ce2816c.jpg",
-    "sellPrice": 399.99,
-    "basePrice": null,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-meskie-new-balance-numeric-un508wbg-bezowe",
-    "sizes": [
-      "40.5",
-      "41.5",
-      "42",
-      "42.5",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "45.5",
-      "46.5",
-      "47.5"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Buty męskie New Balance Numeric UN440BCO - czarne",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/357906d7d0d865c648de1980ec48626a.jpg",
-    "sellPrice": 399.99,
-    "basePrice": null,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-meskie-new-balance-numeric-un440bco-czarne",
-    "sizes": [
-      "41.5",
-      "42",
-      "42.5",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "45.5",
-      "46.5"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Buty unisex Converse Chuck Taylor All Star Hi M7650C - białe",
-    "brand": "Converse",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/1f95e39fe85b5cb0b825719a63c30084.jpg",
-    "sellPrice": 259.99,
-    "basePrice": 349.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-unisex-converse-chuck-taylor-all-star-hi-m7650c-biale",
-    "sizes": [
-      "35",
-      "36",
-      "36.5",
-      "37",
-      "37.5",
-      "38",
-      "39",
-      "39.5",
-      "40",
-      "41",
-      "41.5",
-      "42",
-      "42.5",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "46"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Buty unisex Converse Chuck Taylor Ox M9166C - czarne",
-    "brand": "Converse",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/b741da53138ea67aead1dbb91c50c3a9.jpg",
-    "sellPrice": 249.99,
-    "basePrice": 329.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-unisex-converse-chuck-taylor-ox-m9166c-czarne",
-    "sizes": [
-      "35",
-      "36",
-      "36.5",
-      "37",
-      "37.5",
-      "38",
-      "39",
-      "39.5",
-      "40",
-      "41",
-      "41.5",
-      "42",
-      "42.5",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "46",
-      "46.5"
-    ],
-    "source": "ss24"
-  },
-  {
     "name": "Buty zimowe męskie New Balance H754TB - brązowe",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/c52d65265caa7f8b584e9617546184dc.jpg",
@@ -433,24 +306,6 @@
       "39",
       "40",
       "41"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Kurtka The North Face Hikesteller Shell 0A3BVIJK31 - czarna",
-    "brand": "The North Face",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/42b2ada35ac80bd5aa2b00d190d0aa0e",
-    "sellPrice": 399.99,
-    "basePrice": 749.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/kurtka-the-north-face-hikesteller-shell-0a3bvijk31-czarna",
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
     ],
     "source": "ss24"
   },
@@ -3492,31 +3347,6 @@
     "source": "ss24"
   },
   {
-    "name": "Buty męskie New Balance ML574OMA - brązowe",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/c0145929b7dfa86d1b437f55a35dfbe2.jpg",
-    "sellPrice": 379.99,
-    "basePrice": 629.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-meskie-new-balance-ml574oma-brazowe",
-    "sizes": [
-      "40",
-      "40.5",
-      "41.5",
-      "42",
-      "42.5",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "45.5",
-      "46.5",
-      "47.5",
-      "49"
-    ],
-    "source": "ss24"
-  },
-  {
     "name": "Czapka adidas Heat.Rdy Four-Panel HA5547 - czarna",
     "brand": "Adidas",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/9ab446bd748c06049966c632f7896d92.jpg",
@@ -3702,25 +3532,6 @@
     "basePrice": 209.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/klapki-crocs-crocband-clog-207006-4s3-niebieskie",
-    "sizes": [
-      "30-31",
-      "32-33",
-      "33-34",
-      "34-35",
-      "36-37",
-      "37-38",
-      "38-39"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Klapki młodzieżowe Crocs Crocband Clog 207006-6GD - różowe",
-    "brand": "Crocs",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/c7f21459cf64bbc697979fc72acba439.jpg",
-    "sellPrice": 179.99,
-    "basePrice": 199.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/klapki-mlodziezowe-crocs-crocband-clog-207006-6gd-rozowe",
     "sizes": [
       "30-31",
       "32-33",
