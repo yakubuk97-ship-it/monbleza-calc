@@ -3080,24 +3080,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender Mascia Bark",
-    "brand": "Weekend Offender",
-    "price": 5690,
-    "sizes": [
-      "S"
-    ],
-    "category": "Шорты",
-    "img": "img/24a216a3-0c9a-4c8a-970c-396a6a7eabf9.jpg",
-    "images": [
-      "img/24a216a3-0c9a-4c8a-970c-396a6a7eabf9.jpg",
-      "img/a9f813ef-3e4f-47f6-83d9-fa2258ef50e7.jpg",
-      "img/0a8b6453-4c7c-43d9-aefa-fae9e7089549.jpg",
-      "img/c7183803-0ccd-4cb6-96f4-24c994b3abf4.jpg",
-      "img/4247ab78-395d-4391-897e-5b275848bc90.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Джемпер Weekend Offender Vandium Half Zip Stormy",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -3445,7 +3427,8 @@
     "price": 5990,
     "sizes": [
       "2XL",
-      "L"
+      "L",
+      "XL"
     ],
     "category": "Шорты",
     "img": "img/3f7e741e-b2ca-4ece-ad7c-b10e9df30c50.jpg",
