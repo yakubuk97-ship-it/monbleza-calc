@@ -560,38 +560,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Fred Perry Tonal Ringer Navy",
-    "brand": "Fred Perry",
-    "price": 6490,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/cbfd6d8a-1488-4bac-9bad-95a8085b0e77.jpg",
-    "images": [
-      "img/cbfd6d8a-1488-4bac-9bad-95a8085b0e77.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Овершот C.P. Company Chrome-R Potent Purple",
-    "brand": "Овершот",
-    "price": 29990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Жилет",
-    "img": "img/e513c26b-3c49-4c9c-ae95-aa4503562b02.jpg",
-    "images": [
-      "img/e513c26b-3c49-4c9c-ae95-aa4503562b02.jpg",
-      "img/11d4bda4-6105-4b92-b86d-8ab6c70f2d35.jpg",
-      "img/5f00930d-cffa-4244-94f1-dfdef53b92ea.jpg",
-      "img/977aa572-a542-433e-a04b-8685b76c0410.jpg",
-      "img/b63d1b2f-f39e-4a3c-bb26-e05ba513f0ac.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nМатериал: Chrome-R плотный премиальный нейлон, перелив цвета. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Кроссовки New Balance 574 ML574EVB",
     "brand": "New Balance",
     "price": 15900,
@@ -788,22 +756,6 @@
       "img/224e082f-4754-4df0-bf9c-cb47c8af1454.jpg"
     ],
     "description": ""
-  },
-  {
-    "name": "Овершот C.P. Company 887 Organic Gabardine",
-    "brand": "Овершот",
-    "price": 20990,
-    "sizes": [
-      "2XL",
-      "M"
-    ],
-    "category": "Жилет",
-    "img": "img/0a4af994-abd5-4f45-b8f4-ed02cd4ed9d6.jpg",
-    "images": [
-      "img/0a4af994-abd5-4f45-b8f4-ed02cd4ed9d6.jpg",
-      "img/b99da9b1-ba4d-4513-ad41-61bd34c4e7f4.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nMade in Tunisia\nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Fred Perry Ringer Ecru",
@@ -2370,8 +2322,7 @@
     "price": 3990,
     "sizes": [
       "M",
-      "S",
-      "XL"
+      "S"
     ],
     "category": "Лонгслив",
     "img": "img/914192ed-412f-48d0-97d6-6cf7bcaef84a.jpg",
@@ -3224,22 +3175,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender Action Grey Marl",
-    "brand": "Weekend Offender",
-    "price": 4390,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/923f99e9-fcc5-44c2-a2b7-9e05a70ca124.jpg",
-    "images": [
-      "img/923f99e9-fcc5-44c2-a2b7-9e05a70ca124.jpg",
-      "img/59a6bc3e-a5a0-42a2-a0d2-5b76b553d3b7.jpg",
-      "img/3d8bcc61-f09b-476a-bcff-be06c573f02b.jpg"
-    ],
-    "description": "Новая, 100% Оригинальная продукция с навесными бирками. \nСостав : 90% Хлопок ; 10% Вискоза"
-  },
-  {
     "name": "Толстовка C.P. Company Diagonal Hoodie",
     "brand": "Толстовка",
     "price": 20990,
@@ -3550,8 +3485,7 @@
     "price": 6790,
     "sizes": [
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/05c8707e-aae8-4ab0-b610-d31e85e64b41.jpg",
