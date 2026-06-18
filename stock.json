@@ -449,8 +449,7 @@
     "brand": "Fred Perry",
     "price": 13490,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/ed89808c-f6ec-4834-afd8-67834592be2a.jpg",
@@ -1053,22 +1052,6 @@
       "img/b00f9114-8e44-42ce-8d24-189606aa3846.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Толстовка Lacoste Cotton Khaki",
-    "brand": "Lacoste",
-    "price": 9990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Джемпер",
-    "img": "img/b5f02d10-80f4-4be4-88c4-174ffd02108a.jpg",
-    "images": [
-      "img/b5f02d10-80f4-4be4-88c4-174ffd02108a.jpg",
-      "img/6f01dee0-49ca-4ce4-b50f-2a8a8bb9237f.jpg",
-      "img/5af50440-1fe4-4666-9033-6d4809654af6.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% organic cotton\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Weekend Offender La Guarda Porpoise",
@@ -3362,7 +3345,6 @@
     "brand": "ТОЛСТОВКА",
     "price": 5990,
     "sizes": [
-      "M",
       "XL"
     ],
     "category": "Джемпер",
