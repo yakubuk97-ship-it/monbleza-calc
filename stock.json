@@ -37,8 +37,7 @@
     "brand": "Fred Perry",
     "price": 6490,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/60bfa603-19cc-4c95-8c79-aad594ce122c.jpg",
@@ -722,21 +721,6 @@
       "img/63477256-90d4-4360-a4c8-e85a27c6a364.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender Trio Black",
-    "brand": "Weekend Offender",
-    "price": 3490,
-    "sizes": [
-      "S"
-    ],
-    "category": "Лонгслив",
-    "img": "img/dc5633fb-bb61-43f6-9b99-ef74067d5d0c.jpg",
-    "images": [
-      "img/dc5633fb-bb61-43f6-9b99-ef74067d5d0c.jpg",
-      "img/24757ded-ddc1-451c-8849-3014a1e7009c.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Sergio Tacchini Master Black Glacier",
@@ -2708,22 +2692,6 @@
       "img/b8e9d41e-ca6c-48f9-9cd7-dd1d96808e0f.jpg"
     ],
     "description": "Оригинал из бутика в Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Napapijri S-Vanni Black Beauty",
-    "brand": "Napapijri",
-    "price": 3490,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/87c6d2de-43e8-41f6-8d40-3e57c0ca8f39.jpg",
-    "images": [
-      "img/87c6d2de-43e8-41f6-8d40-3e57c0ca8f39.jpg",
-      "img/5c0df640-6208-44cc-aa13-bac1568bab8e.jpg",
-      "img/86452e8a-4778-4248-8c09-5c83feeedb46.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 95% премиальный хлопок, 5% эластан. \nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Свитшот MA.Strum Edge Crew Iceberg - Portugal",
