@@ -1562,6 +1562,7 @@
     "brand": "Weekend Offender",
     "price": 6490,
     "sizes": [
+      "L",
       "M"
     ],
     "category": "Лонгслив",
@@ -2681,8 +2682,7 @@
     "brand": "Футболка",
     "price": 3890,
     "sizes": [
-      "L",
-      "S"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/dd24f0c0-c4c1-43d0-92bd-7881fb049f92.jpg",
@@ -2900,8 +2900,7 @@
     "brand": "Ben Sherman",
     "price": 3890,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/0b6105f8-6574-4dc3-a958-530c4b38e80b.jpg",
