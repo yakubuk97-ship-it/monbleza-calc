@@ -1,50 +1,5 @@
 [
   {
-    "name": "Buty unisex New Balance U204L86W - szare",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/d8ddbe42b2b451c29a3b45e64d66129b.jpg",
-    "sellPrice": 599.99,
-    "basePrice": null,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-unisex-new-balance-u204l86w-szare",
-    "sizes": [
-      "36",
-      "37",
-      "37.5",
-      "38",
-      "38.5",
-      "39.5",
-      "40",
-      "40.5",
-      "41.5",
-      "42",
-      "42.5",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "46.5"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Koszulka męska New Balance MT51504SET - niebieska",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/adb752a891ea90ab914c27136873da47.jpg",
-    "sellPrice": 149.99,
-    "basePrice": null,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/koszulka-meska-new-balance-mt51504set-niebieska",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL",
-      "XXL"
-    ],
-    "source": "ss24"
-  },
-  {
     "name": "Bluza męska The North Face Glacier 1/4 Zip Fleece 0A8D0QQLI1 - biała",
     "brand": "The North Face",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/b92c9980317a1a3e57bdce8dc93050aa.jpg",
@@ -611,6 +566,24 @@
     "source": "ss24"
   },
   {
+    "name": "Buty męskie The North Face Thermoball Traction V 0A3UZNG781 - granatowe",
+    "brand": "The North Face",
+    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/5cc2a0a6da1f06eee38cde1686933272.jpg",
+    "sellPrice": 179.99,
+    "basePrice": 299.99,
+    "currency": "PLN",
+    "productUrl": "https://streetstyle24.pl/buty-meskie-the-north-face-thermoball-traction-v-0a3uzng781-granatowe",
+    "sizes": [
+      "40.5",
+      "42",
+      "43",
+      "44.5",
+      "45.5",
+      "47"
+    ],
+    "source": "ss24"
+  },
+  {
     "name": "Spodnie męskie The North Face Chakal 0A87Y7KX71 - czarne",
     "brand": "The North Face",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/ad76a99f5188f956f884977696ca3350.jpg",
@@ -657,7 +630,7 @@
     "name": "Buty dziecięce New Balance PV323PK - różowe",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/a773e15abc1d69154851862cfa18dd86.jpg",
-    "sellPrice": 159.99,
+    "sellPrice": 139.99,
     "basePrice": 229.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/buty-dzieciece-new-balance-pv323pk-rozowe",
@@ -943,8 +916,8 @@
     "name": "Buty unisex New Balance U20001PB - szare",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/1988c38c9728de5ba2ae01ff7f83e377.jpg",
-    "sellPrice": 849.99,
-    "basePrice": null,
+    "sellPrice": 509.99,
+    "basePrice": 849.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/buty-unisex-new-balance-u20001pb-szare",
     "sizes": [
@@ -1015,24 +988,11 @@
     "source": "ss24"
   },
   {
-    "name": "Buty unisex New Balance U509E36B - brązowe",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/805b1d02601ec42181c543cb8b1b7350.jpg",
-    "sellPrice": 599.99,
-    "basePrice": null,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-unisex-new-balance-u509e36b-brazowe",
-    "sizes": [
-      "41.5"
-    ],
-    "source": "ss24"
-  },
-  {
     "name": "Buty niemowlęce New Balance I90601UY - niebieskie",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/eb3fcf555e0fc997b160203124c6748e.jpg",
-    "sellPrice": 399.99,
-    "basePrice": null,
+    "sellPrice": 239.99,
+    "basePrice": 399.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/buty-niemowlece-new-balance-i90601uy-niebieskie",
     "sizes": [
@@ -1067,7 +1027,7 @@
     "name": "Bluza męska New Balance MT41508BUM - niebieska",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/f1a482f06128388027ef66096a6bf8e5.jpg",
-    "sellPrice": 199.99,
+    "sellPrice": 179.99,
     "basePrice": 299.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/bluza-meska-new-balance-mt41508bum-niebieska",
@@ -1100,7 +1060,7 @@
     "name": "Kurtka damska New Balance WJ61J326AFG - biała",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/e1d805220de3930fa54769300c4219bb.jpg",
-    "sellPrice": 369.99,
+    "sellPrice": 359.99,
     "basePrice": 599.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/kurtka-damska-new-balance-wj61j326afg-biala",
@@ -1167,8 +1127,8 @@
     "name": "Buty młodzieżowe New Balance G90603BN - szare",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/77b4f2c55e0e795deb592c422ed23c6b.jpg",
-    "sellPrice": 669.99,
-    "basePrice": null,
+    "sellPrice": 399.99,
+    "basePrice": 669.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/buty-mlodziezowe-new-balance-g90603bn-szare",
     "sizes": [
@@ -1771,8 +1731,8 @@
     "name": "Klapki damskie New Balance W66509TG - beżowe",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/fcf5a00ecd6389e1df66bf5ef4d1715c.jpg",
-    "sellPrice": 249.99,
-    "basePrice": null,
+    "sellPrice": 149.99,
+    "basePrice": 249.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/klapki-damskie-new-balance-w66509tg-bezowe",
     "sizes": [
@@ -2183,8 +2143,8 @@
     "name": "Klapki męskie New Balance M66508WJ - szare",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/c69acb59b14d6cc1db9d91067e4ef7f9.jpg",
-    "sellPrice": 249.99,
-    "basePrice": null,
+    "sellPrice": 149.99,
+    "basePrice": 249.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/klapki-meskie-new-balance-m66508wj-szare",
     "sizes": [
@@ -2245,22 +2205,6 @@
       "44",
       "44.5",
       "45"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Bluza damska New Balance WJ6109B2ABC - żółta",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/1a738deb39b7495bc38801479240479e.jpg",
-    "sellPrice": 199.99,
-    "basePrice": 299.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/bluza-damska-new-balance-wj6109b2abc-zolta",
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L"
     ],
     "source": "ss24"
   },
@@ -2392,8 +2336,8 @@
     "name": "Klapki damskie New Balance W66507VX - różowe",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/1c43fe64f3b1f735bb3910b472c9c15a.jpg",
-    "sellPrice": 249.99,
-    "basePrice": null,
+    "sellPrice": 169.99,
+    "basePrice": 249.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/klapki-damskie-new-balance-w66507vx-rozowe",
     "sizes": [
@@ -2806,22 +2750,6 @@
     "source": "ss24"
   },
   {
-    "name": "Koszulka damska The North Face Simple Dome 0A87NQ6IH1 - brązowa",
-    "brand": "The North Face",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/d91a1ac6299b221fe186f3e2250e9feb.jpg",
-    "sellPrice": 79.99,
-    "basePrice": 169.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/koszulka-damska-the-north-face-simple-dome-0a87nq6ih1-brazowa",
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L"
-    ],
-    "source": "ss24"
-  },
-  {
     "name": "Bluza męska The North Face 100 Glacier Heavyweight Full-Zip Fleece 0A89JGDKI1 - zielono-czarna",
     "brand": "The North Face",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/12dcc37924abf0c80a97b3fb07f57b6f.jpg",
@@ -2885,22 +2813,6 @@
       "L",
       "XL",
       "XXL"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Bluza damska New Balance WJ6109B2ABR - szara",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/e78f471d58c15fc4aec70fbd8389650b.jpg",
-    "sellPrice": 299.99,
-    "basePrice": null,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/bluza-damska-new-balance-wj6109b2abr-szara",
-    "sizes": [
-      "XS",
-      "S",
-      "M",
-      "L"
     ],
     "source": "ss24"
   },
@@ -3099,8 +3011,8 @@
     "name": "Buty damskie New Balance W23746Z - niebieskie",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/b229b3117eca03ea1a3d7167592444cf.jpg",
-    "sellPrice": 299.99,
-    "basePrice": null,
+    "sellPrice": 179.99,
+    "basePrice": 299.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/buty-damskie-new-balance-w23746z-niebieskie",
     "sizes": [
@@ -3121,8 +3033,8 @@
     "name": "Buty damskie New Balance W2371AZ - multikolor",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/21e7c395c2c1cc74d38bfc1f12747727.jpg",
-    "sellPrice": 299.99,
-    "basePrice": null,
+    "sellPrice": 179.99,
+    "basePrice": 299.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/buty-damskie-new-balance-w2371az-multikolor",
     "sizes": [
@@ -3188,22 +3100,6 @@
       "45",
       "45.5",
       "46.5"
-    ],
-    "source": "ss24"
-  },
-  {
-    "name": "Spodenki męskie New Balance MS51901DYK - fioletowe",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/d96a872f7cfc05bcb190202671f90afb.jpg",
-    "sellPrice": 89.99,
-    "basePrice": 129.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/spodenki-meskie-new-balance-ms51901dyk-fioletowe",
-    "sizes": [
-      "S",
-      "M",
-      "L",
-      "XL"
     ],
     "source": "ss24"
   },
@@ -3476,6 +3372,105 @@
       "38 2/3",
       "39 1/3",
       "40"
+    ],
+    "source": "ss24"
+  },
+  {
+    "name": "Buty młodzieżowe New Balance GC9060ER - beżowe",
+    "brand": "New Balance",
+    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/e5cd20bffc2a5b6d2b1405483965c25e.jpg",
+    "sellPrice": 749.99,
+    "basePrice": null,
+    "currency": "PLN",
+    "productUrl": "https://streetstyle24.pl/buty-mlodziezowe-new-balance-gc9060er-bezowe",
+    "sizes": [
+      "35.5",
+      "36",
+      "37",
+      "37.5",
+      "38",
+      "38.5",
+      "39",
+      "40"
+    ],
+    "source": "ss24"
+  },
+  {
+    "name": "Buty unisex New Balance U530KLB - białe",
+    "brand": "New Balance",
+    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/8bc9460f98cada5aaf5ff4341f647517.jpg",
+    "sellPrice": 529.99,
+    "basePrice": null,
+    "currency": "PLN",
+    "productUrl": "https://streetstyle24.pl/buty-unisex-new-balance-u530klb-biale",
+    "sizes": [
+      "36",
+      "37",
+      "37.5",
+      "38",
+      "38.5",
+      "39.5",
+      "40",
+      "40.5",
+      "41.5",
+      "42",
+      "42.5",
+      "43",
+      "44",
+      "44.5",
+      "45",
+      "45.5",
+      "46.5"
+    ],
+    "source": "ss24"
+  },
+  {
+    "name": "Buty unisex New Balance U7407KF - beżowe",
+    "brand": "New Balance",
+    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/935c5e4bd846b20fddab55a5ab85a6e6.jpg",
+    "sellPrice": 529.99,
+    "basePrice": null,
+    "currency": "PLN",
+    "productUrl": "https://streetstyle24.pl/buty-unisex-new-balance-u7407kf-bezowe",
+    "sizes": [
+      "36",
+      "37",
+      "37.5",
+      "38",
+      "38.5",
+      "39.5",
+      "40",
+      "40.5",
+      "41.5"
+    ],
+    "source": "ss24"
+  },
+  {
+    "name": "Buty unisex New Balance U19069BR - szare",
+    "brand": "New Balance",
+    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/9659777aafe014f99f6f2024d7e36bb2.jpg",
+    "sellPrice": 749.99,
+    "basePrice": null,
+    "currency": "PLN",
+    "productUrl": "https://streetstyle24.pl/buty-unisex-new-balance-u19069br-szare",
+    "sizes": [
+      "36",
+      "37",
+      "37.5",
+      "38",
+      "38.5",
+      "39.5",
+      "40",
+      "40.5",
+      "41.5",
+      "42",
+      "42.5",
+      "43",
+      "44",
+      "44.5",
+      "45",
+      "45.5",
+      "46.5"
     ],
     "source": "ss24"
   },
@@ -3962,8 +3957,8 @@
     "name": "Buty męskie New Balance CM997HCA - szare",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/80c3df66e25fba58005da113b3779dd3.jpg",
-    "sellPrice": 499.99,
-    "basePrice": null,
+    "sellPrice": 299.99,
+    "basePrice": 499.99,
     "currency": "PLN",
     "productUrl": "https://streetstyle24.pl/buty-meskie-new-balance-cm997hca-szare",
     "sizes": [
@@ -5732,24 +5727,6 @@
     "source": "ss24"
   },
   {
-    "name": "Spodnie adidas Essentials French Terry 3-Stripes GM8733 - czarne",
-    "brand": "Adidas",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/ec39f72190761fcb73e89c0b4b6b5f70.jpg",
-    "sellPrice": 159.99,
-    "basePrice": 229.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/spodnie-adidas-essentials-french-terry-3-stripes-gm8733-czarne",
-    "sizes": [
-      "XXS",
-      "XS",
-      "S",
-      "M",
-      "L",
-      "XL"
-    ],
-    "source": "ss24"
-  },
-  {
     "name": "The North Face Skeena > 0A46BGZU31",
     "brand": "The North Face",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/666c17528e6a96102ecc96550a73cbdf.jpg",
@@ -6860,31 +6837,6 @@
     "source": "ss24"
   },
   {
-    "name": "Buty męskie New Balance ML574OMC - granatowe",
-    "brand": "New Balance",
-    "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/9d7353d3344f39195378f000eedbc9f2.jpg",
-    "sellPrice": 429.99,
-    "basePrice": 629.99,
-    "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-meskie-new-balance-ml574omc-granatowe",
-    "sizes": [
-      "40",
-      "40.5",
-      "41.5",
-      "42",
-      "42.5",
-      "43",
-      "44",
-      "44.5",
-      "45",
-      "45.5",
-      "46.5",
-      "47.5",
-      "49"
-    ],
-    "source": "ss24"
-  },
-  {
     "name": "Czapka adidas Heat.Rdy Four-Panel HA5547 - czarna",
     "brand": "Adidas",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/9ab446bd748c06049966c632f7896d92.jpg",
@@ -6957,13 +6909,13 @@
     "source": "ss24"
   },
   {
-    "name": "Buty męskie New Balance ML574EVG - szare",
+    "name": "Buty unisex New Balance ML574EVG - szare",
     "brand": "New Balance",
     "imageUrl": "https://streetstyle24.pl/picture/fit-in/600x600/smart/a314744455e3013c4f2879273c7799c0.jpg",
     "sellPrice": 499.99,
     "basePrice": null,
     "currency": "PLN",
-    "productUrl": "https://streetstyle24.pl/buty-meskie-new-balance-ml574evg-szare",
+    "productUrl": "https://streetstyle24.pl/buty-unisex-new-balance-ml574evg-szare",
     "sizes": [
       "36",
       "37",
