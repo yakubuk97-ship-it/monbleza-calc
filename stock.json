@@ -2041,23 +2041,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Weekend Offender McMoney Navy Bark",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/8296c0bb-1c52-498e-91a1-d96a9775e527.jpg",
-    "images": [
-      "img/8296c0bb-1c52-498e-91a1-d96a9775e527.jpg",
-      "img/de4b6be0-32ca-4b11-a262-b39ea9847b0b.jpg",
-      "img/f8218192-81df-4f18-aee7-1c7cef67603d.jpg",
-      "img/6335dae5-7eae-457b-9077-f67f7bc841e7.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Свитшот C.P. Company Malfile Lens Crewneck",
     "brand": "Свитшот",
     "price": 17990,
@@ -2750,7 +2733,6 @@
     "price": 5490,
     "sizes": [
       "2XL",
-      "L",
       "M",
       "XL"
     ],
@@ -2977,6 +2959,21 @@
       "img/cb567c72-4275-4b8b-b1e0-58d202370e99.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Сумка Fred Perry Crossbody Black",
+    "brand": "Fred Perry",
+    "price": 8490,
+    "sizes": [],
+    "category": "АКСЕССУАРЫ",
+    "img": "img/c61a1a6d-6552-432b-a9ea-b2ecd4fb3856.jpg",
+    "images": [
+      "img/c61a1a6d-6552-432b-a9ea-b2ecd4fb3856.jpg",
+      "img/53b6b704-e671-4f8c-ab55-a4efa6fdb13f.jpg",
+      "img/5d9c4061-f307-4d1b-973f-a97ae8e1e072.jpg",
+      "img/e5f4ba48-aef6-4c58-ae51-dda9e9740351.jpg"
+    ],
+    "description": "Оригинал из бутика в Англии!\nРазмер: 30 x 16 x 7 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Джемпер Weekend Offender Vandium Half Zip Stormy",
