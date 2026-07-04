@@ -610,6 +610,22 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Толстовка Ma.Strum Core Overhead Hoody",
+    "brand": "MA.Strum",
+    "price": 17990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/af64797c-44b9-4352-8990-5711078cc444.jpg",
+    "images": [
+      "img/af64797c-44b9-4352-8990-5711078cc444.jpg",
+      "img/59997ff2-de92-4a2a-a1dc-6f387a9d65f8.jpg",
+      "img/8da18a33-c86a-4c91-b347-ebb85fd1e5a3.jpg"
+    ],
+    "description": "Оригинал из бутика в Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок, 420 gms - высокой плотности и качества!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Fred Perry Tonal Ringer Black",
     "brand": "Fred Perry",
     "price": 6490,
@@ -1057,6 +1073,22 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Толстовка Ma.Strum Edge Quarter Zip Black",
+    "brand": "MA.Strum",
+    "price": 17990,
+    "sizes": [
+      "L"
+    ],
+    "category": "Джемпер",
+    "img": "img/df95be8a-92fd-4d79-8c9d-12bc14a2b9fb.jpg",
+    "images": [
+      "img/df95be8a-92fd-4d79-8c9d-12bc14a2b9fb.jpg",
+      "img/94f43486-2651-4083-9d7f-f4b9df95e731.jpg",
+      "img/06b4f87d-8d3f-46ff-b2a0-0c3b23dbaf79.jpg"
+    ],
+    "description": "Оригинал из бутика в Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок, 420 gms - высокой плотности и качества!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Куртка Weekend Offender La Guarda Porpoise",
     "brand": "Weekend Offender",
     "price": 11990,
@@ -1252,6 +1284,25 @@
       "img/9b6e516b-165b-4646-bf9c-f815eeace9c4.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 78% хлопок, 28 поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Свитшот MA.Strum Edge Crew Black",
+    "brand": "MA.Strum",
+    "price": 17990,
+    "sizes": [
+      "2XL",
+      "M",
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/fff012e9-e94c-4204-a8fb-ae144b0f44c6.jpg",
+    "images": [
+      "img/fff012e9-e94c-4204-a8fb-ae144b0f44c6.jpg",
+      "img/7c344093-124c-4c0e-9bcb-baa43938f59b.jpg",
+      "img/0c6e98bb-4dd2-45bc-b350-b4b9df651f8c.jpg",
+      "img/d0b39129-6461-41c3-8560-c0624d39343f.jpg"
+    ],
+    "description": "Оригинал из бутика в Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок, 420 gms - высокой плотности и качества!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Свитер Weekend Offender Platinum Knit Midium Grey",
@@ -2879,6 +2930,23 @@
       "img/ea3d8a7c-ef87-4943-91ce-219bd9cc4cd4.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Куртка Weekend Offender Cotoca Smokey",
+    "brand": "Weekend Offender",
+    "price": 16990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
+    "images": [
+      "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
+      "img/95f86d6b-8070-4c62-ba17-7c7f43500df4.jpg",
+      "img/b5ea72b8-8557-456e-bd82-c9990f36c586.jpg",
+      "img/d6d73169-6eed-4133-aaab-929d48b1ad69.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nВодоотталкивающая, перелив цвета\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Олимпийка Sergio Tacchini Damarindo Track Top Navy",
