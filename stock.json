@@ -1,5 +1,22 @@
 [
   {
+    "name": "Штаны Weekend Offender Kwale Cargo Black",
+    "brand": "Weekend Offender",
+    "price": 7190,
+    "sizes": [
+      "L"
+    ],
+    "category": "Шорты",
+    "img": "img/39f87b21-63e4-4986-8709-f611feb98f4e.jpg",
+    "images": [
+      "img/39f87b21-63e4-4986-8709-f611feb98f4e.jpg",
+      "img/7f14028b-da16-4ec8-9392-37413349798b.jpg",
+      "img/3c2cf714-0442-4ccb-98c5-84a6d2dc8939.jpg",
+      "img/d637a006-8a77-49d1-b7ac-7ebf8e2ebc3f.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% хлопок \nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Джемпер Weekend Offender Silver Knit Mid Grey",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -207,6 +224,40 @@
       "img/b1625ac9-6d7f-42b2-bc10-ba79a57526e7.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: нейлон метал, с водоотталкивающими свойствами,  перелив цвета.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Толстовка Marshall Artist Marchio 1/4 Zip Teal",
+    "brand": "Marshall Artist",
+    "price": 5990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/b2b2c3a2-baf1-41f9-870a-be8e7dd0ee60.jpg",
+    "images": [
+      "img/b2b2c3a2-baf1-41f9-870a-be8e7dd0ee60.jpg",
+      "img/0de88415-5c8d-416b-a9a7-8c9d0cd1b35c.jpg",
+      "img/48a52e47-7ebc-4c87-936a-8f7bbdd7b796.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 80% хлопок, 20% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Куртка Weekend Offender Kazan Navy",
+    "brand": "Weekend Offender",
+    "price": 9390,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/fa8b0e58-1e7b-4672-bc8b-7038dde777fd.jpg",
+    "images": [
+      "img/fa8b0e58-1e7b-4672-bc8b-7038dde777fd.jpg",
+      "img/60cdfbe9-4799-486a-a54f-e8625015866a.jpg",
+      "img/72ada710-bfe4-4151-9498-0a2ff3cf34a2.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nОднослойный Soft Shell  \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Жилет Berghaus Vaskye Vest",
@@ -825,6 +876,39 @@
       "img/63477256-90d4-4360-a4c8-e85a27c6a364.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Жилет Weekend Offender Gacha Deep Blue",
+    "brand": "Weekend Offender",
+    "price": 9990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/8e61e8c8-60fb-4258-b29b-094b2d6908f9.jpg",
+    "images": [
+      "img/8e61e8c8-60fb-4258-b29b-094b2d6908f9.jpg",
+      "img/3eceefa0-888b-4773-84e3-5cf8f9419e42.jpg",
+      "img/f9f5983a-e1a9-49fb-8dfa-380f98313331.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Толстовка Lacoste Quarter Zip Brown",
+    "brand": "Lacoste",
+    "price": 12990,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "category": "Жилет",
+    "img": "img/aee2f44f-952c-4afd-85bf-ccbf07862450.jpg",
+    "images": [
+      "img/aee2f44f-952c-4afd-85bf-ccbf07862450.jpg",
+      "img/2b858783-7d4c-4e97-bded-4077b7f11eaf.jpg",
+      "img/c1c98fc8-63c0-4df1-b74f-1f1404ca20aa.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Sergio Tacchini Master Black Glacier",
@@ -1497,6 +1581,23 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Толстовка Marshall Artist Foundation Blue",
+    "brand": "Marshall Artist",
+    "price": 7290,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/639ea0b4-80bc-4baf-8ddc-174724ca26a0.jpg",
+    "images": [
+      "img/639ea0b4-80bc-4baf-8ddc-174724ca26a0.jpg",
+      "img/16570612-1fc4-474c-94d7-20177fb771fb.jpg",
+      "img/b748ce8b-dabd-4967-bc03-fc0bf51f770e.jpg",
+      "img/a5e1fbce-7e8a-47aa-b5d4-5da9aba82f6b.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСоставь: хлопок и поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "КЕПКА POLO RALPH LAUREN COTTON NAUTICAL INK",
     "brand": "Ralph Lauren",
     "price": 7990,
@@ -1565,6 +1666,24 @@
       "img/60361aa7-c791-4fd4-8f4b-3c76d3fe09bd.jpg"
     ],
     "description": "Оригинальная продукция\nСостав: премиальный нейлон метал, перелив цвета\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Куртка Marshall Artist Ashdale Bubble Black",
+    "brand": "Marshall Artist",
+    "price": 9990,
+    "sizes": [
+      "L/XL",
+      "M/L"
+    ],
+    "category": "Жилет",
+    "img": "img/a9846afd-9161-4ba0-b508-faeda88da558.jpg",
+    "images": [
+      "img/a9846afd-9161-4ba0-b508-faeda88da558.jpg",
+      "img/156ab8c2-e21e-40a4-ba48-48c05f9bd3f3.jpg",
+      "img/f554b1cc-5355-458d-b654-50f3b67f7a6d.jpg",
+      "img/df9a9271-ae22-4056-9828-07e8746a9f39.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Поло Barbour Original Bleached Blue",
@@ -1665,6 +1784,24 @@
       "img/595d0d56-ef09-4123-bbe2-8fef317779f7.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: Регулируется, на любую голову!\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Жилет Weekend Offender Gacha Black",
+    "brand": "Weekend Offender",
+    "price": 10390,
+    "sizes": [
+      "2XL",
+      "XL"
+    ],
+    "category": "Жилет",
+    "img": "img/6a6d8d5f-ad24-4ce1-ba68-7510bd714bed.jpg",
+    "images": [
+      "img/6a6d8d5f-ad24-4ce1-ba68-7510bd714bed.jpg",
+      "img/744a7505-46e3-4ab2-96f1-47d4b986c909.jpg",
+      "img/2ea816ac-cc3a-4587-984d-ae4ad399dd49.jpg",
+      "img/602d0a4e-b886-4a8a-b948-4d7a090111c8.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Weekend Offender Harpocrates Intercity Black",
@@ -2165,6 +2302,23 @@
     "description": "Оригинал из бутиков Европы!\n\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Свитшот Weekend Offender Skylar Crew Yale Blue",
+    "brand": "Weekend Offender",
+    "price": 5790,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/95207fbf-4754-4041-864d-8887bfb3b22c.jpg",
+    "images": [
+      "img/95207fbf-4754-4041-864d-8887bfb3b22c.jpg",
+      "img/6d56776f-eef4-4ec7-955d-e83fbeab84fc.jpg",
+      "img/14a18e17-caa1-4252-8cb3-71f5244984d6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 100% премиальный хлопок, на микро-начесе. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Свитшот C.P. Company Malfile Lens Crewneck",
     "brand": "Свитшот",
     "price": 17990,
@@ -2388,6 +2542,21 @@
       "img/c6bb2953-9cbb-4f71-b999-f5fd8e4221b1.jpg"
     ],
     "description": ""
+  },
+  {
+    "name": "Овершот Weekend Offender Khadija Blue Haze",
+    "brand": "Weekend Offender",
+    "price": 8390,
+    "sizes": [
+      "L"
+    ],
+    "category": "Жилет",
+    "img": "img/d30390d9-e446-4671-af27-4f7b496d11b8.jpg",
+    "images": [
+      "img/d30390d9-e446-4671-af27-4f7b496d11b8.jpg",
+      "img/2e90bd13-ce9c-4d88-ae4f-a5b23bd09bf6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: нейлон, перелив цвета \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка MA.Strum Cargo Pocket Jet Black",
@@ -3679,6 +3848,38 @@
       "img/23e976ee-efee-4612-a335-aa40d83b54af.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Овершот Weekend Offender Mystery Deep Wine",
+    "brand": "Weekend Offender",
+    "price": 8390,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/dfc28e9c-377c-4cfb-9edf-18fddb816bf9.jpg",
+    "images": [
+      "img/dfc28e9c-377c-4cfb-9edf-18fddb816bf9.jpg",
+      "img/94545307-a0ee-4908-acc1-6ced19351d58.jpg",
+      "img/c274516d-8d93-4d8e-bdca-f62c92bd727c.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: нейлон, перелив цвета \nБоковые карманы, + нагрудный.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Джемпер Weekend Offender Zip Vandium Black",
+    "brand": "Weekend Offender",
+    "price": 5990,
+    "sizes": [
+      "XL (fact. L)"
+    ],
+    "category": "Джемпер",
+    "img": "img/7a19d451-4f7d-4b42-a876-0c6e32d75579.jpg",
+    "images": [
+      "img/7a19d451-4f7d-4b42-a876-0c6e32d75579.jpg",
+      "img/9af95e39-c4b4-4ea1-a8ca-8f92bd9f8c8e.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Leo Gregory Black",
