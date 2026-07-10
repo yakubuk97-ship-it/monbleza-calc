@@ -1278,23 +1278,6 @@
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "Шорты MA.Strum Nylon Oil Slick + Чехол",
-    "brand": "MA.Strum",
-    "price": 8490,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/75066cef-7d2a-4789-b2b9-cec08b398352.jpg",
-    "images": [
-      "img/75066cef-7d2a-4789-b2b9-cec08b398352.jpg",
-      "img/88e2015c-f54e-40f6-a1f3-a09d04ec1c43.jpg",
-      "img/d3c035c7-2cd5-4b54-8048-2e76b804d50c.jpg",
-      "img/9b946f61-c005-4179-8a00-15299678f525.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: премиальный нейлон, в комплекте идет брендированный чехол с вышитым логотипом. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Куртка Alpha Industries Bomber Black",
     "brand": "Куртка",
     "price": 13490,
@@ -2187,7 +2170,6 @@
     "brand": "Fred Perry",
     "price": 8790,
     "sizes": [
-      "L",
       "XL"
     ],
     "category": "Лонгслив",
@@ -3159,21 +3141,6 @@
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок\nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "КЕПКА POLO RALPH LAUREN BALL CLASSIC WINE",
-    "brand": "Ralph Lauren",
-    "price": 6990,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/f26e79dc-d828-4d5f-a61d-5dd857293cba.jpg",
-    "images": [
-      "img/f26e79dc-d828-4d5f-a61d-5dd857293cba.jpg",
-      "img/f59e607c-8c60-46e1-94b7-d95f7985c4c5.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\n- Made in Cambodia  \n- Состав: премиальный хлопок\nРазмер: Регулируется, на любую голову\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш"
-  },
-  {
     "name": "Футболка Fred Perry Laurel Graphic Navy",
     "brand": "Fred Perry",
     "price": 6490,
@@ -3464,40 +3431,6 @@
       "img/9b6e516b-165b-4646-bf9c-f815eeace9c4.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nУтеплена, вельветовый ворот с подъемом и фиксацией на пуговицу.\nСостав: 78% хлопок, 28 поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Шорты Marshall Artist Gabardine Cargo Sage",
-    "brand": "Marshall Artist",
-    "price": 7490,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/0e3a4719-94e9-4e0b-90c8-10c651702183.jpg",
-    "images": [
-      "img/0e3a4719-94e9-4e0b-90c8-10c651702183.jpg",
-      "img/cdb67a01-ec43-48fd-a23e-7695d15a7dea.jpg",
-      "img/a59dfcd3-c20d-4b80-94a5-bad086b1df33.jpg",
-      "img/794010e7-db71-4591-b3d8-6f89b9d497e1.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nДругие размеры доступны по пред заказу из Англии! \nСостав: премиальный хлопок, 2% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Сумка Napapijri Cala Black",
-    "brand": "Napapijri",
-    "price": 3890,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/63495e9a-dfb7-4151-98a2-1d0933ca9332.jpg",
-    "images": [
-      "img/63495e9a-dfb7-4151-98a2-1d0933ca9332.jpg",
-      "img/fb8ff27c-2298-4989-be23-ba5f7a3ca189.jpg",
-      "img/28f897a5-81f6-431a-b880-c772f4af6315.jpg",
-      "img/594d25ea-d965-4d27-96ef-675dc9dd5f9f.jpg"
-    ],
-    "description": ""
   },
   {
     "name": "Поло Fred Perry Twin Tapped Warm Stone",
