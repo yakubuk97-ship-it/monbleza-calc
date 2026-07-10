@@ -480,6 +480,23 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Толстовка Marshall Artist Marchio 1/4 Zip Black",
+    "brand": "Marshall Artist",
+    "price": 5990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/8d3b6fdb-eaae-477a-aa79-fdf1cee658e4.jpg",
+    "images": [
+      "img/8d3b6fdb-eaae-477a-aa79-fdf1cee658e4.jpg",
+      "img/e7687c3a-0f5e-4de9-acda-51cd6fc1e54c.jpg",
+      "img/f41cc057-e31b-43d0-8b3c-276c52e47956.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 80% хлопок, 20% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Поло Weekend Offender Nicks White",
     "brand": "Weekend Offender",
     "price": 4890,
@@ -1670,7 +1687,7 @@
   {
     "name": "Куртка Marshall Artist Ashdale Bubble Black",
     "brand": "Marshall Artist",
-    "price": 9990,
+    "price": 10490,
     "sizes": [
       "L/XL",
       "M/L"
@@ -1679,11 +1696,11 @@
     "img": "img/a9846afd-9161-4ba0-b508-faeda88da558.jpg",
     "images": [
       "img/a9846afd-9161-4ba0-b508-faeda88da558.jpg",
-      "img/156ab8c2-e21e-40a4-ba48-48c05f9bd3f3.jpg",
       "img/f554b1cc-5355-458d-b654-50f3b67f7a6d.jpg",
-      "img/df9a9271-ae22-4056-9828-07e8746a9f39.jpg"
+      "img/df9a9271-ae22-4056-9828-07e8746a9f39.jpg",
+      "img/156ab8c2-e21e-40a4-ba48-48c05f9bd3f3.jpg"
     ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСезон: Осень\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Поло Barbour Original Bleached Blue",
@@ -2363,6 +2380,23 @@
       "img/c6764a7d-2fc4-4a11-88e8-eb6c809b9b7f.jpg"
     ],
     "description": ""
+  },
+  {
+    "name": "Толстовка Marshall Artist Marchio 1/4 Zip Navy",
+    "brand": "Marshall Artist",
+    "price": 5990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/ab54f161-ab54-4ffd-a517-73fb32d17d84.jpg",
+    "images": [
+      "img/ab54f161-ab54-4ffd-a517-73fb32d17d84.jpg",
+      "img/e169f746-de89-4514-9dcf-aa021b39139d.jpg",
+      "img/d4760cfd-4e76-4652-bcb8-e7fccd1f9146.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 80% хлопок, 20% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Костюм Ellesse Giraldo Navy",
@@ -3391,6 +3425,23 @@
       "img/deb01aed-11d6-4cf7-bc3f-d28117f07249.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Куртка Marshall Artist Ashdale Bubble Khaki",
+    "brand": "Marshall Artist",
+    "price": 10490,
+    "sizes": [
+      "M/L"
+    ],
+    "category": "Жилет",
+    "img": "img/88149ae0-1204-48ab-9711-295e3ebd86c0.jpg",
+    "images": [
+      "img/88149ae0-1204-48ab-9711-295e3ebd86c0.jpg",
+      "img/92391429-9e04-4cd3-bbbb-089995427f53.jpg",
+      "img/ef08f652-df9a-4d7c-be43-8ae98b6ef5a2.jpg",
+      "img/e38e2f8d-b9b1-4142-8146-caf09b19acf0.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСезон - Осень\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Ellesse Tortona White",
