@@ -698,22 +698,6 @@
     "description": "Оригинал из бутика в Англии!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Кроссовки New Balance 574 ML574EVB",
-    "brand": "New Balance",
-    "price": 15900,
-    "sizes": [
-      "43 EUR / 9.5 US / 27.5 cm"
-    ],
-    "category": "Обувь",
-    "img": "img/778b95c4-c792-4b38-badb-4ade27a421ee.jpg",
-    "images": [
-      "img/778b95c4-c792-4b38-badb-4ade27a421ee.jpg",
-      "img/3142cbc6-8906-49b8-95f4-d6de517feb20.jpg",
-      "img/9a08817d-17c4-49bf-973a-ca745b4b674f.jpg"
-    ],
-    "description": "43 EU 27,5 СМ 9,5 US"
-  },
-  {
     "name": "Футболка Weekend Offender Leo Gregory Navy",
     "brand": "Weekend Offender",
     "price": 6490,
