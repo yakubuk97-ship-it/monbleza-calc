@@ -748,22 +748,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender Scandium Navy",
-    "brand": "Weekend Offender",
-    "price": 4390,
-    "sizes": [
-      "2XL"
-    ],
-    "category": "Шорты",
-    "img": "img/e1a43e31-29fb-4056-96fd-82bd417aee68.jpg",
-    "images": [
-      "img/e1a43e31-29fb-4056-96fd-82bd417aee68.jpg",
-      "img/d5fb2f03-bfda-4edc-8f67-2095d5c46aae.jpg",
-      "img/56967184-fca5-48cf-9b7f-8d1584ad5d1e.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
-  },
-  {
     "name": "Куртка Weekend Offender La Guardia Navy",
     "brand": "Weekend Offender",
     "price": 11990,
@@ -1311,22 +1295,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender Stacks Black",
-    "brand": "Weekend Offender",
-    "price": 4990,
-    "sizes": [
-      "2XL"
-    ],
-    "category": "Шорты",
-    "img": "img/3c9c16ac-0c4f-4a74-8296-54703a29a354.jpg",
-    "images": [
-      "img/3c9c16ac-0c4f-4a74-8296-54703a29a354.jpg",
-      "img/0e4b89db-34d8-4494-9118-6a353dc209bc.jpg",
-      "img/e4cfab74-c1fb-4cd2-8a94-df8b908ab2c8.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% нейлон метал, перелив цвета\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Кепка Fred Perry Pique Black",
     "brand": "Fred Perry",
     "price": 7190,
@@ -1724,7 +1692,6 @@
     "brand": "Sergio Tacchini",
     "price": 6490,
     "sizes": [
-      "2XL (fact. XL)",
       "L (fact. M)",
       "XL (fact. L)"
     ],
@@ -1752,22 +1719,6 @@
       "img/4bf677ac-5ce9-4532-9e2f-502f0a18b50a.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Кепка Lacoste Central Croc Green",
-    "brand": "Lacoste",
-    "price": 6990,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/b8fbe84a-58fc-4391-b8c6-da853bc2df2d.jpg",
-    "images": [
-      "img/b8fbe84a-58fc-4391-b8c6-da853bc2df2d.jpg",
-      "img/3c5ebd97-6715-446f-8270-c91a85e5ccea.jpg",
-      "img/595d0d56-ef09-4123-bbe2-8fef317779f7.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: Регулируется, на любую голову!\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Жилет Weekend Offender Gacha Black",
@@ -3278,8 +3229,7 @@
     "price": 3290,
     "sizes": [
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Шорты",
     "img": "img/926c0a72-a7f6-4c36-a228-fcc738f4af60.jpg",
@@ -3393,23 +3343,6 @@
       "img/e38e2f8d-b9b1-4142-8146-caf09b19acf0.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСезон - Осень\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Ellesse Tortona White",
-    "brand": "Ellesse",
-    "price": 3290,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/281b902e-c7d0-4d52-9676-ceb338fdca9f.jpg",
-    "images": [
-      "img/281b902e-c7d0-4d52-9676-ceb338fdca9f.jpg",
-      "img/6aeb6039-6dc5-464f-a404-9c2493880404.jpg",
-      "img/9000f722-77c1-480a-a23b-741419bad5fe.jpg",
-      "img/bb44bcde-3c46-4c1e-80fc-cd75f1e12689.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Fred Perry Caban Jacket Green",
