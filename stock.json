@@ -979,22 +979,6 @@
     "description": "Оригинал из бутика в Англии!\nРазмер: \nВерх - 100% нейлон; \nПодкладка - 100% полиэстер;\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Толстовка Weekend Offender Justify Check Navy",
-    "brand": "Weekend Offender",
-    "price": 6490,
-    "sizes": [
-      "S"
-    ],
-    "category": "Джемпер",
-    "img": "img/a6bc320c-9dc8-4c0e-a792-b8f29b65343c.jpg",
-    "images": [
-      "img/a6bc320c-9dc8-4c0e-a792-b8f29b65343c.jpg",
-      "img/47c36a4a-5ea4-47a7-bbc2-cbf0757d2969.jpg",
-      "img/0ff80c27-eb45-42ce-9fa1-2d87a41ec9b0.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Джемпер Weekend Offender Silver Crew Dark Green",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -1555,7 +1539,6 @@
     "brand": "Marshall Artist",
     "price": 10490,
     "sizes": [
-      "L/XL",
       "M/L"
     ],
     "category": "Жилет",
@@ -1591,7 +1574,6 @@
     "brand": "Weekend Offender",
     "price": 8490,
     "sizes": [
-      "L/XL",
       "XL/2XL"
     ],
     "category": "Джемпер",
@@ -2117,23 +2099,6 @@
       "img/638d00be-e720-4e87-b5cb-2ff91fef35ac.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСамая популярная модель в свежей цветовой гамме. Одна из самых запоминающихся моделей Sergio 80-х годов, выпущенная исключительно в рамках коллекции «80s Casual Classics». Состав : 60% полиэстер, 40% премиальный хлопок"
-  },
-  {
-    "name": "Сумка C.P. Company Nylon Bag SS26 Grey",
-    "brand": "Сумка",
-    "price": 17690,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "",
-    "img": "img/ec073967-8134-418a-9cdf-4970a59508f4.jpg",
-    "images": [
-      "img/ec073967-8134-418a-9cdf-4970a59508f4.jpg",
-      "img/5bdd506a-17d7-4141-b3ae-8c1521d2626b.jpg",
-      "img/55b02e98-0fbb-4743-9e1e-61a2b7d353fa.jpg",
-      "img/9fe426a2-976f-4c50-b741-70c2ce44d77f.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nПроизведена из атласного многоволоконного нейлона Nylon B. Прочный регулируемый ремень, основное отделение и внешние карманы на молнии, внутренний карман с логотипом и фирменная линза C.P. Company. Размеры: 30 х 21 х 6 см.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Поло Barbour Seagrass",
@@ -3560,23 +3525,6 @@
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "Шорты Marshall Artist Micro Ripstop Slate",
-    "brand": "Marshall Artist",
-    "price": 6990,
-    "sizes": [
-      "2XL"
-    ],
-    "category": "Шорты",
-    "img": "img/68877172-c685-4df0-8385-b0fba0d9fd4a.jpg",
-    "images": [
-      "img/68877172-c685-4df0-8385-b0fba0d9fd4a.jpg",
-      "img/5618928f-4f5e-4310-9584-68762fd46211.jpg",
-      "img/b7af37e5-42fb-49d1-8b67-2caafce90a35.jpg",
-      "img/794010e7-db71-4591-b3d8-6f89b9d497e1.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: twill ripstop; 98% хлопок, 2% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Lacoste Plain Pima Cotton White",
     "brand": "Lacoste",
     "price": 6790,
@@ -3614,7 +3562,6 @@
     "brand": "Weekend Offender",
     "price": 6790,
     "sizes": [
-      "2XL",
       "L"
     ],
     "category": "Рубашка",
