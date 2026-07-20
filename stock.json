@@ -414,23 +414,6 @@
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "Сумка Ben Sherman Steiger Barrel Bag Black",
-    "brand": "Ben Sherman",
-    "price": 4990,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/56528570-765b-4987-b909-8503878f2f5b.jpg",
-    "images": [
-      "img/56528570-765b-4987-b909-8503878f2f5b.jpg",
-      "img/8934a6b3-d819-402b-8c87-9500b86ade0f.jpg",
-      "img/ba361526-5839-4739-8bc2-48564bee3701.jpg",
-      "img/55f819da-d60d-4b29-b952-cc47c4d430f9.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Толстовка Marshall Artist Marchio 1/4 Zip Black",
     "brand": "Marshall Artist",
     "price": 5990,
@@ -2182,21 +2165,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Ben Sherman Signature Target Black",
-    "brand": "Ben Sherman",
-    "price": 4190,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/173f6670-e514-40a8-a630-1b9d92063c11.jpg",
-    "images": [
-      "img/173f6670-e514-40a8-a630-1b9d92063c11.jpg",
-      "img/c6764a7d-2fc4-4a11-88e8-eb6c809b9b7f.jpg"
-    ],
-    "description": ""
-  },
-  {
     "name": "Толстовка Marshall Artist Marchio 1/4 Zip Navy",
     "brand": "Marshall Artist",
     "price": 5990,
@@ -3340,22 +3308,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Кепка Lacoste Central Croc Black",
-    "brand": "Lacoste",
-    "price": 6990,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/d7d8f8e6-4ab7-456d-adba-1ddcc9da78cc.jpg",
-    "images": [
-      "img/d7d8f8e6-4ab7-456d-adba-1ddcc9da78cc.jpg",
-      "img/ae5cf5b1-4db7-4aae-b693-a7a30617ebf2.jpg",
-      "img/af1fc266-8236-42ab-88a2-bf4a72f94642.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: Универсальный, регулировка на любую голову. \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Шорты Bench Noahs Cargo Navy",
     "brand": "Bench",
     "price": 5990,
@@ -3440,8 +3392,7 @@
     "brand": "Bench",
     "price": 5990,
     "sizes": [
-      "2XL",
-      "L"
+      "2XL"
     ],
     "category": "Шорты",
     "img": "img/3f7e741e-b2ca-4ece-ad7c-b10e9df30c50.jpg",
