@@ -765,21 +765,6 @@
     "description": ""
   },
   {
-    "name": "Футболка Fred Perry Ringer Ecru",
-    "brand": "Fred Perry",
-    "price": 5990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/e7b45869-09dc-4afd-963f-7838cfd1ae74.jpg",
-    "images": [
-      "img/e7b45869-09dc-4afd-963f-7838cfd1ae74.jpg",
-      "img/63477256-90d4-4360-a4c8-e85a27c6a364.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Жилет Weekend Offender Gacha Deep Blue",
     "brand": "Weekend Offender",
     "price": 9990,
@@ -1110,22 +1095,6 @@
     "images": [
       "img/92241841-da9c-4fd1-93c7-d0fecacb9f0e.jpg",
       "img/355ffaaa-edb1-4ae2-b4d7-5907660750ff.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
-  },
-  {
-    "name": "Шорты Marshall Artist Print Logo Sandstone",
-    "brand": "Marshall Artist",
-    "price": 4690,
-    "sizes": [
-      "L"
-    ],
-    "category": "Шорты",
-    "img": "img/4311d3a5-69f1-4fe8-bced-7917ec694dbb.jpg",
-    "images": [
-      "img/4311d3a5-69f1-4fe8-bced-7917ec694dbb.jpg",
-      "img/83ebcffe-a550-4683-bda7-75a0cb4e49b2.jpg",
-      "img/7ce8070d-5171-49d3-af88-40fb3d4e897b.jpg"
     ],
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
@@ -1523,22 +1492,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок высокой плотности.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Толстовка Weekend Offender Daponte Black",
-    "brand": "Weekend Offender",
-    "price": 8490,
-    "sizes": [
-      "XL/2XL"
-    ],
-    "category": "Джемпер",
-    "img": "img/3d410f0a-d4a3-40f7-8870-b1356579f710.jpg",
-    "images": [
-      "img/3d410f0a-d4a3-40f7-8870-b1356579f710.jpg",
-      "img/d786bb82-29a2-48f0-9e3d-30f6d4e0b781.jpg",
-      "img/cda9eab7-8521-4b1e-a4ce-29da96c988f6.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nСостав 100% премиальный хлопок, детали из плотного нейлон метала!\nCверьте размерную сетку \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Поло Barbour Classic Black",
     "brand": "Поло",
     "price": 8990,
@@ -1622,21 +1575,6 @@
       "img/6974222e-0f27-4fe9-bb58-40b0967a94c7.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \n- Съемный капюшон  \n- Стандартный фит\n- Фурнитура Vilson YKK\n- Карманы так же с боковым входом\n- Потайной карман сзади на молнии\nСостав: премиальный хлопок и нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Поло Fred Perry Twin Tapped Navy",
-    "brand": "Fred Perry",
-    "price": 8790,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/f09da58b-9097-4f8a-a111-737e0cb1c2a9.jpg",
-    "images": [
-      "img/f09da58b-9097-4f8a-a111-737e0cb1c2a9.jpg",
-      "img/52b0a4d7-210c-49ce-b572-9f28393dbcaf.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок высокой плотности\n(Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Leo Gregory White",
