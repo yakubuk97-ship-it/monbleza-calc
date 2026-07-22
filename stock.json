@@ -1,22 +1,5 @@
 [
   {
-    "name": "Штаны Weekend Offender Kwale Cargo Black",
-    "brand": "Weekend Offender",
-    "price": 7190,
-    "sizes": [
-      "L"
-    ],
-    "category": "Шорты",
-    "img": "img/39f87b21-63e4-4986-8709-f611feb98f4e.jpg",
-    "images": [
-      "img/39f87b21-63e4-4986-8709-f611feb98f4e.jpg",
-      "img/7f14028b-da16-4ec8-9392-37413349798b.jpg",
-      "img/3c2cf714-0442-4ccb-98c5-84a6d2dc8939.jpg",
-      "img/d637a006-8a77-49d1-b7ac-7ebf8e2ebc3f.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% хлопок \nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Джемпер Weekend Offender Silver Knit Mid Grey",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -900,7 +883,6 @@
     "brand": "Weekend Offender",
     "price": 3890,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Лонгслив",
@@ -2184,23 +2166,6 @@
       "img/783ec756-7de0-4ed9-9605-649b2acedd0a.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Жилет Weekend Offender Toronto Cyclone",
-    "brand": "Weekend Offender",
-    "price": 9490,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/544fd460-917d-4eac-8a4b-0b9d161d96a7.jpg",
-    "images": [
-      "img/544fd460-917d-4eac-8a4b-0b9d161d96a7.jpg",
-      "img/1fcd8aa6-2603-4c32-a4f0-93a49a91539a.jpg",
-      "img/05290ea1-1725-4670-b4bc-e2710a50cfaa.jpg",
-      "img/b9d87780-5e5f-4a10-95ab-035fc10167f0.jpg"
-    ],
-    "description": "Оригинал из бутика в Англии!\nРазмер: \nСостав внейшний: нейлон метал DWR с водооталкивающими свойствами. \nНаполнитель: поли. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Fred Perry Twin Tipped Navy",
