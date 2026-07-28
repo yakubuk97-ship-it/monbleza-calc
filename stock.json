@@ -65,21 +65,6 @@
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: XL/2XL (замеры ниже)\nСостав: 100% премиальный хлопок\nДлина полностью - 75 cm \nШирина между подмышек - 63 cm \nРукав от подмышки - 49 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Weekend Offender Fumo Black",
-    "brand": "Weekend Offender",
-    "price": 4190,
-    "sizes": [
-      "S"
-    ],
-    "category": "Лонгслив",
-    "img": "img/b2e92003-8779-484e-a25f-4b6fe29bfde8.jpg",
-    "images": [
-      "img/b2e92003-8779-484e-a25f-4b6fe29bfde8.jpg",
-      "img/18bdda90-2396-4cb3-93f1-4cfa7b8a9241.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
-  },
-  {
     "name": "Футболка Ellesse Elpidio Black",
     "brand": "Ellesse",
     "price": 2990,
@@ -924,7 +909,6 @@
     "price": 16790,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Джемпер",
