@@ -313,22 +313,6 @@
     "description": "Оригинал из бутика Англии! Есть документы о происхождении.\nMade in Italy | Единственная в РФ\nРазмер: L\nСостав: кожа, премиум класса. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Peaceful Hooligan OASIS Poster Stone",
-    "brand": "Футболка",
-    "price": 4190,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/721d5b13-6720-40a4-a4c9-5a3bb661454a.jpg",
-    "images": [
-      "img/721d5b13-6720-40a4-a4c9-5a3bb661454a.jpg",
-      "img/79217d29-286a-496d-9c95-3bfff4a33750.jpg",
-      "img/855068c4-b7cb-4f07-9624-bb4ea8c66628.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Олимпийка Sergio Tacchini Damarindo Maritime Baltic Sea",
     "brand": "Sergio Tacchini",
     "price": 13490,
@@ -599,8 +583,7 @@
     "brand": "Napapijri",
     "price": 3790,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/1e8b137f-9e8b-4c1d-8b48-c277b47f8c49.jpg",
@@ -928,8 +911,7 @@
     "price": 8990,
     "sizes": [
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/58510cc9-0796-404f-991d-737101136516.jpg",
@@ -1042,7 +1024,7 @@
   {
     "name": "Куртка С.P. Company Tylon L La Mille",
     "brand": "Куртка",
-    "price": 57990,
+    "price": 53990,
     "sizes": [
       "L",
       "XL"
@@ -1418,7 +1400,6 @@
     "price": 18490,
     "sizes": [
       "2XL",
-      "L",
       "XL"
     ],
     "category": "Жилет",
