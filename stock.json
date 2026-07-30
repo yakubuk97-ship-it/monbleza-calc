@@ -2506,21 +2506,6 @@
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер регулируется на любую голову!\n- Cостав: из хлопкового габардина.\n- Вышитый логотип\n- C.P. Company пряжка сзади\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка C.P. Company Ersey British Sailor",
-    "brand": "Футболка",
-    "price": 9490,
-    "sizes": [
-      "2XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/740cd081-83ff-4ade-8828-ddf1d22b4b0a.jpg",
-    "images": [
-      "img/740cd081-83ff-4ade-8828-ddf1d22b4b0a.jpg",
-      "img/580fe84c-49f9-4a88-82d1-081a6db6a2b8.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Жилет Fred Perry Insulated Green",
     "brand": "Fred Perry",
     "price": 17990,
@@ -2626,8 +2611,7 @@
     "brand": "Weekend Offender",
     "price": 8990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/017c7af5-d4c6-481a-bffc-0a0b39ac0a69.jpg",
@@ -3704,8 +3688,7 @@
     "brand": "Свитшот",
     "price": 17900,
     "sizes": [
-      "2XL",
-      "XL"
+      "2XL"
     ],
     "category": "Джемпер",
     "img": "img/b674e45b-6a53-4428-ae0e-bd5bbbcb275d.jpg",
