@@ -1521,8 +1521,7 @@
     "brand": "Sergio Tacchini",
     "price": 7890,
     "sizes": [
-      "L (fact. M)",
-      "XL (fact. L)"
+      "L (fact. M)"
     ],
     "category": "Джемпер",
     "img": "img/73103cdf-aef7-414f-a3a2-7e6e2a2d26be.jpg",
@@ -2306,22 +2305,6 @@
       "img/c990465e-9b71-40d5-a65b-ea0875aed92f.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Поло Napapijri Ealis Leaf",
-    "brand": "Napapijri",
-    "price": 6790,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/3724cbbd-17d5-4c53-91a2-30da72aec19e.jpg",
-    "images": [
-      "img/3724cbbd-17d5-4c53-91a2-30da72aec19e.jpg",
-      "img/c2634538-4491-4166-b3be-40e81d878c29.jpg",
-      "img/bd6efbaf-7fe1-4903-8318-699cd9db4733.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка C.P. Company 814 Outwear Chrome-R",
