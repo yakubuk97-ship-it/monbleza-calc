@@ -313,22 +313,6 @@
     "description": "Оригинал из бутика Англии! Есть документы о происхождении.\nMade in Italy | Единственная в РФ\nРазмер: L\nСостав: кожа, премиум класса. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Peaceful Hooligan OASIS Poster Stone",
-    "brand": "Футболка",
-    "price": 4190,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Лонгслив",
-    "img": "img/721d5b13-6720-40a4-a4c9-5a3bb661454a.jpg",
-    "images": [
-      "img/721d5b13-6720-40a4-a4c9-5a3bb661454a.jpg",
-      "img/79217d29-286a-496d-9c95-3bfff4a33750.jpg",
-      "img/855068c4-b7cb-4f07-9624-bb4ea8c66628.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Олимпийка Sergio Tacchini Damarindo Maritime Baltic Sea",
     "brand": "Sergio Tacchini",
     "price": 13490,
@@ -599,8 +583,7 @@
     "brand": "Napapijri",
     "price": 3790,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/1e8b137f-9e8b-4c1d-8b48-c277b47f8c49.jpg",
@@ -1171,21 +1154,6 @@
       "img/bb589a61-4fdd-4aba-94ba-798fc8925af9.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Поло Weekend Offender Nicks Black",
-    "brand": "Weekend Offender",
-    "price": 4890,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/92241841-da9c-4fd1-93c7-d0fecacb9f0e.jpg",
-    "images": [
-      "img/92241841-da9c-4fd1-93c7-d0fecacb9f0e.jpg",
-      "img/355ffaaa-edb1-4ae2-b4d7-5907660750ff.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
   {
     "name": "Куртка Alpha Industries Bomber Black",
@@ -3112,7 +3080,8 @@
     "price": 11990,
     "sizes": [
       "2XL",
-      "3XL"
+      "3XL",
+      "XL"
     ],
     "category": "Жилет",
     "img": "img/38b852c6-c75e-4649-81d6-6b48600bd4b6.jpg",
