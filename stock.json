@@ -429,7 +429,6 @@
     "brand": "Fred Perry",
     "price": 6490,
     "sizes": [
-      "2XL",
       "L",
       "M"
     ],
@@ -838,20 +837,6 @@
     "description": "Оригинал из бутиков Европы!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender Parma Spearmint",
-    "brand": "Weekend Offender",
-    "price": 4190,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/a0d65e98-9505-4e1e-b94a-a3ff72034646.jpg",
-    "images": [
-      "img/a0d65e98-9505-4e1e-b94a-a3ff72034646.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
-  },
-  {
     "name": "Поло Fred Perry M1600 Plain White",
     "brand": "Fred Perry",
     "price": 9490,
@@ -1086,23 +1071,6 @@
       "img/13189485-4e07-4499-8453-ca61389fca26.jpg"
     ],
     "description": "Оригинал из бутика в Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender The Heights Winter White",
-    "brand": "Weekend Offender",
-    "price": 3790,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/8f5c8dc6-bbcc-438f-afeb-2c2ec0302ca5.jpg",
-    "images": [
-      "img/8f5c8dc6-bbcc-438f-afeb-2c2ec0302ca5.jpg",
-      "img/bcbbcc32-6ad6-4158-a11c-b99f4ddfccbd.jpg",
-      "img/86d8bb6e-0fc7-4f23-bd45-04213e346758.jpg",
-      "img/b00f9114-8e44-42ce-8d24-189606aa3846.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Weekend Offender La Guarda Porpoise",
@@ -1482,23 +1450,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: хлопок и полиэстер, с начесом внутри. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Шорты Weekend Offender Stacks Navy",
-    "brand": "Weekend Offender",
-    "price": 4790,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/7df34225-8a38-471c-bc42-02ff87b8904d.jpg",
-    "images": [
-      "img/7df34225-8a38-471c-bc42-02ff87b8904d.jpg",
-      "img/07bd0b47-7473-44a6-94a6-c8bb99e27aee.jpg",
-      "img/e705b3c2-743f-49b9-8729-9a41bd831b96.jpg",
-      "img/60361aa7-c791-4fd4-8f4b-3c76d3fe09bd.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: премиальный нейлон метал, перелив цвета\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Куртка Marshall Artist Ashdale Bubble Black",
     "brand": "Marshall Artist",
     "price": 10490,
@@ -1604,8 +1555,7 @@
     "brand": "Ellesse",
     "price": 2890,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/bd36dcf3-3c73-4080-9a3e-c567902959b6.jpg",
@@ -1740,8 +1690,7 @@
     "brand": "Lacoste",
     "price": 6790,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/3106c911-0769-4167-b3b2-8848a9d10db6.jpg",
@@ -1901,7 +1850,6 @@
     "price": 9490,
     "sizes": [
       "L",
-      "M",
       "XL"
     ],
     "category": "Джемпер",
@@ -1961,24 +1909,6 @@
       "img/894a1ff4-3b38-4e1b-9186-a07af7b9087b.jpg"
     ],
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Кроссовки New Balance 997H Cordura",
-    "brand": "New Balance",
-    "price": 16990,
-    "sizes": [
-      "46.5 EUR / 12 US / 30 cm"
-    ],
-    "category": "",
-    "img": "img/40d82946-02e1-4a1a-80da-3f45ae918129.jpg",
-    "images": [
-      "img/40d82946-02e1-4a1a-80da-3f45ae918129.jpg",
-      "img/13fff85e-015e-47fe-a1e3-40b8c2707a2f.jpg",
-      "img/4f1a24aa-b65d-4a83-8214-94ec4b69c0c9.jpg",
-      "img/ee767571-054d-4e9c-b9c7-b6aeda9e0f91.jpg",
-      "img/ba5ead3e-6f22-480c-9bb1-501272c0fd0b.jpg"
-    ],
-    "description": "Оригинал из бутика в Европе! Чек из бутика, по запросу покупателю! \nMade in Indonesia \nCodruda Tech. - водостойкие, износостойкая отделка.\nРазмеры: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Lacoste Pima Cotton Beige",
@@ -2344,7 +2274,6 @@
     "brand": "Weekend Offender",
     "price": 4390,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Шорты",
@@ -2859,8 +2788,7 @@
     "brand": "Weekend Offender",
     "price": 3890,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/229db215-e086-422a-b04b-92af9095b2e7.jpg",
@@ -3060,7 +2988,6 @@
     "brand": "Weekend Offender",
     "price": 11990,
     "sizes": [
-      "2XL",
       "XL"
     ],
     "category": "Жилет",
@@ -3118,20 +3045,6 @@
     "images": [
       "img/2a446a72-7fd7-48ab-98c5-24a511ba9f42.jpg",
       "img/b122944f-6df3-44ba-bced-19a51469d984.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Шорты Ellesse Laminardo Black",
-    "brand": "Ellesse",
-    "price": 3290,
-    "sizes": [
-      "L"
-    ],
-    "category": "Шорты",
-    "img": "img/926c0a72-a7f6-4c36-a228-fcc738f4af60.jpg",
-    "images": [
-      "img/926c0a72-a7f6-4c36-a228-fcc738f4af60.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
@@ -3434,22 +3347,6 @@
       "img/aa06ab89-877e-42ea-869e-bbe94107f23a.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: Регулируется, на любую голову!\nСостав: хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Шорты Bench Noahs Combat Camo",
-    "brand": "Bench",
-    "price": 5990,
-    "sizes": [
-      "2XL"
-    ],
-    "category": "Шорты",
-    "img": "img/3f7e741e-b2ca-4ece-ad7c-b10e9df30c50.jpg",
-    "images": [
-      "img/3f7e741e-b2ca-4ece-ad7c-b10e9df30c50.jpg",
-      "img/be5a5827-ca19-4ab4-b52c-277d2ed57f4a.jpg",
-      "img/73157ea0-21e8-4a09-919b-45d28766b237.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\nМожно под ремень. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Кроссовки Polo Ralph Lauren Bedford Bianco White",
