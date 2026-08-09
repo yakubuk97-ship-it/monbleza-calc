@@ -1143,8 +1143,7 @@
     "brand": "Weekend Offender",
     "price": 11990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/5c897131-6f83-400e-8007-e72597bff992.jpg",
@@ -1187,21 +1186,6 @@
       "img/f0329334-3260-47e8-a328-add89776b0f2.jpg"
     ],
     "description": "Оригинал из бутика в Англии!\nРазмер: \nСостав: плотный премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender Cannon Beach Castle Green",
-    "brand": "Weekend Offender",
-    "price": 3390,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/d020948d-d957-4351-b765-eb3024fd42e4.jpg",
-    "images": [
-      "img/d020948d-d957-4351-b765-eb3024fd42e4.jpg",
-      "img/09108e88-8a78-44eb-9f54-c9b10db9ea3a.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Кепка Fred Perry Pique Black",
@@ -1741,8 +1725,7 @@
     "brand": "Weekend Offender",
     "price": 13990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/8eb33901-c9b9-48cc-a81e-1f0e21582c75.jpg",
@@ -2031,22 +2014,6 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 97% хлопок, 3% elastan\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Napapijri S-Bollo 1 Bright White",
-    "brand": "Napapijri",
-    "price": 3490,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/66ee6844-a53b-4f03-a09e-9816d104744f.jpg",
-    "images": [
-      "img/66ee6844-a53b-4f03-a09e-9816d104744f.jpg",
-      "img/84930a66-e7f8-4e75-bbec-0818e2b709fc.jpg",
-      "img/4cf5eb96-c363-42fc-a331-f80275ecce68.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Рубашка Weekend Offender Lisbon Mid House Check",
     "brand": "Weekend Offender",
     "price": 7490,
@@ -2102,8 +2069,7 @@
     "brand": "Lacoste",
     "price": 5990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/88f82ce1-87f2-4737-840e-c8499f135aa4.jpg",
@@ -3686,8 +3652,7 @@
     "brand": "Lacoste",
     "price": 6790,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/05c8707e-aae8-4ab0-b610-d31e85e64b41.jpg",
@@ -3763,21 +3728,6 @@
       "img/9af95e39-c4b4-4ea1-a8ca-8f92bd9f8c8e.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender Leo Gregory Black",
-    "brand": "Weekend Offender",
-    "price": 6490,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/8aada9ba-2dd8-43d7-99d9-70a19282ed48.jpg",
-    "images": [
-      "img/8aada9ba-2dd8-43d7-99d9-70a19282ed48.jpg",
-      "img/73c48f09-1ffd-4758-b82f-c1878c3f4886.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Обувь Walk London Sean Suede",
