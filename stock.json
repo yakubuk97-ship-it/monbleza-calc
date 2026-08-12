@@ -410,20 +410,6 @@
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "Толстовка Fred Perry Half Zip Anchor",
-    "brand": "Fred Perry",
-    "price": 12990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Джемпер",
-    "img": "img/323558fe-4de4-4a57-9103-c277b07cb1db.jpg",
-    "images": [
-      "img/323558fe-4de4-4a57-9103-c277b07cb1db.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Свитшот C.P. Company Diagonal Crew Blue Fox",
     "brand": "Свитшот",
     "price": 17900,
