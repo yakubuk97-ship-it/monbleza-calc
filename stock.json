@@ -1005,6 +1005,24 @@
     "description": "Оригинал из бутиков Англии!\n- Made in Cambodia  \n- Состав: премиальный хлопок\nРазмер: Регулируется, на любую голову\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Куртка С.P. Company Tylon L La Mille",
+    "brand": "Куртка",
+    "price": 53990,
+    "sizes": [
+      "L"
+    ],
+    "category": "Жилет",
+    "img": "img/993d9338-2de5-4354-8c60-cb68a58bef6c.jpg",
+    "images": [
+      "img/993d9338-2de5-4354-8c60-cb68a58bef6c.jpg",
+      "img/6587fae5-604b-4878-8111-36196e8c9299.jpg",
+      "img/8393665b-c8b2-4d1b-a8c5-215fdd54d421.jpg",
+      "img/0c57917f-194b-4fb4-a1d0-7c53f80b5afa.jpg",
+      "img/d8e7210b-f57d-48ca-ac09-c1230a5e351c.jpg"
+    ],
+    "description": "Оригинал из офф. магазина C.P. Италии! \nMade in Romania \nЧеки из бутика на каждый товар магазина! Новая, с комплектом биркок, CLG+  \nРазмер: \n\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Олимпийка Sergio Tacchini Masters Track Navy Sky",
     "brand": "Sergio Tacchini",
     "price": 13990,
@@ -1156,6 +1174,8 @@
     "brand": "Жилет",
     "price": 27490,
     "sizes": [
+      "L",
+      "M",
       "XL"
     ],
     "category": "Жилет",
@@ -1295,6 +1315,21 @@
       "img/8e999d90-56e5-48b5-943c-6a1acb9c2216.jpg"
     ],
     "description": "Оригинальная продукция, из официального магазина New Balance"
+  },
+  {
+    "name": "Cвитшот C.P. Company 857 Cotton Crew Neck",
+    "brand": "Cвитшот",
+    "price": 17900,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/da878eac-88d9-47be-8d31-e8afd282ff24.jpg",
+    "images": [
+      "img/da878eac-88d9-47be-8d31-e8afd282ff24.jpg",
+      "img/b26db4e8-1c65-418b-b9f7-0d752d9bdf87.jpg"
+    ],
+    "description": "Оригинал из офф. магазина C.P. Италии!\nРазмер: \nНовые, с комплектом биркок, CLG+  \nСостав: 100% премиальный хлопок\nMade in Turkey\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Barbour Chelsea Black",
@@ -2508,6 +2543,28 @@
       "img/b0c82a86-bcc0-4615-b1cc-cfbb97cf1194.jpg",
       "img/e4ebed14-44e5-4d43-b161-663f89b788ab.jpg",
       "img/25945e62-a9ee-40da-825d-1910e320e4fc.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nПремиальные материала и идеальная посадка. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Кроссовки Polo Ralph Lauren Bedford Tonal Grey",
+    "brand": "Ralph Lauren",
+    "price": 16990,
+    "sizes": [
+      "44 EUR / 11 US"
+    ],
+    "category": "Обувь",
+    "img": "img/242a24de-69a9-433e-9991-bc146c7e8921.jpg",
+    "images": [
+      "img/242a24de-69a9-433e-9991-bc146c7e8921.jpg",
+      "img/67360984-0a2a-41a7-b855-c7d11ca298f1.jpg",
+      "img/22cc5cc1-f3e5-4485-ac11-d1f5a1dd8ca2.jpg",
+      "img/0a3aa2d4-5ecb-4483-99c8-10c5f2d0343b.jpg",
+      "img/52e91eb6-ac68-40cc-9108-c89b6077425a.jpg",
+      "img/ac3d6834-c318-4381-9ab0-ce86a1696a8e.jpg",
+      "img/5f568376-758e-4ff9-a038-c6f1d21d7095.jpg",
+      "img/c3ebe98c-5bc0-48e5-8fe7-4319bf62ae71.jpg",
+      "img/e00c639a-1d46-4c67-b1c3-18d41861f665.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nПремиальные материала и идеальная посадка. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
