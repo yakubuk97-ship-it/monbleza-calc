@@ -1287,8 +1287,7 @@
     "price": 11990,
     "sizes": [
       "2XL",
-      "3XL",
-      "XL"
+      "3XL"
     ],
     "category": "Жилет",
     "img": "img/7ec1bcca-cb92-4605-947b-b859a1beb965.jpg",
@@ -2711,7 +2710,6 @@
     "brand": "Овершот",
     "price": 22800,
     "sizes": [
-      "L",
       "XL"
     ],
     "category": "Жилет",
@@ -3523,8 +3521,7 @@
     "brand": "Weekend Offender",
     "price": 8390,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/dfc28e9c-377c-4cfb-9edf-18fddb816bf9.jpg",
