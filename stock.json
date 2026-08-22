@@ -351,8 +351,7 @@
     "brand": "Weekend Offender",
     "price": 4590,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/5a74476f-b120-4379-9b27-5f11fa6966da.jpg",
@@ -1270,8 +1269,7 @@
     "brand": "Marshall Artist",
     "price": 7390,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/36440d9a-48a0-4472-8139-a0defec4168d.jpg",
@@ -1938,24 +1936,6 @@
     "description": "Оригинал из бутика Италии! Документы и чеки из бутиков на каждый товар!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Ellesse Zorian Black",
-    "brand": "Ellesse",
-    "price": 2890,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/f68a0faf-bbbb-4375-82cd-e62b35a5bba5.jpg",
-    "images": [
-      "img/f68a0faf-bbbb-4375-82cd-e62b35a5bba5.jpg",
-      "img/441d723a-494d-41d0-8294-1b55836bed3f.jpg",
-      "img/da54bdc2-9e3c-4e09-a0a9-baa7d6d8a9d0.jpg",
-      "img/f5acbdd2-a8a0-4188-9ee8-c10092aa77c9.jpg",
-      "img/894a1ff4-3b38-4e1b-9186-a07af7b9087b.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок\nРазмерная сетка на последнем фото, либо в комментариях в товару!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Lacoste Pima Cotton Beige",
     "brand": "Lacoste",
     "price": 5990,
@@ -2067,22 +2047,6 @@
       "img/638d00be-e720-4e87-b5cb-2ff91fef35ac.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСамая популярная модель в свежей цветовой гамме. Одна из самых запоминающихся моделей Sergio 80-х годов, выпущенная исключительно в рамках коллекции «80s Casual Classics». Состав : 60% полиэстер, 40% премиальный хлопок"
-  },
-  {
-    "name": "Поло Barbour Seagrass",
-    "brand": "Поло",
-    "price": 7490,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/1cf0cf18-3065-4cca-ba0c-23cf55c56d79.jpg",
-    "images": [
-      "img/1cf0cf18-3065-4cca-ba0c-23cf55c56d79.jpg",
-      "img/5736b5c8-9baf-4c49-b392-2962d2421aee.jpg",
-      "img/7cd69fea-01c9-49e0-afcc-f1a32c5530f3.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок высокой плотности\n(Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Олимпийка Sergio Tacchini Orion Track Top Maritime Blue",
@@ -2536,8 +2500,7 @@
     "brand": "Кроссовки",
     "price": 13990,
     "sizes": [
-      "43 EUR / 27 cm",
-      "44 EUR / 28 cm"
+      "43 EUR / 27 cm"
     ],
     "category": "Обувь",
     "img": "img/ac56e15b-cc27-4084-9b9a-1fc0eed8a147.jpg",
@@ -2994,8 +2957,7 @@
     "brand": "Weekend Offender",
     "price": 16990,
     "sizes": [
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Жилет",
     "img": "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
