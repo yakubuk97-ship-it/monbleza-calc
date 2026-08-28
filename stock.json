@@ -950,22 +950,6 @@
     "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
   {
-    "name": "КЕПКА POLO RALPH LAUREN THE ICONIC CANOPY OLIVE",
-    "brand": "Ralph Lauren",
-    "price": 6990,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/16f00f4e-0bf8-4060-bf5d-3f87a82b1b5b.jpg",
-    "images": [
-      "img/16f00f4e-0bf8-4060-bf5d-3f87a82b1b5b.jpg",
-      "img/04e6029e-14e1-49c0-90ef-e8ff26881f19.jpg",
-      "img/7f0ffe97-24bd-4c39-89cc-a956dad1489d.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\n- Made in Cambodia  \n- Состав: премиальный хлопок\nРазмер: Регулируется, на любую голову\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Куртка С.P. Company Tylon L La Mille",
     "brand": "Куртка",
     "price": 53990,
@@ -2486,7 +2470,8 @@
     "brand": "Кроссовки",
     "price": 13990,
     "sizes": [
-      "43 EUR / 27 cm"
+      "43 EUR / 27 cm",
+      "44 EUR / 28 cm"
     ],
     "category": "Обувь",
     "img": "img/ac56e15b-cc27-4084-9b9a-1fc0eed8a147.jpg",
@@ -3173,23 +3158,6 @@
       "img/deb01aed-11d6-4cf7-bc3f-d28117f07249.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Штаны Weekend Offender Mdou Cargo Black",
-    "brand": "Weekend Offender",
-    "price": 8990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Шорты",
-    "img": "img/618ef1b6-9ea2-44ae-805c-7a27408d154a.jpg",
-    "images": [
-      "img/618ef1b6-9ea2-44ae-805c-7a27408d154a.jpg",
-      "img/c5cf3e17-fba0-4047-8888-7dcdd8bb10df.jpg",
-      "img/22832680-f0e9-4494-bba6-fa4f305c6e2a.jpg",
-      "img/ce08ba5a-693c-4ee3-a703-4c0f3c4393c2.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nОписание: технические карго-штаны\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Fred Perry Caban Jacket Green",
