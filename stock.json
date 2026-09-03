@@ -267,6 +267,23 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Штаны Weekend Offender Eldon Cargo Black (Широкий крой)",
+    "brand": "Weekend Offender",
+    "price": 8990,
+    "sizes": [
+      "L"
+    ],
+    "category": "Шорты",
+    "img": "img/ea12f585-f60f-43ef-9f01-4195b56c1a46.jpg",
+    "images": [
+      "img/ea12f585-f60f-43ef-9f01-4195b56c1a46.jpg",
+      "img/3501c2e7-fe3e-4738-97b0-36bde4f21296.jpg",
+      "img/3f49e85a-103d-419e-aa27-7cac92dbe3ab.jpg",
+      "img/6ba8caca-1657-46eb-9312-cc34f591adb8.jpg"
+    ],
+    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\nПрямой крой, без резинок внизу. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Fred Perry Crew Neck Black",
     "brand": "Fred Perry",
     "price": 5990,
@@ -650,23 +667,6 @@
       "img/df6c51eb-0554-4047-a9aa-4f64794dde2a.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Костюм Ellesse Giraldo Black",
-    "brand": "Ellesse",
-    "price": 9990,
-    "sizes": [
-      "XL (fact. L)"
-    ],
-    "category": "Костюм",
-    "img": "img/eaf86a1d-09e0-4bf6-986a-79caa6c55fbf.jpg",
-    "images": [
-      "img/eaf86a1d-09e0-4bf6-986a-79caa6c55fbf.jpg",
-      "img/24b90dd6-c692-4f4f-bb55-473ec49e5752.jpg",
-      "img/a775273a-b3ba-4a7e-b658-bd9d64c887d7.jpg",
-      "img/08f7e9b3-80a8-415d-99c5-4b99e43f6ecd.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% полиэстер"
   },
   {
     "name": "Лонг MA.Strum Плотный Icon Black",
@@ -1887,23 +1887,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Олимпийка Weekend Offender Hemsley Navy",
-    "brand": "Weekend Offender",
-    "price": 6990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Джемпер",
-    "img": "img/e9b9e7b9-f220-4138-9441-12ff0e5495a5.jpg",
-    "images": [
-      "img/e9b9e7b9-f220-4138-9441-12ff0e5495a5.jpg",
-      "img/d48ef022-1394-487a-9a10-b49e0ca84181.jpg",
-      "img/383d6fd4-4d46-4fc2-99a0-418fac096865.jpg",
-      "img/aecdefca-3ec1-419c-97d7-62b206d137e0.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 97% Cotton 3% Elastane\nЗамеры L (Д-72; Ш-58; ПЛЧ-49; Р-67.5)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Толстовка Weekend Offender HM Classic Grey Marl",
     "brand": "Weekend Offender",
     "price": 6990,
@@ -2804,7 +2787,8 @@
     "brand": "Weekend Offender",
     "price": 16990,
     "sizes": [
-      "M"
+      "M",
+      "XL"
     ],
     "category": "Жилет",
     "img": "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
@@ -3022,8 +3006,7 @@
     "price": 23990,
     "sizes": [
       "2XL",
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/d9befc2d-12b6-400a-812a-3930e1bda818.jpg",
@@ -3382,7 +3365,6 @@
     "brand": "Weekend Offender",
     "price": 3890,
     "sizes": [
-      "L",
       "M",
       "XL"
     ],
