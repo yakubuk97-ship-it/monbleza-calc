@@ -1209,10 +1209,9 @@
   {
     "name": "Толстовка Marshall Artist Full Zip Black",
     "brand": "Marshall Artist",
-    "price": 7390,
+    "price": 7990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/36440d9a-48a0-4472-8139-a0defec4168d.jpg",
@@ -2488,21 +2487,6 @@
     "description": "Оригинал из бутика Италии! Документы и чеки из бутиков на каждый товар!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Weekend Offender Mcmoney Navy Thunder",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/258f3133-fbae-4dad-b500-68741bf52f6c.jpg",
-    "images": [
-      "img/258f3133-fbae-4dad-b500-68741bf52f6c.jpg",
-      "img/74a553e0-3420-4573-8fb3-eb7df5b4f398.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Джемпер Weekend Offender Zip Vandium Charcoal",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -3016,6 +3000,40 @@
       "img/deb01aed-11d6-4cf7-bc3f-d28117f07249.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Куртка Marshall Artist Ashdale Bubble Khaki",
+    "brand": "Marshall Artist",
+    "price": 10900,
+    "sizes": [
+      "M/L",
+      "XL/2XL"
+    ],
+    "category": "Жилет",
+    "img": "img/88149ae0-1204-48ab-9711-295e3ebd86c0.jpg",
+    "images": [
+      "img/88149ae0-1204-48ab-9711-295e3ebd86c0.jpg",
+      "img/92391429-9e04-4cd3-bbbb-089995427f53.jpg",
+      "img/ef08f652-df9a-4d7c-be43-8ae98b6ef5a2.jpg",
+      "img/e38e2f8d-b9b1-4142-8146-caf09b19acf0.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСезон - Осень\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "КУРТКА WEEKEND OFFENDER LOMBARDO BLACK",
+    "brand": "Weekend Offender",
+    "price": 28900,
+    "sizes": [
+      "L"
+    ],
+    "category": "Жилет",
+    "img": "img/b103269e-e3a9-4634-956f-dbb376f767b9.jpg",
+    "images": [
+      "img/b103269e-e3a9-4634-956f-dbb376f767b9.jpg",
+      "img/3123be31-bda6-4abc-9cfb-d8015ae0458c.jpg",
+      "img/dc55bbac-f197-4bb0-9313-0c9da68f80bb.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСезон - Зима!\nТёплая куртка с утеплителем PrimaLoft ThermoPlume+. Выполнена из прочного 100% нейлона ripstop с водоотталкивающей пропиткой DWR. Оснащена капюшоном, двухзамковой молнией, утеплёнными карманами и съёмным патчем WO на рукаве. Практичная модель для холодной и влажной погоды!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Fred Perry Caban Jacket Green",
