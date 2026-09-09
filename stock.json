@@ -34,21 +34,6 @@
     "description": "Оригинал из бутика в Англии!\nMade in Portugal\nРазмер: \nСостав: 60% премиальный хлопок, 40% поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Fred Perry Twin Tipped White Black",
-    "brand": "Fred Perry",
-    "price": 6490,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/60bfa603-19cc-4c95-8c79-aad594ce122c.jpg",
-    "images": [
-      "img/60bfa603-19cc-4c95-8c79-aad594ce122c.jpg",
-      "img/5c919e59-8a7c-4952-a2a1-6b1132130301.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Толстовка C.P. Company Hooded Open Diagonal",
     "brand": "Толстовка",
     "price": 20990,
@@ -316,21 +301,6 @@
       "img/3d50a7cb-2483-47ee-9b92-4e4160578a10.jpg"
     ],
     "description": "Оригинал из офф. магазина C.P. Италии! Чеки из бутика на каждый товар магазина!\nРазмер: \nНовая, с комплектом биркок, CLG+  \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Поло Weekend Offender Barnum White",
-    "brand": "Weekend Offender",
-    "price": 4590,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/5a74476f-b120-4379-9b27-5f11fa6966da.jpg",
-    "images": [
-      "img/5a74476f-b120-4379-9b27-5f11fa6966da.jpg",
-      "img/babe8af1-965b-45c8-9708-f14ea56e8405.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
   },
   {
     "name": "Толстовка Marshall Artist Marchio 1/4 Zip Black",
@@ -960,23 +930,6 @@
       "img/d0de19dc-e1f6-47b3-8237-67909c5f06d0.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Поло Tommy Hilfiger 1985 Regular Light Pink",
-    "brand": "Tommy Hilfiger",
-    "price": 7990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/2fd2a54a-5dc6-4aa2-9730-75a51b0a2cf7.jpg",
-    "images": [
-      "img/2fd2a54a-5dc6-4aa2-9730-75a51b0a2cf7.jpg",
-      "img/daf323bb-c57b-4f11-a661-4bab8b53c42b.jpg",
-      "img/42efa517-7afe-42a8-8539-1f7ecc4e803d.jpg",
-      "img/2ae023d8-71c8-4826-9726-049dbe1d7dc9.jpg"
-    ],
-    "description": "Оригинальная продукция\nСостав: 100% премиальный хлопок"
   },
   {
     "name": "Олимпийка Sergio Tacchini Masters Track Navy Sky",
@@ -2007,7 +1960,6 @@
     "brand": "Weekend Offender",
     "price": 5790,
     "sizes": [
-      "L",
       "M",
       "XL"
     ],
@@ -2200,21 +2152,6 @@
     "description": "Оригинал из бутика в Англии!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Куртка Fred Perry Lauren Shell Green",
-    "brand": "Fred Perry",
-    "price": 17988,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/10b53502-419a-4d10-9f92-19802f6b9d78.jpg",
-    "images": [
-      "img/10b53502-419a-4d10-9f92-19802f6b9d78.jpg",
-      "img/c6bb2953-9cbb-4f71-b999-f5fd8e4221b1.jpg"
-    ],
-    "description": ""
-  },
-  {
     "name": "Овершот C.P. Company Лён 683 Cotton Liner",
     "brand": "Овершот",
     "price": 28990,
@@ -2288,7 +2225,6 @@
     "brand": "Weekend Offender",
     "price": 3990,
     "sizes": [
-      "L",
       "M",
       "S"
     ],
@@ -2671,22 +2607,6 @@
       "img/3796c8d7-d77d-427a-8733-eae1c79f89c7.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: хлопок и поли \n(Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "ФУТБОЛКА WEEKEND OFFENDER MCMONEY THUNDER BLUE NAVY",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "L"
-    ],
-    "category": "Лонгслив",
-    "img": "img/229db215-e086-422a-b04b-92af9095b2e7.jpg",
-    "images": [
-      "img/229db215-e086-422a-b04b-92af9095b2e7.jpg",
-      "img/0458ce03-bad4-40f9-94c5-28e08c969945.jpg",
-      "img/6bc8b8f3-6e19-4501-8fa6-efa2a2d57bf4.jpg"
-    ],
-    "description": "Оригинал из бутика в Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Tickets Black",
