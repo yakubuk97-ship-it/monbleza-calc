@@ -66,23 +66,6 @@
     "description": "Оригинальная продукция \nСостав: 100% полиэстер"
   },
   {
-    "name": "Штаны C.P. Company Cargo Chrome-R",
-    "brand": "Штаны",
-    "price": 19900,
-    "sizes": [
-      "XL"
-    ],
-    "category": "",
-    "img": "img/48ee3671-d94b-43d3-94f0-3a68f1fb5eea.jpg",
-    "images": [
-      "img/48ee3671-d94b-43d3-94f0-3a68f1fb5eea.jpg",
-      "img/1d3e66f3-5044-4d33-8ebf-875544120cac.jpg",
-      "img/e55bd7de-0b18-4f97-865d-c60f2eb1d730.jpg",
-      "img/b817d0b8-fbdf-411a-a59f-297cfc219d28.jpg"
-    ],
-    "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: 54 / XL \nМатериал: Chrome-R премиальный нейлон, перелив цвета. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Weekend Offender Boombox White",
     "brand": "Weekend Offender",
     "price": 4190,
@@ -491,8 +474,7 @@
     "brand": "Ellesse",
     "price": 4790,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/3db0bbdc-6520-4284-869d-733055f42b00.jpg",
@@ -2579,8 +2561,7 @@
     "brand": "Fred Perry",
     "price": 12990,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/f7a8bd54-1afa-4eea-b379-585ab5179cc0.jpg",
@@ -2956,7 +2937,6 @@
     "brand": "Marshall Artist",
     "price": 6490,
     "sizes": [
-      "L",
       "M",
       "XL"
     ],
