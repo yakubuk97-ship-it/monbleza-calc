@@ -878,22 +878,6 @@
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nПроизведена из атласного многоволоконного нейлона Nylon B. Прочный регулируемый ремень, основное отделение и внешние карманы на молнии, внутренний карман с логотипом и фирменная линза C.P. Company. Размеры: 30 х 21 х 6 см.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Куртка Peaceful Hooligan Chase Copen Blue",
-    "brand": "Куртка",
-    "price": 9490,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/a404a416-f83b-415e-9c2a-34ce6750a5f3.jpg",
-    "images": [
-      "img/a404a416-f83b-415e-9c2a-34ce6750a5f3.jpg",
-      "img/0541377d-fb54-473d-887c-d9b21504c48b.jpg",
-      "img/e5ec7187-0176-45fa-a8bf-b89a1da88212.jpg"
-    ],
-    "description": "Оригинал из бутика в Англии!\nРазмер: \nВерх - 100% нейлон; \nПодкладка - 100% полиэстер;\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Джемпер Weekend Offender Silver Crew Dark Green",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -981,7 +965,6 @@
     "brand": "Marshall Artist",
     "price": 6490,
     "sizes": [
-      "L",
       "XL"
     ],
     "category": "Джемпер",
@@ -1028,22 +1011,6 @@
       "img/d21d0f59-213b-41ab-a2ba-dda088b7589e.jpg"
     ],
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Кепка Fred Perry Pique Black",
-    "brand": "Fred Perry",
-    "price": 7190,
-    "sizes": [
-      "One Size"
-    ],
-    "category": "АКСЕССУАРЫ",
-    "img": "img/f6cb0d04-f695-430e-a4d8-0959a5404414.jpg",
-    "images": [
-      "img/f6cb0d04-f695-430e-a4d8-0959a5404414.jpg",
-      "img/b9347e9e-e740-4aa9-b4e4-399c667b9d00.jpg",
-      "img/e33dd263-c5fa-42b1-bf4a-d72a01996cc4.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Кепка Lacoste Cotton Twill Viennese",
@@ -1257,8 +1224,7 @@
     "brand": "Marshall Artist",
     "price": 8490,
     "sizes": [
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Джемпер",
     "img": "img/a339c56c-54d0-42e1-be1b-e5b356090ec4.jpg",
@@ -2292,8 +2258,7 @@
     "brand": "MA.Strum",
     "price": 16990,
     "sizes": [
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Джемпер",
     "img": "img/a42a5654-a8c4-4378-9e2c-b89517d670ea.jpg",
@@ -2864,22 +2829,6 @@
     "description": "Оригинал из бутика в Англии!\nРазмер: 30 x 16 x 7 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Штаны Weekend Offender Eldon Cargo Forest Green",
-    "brand": "Weekend Offender",
-    "price": 8990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Шорты",
-    "img": "img/5e74598b-3c7d-42b1-a1f8-f6c36141e52f.jpg",
-    "images": [
-      "img/5e74598b-3c7d-42b1-a1f8-f6c36141e52f.jpg",
-      "img/5c562f86-7c56-40ac-9dda-b2fef1171c9b.jpg",
-      "img/a658b8ff-a234-472d-89e7-993607b04615.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nПрисутствуют утяжки низа и пояса!\nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Джемпер Weekend Offender Vandium Half Zip Stormy",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -2902,8 +2851,7 @@
     "brand": "Marshall Artist",
     "price": 6490,
     "sizes": [
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Джемпер",
     "img": "img/48666f0f-f743-4dc6-8629-74309ab895be.jpg",
@@ -3325,21 +3273,6 @@
       "img/b54f7aad-5a8c-4746-b722-edddc1b8bf58.jpg"
     ],
     "description": "Оригинал из бутика Италии! Документы и чеки из бутиков на каждый товар!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Weekend Offender Id Graphic Black",
-    "brand": "Weekend Offender",
-    "price": 3890,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/7cc34140-1a95-43f7-8edd-2feffb599508.jpg",
-    "images": [
-      "img/7cc34140-1a95-43f7-8edd-2feffb599508.jpg",
-      "img/76c7e7d1-0214-4b34-9bdd-d0eb6398bdf7.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Свитшот Marshall Artist Siren Crew Neck Clay",
