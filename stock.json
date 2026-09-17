@@ -287,9 +287,12 @@
   {
     "name": "Толстовка Marshall Artist Marchio 1/4 Zip Black",
     "brand": "Marshall Artist",
-    "price": 5990,
+    "price": 6890,
     "sizes": [
-      "M"
+      "2XL",
+      "L",
+      "M",
+      "XL"
     ],
     "category": "Джемпер",
     "img": "img/8d3b6fdb-eaae-477a-aa79-fdf1cee658e4.jpg",
@@ -894,6 +897,24 @@
       "img/d0de19dc-e1f6-47b3-8237-67909c5f06d0.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "ТОЛСТОВКА MARSHALL ARTIST STAMPA LOGO BLACK",
+    "brand": "Marshall Artist",
+    "price": 6890,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/21a8d1cd-e8b2-450d-a265-13501a919629.jpg",
+    "images": [
+      "img/21a8d1cd-e8b2-450d-a265-13501a919629.jpg",
+      "img/7e1c19c8-45b7-438a-a904-2a70bb996eb9.jpg",
+      "img/883341be-a20f-4633-a85b-a9d78548dbbf.jpg",
+      "img/3a49afc4-0399-4734-ab93-adbd07d97018.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 80% хлопок, 20% поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Олимпийка Sergio Tacchini Masters Track Navy Sky",
@@ -1812,6 +1833,21 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 97% хлопок, 3% elastan\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "ЛОНГ MARSHALL ARTIST Siren Sage",
+    "brand": "Marshall Artist",
+    "price": 4790,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/d2a8fb7c-eaf9-4f5c-858f-fd1fcfbe32e0.jpg",
+    "images": [
+      "img/d2a8fb7c-eaf9-4f5c-858f-fd1fcfbe32e0.jpg",
+      "img/136fb2f4-667c-47ad-ae9a-8002c811a4af.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Рубашка Weekend Offender Lisbon Mid House Check",
     "brand": "Weekend Offender",
     "price": 7490,
@@ -1921,6 +1957,41 @@
       "img/312819f5-66e1-47f3-ba7c-d1dcf99b8880.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок, 370 gms плотность\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "ТОЛСТОВКА MARSHALL ARTIST MARCHIO BLACK",
+    "brand": "Marshall Artist",
+    "price": 6890,
+    "sizes": [
+      "2XL",
+      "L",
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/be920b7a-9036-4ecc-bfdb-078f7d45c9f8.jpg",
+    "images": [
+      "img/be920b7a-9036-4ecc-bfdb-078f7d45c9f8.jpg",
+      "img/819a8327-37e9-4e88-bcc3-fc5f2c94accb.jpg",
+      "img/0bcb35aa-7576-4bcd-9a41-b4856827be46.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 80% хлопок, 20% поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Толстовка Marshall Artist Full Zip Black",
+    "brand": "Marshall Artist",
+    "price": 7990,
+    "sizes": [
+      "2XL",
+      "L",
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/ea5a7655-e812-4a32-aa46-4276996fa4ae.jpg",
+    "images": [
+      "img/ea5a7655-e812-4a32-aa46-4276996fa4ae.jpg",
+      "img/5ebeb07a-a14d-498a-bab6-e0ab6bfb8d15.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 80% хлопок, 20% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Олимпийка Sergio Tacchini Orion Track Top Maritime Blue",
@@ -2677,6 +2748,23 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "ТОЛСТОВКА MARSHALL ARTIST Siren Quarter Zip Navy",
+    "brand": "Marshall Artist",
+    "price": 6990,
+    "sizes": [
+      "2XL",
+      "L"
+    ],
+    "category": "Джемпер",
+    "img": "img/76ce46e4-2bcf-45b3-981b-4b6e6bf19231.jpg",
+    "images": [
+      "img/76ce46e4-2bcf-45b3-981b-4b6e6bf19231.jpg",
+      "img/4b331613-b12d-4707-8082-9fea8a48d06f.jpg",
+      "img/4fcf45b2-e13f-4e2f-8dd0-75a9b6ad5916.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 80% хлопок, 20% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Свитшот C.P. Company 520 Cotton Crew Neck",
     "brand": "Свитшот",
     "price": 17900,
@@ -2911,6 +2999,7 @@
     "brand": "Marshall Artist",
     "price": 6490,
     "sizes": [
+      "L",
       "M"
     ],
     "category": "Джемпер",
@@ -3106,6 +3195,22 @@
       "img/b71d394d-4444-4628-b6f1-8f435ad2b337.jpg"
     ],
     "description": "Оригинал из бутика Италии!\nНовое, с комплектом биркок, CLG+ \nРазмер: \n- Состав: 100% премиальный хлопок\n- Страна-производитель: Мьянма\n- Стандартный фит\n- Регулируемый капюшон со встроенными линзами Goggle\n- Два боковых кармана на молнии\n- Отверстие для большого пальца на манжете\n\nДлина полностью - 75 cm \nШирина между подмышек - 63 cm \nРукав от подмышки - 49 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "CВИТШОТ MARSHALL ARTIST SIREN CREW NECK BLACK",
+    "brand": "Marshall Artist",
+    "price": 6890,
+    "sizes": [
+      "M"
+    ],
+    "category": "Джемпер",
+    "img": "img/e1f40873-0825-4b5a-9c9e-dd7418a36018.jpg",
+    "images": [
+      "img/e1f40873-0825-4b5a-9c9e-dd7418a36018.jpg",
+      "img/ea69d26a-e26b-49e9-835d-71590ba79e19.jpg",
+      "img/7485098f-fe4c-4e67-8b75-c745f1c24dfd.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: хлопок и поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Худи C.P. Company Open Zip Light Navy",
