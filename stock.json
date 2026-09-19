@@ -937,8 +937,7 @@
     "brand": "Marshall Artist",
     "price": 6890,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/21a8d1cd-e8b2-450d-a265-13501a919629.jpg",
@@ -1352,7 +1351,6 @@
     "brand": "Куртка",
     "price": 36990,
     "sizes": [
-      "2XL (fact. L)",
       "L (fact. M)"
     ],
     "category": "Жилет",
@@ -3455,20 +3453,6 @@
       "img/9af95e39-c4b4-4ea1-a8ca-8f92bd9f8c8e.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Обувь Walk London Sean Suede",
-    "brand": "Обувь",
-    "price": 10990,
-    "sizes": [],
-    "category": "Обувь",
-    "img": "img/33d8b270-5897-49a3-af42-4940a37a473c.jpg",
-    "images": [
-      "img/33d8b270-5897-49a3-af42-4940a37a473c.jpg",
-      "img/cbb16223-d531-4250-830a-54f6f3c77655.jpg",
-      "img/bf3ad205-d11c-4620-8cc3-14002ad6511e.jpg"
-    ],
-    "description": "Оригинальная продукция, из официального магазина бренда в Лондоне!\nMade in India"
   },
   {
     "name": "Свитшот C.P. Company 814  Diagonal Crew Neck",
