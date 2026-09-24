@@ -1067,6 +1067,23 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Жилет Stone Island Stella Primaloft Black - Final Sale",
+    "brand": "Жилет",
+    "price": 35900,
+    "sizes": [
+      "L"
+    ],
+    "category": "Жилет",
+    "img": "img/5be1be40-c3dd-48f2-af80-706801a126f3.jpg",
+    "images": [
+      "img/5be1be40-c3dd-48f2-af80-706801a126f3.jpg",
+      "img/a4f9e656-5048-4d44-982a-74fa8175938e.jpg",
+      "img/50eea5cd-d83f-4f92-8262-ec42dc3d6ea2.jpg",
+      "img/1eaf4377-ca45-4f8d-a18b-ba7a5b5f5e70.jpg"
+    ],
+    "description": "Оригинал из бутика Stone Island! Новый товар с бумажными бирками!\nРазмер: \nЖилетка Stone Island из Nylon Stella с наполнителем PrimaLoft®-TC. Ветрозащитная и водоотталкивающая обработка, фирменная стёжка и съёмный Compass Badge. Отличный вариант для многослойных образов.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "КЕПКА POLO RALPH LAUREN THE ICONIC OLD ROYAL",
     "brand": "Ralph Lauren",
     "price": 6790,
@@ -1573,8 +1590,7 @@
     "brand": "Weekend Offender",
     "price": 10390,
     "sizes": [
-      "2XL",
-      "XL"
+      "2XL"
     ],
     "category": "Жилет",
     "img": "img/6a6d8d5f-ad24-4ce1-ba68-7510bd714bed.jpg",
@@ -2134,23 +2150,6 @@
       "img/a862925f-4e6e-40f4-903a-df8be9d70073.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Свитшот C.P. Company Diagonal Crew Neck Black",
-    "brand": "Свитшот",
-    "price": 17900,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Джемпер",
-    "img": "img/e9fd924d-8fca-4463-9512-a2a3ad55e8f9.jpg",
-    "images": [
-      "img/e9fd924d-8fca-4463-9512-a2a3ad55e8f9.jpg",
-      "img/4059b99c-2910-4422-bfba-b460648f87a7.jpg",
-      "img/d0dba28a-25c6-4967-ab5b-e389be79dad3.jpg",
-      "img/8a92d296-0d95-4f61-95e7-26a687780ee3.jpg"
-    ],
-    "description": "Оригинал из бутика Италии! Документы и чеки из бутиков на каждый товар!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: премиальный хлопок\nСтрана производитель: Турция\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка MA.Strum Neo Quarter Zip Ink Navy",
