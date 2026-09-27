@@ -102,8 +102,7 @@
     "brand": "Weekend Offender",
     "price": 9390,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/fa8b0e58-1e7b-4672-bc8b-7038dde777fd.jpg",
@@ -1179,7 +1178,8 @@
     "price": 29500,
     "sizes": [
       "2XL",
-      "L"
+      "L",
+      "M"
     ],
     "category": "Жилет",
     "img": "img/b33e9d64-f2d2-465c-a83d-35efe672dfa8.jpg",
@@ -3400,6 +3400,20 @@
       "img/c274516d-8d93-4d8e-bdca-f62c92bd727c.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: нейлон, перелив цвета \nБоковые карманы, + нагрудный.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Обувь Walk London Sean Suede",
+    "brand": "Обувь",
+    "price": 10990,
+    "sizes": [],
+    "category": "Обувь",
+    "img": "img/33d8b270-5897-49a3-af42-4940a37a473c.jpg",
+    "images": [
+      "img/33d8b270-5897-49a3-af42-4940a37a473c.jpg",
+      "img/cbb16223-d531-4250-830a-54f6f3c77655.jpg",
+      "img/bf3ad205-d11c-4620-8cc3-14002ad6511e.jpg"
+    ],
+    "description": "Оригинальная продукция, из официального магазина бренда в Лондоне!\nMade in India"
   },
   {
     "name": "Свитшот C.P. Company 814  Diagonal Crew Neck",
