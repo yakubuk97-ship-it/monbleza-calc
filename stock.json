@@ -725,8 +725,7 @@
     "brand": "Weekend Offender",
     "price": 3490,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/dc5633fb-bb61-43f6-9b99-ef74067d5d0c.jpg",
@@ -1090,6 +1089,7 @@
     "brand": "Fred Perry",
     "price": 23990,
     "sizes": [
+      "2XL",
       "L",
       "XL"
     ],
@@ -1112,8 +1112,7 @@
     "sizes": [
       "2XL",
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Шорты",
     "img": "img/b3b28b33-c58c-41a8-b688-06e1cad4c6b3.jpg",
@@ -1215,7 +1214,6 @@
     "brand": "Weekend Offender",
     "price": 5990,
     "sizes": [
-      "2XL (fact. XL)",
       "L (fact. M)"
     ],
     "category": "Джемпер",
@@ -1969,8 +1967,7 @@
     "brand": "Weekend Offender",
     "price": 6990,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/88cab9bc-72e6-4888-a068-9b67245865f6.jpg",
@@ -2783,6 +2780,7 @@
     "brand": "Marshall Artist",
     "price": 6990,
     "sizes": [
+      "2XL",
       "L"
     ],
     "category": "Джемпер",
@@ -2892,23 +2890,6 @@
       "img/efce145d-004c-466d-bf9b-e153e59cf1d6.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Куртка Weekend Offender Cotoca Smokey",
-    "brand": "Weekend Offender",
-    "price": 16990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Жилет",
-    "img": "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
-    "images": [
-      "img/dc016fca-174a-4bdf-8b71-6d33d7560716.jpg",
-      "img/95f86d6b-8070-4c62-ba17-7c7f43500df4.jpg",
-      "img/b5ea72b8-8557-456e-bd82-c9990f36c586.jpg",
-      "img/d6d73169-6eed-4133-aaab-929d48b1ad69.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nЗамеры M (Д-74; Ш-56; ПЛЧ-44; Р-67.5)\nЗамеры XL (Д-79; Ш-65; ПЛЧ-49; Р-)\nВодооталкивающая, перелив цвета!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Олимпийка Sergio Tacchini Damarindo Track Top Navy",
@@ -3422,22 +3403,6 @@
       "img/23e976ee-efee-4612-a335-aa40d83b54af.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
-  },
-  {
-    "name": "Овершот Weekend Offender Mystery Deep Wine",
-    "brand": "Weekend Offender",
-    "price": 8390,
-    "sizes": [
-      "L"
-    ],
-    "category": "Джемпер",
-    "img": "img/dfc28e9c-377c-4cfb-9edf-18fddb816bf9.jpg",
-    "images": [
-      "img/dfc28e9c-377c-4cfb-9edf-18fddb816bf9.jpg",
-      "img/94545307-a0ee-4908-acc1-6ced19351d58.jpg",
-      "img/c274516d-8d93-4d8e-bdca-f62c92bd727c.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: нейлон, перелив цвета \nБоковые карманы, + нагрудный.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Обувь Walk London Sean Suede",
