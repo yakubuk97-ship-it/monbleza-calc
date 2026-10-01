@@ -442,7 +442,6 @@
     "brand": "Marshall Artist",
     "price": 19900,
     "sizes": [
-      "2XL",
       "XL"
     ],
     "category": "Жилет",
@@ -685,24 +684,6 @@
       "img/e0b081f1-5d07-4e11-8a59-2f54e8ed3326.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nСДЕЛАНО В ПОРТУГАЛИИ\nРазмер: \nСостав: 100% премиальный хлопок, вышитый логотип (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Ботинки The North Face Storm Strike III 0A7W4GKT0 42,5 EUR 27,5 СМ 9,5 US",
-    "brand": "The North Face",
-    "price": 17990,
-    "sizes": [
-      "42.5 EUR / 9 US / 27 cm"
-    ],
-    "category": "Обувь",
-    "img": "img/3258cde6-d6ab-41d9-98bb-11385af35dae.jpg",
-    "images": [
-      "img/3258cde6-d6ab-41d9-98bb-11385af35dae.jpg",
-      "img/d753be5c-450b-4221-aeb3-614c89af43e9.jpg",
-      "img/444a3190-4bb8-40a1-b8d6-3dbfe52bca78.jpg",
-      "img/0eda20d3-3e2e-4184-bcf7-25c61f3783a7.jpg",
-      "img/224e082f-4754-4df0-bf9c-cb47c8af1454.jpg"
-    ],
-    "description": ""
   },
   {
     "name": "Жилет Weekend Offender Gacha Deep Blue",
