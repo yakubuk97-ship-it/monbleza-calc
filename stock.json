@@ -50,22 +50,6 @@
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: XL/2XL (замеры ниже)\nСостав: 100% премиальный хлопок\nДлина полностью - 75 cm \nШирина между подмышек - 63 cm \nРукав от подмышки - 49 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка Ellesse Elpidio Black",
-    "brand": "Ellesse",
-    "price": 2990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/c92283d1-2f29-4f72-841a-c944c81bd771.jpg",
-    "images": [
-      "img/c92283d1-2f29-4f72-841a-c944c81bd771.jpg",
-      "img/0a63b2ab-e539-425a-b47b-959185b1c06f.jpg",
-      "img/7a4c6b8d-5a9d-40de-8fbe-6cd27bfd688d.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% полиэстер"
-  },
-  {
     "name": "Футболка Weekend Offender Boombox White",
     "brand": "Weekend Offender",
     "price": 4190,
@@ -2573,21 +2557,6 @@
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Футболка New Balance Arch Stacked Logo Blue Oasis",
-    "brand": "New Balance",
-    "price": 3990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/c2602408-b106-41bc-83fd-0dfd2bedb9cf.jpg",
-    "images": [
-      "img/c2602408-b106-41bc-83fd-0dfd2bedb9cf.jpg",
-      "img/10751531-89e4-4801-9d71-77c660476102.jpg"
-    ],
-    "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
-  },
-  {
     "name": "Куртка Weekend Offender La Guardia Black",
     "brand": "Weekend Offender",
     "price": 11990,
@@ -2872,21 +2841,6 @@
       "img/dea74770-bd2a-4875-8f4e-6240a0cb5b09.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: нейлон метал + легкий флисовый подклад\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Футболка Lacoste Pima Cotton Light Purple",
-    "brand": "Lacoste",
-    "price": 5990,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/aac11f1c-04ac-439f-8ff0-027429a54ccb.jpg",
-    "images": [
-      "img/aac11f1c-04ac-439f-8ff0-027429a54ccb.jpg",
-      "img/fb98017d-ace7-4d37-ba5b-34ca5c0d5e6e.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Шорты Sergio Tacchini Cordosa Thistle",
