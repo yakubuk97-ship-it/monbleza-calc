@@ -406,22 +406,6 @@
     "description": "Оригинал из офф. магазина C.P. Италии! Чеки из бутика на каждый товар магазина!\nНовая, с комплектом биркок, CLG+  \nРазмер: XL по бирке, на L/XL\nСостав: Primaloft + Nada Shell C.P. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Куртка Marshall Artist Seaforth Parka Navy",
-    "brand": "Marshall Artist",
-    "price": 19900,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Жилет",
-    "img": "img/99f1e1d1-f84a-4aab-b372-5ddfa0501d1a.jpg",
-    "images": [
-      "img/99f1e1d1-f84a-4aab-b372-5ddfa0501d1a.jpg",
-      "img/88706ac2-85c3-45a6-9a6c-89f2ac8a1ab9.jpg",
-      "img/35fcf7ab-3c20-41fa-90f2-0698a103853b.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nФункциональная куртка от Marshall Artist! Водонепроницаемый материал в сочетании с утеплителем Eco-Fil 280 г/м² помогает сохранять тепло и защищает от влаги.\nПродумана до мелочей: утеплённый микрофлисовый капюшон с регулировкой, двухсторонняя молния с ветрозащитной планкой, регулируемые манжеты и множество вместительных карманов в стиле military. Практичность, защита и узнаваемая эстетика Marshall Artist в одной модели."
-  },
-  {
     "name": "Жилет C.P. Company DD Shell Down Gilet Navy",
     "brand": "Жилет",
     "price": 31490,
@@ -627,7 +611,8 @@
     "brand": "Weekend Offender",
     "price": 3490,
     "sizes": [
-      "L"
+      "L",
+      "M"
     ],
     "category": "Лонгслив",
     "img": "img/dc5633fb-bb61-43f6-9b99-ef74067d5d0c.jpg",
@@ -815,6 +800,24 @@
       "img/d0de19dc-e1f6-47b3-8237-67909c5f06d0.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Рубашка Овершот Weekend Offender Shields Driftwood",
+    "brand": "Weekend Offender",
+    "price": 9990,
+    "sizes": [
+      "M",
+      "XL"
+    ],
+    "category": "Жилет",
+    "img": "img/68904b50-b4df-406c-b2d2-09353417d3cc.jpg",
+    "images": [
+      "img/68904b50-b4df-406c-b2d2-09353417d3cc.jpg",
+      "img/7904f708-1fce-472c-92e4-21729c57c9cf.jpg",
+      "img/8d3b2a48-c3b6-4276-ba37-520803e232ab.jpg",
+      "img/ceaa4b27-a4c4-47cd-8430-b7c1472dbd98.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка MA.Strum Neo Quarter Zip Oil Slick",
@@ -1250,6 +1253,24 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Куртка Weekend Offender Mayfield Over-Top Black",
+    "brand": "Weekend Offender",
+    "price": 10490,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/f9f12d1a-9d6c-4596-83de-7b31ce33516c.jpg",
+    "images": [
+      "img/f9f12d1a-9d6c-4596-83de-7b31ce33516c.jpg",
+      "img/2a3bc8e5-f7f1-425b-b2ae-2844f59b8013.jpg",
+      "img/4e3979b7-7c43-40a1-a5d4-799751ea50cf.jpg",
+      "img/d5687962-af90-4eaa-9f8b-16354f819293.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Куртка Belstaff Вощеная Sideline Black - Made in Bulgaria",
     "brand": "Куртка",
     "price": 36990,
@@ -1403,6 +1424,22 @@
       "img/40c3a02a-4b5a-4d43-9fe3-6b2ad57786b3.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: хлопок и полиэстер, с начесом внутри. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Джемпер Weekend Offender Vandium Half Zip Anthracite",
+    "brand": "Weekend Offender",
+    "price": 5990,
+    "sizes": [
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/ec1340c7-202b-441a-8be3-e9fa2f8d3cfd.jpg",
+    "images": [
+      "img/ec1340c7-202b-441a-8be3-e9fa2f8d3cfd.jpg",
+      "img/f07c3adf-9abb-477a-8eb1-2a84e6f4eacc.jpg",
+      "img/e62216ce-b1a2-4f0d-be6e-eb63ecb2c350.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Худи C.P. Company 598 Light Full Zip",
@@ -1688,6 +1725,23 @@
       "img/a97c98ab-4a02-4f7c-bfd8-715ebdaa7cb0.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\n- Made in Cambodia  \n- Состав: премиальный хлопок\nРазмер: Регулируется, на любую голову\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Поло Ellesse Baccio Black",
+    "brand": "Ellesse",
+    "price": 3790,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/78ec23ea-1c34-476d-88c1-d50d2f1a0486.jpg",
+    "images": [
+      "img/78ec23ea-1c34-476d-88c1-d50d2f1a0486.jpg",
+      "img/52e4e11e-46b7-4629-8092-f76b85ed640e.jpg",
+      "img/a24da8ca-ab8d-468b-a4d8-4947d7fe0912.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Шорты Weekend Offender Varadero Check",
@@ -2357,6 +2411,22 @@
     "description": "Оригинал из бутика Италии! Документы и чеки из бутиков на каждый товар!\nНовая, с комплектом биркок, CLG+ \nРазмер: \nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Weekend Offender Mcmoney Navy Thunder",
+    "brand": "Weekend Offender",
+    "price": 3890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/258f3133-fbae-4dad-b500-68741bf52f6c.jpg",
+    "images": [
+      "img/258f3133-fbae-4dad-b500-68741bf52f6c.jpg",
+      "img/74a553e0-3420-4573-8fb3-eb7df5b4f398.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Джемпер Weekend Offender Zip Vandium Charcoal",
     "brand": "Weekend Offender",
     "price": 5990,
@@ -2640,6 +2710,23 @@
       "img/ea3d8a7c-ef87-4943-91ce-219bd9cc4cd4.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Поло Weekend Offender Merane Mid House Check",
+    "brand": "Weekend Offender",
+    "price": 5990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/96599f4b-78b0-4ade-9c17-3bd3689b34a7.jpg",
+    "images": [
+      "img/96599f4b-78b0-4ade-9c17-3bd3689b34a7.jpg",
+      "img/d86b131f-4beb-4731-a537-d94623e3ea6b.jpg",
+      "img/40659fab-6534-4081-be87-2e053a3445f6.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Пуховик Napapijri A-Terez Puffer Black",
@@ -3091,6 +3178,23 @@
     "description": "Оригинал из бутиков Англии!\nРазмер: \nПремиальные материала и идеальная посадка. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Поло Weekend Offender Levanto Forest Green",
+    "brand": "Weekend Offender",
+    "price": 4890,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/37cc526d-29e5-43f1-8681-02426ac5870f.jpg",
+    "images": [
+      "img/37cc526d-29e5-43f1-8681-02426ac5870f.jpg",
+      "img/2d29f5cb-2d1c-4496-84fb-507523e24952.jpg",
+      "img/bdf3e74d-8f2d-4a89-afa2-3491d8e9e6eb.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Куртка Barbour Int. Haze Puffer Black",
     "brand": "Куртка",
     "price": 24990,
@@ -3141,6 +3245,24 @@
       "img/23e976ee-efee-4612-a335-aa40d83b54af.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
+  },
+  {
+    "name": "Олимпийка Weekend Offender Hemsley Track Top Black",
+    "brand": "Weekend Offender",
+    "price": 7490,
+    "sizes": [
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/56cf5709-7a2c-4f14-bc12-1c15510537d3.jpg",
+    "images": [
+      "img/56cf5709-7a2c-4f14-bc12-1c15510537d3.jpg",
+      "img/93604490-e499-474c-81a1-e22f33feb4d6.jpg",
+      "img/682ac4c6-80c5-4d5f-87e7-7d1fdcd1f3f1.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 97% хлопок, 3% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Обувь Walk London Sean Suede",
