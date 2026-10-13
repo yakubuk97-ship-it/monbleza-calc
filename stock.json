@@ -50,6 +50,23 @@
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: XL/2XL (замеры ниже)\nСостав: 100% премиальный хлопок\nДлина полностью - 75 cm \nШирина между подмышек - 63 cm \nРукав от подмышки - 49 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Свитшот Weekend Offender F-Bomb Cyclone",
+    "brand": "Weekend Offender",
+    "price": 6790,
+    "sizes": [
+      "L"
+    ],
+    "category": "Джемпер",
+    "img": "img/3ebec2c5-3f4b-4c04-b86e-53b61d245128.jpg",
+    "images": [
+      "img/3ebec2c5-3f4b-4c04-b86e-53b61d245128.jpg",
+      "img/cb5ab4d8-a274-47b6-9ad4-9a838c9f997b.jpg",
+      "img/3c3d8036-3888-4fb3-8256-a8b3297f924d.jpg",
+      "img/1d61fbbb-0282-435b-9daa-818da67659ef.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Weekend Offender Boombox White",
     "brand": "Weekend Offender",
     "price": 4190,
@@ -64,6 +81,21 @@
       "img/726004e0-6e93-4521-9236-9a7615100f46.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Толстовка Weekend Offender Kraviz Quarter Zip Blue Shadow",
+    "brand": "Weekend Offender",
+    "price": 7990,
+    "sizes": [
+      "L"
+    ],
+    "category": "Джемпер",
+    "img": "img/b1f8788b-c6a0-49ae-8ec0-fbfd5962ab86.jpg",
+    "images": [
+      "img/b1f8788b-c6a0-49ae-8ec0-fbfd5962ab86.jpg",
+      "img/b12ef298-eac8-47d0-8e51-3534d2c61273.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: премиальный хлопок, внутри микро-начос.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка Marshall Artist Marchio 1/4 Zip Teal",
@@ -1257,6 +1289,7 @@
     "brand": "Weekend Offender",
     "price": 10490,
     "sizes": [
+      "2XL",
       "L",
       "XL"
     ],
@@ -1855,6 +1888,23 @@
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: хлопок и поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Ветровка Weekend Offender Grohl Black Forest",
+    "brand": "Weekend Offender",
+    "price": 9990,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Жилет",
+    "img": "img/c678ddc5-5d67-4d4e-8163-40459a71831e.jpg",
+    "images": [
+      "img/c678ddc5-5d67-4d4e-8163-40459a71831e.jpg",
+      "img/bfc07506-173e-4ea5-a29e-d42ff962fd93.jpg",
+      "img/97d0c3d1-47a4-4706-83ef-8257066eb6d2.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: нейлон\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Толстовка C.P. Company 1/2 Zip Cotton 888 Diagonal",
     "brand": "Толстовка",
     "price": 19490,
@@ -2227,6 +2277,24 @@
       "img/172750c0-970a-4c90-860b-8079dc4d8304.jpg"
     ],
     "description": ""
+  },
+  {
+    "name": "Шорты Weekend Offender Stacks Smokey",
+    "brand": "Weekend Offender",
+    "price": 4790,
+    "sizes": [
+      "2XL",
+      "XL"
+    ],
+    "category": "Шорты",
+    "img": "img/c4680274-20a0-4f09-80f8-4e0b3c24aa76.jpg",
+    "images": [
+      "img/c4680274-20a0-4f09-80f8-4e0b3c24aa76.jpg",
+      "img/93ccd795-ddbe-4c3d-8668-a8b944467157.jpg",
+      "img/b9a55112-4a78-4562-ac27-15dd5a503445.jpg",
+      "img/60361aa7-c791-4fd4-8f4b-3c76d3fe09bd.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: нейлон метал (перелив цвета) \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Поло Sergio Tacchini Young Line Shirt Black",
