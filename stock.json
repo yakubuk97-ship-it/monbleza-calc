@@ -1530,8 +1530,7 @@
     "brand": "Fred Perry",
     "price": 7990,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/333e7b21-b963-4a03-a15f-5657a17300d2.jpg",
@@ -2465,8 +2464,7 @@
     "brand": "Свитшот",
     "price": 17900,
     "sizes": [
-      "M",
-      "XL"
+      "M"
     ],
     "category": "",
     "img": "img/ba9fc92b-adaf-4f22-ad03-8893e38a92e8.jpg",
@@ -3324,10 +3322,11 @@
       "XL"
     ],
     "category": "Джемпер",
-    "img": "img/56cf5709-7a2c-4f14-bc12-1c15510537d3.jpg",
+    "img": "img/bfb82e99-1015-4458-a8e2-08c843409112.jpg",
     "images": [
-      "img/56cf5709-7a2c-4f14-bc12-1c15510537d3.jpg",
-      "img/93604490-e499-474c-81a1-e22f33feb4d6.jpg",
+      "img/bfb82e99-1015-4458-a8e2-08c843409112.jpg",
+      "img/8d4afbd8-eac6-472e-a8c5-8ef0cb254700.jpg",
+      "img/9c348130-2500-4fd5-a18a-8325be249b6c.jpg",
       "img/682ac4c6-80c5-4d5f-87e7-7d1fdcd1f3f1.jpg"
     ],
     "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 97% хлопок, 3% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
