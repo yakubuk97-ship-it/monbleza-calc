@@ -872,7 +872,6 @@
     "brand": "Sergio Tacchini",
     "price": 13990,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Джемпер",
@@ -1030,7 +1029,6 @@
     "price": 8990,
     "sizes": [
       "2XL",
-      "L",
       "M",
       "XL"
     ],
@@ -1934,7 +1932,7 @@
   {
     "name": "Куртка Barbour Ashby Wax Black",
     "brand": "Куртка",
-    "price": 42900,
+    "price": 44990,
     "sizes": [
       "L",
       "XL"
@@ -2666,8 +2664,7 @@
     "brand": "Marshall Artist",
     "price": 6990,
     "sizes": [
-      "2XL",
-      "L"
+      "2XL"
     ],
     "category": "Джемпер",
     "img": "img/76ce46e4-2bcf-45b3-981b-4b6e6bf19231.jpg",
