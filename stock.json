@@ -477,7 +477,6 @@
     "brand": "Вощеная",
     "price": 43900,
     "sizes": [
-      "42 UK (L/XL)",
       "44 UK (XL/2XL)"
     ],
     "category": "Жилет",
@@ -611,7 +610,6 @@
     "price": 53000,
     "sizes": [
       "42 UK (L/XL)",
-      "44 UK (XL/2XL)",
       "46 UK (3XL)"
     ],
     "category": "Жилет",
@@ -1230,6 +1228,23 @@
       "img/8e999d90-56e5-48b5-943c-6a1acb9c2216.jpg"
     ],
     "description": "Оригинальная продукция, из официального магазина New Balance"
+  },
+  {
+    "name": "Толстовка Marshall Artist Siren Full Zip Oceanic Grey",
+    "brand": "Marshall Artist",
+    "price": 7490,
+    "sizes": [
+      "L",
+      "XL"
+    ],
+    "category": "Джемпер",
+    "img": "img/935a6f78-cc7b-4287-8944-c048492023c5.jpg",
+    "images": [
+      "img/935a6f78-cc7b-4287-8944-c048492023c5.jpg",
+      "img/dbdf5e10-7ad0-45ac-a5ef-a07eea475575.jpg",
+      "img/0f5dcd85-d2f8-43a9-b32f-4507429e3a2f.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Berghaus Ewden Jacket Black",
