@@ -3250,6 +3250,24 @@
     "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 97% хлопок, 3% эластан\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Limited Футболка Weekend Offender Leo Gregory Black",
+    "brand": "Weekend Offender",
+    "price": 7490,
+    "sizes": [
+      "2XL",
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/8aada9ba-2dd8-43d7-99d9-70a19282ed48.jpg",
+    "images": [
+      "img/8aada9ba-2dd8-43d7-99d9-70a19282ed48.jpg",
+      "img/73c48f09-1ffd-4758-b82f-c1878c3f4886.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Обувь Walk London Sean Suede",
     "brand": "Обувь",
     "price": 10990,
