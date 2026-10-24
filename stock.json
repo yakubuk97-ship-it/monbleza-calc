@@ -1269,7 +1269,6 @@
     "brand": "Куртка",
     "price": 26490,
     "sizes": [
-      "L",
       "XL"
     ],
     "category": "Жилет",
@@ -2348,8 +2347,7 @@
     "brand": "Кроссовки",
     "price": 13990,
     "sizes": [
-      "43 EUR / 27 cm",
-      "44 EUR / 28 cm"
+      "43 EUR / 27 cm"
     ],
     "category": "Обувь",
     "img": "img/ac56e15b-cc27-4084-9b9a-1fc0eed8a147.jpg",
@@ -2960,8 +2958,7 @@
     "brand": "Weekend Offender",
     "price": 28900,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/b103269e-e3a9-4634-956f-dbb376f767b9.jpg",
