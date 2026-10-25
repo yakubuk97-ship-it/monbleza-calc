@@ -627,7 +627,6 @@
     "brand": "Куртка",
     "price": 53000,
     "sizes": [
-      "42 UK (L/XL)",
       "46 UK (3XL)"
     ],
     "category": "Жилет",
@@ -2476,7 +2475,6 @@
     "brand": "Weekend Offender",
     "price": 3890,
     "sizes": [
-      "L",
       "M"
     ],
     "category": "Лонгслив",
@@ -3313,6 +3311,7 @@
     "brand": "Футболка",
     "price": 3990,
     "sizes": [
+      "L",
       "M"
     ],
     "category": "Лонгслив",
