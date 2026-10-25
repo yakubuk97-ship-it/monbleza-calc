@@ -98,22 +98,6 @@
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: премиальный хлопок, внутри микро-начос.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Толстовка Marshall Artist Marchio 1/4 Zip Teal",
-    "brand": "Marshall Artist",
-    "price": 5990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Джемпер",
-    "img": "img/b2b2c3a2-baf1-41f9-870a-be8e7dd0ee60.jpg",
-    "images": [
-      "img/b2b2c3a2-baf1-41f9-870a-be8e7dd0ee60.jpg",
-      "img/0de88415-5c8d-416b-a9a7-8c9d0cd1b35c.jpg",
-      "img/48a52e47-7ebc-4c87-936a-8f7bbdd7b796.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!​\nРазмер: \nСостав: 80% хлопок, 20% поли\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Куртка Weekend Offender Kazan Navy",
     "brand": "Weekend Offender",
     "price": 9390,
@@ -290,8 +274,7 @@
     "sizes": [
       "2XL",
       "L",
-      "M",
-      "XL"
+      "M"
     ],
     "category": "Джемпер",
     "img": "img/8d3b6fdb-eaae-477a-aa79-fdf1cee658e4.jpg",
@@ -2606,23 +2589,6 @@
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Толстовка Ellesse Ferrer Hoodie Navy",
-    "brand": "Ellesse",
-    "price": 5990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Джемпер",
-    "img": "img/cbd79855-ed74-4cd1-b37a-c5c5d2e3a068.jpg",
-    "images": [
-      "img/cbd79855-ed74-4cd1-b37a-c5c5d2e3a068.jpg",
-      "img/da2a547b-e514-426f-bcb9-63e3d7ff9458.jpg",
-      "img/63553b20-8db4-4177-bfbb-57afacca5808.jpg",
-      "img/3796c8d7-d77d-427a-8733-eae1c79f89c7.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: хлопок и поли \n(Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "ФУТБОЛКА WEEKEND OFFENDER MCMONEY THUNDER BLUE NAVY",
     "brand": "Weekend Offender",
     "price": 3890,
@@ -2977,8 +2943,7 @@
     "brand": "MA.Strum",
     "price": 8990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/0bb6109f-c96b-4a70-b60f-c3becaed55fd.jpg",
