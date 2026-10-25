@@ -674,6 +674,23 @@
     "description": "Оригинальная продукция\nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Weekend Offender Trio Navy",
+    "brand": "Weekend Offender",
+    "price": 3490,
+    "sizes": [
+      "L",
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/50ba78cc-b28d-464a-88e5-00672241c768.jpg",
+    "images": [
+      "img/50ba78cc-b28d-464a-88e5-00672241c768.jpg",
+      "img/60b12c17-e896-4cf4-ae50-e28fe4912b62.jpg",
+      "img/7ad64f66-6fcc-4648-ad7a-307430584c16.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Свитшот C.P. Company 598 Diagonal Raised",
     "brand": "Свитшот",
     "price": 17900,
@@ -841,7 +858,11 @@
     "brand": "Weekend Offender",
     "price": 9990,
     "sizes": [
-      "M"
+      "2XL",
+      "L",
+      "M",
+      "S",
+      "XL"
     ],
     "category": "Жилет",
     "img": "img/68904b50-b4df-406c-b2d2-09353417d3cc.jpg",
@@ -2788,6 +2809,25 @@
     "description": "Оригинал из офф. магазина C.P. Италии! \nРазмер: \nНовая, с комплектом биркок, CLG+  \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
+    "name": "Футболка Peaceful Hooligan Frontline Black",
+    "brand": "Футболка",
+    "price": 4190,
+    "sizes": [
+      "L",
+      "M",
+      "XL"
+    ],
+    "category": "Лонгслив",
+    "img": "img/71fe1dc8-3f22-498e-a02e-ed339fa8c751.jpg",
+    "images": [
+      "img/71fe1dc8-3f22-498e-a02e-ed339fa8c751.jpg",
+      "img/9b2e1203-d81d-487c-bc2d-b21a901df7ad.jpg",
+      "img/42f72d30-ab14-4580-b44c-be34d8d57cd4.jpg",
+      "img/33dad6b9-437a-41fb-8c09-f2767ad498a7.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Футболка Weekend Offender Everyone Graphic White",
     "brand": "Weekend Offender",
     "price": 4390,
@@ -3237,7 +3277,8 @@
     "price": 7490,
     "sizes": [
       "L",
-      "M"
+      "M",
+      "XL"
     ],
     "category": "Джемпер",
     "img": "img/bfb82e99-1015-4458-a8e2-08c843409112.jpg",
@@ -3266,6 +3307,23 @@
       "img/73c48f09-1ffd-4758-b82f-c1878c3f4886.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
+    "name": "Футболка Peaceful Hooligan Paisley Heads White",
+    "brand": "Футболка",
+    "price": 3990,
+    "sizes": [
+      "M"
+    ],
+    "category": "Лонгслив",
+    "img": "img/e1815369-1eeb-4bf7-874b-cda9411f8eea.jpg",
+    "images": [
+      "img/e1815369-1eeb-4bf7-874b-cda9411f8eea.jpg",
+      "img/cc190138-0759-4832-b443-7c8c8d7d89ba.jpg",
+      "img/656500e4-c0c8-488e-8a70-8f548b5e61b1.jpg",
+      "img/2c795929-9fc2-4b2c-be85-17f8190e49a0.jpg"
+    ],
+    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: 100% хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Обувь Walk London Sean Suede",
