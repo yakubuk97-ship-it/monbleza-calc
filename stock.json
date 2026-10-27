@@ -102,8 +102,7 @@
     "brand": "Weekend Offender",
     "price": 9390,
     "sizes": [
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Жилет",
     "img": "img/fa8b0e58-1e7b-4672-bc8b-7038dde777fd.jpg",
@@ -1150,23 +1149,6 @@
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 80% хлопок, 20% поли\nЗамеры M (Д-71; Ш-54; ПЛЧ-46; Р-68)\nЗамеры L (Д-73; Ш-57; ПЛЧ-49; Р-69)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Свитер Weekend Offender Platinum Knit Midium Grey",
-    "brand": "Weekend Offender",
-    "price": 5990,
-    "sizes": [
-      "L (fact. M)"
-    ],
-    "category": "Джемпер",
-    "img": "img/96ab6ec0-8bbc-4030-9a24-3a7ecfbb5603.jpg",
-    "images": [
-      "img/96ab6ec0-8bbc-4030-9a24-3a7ecfbb5603.jpg",
-      "img/266ed6d7-59d7-4299-9668-e57121480cd9.jpg",
-      "img/78b1a708-f233-451f-8983-f0d50107a3f9.jpg",
-      "img/aa619cfa-70ab-43a9-a3ce-03885e0f4f54.jpg"
-    ],
-    "description": "Оригинальная продукция\nРазмер: \nСостав: 100% хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Куртка Sergio Tacchini Overhead Navy Blue",
     "brand": "Sergio Tacchini",
     "price": 11990,
@@ -1576,21 +1558,6 @@
       "img/84118984-4a5a-4adf-b71d-7ba9f3dafaa9.jpg"
     ],
     "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nНейлоновый капюшон, убирается в ворот. \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Штаны Weekend Offender Pianemo Cargo Castle Green",
-    "brand": "Weekend Offender",
-    "price": 7990,
-    "sizes": [
-      "XL"
-    ],
-    "category": "Шорты",
-    "img": "img/24b01772-0c94-4bfd-8091-e88c10cf23e3.jpg",
-    "images": [
-      "img/24b01772-0c94-4bfd-8091-e88c10cf23e3.jpg",
-      "img/13a3c362-2e5b-4404-81d9-17ba688d29b6.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% хлопок ripstop отделка.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Футболка Weekend Offender Leo Gregory White",
@@ -2723,8 +2690,7 @@
     "brand": "Weekend Offender",
     "price": 5990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/96599f4b-78b0-4ade-9c17-3bd3689b34a7.jpg",
@@ -3154,8 +3120,7 @@
     "brand": "Sergio Tacchini",
     "price": 6990,
     "sizes": [
-      "2XL",
-      "XL"
+      "2XL"
     ],
     "category": "Джемпер",
     "img": "img/a37e9752-a611-4035-a8f6-696fb2695f2f.jpg",
@@ -3276,8 +3241,7 @@
     "brand": "Футболка",
     "price": 3990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Лонгслив",
     "img": "img/e1815369-1eeb-4bf7-874b-cda9411f8eea.jpg",
