@@ -948,7 +948,6 @@
     "brand": "Weekend Offender",
     "price": 8990,
     "sizes": [
-      "2XL",
       "M",
       "XL"
     ],
@@ -1069,7 +1068,6 @@
     "brand": "MA.Strum",
     "price": 17990,
     "sizes": [
-      "L",
       "XL"
     ],
     "category": "Джемпер",
@@ -1441,23 +1439,6 @@
     "description": "Оригинальная продукция\nСостав:100% премиальный хлопок"
   },
   {
-    "name": "Жилет Marshall Artist Wayfarer Nardo Grey",
-    "brand": "Marshall Artist",
-    "price": 9290,
-    "sizes": [
-      "L (fact. M)"
-    ],
-    "category": "Жилет",
-    "img": "img/3d467544-9065-436b-a152-2b5710ea74b6.jpg",
-    "images": [
-      "img/3d467544-9065-436b-a152-2b5710ea74b6.jpg",
-      "img/69e2cb34-3a67-4f13-825c-02cbe270dace.jpg",
-      "img/f72b20a1-f0ab-442e-8a98-588cd1a3d4fe.jpg",
-      "img/4ea8003c-225f-42ce-9b14-f53d8c29ce4a.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: нейлон и поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Шорты Marshall Artist Birkdale Cargo Stone",
     "brand": "Marshall Artist",
     "price": 7490,
@@ -1537,24 +1518,6 @@
       "img/a1259555-5c61-46da-a9d9-77dc94698ae8.jpg"
     ],
     "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Свитшот Weekend Offender Santos Crew Black",
-    "brand": "Weekend Offender",
-    "price": 5990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Джемпер",
-    "img": "img/01b12ad7-d1f6-485d-8101-fdc31e0a19dc.jpg",
-    "images": [
-      "img/01b12ad7-d1f6-485d-8101-fdc31e0a19dc.jpg",
-      "img/ec06aa95-f525-4ea3-bf83-47d1436fb258.jpg",
-      "img/15e8c981-778a-4026-a2d6-0ae0c4081e3f.jpg",
-      "img/84ba243d-e49e-416e-ad09-fb102beabd90.jpg",
-      "img/20194412-eeeb-4db8-a7b4-99b6c55f78fc.jpg"
-    ],
-    "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Угги UGG Mustard Seed Classic Maxi Mini Boot",
@@ -2053,24 +2016,6 @@
       "img/12d1b50a-a301-4cfb-acf7-30f7ec403771.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок (Размерная сетка на последнем фото, либо в комментариях в товару)\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Овершот Weekend Offender Vinnie Pocket Sea Spray",
-    "brand": "Weekend Offender",
-    "price": 8990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/017c7af5-d4c6-481a-bffc-0a0b39ac0a69.jpg",
-    "images": [
-      "img/017c7af5-d4c6-481a-bffc-0a0b39ac0a69.jpg",
-      "img/8e47b290-3d03-4bda-b0a6-9a2dfe5b42ac.jpg",
-      "img/96bb3f4f-7e45-4234-b68f-32e26011c6dd.jpg",
-      "img/7003e941-600a-4ca6-9264-b72adb3b73ad.jpg",
-      "img/08457df3-b208-4c29-b159-05889c389074.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nСостав: 100% нейлон метал, ripstop \nОриентируйтесь на размерную сетку!\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Куртка Fred Perry Brentham Black",
@@ -3074,38 +3019,6 @@
       "img/fda3ae58-0f3a-4f07-b273-c103f9f0965c.jpg"
     ],
     "description": "Оригинальная продукция \nСостав: 100% премиальный хлопок"
-  },
-  {
-    "name": "Поло MA.Strum Pique Sage",
-    "brand": "MA.Strum",
-    "price": 9690,
-    "sizes": [
-      "M"
-    ],
-    "category": "Лонгслив",
-    "img": "img/869d85b9-8fa9-4522-a191-b3286767ee23.jpg",
-    "images": [
-      "img/869d85b9-8fa9-4522-a191-b3286767ee23.jpg",
-      "img/42c94281-3041-4755-b823-5e63310711d5.jpg",
-      "img/91ae9d13-8550-48a4-888d-a35e06a5bcb5.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "СВИТШОТ FRED PERRY CREW NECK ANCIENT GREY",
-    "brand": "Fred Perry",
-    "price": 9990,
-    "sizes": [
-      "2XL"
-    ],
-    "category": "Джемпер",
-    "img": "img/9c986bb1-a0ca-47d4-8130-51aa3c79d307.jpg",
-    "images": [
-      "img/9c986bb1-a0ca-47d4-8130-51aa3c79d307.jpg",
-      "img/4553c9c3-1d52-4a36-b71d-3a4af3fdc445.jpg",
-      "img/0de845f2-3269-4d01-9cec-0173686640e0.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 100% премиальный хлопок​\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "Толстовка MA.Strum Core Overhead Hoody Ink Navy",
