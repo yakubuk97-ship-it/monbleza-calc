@@ -725,23 +725,6 @@
     "description": "Оригинал из бутиков Англии!\nMade in Portugal\nРазмер: \nСостав: 100% премиальный хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "ТОЛСТОВКА MARSHALL ARTIST STAMPA LOGO BLACK",
-    "brand": "Marshall Artist",
-    "price": 6890,
-    "sizes": [
-      "L"
-    ],
-    "category": "Джемпер",
-    "img": "img/21a8d1cd-e8b2-450d-a265-13501a919629.jpg",
-    "images": [
-      "img/21a8d1cd-e8b2-450d-a265-13501a919629.jpg",
-      "img/7e1c19c8-45b7-438a-a904-2a70bb996eb9.jpg",
-      "img/883341be-a20f-4633-a85b-a9d78548dbbf.jpg",
-      "img/3a49afc4-0399-4734-ab93-adbd07d97018.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! Чеки из бутиков, на каждый товар!\nРазмер: \nСостав: 80% хлопок, 20% поли.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Олимпийка Sergio Tacchini Masters Track Navy Sky",
     "brand": "Sergio Tacchini",
     "price": 13990,
@@ -1681,8 +1664,7 @@
     "price": 6890,
     "sizes": [
       "2XL",
-      "L",
-      "XL"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/be920b7a-9036-4ecc-bfdb-078f7d45c9f8.jpg",
