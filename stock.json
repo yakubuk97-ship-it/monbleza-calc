@@ -50,23 +50,6 @@
     "description": "Оригинал из бутика Италии!\nНовая, с комплектом биркок, CLG+ \nРазмер: XL/2XL (замеры ниже)\nСостав: 100% премиальный хлопок\nДлина полностью - 75 cm \nШирина между подмышек - 63 cm \nРукав от подмышки - 49 cm\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
-    "name": "Свитшот Weekend Offender F-Bomb Cyclone",
-    "brand": "Weekend Offender",
-    "price": 6790,
-    "sizes": [
-      "L"
-    ],
-    "category": "Джемпер",
-    "img": "img/3ebec2c5-3f4b-4c04-b86e-53b61d245128.jpg",
-    "images": [
-      "img/3ebec2c5-3f4b-4c04-b86e-53b61d245128.jpg",
-      "img/cb5ab4d8-a274-47b6-9ad4-9a838c9f997b.jpg",
-      "img/3c3d8036-3888-4fb3-8256-a8b3297f924d.jpg",
-      "img/1d61fbbb-0282-435b-9daa-818da67659ef.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии! \nРазмер: \nСостав: хлопок\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
     "name": "Футболка Weekend Offender Boombox White",
     "brand": "Weekend Offender",
     "price": 4190,
@@ -545,8 +528,7 @@
     "brand": "Weekend Offender",
     "price": 7990,
     "sizes": [
-      "L",
-      "M"
+      "L"
     ],
     "category": "Джемпер",
     "img": "img/3256e887-9074-4115-a7d9-a2c1dc52a746.jpg",
@@ -1083,7 +1065,6 @@
     "brand": "Weekend Offender",
     "price": 10490,
     "sizes": [
-      "2XL",
       "L",
       "XL"
     ],
