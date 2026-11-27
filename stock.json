@@ -699,6 +699,26 @@
     "description": "Оригинал из бутиков Англии! \nРазмер: M, L, XL - другие размеры можно заказать под заказ из Лондона\nBarbour Exclusive 👍 Как жилет под куртку, под любую — подойдёт к любой модели, где есть отдельная молния. А так же и на модели без молнии, можно носить как отдельный элемент гардероба без куртки.\n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!\n\nSize M :\nА Длинна -  71\nB Ширина между подмышек - 56\nС Плечи - 42\n\nSize L :\nA 73\nB 59\nC 44\n\nSize XL :\nA 74\nB 62\nC 46\n\nSize 2XL :\nA 76\nB 66\nC 47"
   },
   {
+    "name": "Куртка Barbour Вощеная Classic Beaufort Olive - Made in England",
+    "brand": "Куртка",
+    "price": 53000,
+    "sizes": [
+      "42 UK (L/XL)",
+      "44 UK (XL/2XL)",
+      "46 UK (2XL/3XL)"
+    ],
+    "category": "Жилет",
+    "img": "img/4e0bc76b-48ff-48ce-8735-2a7b7b93e944.jpg",
+    "images": [
+      "img/4e0bc76b-48ff-48ce-8735-2a7b7b93e944.jpg",
+      "img/3bad9a14-5cdf-41d7-acba-8da37daee4f7.jpg",
+      "img/d680e11f-8696-4dfe-8345-bc54ef4e0015.jpg",
+      "img/06aa347a-5771-4b78-af32-c0daaed49349.jpg",
+      "img/dd0a31c3-0bdc-401f-b4bc-ec9d59a6b903.jpg"
+    ],
+    "description": "Оригинал из бутиков Лондона! \nСделано в Англии\nРазмер: \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
+  },
+  {
     "name": "Регбийка Weekend Offender Nicks White",
     "brand": "Weekend Offender",
     "price": 4990,
@@ -2015,22 +2035,6 @@
       "img/855b5150-a218-4d5c-b359-f7b9bcbdc521.jpg"
     ],
     "description": "Оригинал из бутиков Европы!\nРазмер: \nСостав: 100% премиальный хлопок \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
-  },
-  {
-    "name": "Куртка Weekend Offender La Guardia Black",
-    "brand": "Weekend Offender",
-    "price": 12990,
-    "sizes": [
-      "L"
-    ],
-    "category": "Жилет",
-    "img": "img/038143a8-6b08-4eca-93b9-b81a00c36b4c.jpg",
-    "images": [
-      "img/038143a8-6b08-4eca-93b9-b81a00c36b4c.jpg",
-      "img/77d7020b-56b7-4097-a947-dc98c193d215.jpg",
-      "img/4e80e415-a959-4832-8197-3a71093331a6.jpg"
-    ],
-    "description": "Оригинал из бутиков Англии!\nРазмер: \nВерх - 100% нейлон; \nНаполнитель - 100% полиэстер\nПодкладка - 100% нейлон; \n\nг. Москва - выдача и примерка по записи!\nДоставим ваш заказ в любую точку мира!"
   },
   {
     "name": "ФУТБОЛКА WEEKEND OFFENDER MCMONEY THUNDER BLUE NAVY",
